@@ -8,15 +8,18 @@ const exercises = {
     name: 'Alternate Heel Touchers',
     versions: {
       'v3': {
-        label: 'v3 (Dec 2025 - 10 Models)',
+        label: 'v3 (Dec 2025 - 12 Models)',
         models: [
           { id: 'original', name: 'Original GIF', file: '/comparison/0025-original.gif', type: 'gif', cost: '-', time: '-', tier: 'source' },
+          // Video-to-Video (Motion Preserving)
+          { id: 'animatediff-low', name: 'AnimateDiff V2V (30%)', file: '/comparison/0025-animatediff-low.mp4', type: 'video', cost: '~$0.15', time: '139s', tier: 'v2v', recommended: true },
+          { id: 'animatediff-high', name: 'AnimateDiff V2V (70%)', file: '/comparison/0025-animatediff-high.mp4', type: 'video', cost: '~$0.15', time: '8s', tier: 'v2v' },
           // Budget Tier ($0.04-0.05/sec)
           { id: 'ltx2-fast', name: 'LTX-2 Fast', file: '/comparison/0025-ltx2-fast.mp4', type: 'video', cost: '$0.20', time: '40s', tier: 'budget' },
           { id: 'pixverse', name: 'PixVerse v5.5', file: '/comparison/0025-pixverse.mp4', type: 'video', cost: '$0.20', time: '65s', tier: 'budget' },
           { id: 'kling21-std', name: 'Kling 2.1 Std', file: '/comparison/0025-kling21-std.mp4', type: 'video', cost: '$0.25', time: '76s', tier: 'budget' },
           // Mid Tier ($0.07-0.10/sec)
-          { id: 'kling26-pro', name: 'Kling 2.6 Pro', file: '/comparison/0025-kling26-pro.mp4', type: 'video', cost: '$0.35', time: '77s', tier: 'mid', recommended: true },
+          { id: 'kling26-pro', name: 'Kling 2.6 Pro', file: '/comparison/0025-kling26-pro.mp4', type: 'video', cost: '$0.35', time: '77s', tier: 'mid' },
           { id: 'kling25-turbo', name: 'Kling 2.5 Turbo', file: '/comparison/0025-kling25-turbo.mp4', type: 'video', cost: '$0.35', time: '71s', tier: 'mid' },
           { id: 'hunyuan', name: 'Hunyuan 1.5', file: '/comparison/0025-hunyuan.mp4', type: 'video', cost: '$0.38', time: '260s', tier: 'mid' },
           { id: 'kling21-pro', name: 'Kling 2.1 Pro', file: '/comparison/0025-kling21-pro.mp4', type: 'video', cost: '$0.45', time: '88s', tier: 'mid' },
@@ -41,6 +44,7 @@ const exercises = {
 
 const tierColors = {
   source: 'bg-zinc-200 text-zinc-700',
+  v2v: 'bg-yellow-100 text-yellow-700',
   budget: 'bg-green-100 text-green-700',
   mid: 'bg-blue-100 text-blue-700',
   premium: 'bg-purple-100 text-purple-700',
@@ -48,6 +52,7 @@ const tierColors = {
 
 const tierLabels = {
   source: 'Source',
+  v2v: 'V2V Motion',
   budget: 'Budget',
   mid: 'Mid-Tier',
   premium: 'Premium',
@@ -70,7 +75,7 @@ export function VideoComparison() {
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold">Video Model Benchmark (Dec 2025)</h2>
-        <p className="text-zinc-500 mt-1">10 fal.ai models compared for exercise GIF styling</p>
+        <p className="text-zinc-500 mt-1">12 fal.ai models compared - includes V2V for motion preservation</p>
       </div>
 
       {/* Version Selector */}
@@ -93,7 +98,7 @@ export function VideoComparison() {
       {version === 'v3' && (
         <div className="flex flex-wrap gap-2">
           <span className="text-sm text-zinc-500 self-center mr-2">Filter:</span>
-          {['all', 'budget', 'mid', 'premium'].map(tier => (
+          {['all', 'v2v', 'budget', 'mid', 'premium'].map(tier => (
             <Button
               key={tier}
               variant={tierFilter === tier ? 'default' : 'ghost'}
