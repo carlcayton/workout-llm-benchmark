@@ -101,12 +101,12 @@ const mockBenchmarkData = {
       duration: 45,
       level: 'Intermediate',
       results: [
-        { model: 'GPT-5', success: true, latency: 980, matchRate: 98, exercises: 7, title: 'Elite Push Protocol' },
-        { model: 'Claude Sonnet 4', success: true, latency: 1150, matchRate: 96, exercises: 7, title: 'Precision Push Strength' },
-        { model: 'Claude 4.5 Haiku', success: true, latency: 320, matchRate: 91, exercises: 6, title: 'Swift Push Blast' },
-        { model: 'Gemini 2.5 Flash', success: true, latency: 450, matchRate: 93, exercises: 6, title: 'Flash Push Circuit' },
-        { model: 'DeepSeek R1', success: true, latency: 1890, matchRate: 94, exercises: 8, title: 'Reasoned Push Power' },
-        { model: 'Grok 4.1', success: true, latency: 380, matchRate: 89, exercises: 6, title: 'Grok Push Pump' },
+        { model: 'GPT-5', success: true, latency: 980, matchRate: 98, exercises: 7, title: 'Elite Push Protocol', exerciseList: ['Barbell Bench Press', 'Dumbbell Incline Press', 'Cable Fly', 'Overhead Press', 'Lateral Raise', 'Tricep Pushdown', 'Skull Crushers'] },
+        { model: 'Claude Sonnet 4', success: true, latency: 1150, matchRate: 96, exercises: 7, title: 'Precision Push Strength', exerciseList: ['Bench Press', 'Incline Dumbbell Press', 'Cable Crossover', 'Military Press', 'Dumbbell Lateral Raise', 'Rope Pushdown', 'Dips'] },
+        { model: 'Claude 4.5 Haiku', success: true, latency: 320, matchRate: 91, exercises: 6, title: 'Swift Push Blast', exerciseList: ['Bench Press', 'Shoulder Press', 'Incline Fly', 'Lateral Raise', 'Tricep Extension', 'Diamond Push-up'] },
+        { model: 'Gemini 2.5 Flash', success: true, latency: 450, matchRate: 93, exercises: 6, title: 'Flash Push Circuit', exerciseList: ['Dumbbell Press', 'Overhead Press', 'Cable Fly', 'Front Raise', 'Tricep Dips', 'Close-grip Bench'] },
+        { model: 'DeepSeek R1', success: true, latency: 1890, matchRate: 94, exercises: 8, title: 'Reasoned Push Power', exerciseList: ['Barbell Bench', 'Incline Press', 'Pec Deck', 'Arnold Press', 'Cable Lateral', 'Face Pull', 'Tricep Pushdown', 'Overhead Extension'] },
+        { model: 'Grok 4.1', success: true, latency: 380, matchRate: 89, exercises: 6, title: 'Grok Push Pump', exerciseList: ['Bench Press', 'Shoulder Press', 'Fly', 'Lateral Raise', 'Tricep Dip', 'Pushdown'] },
       ]
     },
     {
@@ -116,12 +116,12 @@ const mockBenchmarkData = {
       duration: 30,
       level: 'Beginner',
       results: [
-        { model: 'GPT-5', success: true, latency: 1020, matchRate: 100, exercises: 9, title: 'Complete Home Transformation' },
-        { model: 'Claude Sonnet 4', success: true, latency: 1280, matchRate: 100, exercises: 8, title: 'Bodyweight Mastery' },
-        { model: 'Claude 4.5 Haiku', success: true, latency: 290, matchRate: 95, exercises: 7, title: 'Quick Body Circuit' },
-        { model: 'Gemini 2.5 Flash', success: true, latency: 380, matchRate: 97, exercises: 7, title: 'Flash Bodyweight' },
-        { model: 'DeepSeek R1', success: true, latency: 2100, matchRate: 98, exercises: 9, title: 'Logical Full Body Flow' },
-        { model: 'Grok 4.1', success: true, latency: 350, matchRate: 92, exercises: 6, title: 'Grok Home Workout' },
+        { model: 'GPT-5', success: true, latency: 1020, matchRate: 100, exercises: 9, title: 'Complete Home Transformation', exerciseList: ['Push-up', 'Squat', 'Lunge', 'Band Row', 'Band Press', 'Plank', 'Mountain Climber', 'Glute Bridge', 'Band Pull-apart'] },
+        { model: 'Claude Sonnet 4', success: true, latency: 1280, matchRate: 100, exercises: 8, title: 'Bodyweight Mastery', exerciseList: ['Push-up', 'Bodyweight Squat', 'Walking Lunge', 'Band Row', 'Pike Push-up', 'Plank', 'Burpee', 'Hip Thrust'] },
+        { model: 'Claude 4.5 Haiku', success: true, latency: 290, matchRate: 95, exercises: 7, title: 'Quick Body Circuit', exerciseList: ['Push-up', 'Squat', 'Lunge', 'Band Row', 'Plank', 'Burpee', 'Mountain Climber'] },
+        { model: 'Gemini 2.5 Flash', success: true, latency: 380, matchRate: 97, exercises: 7, title: 'Flash Bodyweight', exerciseList: ['Push-up', 'Air Squat', 'Reverse Lunge', 'Band Pull', 'Plank Hold', 'Jumping Jack', 'Glute Bridge'] },
+        { model: 'DeepSeek R1', success: true, latency: 2100, matchRate: 98, exercises: 9, title: 'Logical Full Body Flow', exerciseList: ['Push-up Variations', 'Squat', 'Split Squat', 'Band Row', 'Band Press', 'Dead Bug', 'Bird Dog', 'Hip Thrust', 'Calf Raise'] },
+        { model: 'Grok 4.1', success: true, latency: 350, matchRate: 92, exercises: 6, title: 'Grok Home Workout', exerciseList: ['Push-up', 'Squat', 'Lunge', 'Band Row', 'Plank', 'Burpee'] },
       ]
     },
     {
@@ -131,12 +131,12 @@ const mockBenchmarkData = {
       duration: 60,
       level: 'Advanced',
       results: [
-        { model: 'GPT-5', success: true, latency: 1150, matchRate: 96, exercises: 9, title: 'Ultimate Leg Annihilation' },
-        { model: 'Claude Sonnet 4', success: true, latency: 1420, matchRate: 97, exercises: 10, title: 'Complete Lower Protocol' },
-        { model: 'Claude 4.5 Haiku', success: true, latency: 340, matchRate: 88, exercises: 6, title: 'Fast Leg Day' },
-        { model: 'Gemini 2.5 Flash', success: true, latency: 520, matchRate: 90, exercises: 7, title: 'Flash Leg Destroyer' },
-        { model: 'DeepSeek R1', success: true, latency: 2450, matchRate: 95, exercises: 9, title: 'Calculated Leg Gains' },
-        { model: 'Grok 4.1', success: false, latency: 4200, matchRate: 0, exercises: 0, title: null },
+        { model: 'GPT-5', success: true, latency: 1150, matchRate: 96, exercises: 9, title: 'Ultimate Leg Annihilation', exerciseList: ['Barbell Squat', 'Leg Press', 'Romanian Deadlift', 'Walking Lunge', 'Leg Curl', 'Leg Extension', 'Calf Raise', 'Hip Thrust', 'Cable Pull-through'] },
+        { model: 'Claude Sonnet 4', success: true, latency: 1420, matchRate: 97, exercises: 10, title: 'Complete Lower Protocol', exerciseList: ['Back Squat', 'Front Squat', 'Leg Press', 'RDL', 'Bulgarian Split Squat', 'Leg Curl', 'Leg Extension', 'Standing Calf', 'Seated Calf', 'Glute Kickback'] },
+        { model: 'Claude 4.5 Haiku', success: true, latency: 340, matchRate: 88, exercises: 6, title: 'Fast Leg Day', exerciseList: ['Squat', 'Leg Press', 'RDL', 'Lunge', 'Leg Curl', 'Calf Raise'] },
+        { model: 'Gemini 2.5 Flash', success: true, latency: 520, matchRate: 90, exercises: 7, title: 'Flash Leg Destroyer', exerciseList: ['Barbell Squat', 'Leg Press', 'Deadlift', 'Lunges', 'Hamstring Curl', 'Quad Extension', 'Calf Press'] },
+        { model: 'DeepSeek R1', success: true, latency: 2450, matchRate: 95, exercises: 9, title: 'Calculated Leg Gains', exerciseList: ['Back Squat', 'Hack Squat', 'Leg Press', 'Romanian DL', 'Walking Lunge', 'Lying Leg Curl', 'Leg Extension', 'Standing Calf', 'Seated Calf'] },
+        { model: 'Grok 4.1', success: false, latency: 4200, matchRate: 0, exercises: 0, title: null, exerciseList: [] },
       ]
     },
     {
@@ -146,12 +146,12 @@ const mockBenchmarkData = {
       duration: 50,
       level: 'Intermediate',
       results: [
-        { model: 'GPT-5', success: true, latency: 1050, matchRate: 97, exercises: 8, title: 'Complete Upper Sculpt' },
-        { model: 'Claude Sonnet 4', success: true, latency: 1220, matchRate: 98, exercises: 9, title: 'Upper Body Mastery' },
-        { model: 'Claude 4.5 Haiku', success: true, latency: 310, matchRate: 92, exercises: 6, title: 'Quick Upper Blast' },
-        { model: 'Gemini 2.5 Flash', success: true, latency: 420, matchRate: 94, exercises: 7, title: 'Flash Upper Circuit' },
-        { model: 'DeepSeek R1', success: true, latency: 2000, matchRate: 96, exercises: 8, title: 'Reasoned Upper Flow' },
-        { model: 'Grok 4.1', success: true, latency: 370, matchRate: 90, exercises: 6, title: 'Grok Upper Session' },
+        { model: 'GPT-5', success: true, latency: 1050, matchRate: 97, exercises: 8, title: 'Complete Upper Sculpt', exerciseList: ['Pull-up', 'Cable Row', 'Dumbbell Press', 'Lateral Raise', 'Cable Fly', 'Face Pull', 'Bicep Curl', 'Tricep Pushdown'] },
+        { model: 'Claude Sonnet 4', success: true, latency: 1220, matchRate: 98, exercises: 9, title: 'Upper Body Mastery', exerciseList: ['Weighted Pull-up', 'Cable Row', 'DB Bench', 'DB Shoulder Press', 'Cable Crossover', 'Rear Delt Fly', 'Hammer Curl', 'Rope Pushdown', 'Shrugs'] },
+        { model: 'Claude 4.5 Haiku', success: true, latency: 310, matchRate: 92, exercises: 6, title: 'Quick Upper Blast', exerciseList: ['Pull-up', 'Cable Row', 'DB Press', 'Lateral Raise', 'Curl', 'Pushdown'] },
+        { model: 'Gemini 2.5 Flash', success: true, latency: 420, matchRate: 94, exercises: 7, title: 'Flash Upper Circuit', exerciseList: ['Chin-up', 'Seated Row', 'Incline DB Press', 'Arnold Press', 'Cable Fly', 'Preacher Curl', 'Dips'] },
+        { model: 'DeepSeek R1', success: true, latency: 2000, matchRate: 96, exercises: 8, title: 'Reasoned Upper Flow', exerciseList: ['Pull-up', 'Cable Pulldown', 'Seated Row', 'DB Bench', 'Shoulder Press', 'Face Pull', 'EZ Curl', 'Overhead Extension'] },
+        { model: 'Grok 4.1', success: true, latency: 370, matchRate: 90, exercises: 6, title: 'Grok Upper Session', exerciseList: ['Pull-up', 'Row', 'Press', 'Raise', 'Curl', 'Extension'] },
       ]
     },
     {
@@ -161,12 +161,12 @@ const mockBenchmarkData = {
       duration: 70,
       level: 'Advanced',
       results: [
-        { model: 'GPT-5', success: true, latency: 1180, matchRate: 99, exercises: 10, title: 'Arnold Chest/Back Legacy' },
-        { model: 'Claude Sonnet 4', success: true, latency: 1350, matchRate: 98, exercises: 10, title: 'Classic Arnold Protocol' },
-        { model: 'Claude 4.5 Haiku', success: true, latency: 350, matchRate: 87, exercises: 7, title: 'Fast Arnold Day' },
-        { model: 'Gemini 2.5 Flash', success: true, latency: 480, matchRate: 91, exercises: 8, title: 'Flash Arnold Circuit' },
-        { model: 'DeepSeek R1', success: true, latency: 2300, matchRate: 97, exercises: 10, title: 'Calculated Arnold Gains' },
-        { model: 'Grok 4.1', success: true, latency: 400, matchRate: 88, exercises: 7, title: 'Grok Arnold Pump' },
+        { model: 'GPT-5', success: true, latency: 1180, matchRate: 99, exercises: 10, title: 'Arnold Chest/Back Legacy', exerciseList: ['Barbell Bench', 'Incline DB Press', 'Cable Fly', 'Bent Over Row', 'Lat Pulldown', 'Seated Row', 'DB Pullover', 'Face Pull', 'Shrugs', 'Back Extension'] },
+        { model: 'Claude Sonnet 4', success: true, latency: 1350, matchRate: 98, exercises: 10, title: 'Classic Arnold Protocol', exerciseList: ['Flat Bench', 'Incline Press', 'Pec Deck', 'Deadlift', 'Barbell Row', 'Cable Row', 'Pull-up', 'Straight Arm Pulldown', 'Rear Delt', 'Hyperextension'] },
+        { model: 'Claude 4.5 Haiku', success: true, latency: 350, matchRate: 87, exercises: 7, title: 'Fast Arnold Day', exerciseList: ['Bench Press', 'Incline Press', 'Fly', 'Barbell Row', 'Pulldown', 'Seated Row', 'Shrugs'] },
+        { model: 'Gemini 2.5 Flash', success: true, latency: 480, matchRate: 91, exercises: 8, title: 'Flash Arnold Circuit', exerciseList: ['BB Bench', 'DB Incline', 'Cable Cross', 'Pendlay Row', 'Wide Pulldown', 'Cable Row', 'DB Pullover', 'Rear Fly'] },
+        { model: 'DeepSeek R1', success: true, latency: 2300, matchRate: 97, exercises: 10, title: 'Calculated Arnold Gains', exerciseList: ['Bench Press', 'Incline DB', 'Low Cable Fly', 'T-Bar Row', 'Lat Pulldown', 'One-Arm Row', 'Cable Pullover', 'Face Pull', 'Trap Raise', 'Back Raise'] },
+        { model: 'Grok 4.1', success: true, latency: 400, matchRate: 88, exercises: 7, title: 'Grok Arnold Pump', exerciseList: ['Bench', 'Incline', 'Fly', 'Row', 'Pulldown', 'Cable Row', 'Shrugs'] },
       ]
     },
     {
@@ -176,12 +176,12 @@ const mockBenchmarkData = {
       duration: 45,
       level: 'Intermediate',
       results: [
-        { model: 'GPT-5', success: true, latency: 920, matchRate: 100, exercises: 8, title: 'Ultimate Arm Blaster' },
-        { model: 'Claude Sonnet 4', success: true, latency: 1100, matchRate: 100, exercises: 8, title: 'Complete Arm Protocol' },
-        { model: 'Claude 4.5 Haiku', success: true, latency: 280, matchRate: 96, exercises: 6, title: 'Quick Arm Pump' },
-        { model: 'Gemini 2.5 Flash', success: true, latency: 390, matchRate: 98, exercises: 7, title: 'Flash Arm Destroyer' },
-        { model: 'DeepSeek R1', success: true, latency: 1850, matchRate: 99, exercises: 8, title: 'Reasoned Arm Growth' },
-        { model: 'Grok 4.1', success: true, latency: 340, matchRate: 94, exercises: 6, title: 'Grok Arm Session' },
+        { model: 'GPT-5', success: true, latency: 920, matchRate: 100, exercises: 8, title: 'Ultimate Arm Blaster', exerciseList: ['EZ Bar Curl', 'DB Hammer Curl', 'Cable Curl', 'Preacher Curl', 'Rope Pushdown', 'Overhead Extension', 'Kickback', 'Close-grip Press'] },
+        { model: 'Claude Sonnet 4', success: true, latency: 1100, matchRate: 100, exercises: 8, title: 'Complete Arm Protocol', exerciseList: ['Barbell Curl', 'Incline DB Curl', 'Cable Rope Curl', 'Concentration Curl', 'Skull Crusher', 'Rope Pushdown', 'Overhead Cable', 'Diamond Push-up'] },
+        { model: 'Claude 4.5 Haiku', success: true, latency: 280, matchRate: 96, exercises: 6, title: 'Quick Arm Pump', exerciseList: ['EZ Curl', 'Hammer Curl', 'Cable Curl', 'Pushdown', 'Overhead Ext', 'Dips'] },
+        { model: 'Gemini 2.5 Flash', success: true, latency: 390, matchRate: 98, exercises: 7, title: 'Flash Arm Destroyer', exerciseList: ['Standing Curl', 'Hammer Curl', 'High Cable Curl', 'V-Bar Pushdown', 'Skull Crusher', 'Kickback', 'Dip'] },
+        { model: 'DeepSeek R1', success: true, latency: 1850, matchRate: 99, exercises: 8, title: 'Reasoned Arm Growth', exerciseList: ['EZ Bar Curl', 'Alternating DB Curl', 'Cable Preacher', 'Spider Curl', 'Close-Grip Bench', 'Rope Pushdown', 'DB Overhead', 'Cable Kickback'] },
+        { model: 'Grok 4.1', success: true, latency: 340, matchRate: 94, exercises: 6, title: 'Grok Arm Session', exerciseList: ['Curl', 'Hammer', 'Cable Curl', 'Pushdown', 'Extension', 'Dip'] },
       ]
     }
   ]
@@ -430,13 +430,21 @@ export function LLMBenchmark() {
             </CardHeader>
             <CardContent>
               {result.success ? (
-                <div className="space-y-2">
+                <div className="space-y-3">
                   <p className="font-medium text-zinc-800">"{result.title}"</p>
                   <div className="flex flex-wrap gap-2 text-xs">
                     <Badge variant="secondary">{result.latency}ms</Badge>
                     <Badge variant="secondary">{result.matchRate}% match</Badge>
                     <Badge variant="secondary">{result.exercises} exercises</Badge>
                   </div>
+                  {result.exerciseList?.length > 0 && (
+                    <div className="pt-2 border-t border-zinc-200">
+                      <p className="text-xs text-zinc-500 mb-1">Exercises:</p>
+                      <p className="text-xs text-zinc-700 leading-relaxed">
+                        {result.exerciseList.join(' • ')}
+                      </p>
+                    </div>
+                  )}
                 </div>
               ) : (
                 <p className="text-red-500 text-sm">Failed to generate workout</p>

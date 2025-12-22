@@ -8,18 +8,19 @@ const exercises = {
     name: 'Alternate Heel Touchers',
     versions: {
       'v3': {
-        label: 'v3 (Dec 2025 - 9 Models)',
+        label: 'v3 (Dec 2025 - 10 Models)',
         models: [
           { id: 'original', name: 'Original GIF', file: '/comparison/0025-original.gif', type: 'gif', cost: '-', time: '-', tier: 'source' },
           // Budget Tier ($0.04-0.05/sec)
           { id: 'ltx2-fast', name: 'LTX-2 Fast', file: '/comparison/0025-ltx2-fast.mp4', type: 'video', cost: '$0.20', time: '40s', tier: 'budget' },
           { id: 'pixverse', name: 'PixVerse v5.5', file: '/comparison/0025-pixverse.mp4', type: 'video', cost: '$0.20', time: '65s', tier: 'budget' },
           { id: 'kling21-std', name: 'Kling 2.1 Std', file: '/comparison/0025-kling21-std.mp4', type: 'video', cost: '$0.25', time: '76s', tier: 'budget' },
-          // Mid Tier ($0.07-0.09/sec)
+          // Mid Tier ($0.07-0.10/sec)
           { id: 'kling26-pro', name: 'Kling 2.6 Pro', file: '/comparison/0025-kling26-pro.mp4', type: 'video', cost: '$0.35', time: '77s', tier: 'mid', recommended: true },
           { id: 'kling25-turbo', name: 'Kling 2.5 Turbo', file: '/comparison/0025-kling25-turbo.mp4', type: 'video', cost: '$0.35', time: '71s', tier: 'mid' },
           { id: 'hunyuan', name: 'Hunyuan 1.5', file: '/comparison/0025-hunyuan.mp4', type: 'video', cost: '$0.38', time: '260s', tier: 'mid' },
           { id: 'kling21-pro', name: 'Kling 2.1 Pro', file: '/comparison/0025-kling21-pro.mp4', type: 'video', cost: '$0.45', time: '88s', tier: 'mid' },
+          { id: 'wan25', name: 'Wan 2.5', file: '/comparison/0025-wan25.mp4', type: 'video', cost: '$0.50', time: '68s', tier: 'mid' },
           // Premium Tier ($0.20+/sec)
           { id: 'veo31', name: 'Veo 3.1 (Google)', file: '/comparison/0025-veo31.mp4', type: 'video', cost: '$1.00', time: '46s', tier: 'premium' },
           { id: 'kling20-master', name: 'Kling 2.0 Master', file: '/comparison/0025-kling20-master.mp4', type: 'video', cost: '$1.40', time: '203s', tier: 'premium' },
@@ -69,7 +70,7 @@ export function VideoComparison() {
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold">Video Model Benchmark (Dec 2025)</h2>
-        <p className="text-zinc-500 mt-1">9 fal.ai models compared for exercise GIF styling</p>
+        <p className="text-zinc-500 mt-1">10 fal.ai models compared for exercise GIF styling</p>
       </div>
 
       {/* Version Selector */}
