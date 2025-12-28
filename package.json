@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "benchmark": "node benchmark-orchestrator.mjs",
+    "benchmark:single": "node benchmark-single-model.mjs",
+    "benchmark:combine": "node benchmark-combiner.mjs",
+    "benchmark:legacy": "node benchmark-workout-llms-v2.mjs"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.18",
@@ -16,6 +20,7 @@
     "lucide-react": "^0.562.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-router-dom": "^7.11.0",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {

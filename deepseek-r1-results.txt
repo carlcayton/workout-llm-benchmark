@@ -1,0 +1,152 @@
+Single Model Benchmark: DeepSeek R1
+============================================================
+Model ID: deepseek/deepseek-r1
+Tier: reasoning
+Scenarios: 26
+============================================================
+
+[1/26] Bro Split - Bodybuilding (Chest)
+  Category: undefined | Style: undefined
+  Calling edge function... API Error
+  HTTP 546: {"code":"WORKER_LIMIT","message":"Function failed due to not having en
+
+[2/26] Bro Split - Bodybuilding (Back)
+  Category: undefined | Style: undefined
+  Calling edge function... API Error
+  HTTP 546: {"code":"WORKER_LIMIT","message":"Function failed due to not having en
+
+[3/26] Bro Split - Bodybuilding (Shoulders)
+  Category: undefined | Style: undefined
+  Calling edge function... OK 129976ms
+  Exercises: 6 | Equip: 0% | Sets: 4 | Reps: 10 | Rest: 60s
+
+[4/26] PPL - Bodybuilding (Legs)
+  Category: undefined | Style: undefined
+  Calling edge function... API Error
+  HTTP 546: {"code":"WORKER_LIMIT","message":"Function failed due to not having en
+
+[5/26] Upper/Lower - Strength (Upper)
+  Category: undefined | Style: undefined
+  Calling edge function... API Error
+  HTTP 504: 
+
+[6/26] Upper/Lower - Strength (Lower)
+  Category: undefined | Style: undefined
+  Calling edge function... API Error
+  HTTP 546: {"code":"WORKER_LIMIT","message":"Function failed due to not having en
+
+[7/26] Full Body - Strength
+  Category: undefined | Style: undefined
+  Calling edge function... OK 100225ms
+  Exercises: 8 | Equip: 0% | Sets: 5 | Reps: 4 | Rest: 180s
+
+[8/26] Upper/Lower - HIT (Upper)
+  Category: undefined | Style: undefined
+  Calling edge function... API Error
+  HTTP 546: {"code":"WORKER_LIMIT","message":"Function failed due to not having en
+
+[9/26] Full Body - HIT
+  Category: undefined | Style: undefined
+  Calling edge function... API Error
+  HTTP 504: 
+
+[10/26] Upper/Lower - HIT (Lower)
+  Category: undefined | Style: undefined
+  Calling edge function... OK 143737ms
+  Exercises: 3 | Equip: 0% | Sets: 2 | Reps: 8 | Rest: 120s
+
+[11/26] Full Body - Endurance
+  Category: undefined | Style: undefined
+  Calling edge function... API Error
+  HTTP 546: {"code":"WORKER_LIMIT","message":"Function failed due to not having en
+
+[12/26] Upper/Lower - Endurance (Upper)
+  Category: undefined | Style: undefined
+  Calling edge function... API Error
+  HTTP 504: 
+
+[13/26] Full Body - Endurance (Conditioning)
+  Category: undefined | Style: undefined
+  Calling edge function... API Error
+  HTTP 504: 
+
+[14/26] Upper/Lower - Bodybuilding (Dumbbells)
+  Category: undefined | Style: undefined
+  Calling edge function... API Error
+  HTTP 546: {"code":"WORKER_LIMIT","message":"Function failed due to not having en
+
+[15/26] Upper/Lower - Endurance (Bodyweight)
+  Category: undefined | Style: undefined
+  Calling edge function... API Error
+  HTTP 504: 
+
+[16/26] Full Body - Endurance (Bands)
+  Category: undefined | Style: undefined
+  Calling edge function... API Error
+  HTTP 546: {"code":"WORKER_LIMIT","message":"Function failed due to not having en
+
+[17/26] Full Body - Strength (Kettlebell)
+  Category: undefined | Style: undefined
+  Calling edge function... OK 1624ms
+  Exercises: 5 | Equip: 0% | Sets: 5 | Reps: 5 | Rest: 180s
+
+[18/26] Full Body - Bodybuilding (Beginner)
+  Category: undefined | Style: undefined
+  Calling edge function... OK 1249ms
+  Exercises: 6 | Equip: 0% | Sets: 4 | Reps: 10 | Rest: 60s
+
+[19/26] Upper/Lower - Bodybuilding (Beginner)
+  Category: undefined | Style: undefined
+  Calling edge function... OK 1308ms
+  Exercises: 5 | Equip: 0% | Sets: 4 | Reps: 10 | Rest: 60s
+
+[20/26] PPL - Bodybuilding (Push)
+  Category: undefined | Style: undefined
+  Calling edge function... OK 1439ms
+  Exercises: 8 | Equip: 0% | Sets: 4 | Reps: 10 | Rest: 60s
+
+[21/26] PPL - Bodybuilding (Pull)
+  Category: undefined | Style: undefined
+  Calling edge function... OK 1536ms
+  Exercises: 8 | Equip: 0% | Sets: 4 | Reps: 10 | Rest: 60s
+
+[22/26] PPL - Strength + Bodybuilding (Push)
+  Category: undefined | Style: undefined
+  Calling edge function... OK 1348ms
+  Exercises: 8 | Equip: 0% | Sets: 4.4 | Reps: 10 | Rest: 105s
+
+[23/26] Upper/Lower - HIT + Bodybuilding (Upper)
+  Category: undefined | Style: undefined
+  Calling edge function... OK 1393ms
+  Exercises: 5 | Equip: 0% | Sets: 3.2 | Reps: 10 | Rest: 84s
+
+[24/26] Full Body - Strength + Endurance
+  Category: undefined | Style: undefined
+  Calling edge function... OK 1672ms
+  Exercises: 9 | Equip: 0% | Sets: 3.7 | Reps: 20 | Rest: 80s
+
+[25/26] Arnold Split - Bodybuilding (Chest/Back)
+  Category: undefined | Style: undefined
+  Calling edge function... OK 1662ms
+  Exercises: 8 | Equip: 0% | Sets: 4 | Reps: 10 | Rest: 60s
+
+[26/26] Arnold Split - Bodybuilding (Shoulders/Arms)
+  Category: undefined | Style: undefined
+  Calling edge function... OK 1251ms
+  Exercises: 8 | Equip: 0% | Sets: 4 | Reps: 10 | Rest: 60s
+
+============================================================
+BENCHMARK COMPLETE
+============================================================
+Model: DeepSeek R1 (deepseek/deepseek-r1)
+Success Rate: 50% (13/26)
+Parse Errors: 0
+API Errors: 13
+Avg Latency: 29878ms
+Avg Exercises: 6.7
+Avg Equipment Match: 0%
+Avg Sets: 3.9
+Avg Reps: 10
+Avg Rest: 90s
+============================================================
+Results saved to: /home/arian/expo-work/showcase/benchmark-results/model-deepseek-deepseek-r1-2025-12-28T18-42-12-036Z.json

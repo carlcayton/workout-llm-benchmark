@@ -2,254 +2,288 @@
 /**
  * Transform benchmark results from model-based to scenario-based format
  * for the UI component
+ *
+ * Fetches exercise names dynamically from Supabase database
  */
 
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { TEST_SCENARIOS } from './benchmark-shared.mjs';
 
-// Exercise ID to name mapping (from ExerciseDB)
-const EXERCISE_NAMES = {
-  // CHEST
-  '0025': 'dumbbell bench press',
-  '0047': 'barbell bench press',
-  '0251': 'push-up',
-  '1254': 'cable crossover',
-  '0289': 'dumbbell fly',
-  '0048': 'incline barbell bench press',
-  '0026': 'incline dumbbell bench press',
-  '0290': 'incline dumbbell fly',
-  '1255': 'machine chest press',
-  '1256': 'pec deck fly',
-  '0252': 'decline push-up',
-  // BACK
-  '0027': 'barbell bent over row',
-  '0294': 'dumbbell row',
-  '0651': 'pull-up',
-  '0160': 'lat pulldown',
-  '0293': 'dumbbell pullover',
-  '0652': 'chin-up',
-  '0161': 'seated cable row',
-  '0162': 'cable face pull',
-  '0028': 'barbell deadlift',
-  '1257': 'machine row',
-  '0653': 'inverted row',
-  '0029': 't-bar row',
-  // SHOULDERS
-  '0237': 'dumbbell shoulder press',
-  '0036': 'barbell overhead press',
-  '0308': 'dumbbell lateral raise',
-  '0518': 'cable lateral raise',
-  '0309': 'dumbbell front raise',
-  '0310': 'dumbbell rear delt fly',
-  '0037': 'barbell upright row',
-  '1258': 'machine shoulder press',
-  '0253': 'pike push-up',
-  '0311': 'arnold press',
-  // BICEPS
-  '0100': 'barbell curl',
-  '0101': 'dumbbell curl',
-  '0102': 'hammer curl',
-  '0103': 'cable curl',
-  '0104': 'preacher curl',
-  '0105': 'concentration curl',
-  '0106': 'incline dumbbell curl',
-  // TRICEPS
-  '0200': 'tricep pushdown',
-  '0201': 'skull crusher',
-  '0202': 'overhead tricep extension',
-  '0203': 'close grip bench press',
-  '0254': 'diamond push-up',
-  '0255': 'bench dips',
-  '0204': 'tricep kickback',
-  // LEGS - QUADS
-  '0032': 'barbell squat',
-  '0278': 'dumbbell lunge',
-  '0584': 'leg press',
-  '0585': 'leg extension',
-  '0654': 'bodyweight squat',
-  '0655': 'lunge',
-  '0279': 'goblet squat',
-  '0033': 'front squat',
-  '0280': 'bulgarian split squat',
-  '1259': 'hack squat',
-  '0034': 'smith machine squat',
-  // LEGS - HAMSTRINGS
-  '0038': 'romanian deadlift',
-  '0586': 'leg curl',
-  '0281': 'dumbbell romanian deadlift',
-  '0282': 'single leg deadlift',
-  '0656': 'nordic curl',
-  '0587': 'seated leg curl',
-  '0039': 'stiff leg deadlift',
-  '0163': 'cable pull through',
-  // LEGS - GLUTES
-  '0526': 'hip thrust',
-  '0657': 'glute bridge',
-  '0658': 'single leg glute bridge',
-  '0164': 'cable kickback',
-  '1260': 'hip abduction machine',
-  '0283': 'dumbbell step up',
-  // CALVES
-  '0600': 'standing calf raise',
-  '0601': 'seated calf raise',
-  '0602': 'dumbbell calf raise',
-  '0659': 'bodyweight calf raise',
-  '0040': 'barbell calf raise',
-  // ABS
-  '0400': 'crunch',
-  '0401': 'plank',
-  '0402': 'hanging leg raise',
-  '0403': 'russian twist',
-  '0404': 'bicycle crunch',
-  '0165': 'cable crunch',
-  '0405': 'mountain climber',
-  '0406': 'dead bug',
-  '1261': 'ab wheel rollout',
-  '0284': 'weighted crunch',
-  // KETTLEBELL
-  '0527': 'kettlebell swing',
-  '0528': 'kettlebell goblet squat',
-  '0529': 'kettlebell clean and press',
-  '0530': 'kettlebell row',
-  '0531': 'kettlebell floor press',
-  '0532': 'kettlebell snatch',
-  '0533': 'kettlebell turkish get up',
-  '0534': 'kettlebell lunge',
-  '0535': 'kettlebell windmill',
-  // RESISTANCE BANDS
-  '0701': 'resistance band row',
-  '0702': 'resistance band chest press',
-  '0703': 'resistance band squat',
-  '0704': 'resistance band bicep curl',
-  '0705': 'resistance band tricep extension',
-  '0706': 'resistance band lateral raise',
-  '0707': 'resistance band pull apart',
-  '0708': 'resistance band face pull',
-  '0709': 'resistance band glute bridge',
-  '0710': 'resistance band clamshell',
-  // CARDIO
-  '0800': 'burpee',
-  '0801': 'jumping jack',
-  '0802': 'high knees',
-  '0803': 'box jump',
-  '0804': 'battle ropes',
-  '0805': 'rowing machine',
-  '0806': 'assault bike',
-};
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// Build scenario name -> equipment mapping from TEST_SCENARIOS
+const SCENARIO_EQUIPMENT_MAP = {};
+for (const scenario of TEST_SCENARIOS) {
+  SCENARIO_EQUIPMENT_MAP[scenario.name] = scenario.request?.equipment || [];
+}
+
+// Supabase config
+const SUPABASE_URL = 'https://ivfllbccljoyaayftecd.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2ZmxsYmNjbGpveWFheWZ0ZWNkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYxMTkwMTQsImV4cCI6MjA4MTY5NTAxNH0.714kFWsFFKwVAywLY5NOyZz2_eMoi7-Js8JGCwtpycs';
+const GIF_BASE_URL = `${SUPABASE_URL}/storage/v1/object/public/exercise-gifs`;
+
+// Cache for exercise names (loaded from Supabase)
+let exerciseNamesCache = null;
+
+/**
+ * Fetch all exercise names from Supabase database
+ */
+async function fetchExerciseNames() {
+  if (exerciseNamesCache) return exerciseNamesCache;
+
+  console.log('Fetching exercise names from Supabase...');
+
+  const response = await fetch(`${SUPABASE_URL}/rest/v1/exercises?select=id,name`, {
+    headers: {
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch exercises: ${response.status}`);
+  }
+
+  const exercises = await response.json();
+
+  // Build ID -> name mapping
+  exerciseNamesCache = {};
+  for (const ex of exercises) {
+    exerciseNamesCache[ex.id] = ex.name;
+  }
+
+  console.log(`Loaded ${Object.keys(exerciseNamesCache).length} exercise names from database`);
+  return exerciseNamesCache;
+}
 
 // Helper to get exercise name with title case
-function getExerciseName(id) {
-  const name = EXERCISE_NAMES[id];
+function getExerciseName(id, exerciseNames) {
+  const name = exerciseNames[id];
   if (!name) return `Unknown Exercise (${id})`;
   // Title case the name
   return name.replace(/\b\w/g, c => c.toUpperCase());
 }
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const resultsDir = path.join(__dirname, 'benchmark-results');
-
-const files = fs.readdirSync(resultsDir)
-  .filter(f => f.startsWith('model-') && f.endsWith('.json'))
-  .sort((a, b) => b.localeCompare(a));
-
-const latestByModel = {};
-for (const file of files) {
-  try {
-    const data = JSON.parse(fs.readFileSync(path.join(resultsDir, file), 'utf8'));
-    const modelId = data.modelId;
-    if (!latestByModel[modelId]) {
-      latestByModel[modelId] = data;
+// Helper to convert rep ranges like "8-12" to a single numeric value (midpoint)
+function parseRepsToNumber(reps) {
+  if (typeof reps === 'number') return reps;
+  if (typeof reps === 'string') {
+    const match = reps.match(/(\d+)-(\d+)/);
+    if (match) {
+      return Math.round((parseInt(match[1]) + parseInt(match[2])) / 2);
     }
-  } catch (e) {
-    console.error('Error parsing', file, e.message);
+    return parseInt(reps) || 10;
   }
+  return 10;
 }
 
-console.log('Found', Object.keys(latestByModel).length, 'unique models');
+// Split name mappings
+const SPLIT_NAMES = {
+  'full_body': 'Full Body',
+  'upper_lower': 'Upper/Lower',
+  'push_pull_legs': 'Push Pull Legs',
+  'arnold_split': 'Arnold Split',
+  'bro_split': 'Bro Split',
+};
 
-// Pivot: group by scenario name, collect results from each model
-const scenarioMap = {};
+// Training style name mappings
+const STYLE_NAMES = {
+  'BODYBUILD': 'Bodybuilding',
+  'STRENGTH': 'Strength',
+  'HIT': 'High Intensity',
+  'ENDURANCE': 'Endurance',
+  'classic_bodybuilding': 'Bodybuilding',
+  'strength_focused': 'Strength',
+  'high_intensity_hit': 'High Intensity',
+  'muscular_endurance': 'Endurance',
+};
 
-for (const [modelId, modelData] of Object.entries(latestByModel)) {
-  for (const scenario of modelData.scenarios) {
-    if (!scenarioMap[scenario.name]) {
-      scenarioMap[scenario.name] = {
-        name: scenario.name,
-        category: scenario.category,
-        trainingStyle: scenario.trainingStyle,
-        results: []
-      };
+// Old scenario name -> new format mapping (for backwards compat)
+const OLD_NAME_MAPPINGS = {
+  // Bro Split
+  'Bro Split - Chest Day': { split: 'bro_split', styles: ['classic_bodybuilding'], dayFocus: 'Chest' },
+  'Bro Split - Back Day': { split: 'bro_split', styles: ['classic_bodybuilding'], dayFocus: 'Back' },
+  'Bro Split - Shoulders': { split: 'bro_split', styles: ['classic_bodybuilding'], dayFocus: 'Shoulders' },
+  // PPL
+  'PPL - Push Day': { split: 'push_pull_legs', styles: ['classic_bodybuilding'], dayFocus: 'Push' },
+  'PPL - Pull Day': { split: 'push_pull_legs', styles: ['classic_bodybuilding'], dayFocus: 'Pull' },
+  'PPL - Legs': { split: 'push_pull_legs', styles: ['classic_bodybuilding'], dayFocus: 'Legs' },
+  'PPL - Strength Push': { split: 'push_pull_legs', styles: ['strength_focused'], dayFocus: 'Push' },
+  // Upper/Lower
+  'Upper/Lower - Upper Strength': { split: 'upper_lower', styles: ['strength_focused'], dayFocus: 'Upper' },
+  'Upper/Lower - Lower Strength': { split: 'upper_lower', styles: ['strength_focused'], dayFocus: 'Lower' },
+  'Upper/Lower - Upper Hypertrophy': { split: 'upper_lower', styles: ['classic_bodybuilding'], dayFocus: 'Upper' },
+  'Upper/Lower - Lower Hypertrophy': { split: 'upper_lower', styles: ['classic_bodybuilding'], dayFocus: 'Lower' },
+  'Upper/Lower - Upper HIT': { split: 'upper_lower', styles: ['high_intensity_hit'], dayFocus: 'Upper' },
+  'Upper/Lower - Lower HIT': { split: 'upper_lower', styles: ['high_intensity_hit'], dayFocus: 'Lower' },
+  'Upper/Lower - Hybrid': { split: 'upper_lower', styles: ['strength_focused', 'classic_bodybuilding'], dayFocus: 'Upper' },
+  // Full Body
+  'Full Body - Strength': { split: 'full_body', styles: ['strength_focused'], dayFocus: 'Full Body' },
+  'Full Body - Bodybuilding': { split: 'full_body', styles: ['classic_bodybuilding'], dayFocus: 'Full Body' },
+  'Full Body - HIT': { split: 'full_body', styles: ['high_intensity_hit'], dayFocus: 'Full Body' },
+  'Full Body - Endurance': { split: 'full_body', styles: ['muscular_endurance'], dayFocus: 'Full Body' },
+  'Full Body - Hybrid S+B': { split: 'full_body', styles: ['strength_focused', 'classic_bodybuilding'], dayFocus: 'Full Body' },
+  // Arnold Split
+  'Arnold Split - Chest/Back': { split: 'arnold_split', styles: ['classic_bodybuilding'], dayFocus: 'Chest/Back' },
+  'Arnold Split - Shoulders/Arms': { split: 'arnold_split', styles: ['classic_bodybuilding'], dayFocus: 'Shoulders/Arms' },
+};
+
+// Build clean scenario name from split + training styles + day focus
+function buildScenarioName(scenario) {
+  let split = scenario.split;
+  let styles = scenario.trainingStyles || [];
+  let dayFocus = scenario.dayFocus || '';
+
+  // If missing, try to extract from old name mappings
+  if (!split && OLD_NAME_MAPPINGS[scenario.name]) {
+    const mapping = OLD_NAME_MAPPINGS[scenario.name];
+    split = mapping.split;
+    styles = mapping.styles;
+    dayFocus = mapping.dayFocus;
+  }
+
+  // Format split name
+  const splitName = SPLIT_NAMES[split] || split || '';
+
+  // Format training styles
+  const styleNames = styles.map(s => STYLE_NAMES[s] || s).join(' + ');
+
+  // Build name: "{Split} - {Training Style(s)} ({Day Focus})" or simpler variants
+  if (splitName && styleNames && dayFocus && dayFocus !== 'Full Body') {
+    return `${splitName} - ${styleNames} (${dayFocus})`;
+  } else if (splitName && styleNames) {
+    return `${splitName} - ${styleNames}`;
+  }
+
+  // Fallback to original name
+  return scenario.name;
+}
+
+async function main() {
+  // Fetch exercise names from Supabase
+  const exerciseNames = await fetchExerciseNames();
+
+  const resultsDir = path.join(__dirname, 'benchmark-results');
+
+  const files = fs.readdirSync(resultsDir)
+    .filter(f => f.startsWith('model-') && f.endsWith('.json'))
+    .sort((a, b) => b.localeCompare(a));
+
+  const latestByModel = {};
+  for (const file of files) {
+    try {
+      const data = JSON.parse(fs.readFileSync(path.join(resultsDir, file), 'utf8'));
+      const modelId = data.modelId;
+      if (!latestByModel[modelId]) {
+        latestByModel[modelId] = data;
+      }
+    } catch (e) {
+      console.error('Error parsing', file, e.message);
     }
+  }
 
-    // Extract exercises from workout sections
-    let exercises = [];
-    if (scenario.workout?.sections) {
-      exercises = scenario.workout.sections.flatMap(s =>
-        s.exercises.map(e => ({
-          name: getExerciseName(e.id),
+  console.log('Found', Object.keys(latestByModel).length, 'unique models');
+
+  // Pivot: group by scenario name, collect results from each model
+  const scenarioMap = {};
+  const modelStats = {};
+
+  for (const [modelId, modelData] of Object.entries(latestByModel)) {
+    for (const scenario of modelData.scenarios) {
+      // Build clean name from split + training styles
+      const cleanName = buildScenarioName(scenario);
+
+      if (!scenarioMap[cleanName]) {
+        const scenarioEntry = {
+          name: cleanName,
+          duration: scenario.workout?.estimatedDuration || 60,
+          equipment: scenario.equipment || scenario.request?.equipment || SCENARIO_EQUIPMENT_MAP[scenario.name] || [],
+          results: []
+        };
+
+        if (scenario.split !== undefined) scenarioEntry.split = scenario.split;
+        if (scenario.dayFocus !== undefined) scenarioEntry.dayFocus = scenario.dayFocus;
+        if (scenario.trainingStyles !== undefined) scenarioEntry.trainingStyles = scenario.trainingStyles;
+        if (scenario.split === undefined && scenario.category !== undefined) scenarioEntry.category = scenario.category;
+        if (scenario.trainingStyles === undefined && scenario.trainingStyle !== undefined) scenarioEntry.trainingStyle = scenario.trainingStyle;
+
+        scenarioMap[cleanName] = scenarioEntry;
+      }
+
+      // Extract exercises from workout sections
+      let exercises = [];
+      if (scenario.workout?.sections) {
+        exercises = scenario.workout.sections.flatMap(s =>
+          s.exercises.map(e => ({
+            name: getExerciseName(e.id, exerciseNames),
+            id: e.id,
+            sets: e.sets,
+            reps: parseRepsToNumber(e.reps),
+            rest: e.restSeconds || 60,
+            gifUrl: `${GIF_BASE_URL}/${e.id}.gif`
+          }))
+        );
+      } else if (scenario.workout?.exercises) {
+        exercises = scenario.workout.exercises.map(e => ({
+          name: getExerciseName(e.id, exerciseNames),
           id: e.id,
           sets: e.sets,
-          reps: e.reps,
-          rest: e.restSeconds || 60
-        }))
-      );
+          reps: parseRepsToNumber(e.reps),
+          rest: e.restSeconds || 60,
+          gifUrl: `${GIF_BASE_URL}/${e.id}.gif`
+        }));
+      }
+
+      scenarioMap[cleanName].results.push({
+        model: modelData.modelName,
+        modelId: modelData.modelId,
+        status: scenario.success ? 'success' : 'error',
+        latency: scenario.latency,
+        equipmentMatch: scenario.equipmentMatchRate,
+        exerciseCount: scenario.exerciseCount,
+        avgSets: scenario.avgSets,
+        avgReps: parseRepsToNumber(scenario.avgReps),
+        avgRest: scenario.avgRest,
+        error: scenario.error || null,
+        exercises,
+      });
     }
 
-    scenarioMap[scenario.name].results.push({
-      model: modelData.modelName,
-      modelId: modelId,
-      status: scenario.success ? 'success' : 'error',
-      latency: scenario.latency,
-      equipmentMatch: scenario.equipmentMatchRate,
-      exerciseCount: scenario.exerciseCount,
-      avgSets: scenario.avgSets,
-      avgReps: scenario.avgReps,
-      avgRest: scenario.avgRest,
-      error: scenario.error,
-      exercises: exercises
-    });
+    // Collect model stats
+    modelStats[modelId] = {
+      modelId: modelData.modelId,
+      modelName: modelData.modelName,
+      tier: modelData.tier,
+      successRate: modelData.summary.successRate,
+      avgLatency: modelData.summary.avgLatency,
+      avgExerciseCount: modelData.summary.avgExerciseCount,
+      avgEquipmentMatchRate: modelData.summary.avgEquipmentMatchRate,
+      successCount: modelData.summary.successCount,
+      parseErrorCount: modelData.summary.parseErrorCount
+    };
   }
-}
 
-// Sort results within each scenario by success rate and latency
-for (const scenario of Object.values(scenarioMap)) {
-  scenario.results.sort((a, b) => {
-    if (a.status === 'success' && b.status !== 'success') return -1;
-    if (a.status !== 'success' && b.status === 'success') return 1;
-    return a.latency - b.latency;
+  const combined = {
+    timestamp: new Date().toISOString(),
+    modelStats: Object.values(modelStats).sort((a, b) => b.successRate - a.successRate || a.avgLatency - b.avgLatency),
+    scenarios: Object.values(scenarioMap)
+  };
+
+  const outputPath = path.join(__dirname, 'public', 'benchmark-data.json');
+  fs.writeFileSync(outputPath, JSON.stringify(combined, null, 2));
+
+  console.log('Wrote', outputPath);
+  console.log('Scenarios:', combined.scenarios.length);
+  console.log('Models:', combined.modelStats.length);
+  console.log('\nModel Rankings:');
+  combined.modelStats.forEach((m, i) => {
+    console.log(`  ${i+1}. ${m.modelName}: ${m.successRate}% success, ${m.avgLatency}ms avg`);
   });
 }
 
-// Create model summary stats
-const modelStats = {};
-for (const [modelId, modelData] of Object.entries(latestByModel)) {
-  modelStats[modelData.modelName] = {
-    modelId,
-    modelName: modelData.modelName,
-    tier: modelData.tier,
-    successRate: modelData.summary.successRate,
-    avgLatency: modelData.summary.avgLatency,
-    avgExerciseCount: modelData.summary.avgExerciseCount,
-    avgEquipmentMatchRate: modelData.summary.avgEquipmentMatchRate,
-    successCount: modelData.summary.successCount,
-    parseErrorCount: modelData.summary.parseErrorCount
-  };
-}
-
-const combined = {
-  timestamp: new Date().toISOString(),
-  modelStats: Object.values(modelStats).sort((a, b) => b.successRate - a.successRate || a.avgLatency - b.avgLatency),
-  scenarios: Object.values(scenarioMap)
-};
-
-const outputPath = path.join(__dirname, 'public', 'benchmark-data.json');
-fs.writeFileSync(outputPath, JSON.stringify(combined, null, 2));
-
-console.log('Wrote', outputPath);
-console.log('Scenarios:', combined.scenarios.length);
-console.log('Models:', combined.modelStats.length);
-console.log('\nModel Rankings:');
-combined.modelStats.forEach((m, i) => {
-  console.log(`  ${i+1}. ${m.modelName}: ${m.successRate}% success, ${m.avgLatency}ms avg`);
+main().catch(err => {
+  console.error('Transform failed:', err);
+  process.exit(1);
 });

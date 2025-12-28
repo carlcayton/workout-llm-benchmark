@@ -1,24 +1,38 @@
 #!/usr/bin/env node
 /**
- * Shared module for LLM Workout Generation Benchmark v2
+ * LLM Workout Generation Benchmark v2
  *
- * Contains:
- * - MOCK_EXERCISES array
- * - TEST_SCENARIOS array
- * - TRAINING_STYLE_PARAMS object
- * - MODELS array
- * - calculateEnhancedMetrics() function
- * - extractExercises() function
- * - filterExercisesForScenario() function
- * - buildWorkoutPrompt() function
- * - getStyleSpecificInstructions() function
+ * Enhanced benchmark with:
+ * - Comprehensive test scenarios with full gym equipment
+ * - Training style validation scoring
+ * - Advanced techniques evaluation (supersets, drop sets, etc.)
+ * - Enhanced metrics per LLM response
+ * - Detailed comparison reports (JSON + Markdown)
+ *
+ * Usage:
+ *   OPENROUTER_API_KEY=sk-or-... node scripts/benchmark-workout-llms-v2.mjs
+ *   npm run benchmark:llm:v2
  */
 
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+
+if (!OPENROUTER_API_KEY) {
+  console.error('OPENROUTER_API_KEY environment variable is required');
+  console.error('Usage: OPENROUTER_API_KEY=sk-or-... node scripts/benchmark-workout-llms-v2.mjs');
+  process.exit(1);
+}
+
 // ============================================================================
-// MOCK EXERCISES DATABASE
+// MODULE: benchmark-mock-exercises.mjs
+// Comprehensive mock exercise database for benchmarking
 // ============================================================================
 
-export const MOCK_EXERCISES = [
+const MOCK_EXERCISES = [
   // CHEST
   { id: '0025', name: 'dumbbell bench press', target: 'pectorals', bodyPart: 'chest', equipment: 'dumbbell', difficulty: 'intermediate', secondaryMuscles: ['triceps', 'delts'] },
   { id: '0047', name: 'barbell bench press', target: 'pectorals', bodyPart: 'chest', equipment: 'barbell', difficulty: 'intermediate', secondaryMuscles: ['triceps', 'delts'] },
@@ -160,41 +174,23 @@ export const MOCK_EXERCISES = [
 ];
 
 // ============================================================================
-// DAY FOCUS MAPPING - Maps day focus to body parts and target muscles
+// MODULE: benchmark-scenarios.mjs
+// Comprehensive test scenarios with full gym equipment
 // ============================================================================
 
-export const DAY_FOCUS_MAPPING = {
-  'Push': { bodyParts: ['chest', 'shoulders', 'upper arms'], targetMuscles: ['pectorals', 'delts', 'triceps'] },
-  'Pull': { bodyParts: ['back', 'upper arms'], targetMuscles: ['lats', 'upper back', 'biceps'] },
-  'Legs': { bodyParts: ['upper legs', 'lower legs'], targetMuscles: ['quads', 'hamstrings', 'glutes', 'calves'] },
-  'Upper': { bodyParts: ['chest', 'back', 'shoulders', 'upper arms'], targetMuscles: ['pectorals', 'lats', 'delts', 'biceps', 'triceps'] },
-  'Lower': { bodyParts: ['upper legs', 'lower legs'], targetMuscles: ['quads', 'hamstrings', 'glutes', 'calves'] },
-  'Chest': { bodyParts: ['chest'], targetMuscles: ['pectorals'] },
-  'Back': { bodyParts: ['back'], targetMuscles: ['lats', 'upper back'] },
-  'Shoulders': { bodyParts: ['shoulders'], targetMuscles: ['delts'] },
-  'Arms': { bodyParts: ['upper arms'], targetMuscles: ['biceps', 'triceps'] },
-  'Chest/Back': { bodyParts: ['chest', 'back'], targetMuscles: ['pectorals', 'lats', 'upper back'] },
-  'Shoulders/Arms': { bodyParts: ['shoulders', 'upper arms'], targetMuscles: ['delts', 'biceps', 'triceps'] },
-  'Full Body': { bodyParts: ['full_body'], targetMuscles: null }
-};
-
-// ============================================================================
-// TEST SCENARIOS
-// ============================================================================
-
-export const TEST_SCENARIOS = [
-  // BODYBUILDING SCENARIOS - BRO SPLIT
+const TEST_SCENARIOS = [
+  // BODYBUILDING SCENARIOS
   {
-    name: 'Bro Split - Bodybuilding (Chest)',
-    split: 'bro_split',
-    dayFocus: 'Chest',
+    name: 'Classic Bodybuilding - Chest & Triceps',
+    category: 'bodybuilding',
     request: {
-      equipment: ['Dumbbells', 'Barbell', 'Cable Machine', 'Chest Press', 'Pec Deck'],
-      trainingStyles: ['classic_bodybuilding'],
+      equipment: ['dumbbell', 'barbell', 'cable', 'leverage machine'],
+      trainingStyle: 'classic_bodybuilding',
       bodyParts: ['chest', 'upper arms'],
       targetMuscles: ['pectorals', 'triceps'],
       duration: 60,
       experienceLevel: 'intermediate',
+      goal: 'build_muscle',
     },
     expectations: {
       minExercises: 5,
@@ -207,16 +203,16 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Bro Split - Bodybuilding (Back)',
-    split: 'bro_split',
-    dayFocus: 'Back',
+    name: 'Classic Bodybuilding - Back & Biceps',
+    category: 'bodybuilding',
     request: {
-      equipment: ['Dumbbells', 'Barbell', 'Cable Machine', 'Lat Pulldown', 'Seated Row Machine'],
-      trainingStyles: ['classic_bodybuilding'],
+      equipment: ['dumbbell', 'barbell', 'cable', 'leverage machine'],
+      trainingStyle: 'classic_bodybuilding',
       bodyParts: ['back', 'upper arms'],
       targetMuscles: ['lats', 'upper back', 'biceps'],
       duration: 60,
       experienceLevel: 'intermediate',
+      goal: 'build_muscle',
     },
     expectations: {
       minExercises: 5,
@@ -229,16 +225,16 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Bro Split - Bodybuilding (Shoulders)',
-    split: 'bro_split',
-    dayFocus: 'Shoulders',
+    name: 'Bodybuilding - Shoulder Focus',
+    category: 'bodybuilding',
     request: {
       equipment: ['dumbbell', 'barbell', 'cable', 'leverage machine'],
-      trainingStyles: ['classic_bodybuilding'],
+      trainingStyle: 'classic_bodybuilding',
       bodyParts: ['shoulders'],
       targetMuscles: ['delts'],
       duration: 45,
       experienceLevel: 'intermediate',
+      goal: 'build_muscle',
     },
     expectations: {
       minExercises: 4,
@@ -251,16 +247,16 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'PPL - Bodybuilding (Legs)',
-    split: 'push_pull_legs',
-    dayFocus: 'Legs',
+    name: 'High Volume Leg Day',
+    category: 'bodybuilding',
     request: {
-      equipment: ['Barbell', 'Dumbbells', 'Leg Press', 'Leg Curl Machine', 'Leg Extension Machine', 'Hack Squat'],
-      trainingStyles: ['classic_bodybuilding'],
+      equipment: ['barbell', 'dumbbell', 'leverage machine', 'cable'],
+      trainingStyle: 'classic_bodybuilding',
       bodyParts: ['upper legs', 'lower legs'],
       targetMuscles: ['quads', 'hamstrings', 'glutes', 'calves'],
       duration: 75,
       experienceLevel: 'advanced',
+      goal: 'build_muscle',
     },
     expectations: {
       minExercises: 6,
@@ -275,16 +271,16 @@ export const TEST_SCENARIOS = [
 
   // STRENGTH SCENARIOS
   {
-    name: 'Upper/Lower - Strength (Upper)',
-    split: 'upper_lower',
-    dayFocus: 'Upper',
+    name: 'Strength Focused - Upper Body',
+    category: 'strength',
     request: {
       equipment: ['barbell', 'dumbbell', 'cable'],
-      trainingStyles: ['strength_focused'],
+      trainingStyle: 'strength_focused',
       bodyParts: ['chest', 'back', 'shoulders'],
       targetMuscles: ['pectorals', 'lats', 'delts'],
       duration: 60,
       experienceLevel: 'advanced',
+      goal: 'build_strength',
     },
     expectations: {
       minExercises: 4,
@@ -297,16 +293,16 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Upper/Lower - Strength (Lower)',
-    split: 'upper_lower',
-    dayFocus: 'Lower',
+    name: 'Strength Focused - Lower Body',
+    category: 'strength',
     request: {
       equipment: ['barbell', 'dumbbell', 'leverage machine'],
-      trainingStyles: ['strength_focused'],
+      trainingStyle: 'strength_focused',
       bodyParts: ['upper legs'],
       targetMuscles: ['quads', 'hamstrings', 'glutes'],
       duration: 60,
       experienceLevel: 'advanced',
+      goal: 'build_strength',
     },
     expectations: {
       minExercises: 4,
@@ -319,16 +315,16 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Full Body - Strength',
-    split: 'full_body',
-    dayFocus: 'Full Body',
+    name: 'Powerlifting Prep',
+    category: 'strength',
     request: {
       equipment: ['barbell', 'dumbbell'],
-      trainingStyles: ['strength_focused'],
+      trainingStyle: 'strength_focused',
       bodyParts: ['chest', 'upper legs', 'back'],
       targetMuscles: ['pectorals', 'quads', 'spine'],
       duration: 90,
       experienceLevel: 'advanced',
+      goal: 'build_strength',
     },
     expectations: {
       minExercises: 4,
@@ -343,16 +339,16 @@ export const TEST_SCENARIOS = [
 
   // HIGH INTENSITY (HIT) SCENARIOS - Mentzer/Yates style
   {
-    name: 'Upper/Lower - HIT (Upper)',
-    split: 'upper_lower',
-    dayFocus: 'Upper',
+    name: 'HIT - Upper Body',
+    category: 'high_intensity_hit',
     request: {
-      equipment: ['Chest Press', 'Lat Pulldown', 'Shoulder Press Machine', 'Dumbbells', 'Cable Machine'],
-      trainingStyles: ['high_intensity_hit'],
+      equipment: ['leverage machine', 'dumbbell', 'cable'],
+      trainingStyle: 'high_intensity_hit',
       bodyParts: ['chest', 'back', 'shoulders'],
       targetMuscles: ['pectorals', 'lats', 'delts'],
       duration: 45,
       experienceLevel: 'advanced',
+      goal: 'build_muscle',
     },
     expectations: {
       minExercises: 5,
@@ -365,15 +361,15 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Full Body - HIT',
-    split: 'full_body',
-    dayFocus: 'Full Body',
+    name: 'HIT - Full Body',
+    category: 'high_intensity_hit',
     request: {
       equipment: ['leverage machine', 'dumbbell'],
-      trainingStyles: ['high_intensity_hit'],
+      trainingStyle: 'high_intensity_hit',
       bodyParts: ['full_body'],
       duration: 40,
       experienceLevel: 'intermediate',
+      goal: 'build_muscle',
     },
     expectations: {
       minExercises: 6,
@@ -386,16 +382,16 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Upper/Lower - HIT (Lower)',
-    split: 'upper_lower',
-    dayFocus: 'Lower',
+    name: 'HIT - Legs',
+    category: 'high_intensity_hit',
     request: {
       equipment: ['leverage machine', 'barbell'],
-      trainingStyles: ['high_intensity_hit'],
+      trainingStyle: 'high_intensity_hit',
       bodyParts: ['upper legs', 'lower legs'],
       targetMuscles: ['quads', 'hamstrings', 'glutes', 'calves'],
       duration: 35,
       experienceLevel: 'advanced',
+      goal: 'build_muscle',
     },
     expectations: {
       minExercises: 4,
@@ -410,15 +406,15 @@ export const TEST_SCENARIOS = [
 
   // MUSCULAR ENDURANCE SCENARIOS - Circuit/Tri-set based
   {
-    name: 'Full Body - Endurance',
-    split: 'full_body',
-    dayFocus: 'Full Body',
+    name: 'Muscular Endurance - Full Body Circuit',
+    category: 'muscular_endurance',
     request: {
       equipment: ['body weight', 'dumbbell', 'kettlebell'],
-      trainingStyles: ['muscular_endurance'],
+      trainingStyle: 'muscular_endurance',
       bodyParts: ['full_body'],
       duration: 30,
       experienceLevel: 'intermediate',
+      goal: 'get_lean',
     },
     expectations: {
       minExercises: 6,
@@ -431,16 +427,16 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Upper/Lower - Endurance (Upper)',
-    split: 'upper_lower',
-    dayFocus: 'Upper',
+    name: 'Muscular Endurance - Upper Body',
+    category: 'muscular_endurance',
     request: {
       equipment: ['dumbbell', 'cable', 'band'],
-      trainingStyles: ['muscular_endurance'],
+      trainingStyle: 'muscular_endurance',
       bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
       targetMuscles: ['pectorals', 'lats', 'delts', 'biceps', 'triceps'],
       duration: 35,
       experienceLevel: 'intermediate',
+      goal: 'get_lean',
     },
     expectations: {
       minExercises: 6,
@@ -453,15 +449,15 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Full Body - Endurance (Conditioning)',
-    split: 'full_body',
-    dayFocus: 'Full Body',
+    name: 'Muscular Endurance - Conditioning Circuit',
+    category: 'muscular_endurance',
     request: {
       equipment: ['body weight'],
-      trainingStyles: ['muscular_endurance'],
+      trainingStyle: 'muscular_endurance',
       bodyParts: ['full_body', 'cardio'],
       duration: 25,
       experienceLevel: 'beginner',
+      goal: 'get_lean',
     },
     expectations: {
       minExercises: 5,
@@ -476,16 +472,16 @@ export const TEST_SCENARIOS = [
 
   // MINIMAL EQUIPMENT SCENARIOS
   {
-    name: 'Upper/Lower - Bodybuilding (Dumbbells)',
-    split: 'upper_lower',
-    dayFocus: 'Upper',
+    name: 'Home Gym - Dumbbells Only',
+    category: 'minimal',
     request: {
       equipment: ['dumbbell'],
-      trainingStyles: ['classic_bodybuilding'],
+      trainingStyle: 'classic_bodybuilding',
       bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
       targetMuscles: ['pectorals', 'lats', 'delts', 'biceps', 'triceps'],
       duration: 45,
       experienceLevel: 'intermediate',
+      goal: 'build_muscle',
     },
     expectations: {
       minExercises: 5,
@@ -498,16 +494,16 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Upper/Lower - Endurance (Bodyweight)',
-    split: 'upper_lower',
-    dayFocus: 'Upper',
+    name: 'Bodyweight Only - Upper Body',
+    category: 'minimal',
     request: {
       equipment: ['body weight'],
-      trainingStyles: ['muscular_endurance'],
+      trainingStyle: 'functional_fitness',
       bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
       targetMuscles: ['pectorals', 'lats', 'delts', 'triceps'],
       duration: 30,
       experienceLevel: 'beginner',
+      goal: 'build_muscle',
     },
     expectations: {
       minExercises: 4,
@@ -520,15 +516,15 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Full Body - Endurance (Bands)',
-    split: 'full_body',
-    dayFocus: 'Full Body',
+    name: 'Resistance Bands - Full Body',
+    category: 'minimal',
     request: {
-      equipment: ['Resistance Bands', 'body weight'],
-      trainingStyles: ['muscular_endurance'],
+      equipment: ['band', 'body weight'],
+      trainingStyle: 'functional_fitness',
       bodyParts: ['full_body'],
       duration: 35,
       experienceLevel: 'beginner',
+      goal: 'get_lean',
     },
     expectations: {
       minExercises: 5,
@@ -541,15 +537,15 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Full Body - Strength (Kettlebell)',
-    split: 'full_body',
-    dayFocus: 'Full Body',
+    name: 'Kettlebell Only - Strength',
+    category: 'minimal',
     request: {
-      equipment: ['Kettlebells'],
-      trainingStyles: ['strength_focused'],
+      equipment: ['kettlebell'],
+      trainingStyle: 'strength_focused',
       bodyParts: ['full_body'],
       duration: 40,
       experienceLevel: 'intermediate',
+      goal: 'build_strength',
     },
     expectations: {
       minExercises: 4,
@@ -564,15 +560,15 @@ export const TEST_SCENARIOS = [
 
   // BEGINNER SCENARIOS
   {
-    name: 'Full Body - Bodybuilding (Beginner)',
-    split: 'full_body',
-    dayFocus: 'Full Body',
+    name: 'Beginner Full Body',
+    category: 'beginner',
     request: {
       equipment: ['dumbbell', 'leverage machine', 'body weight'],
-      trainingStyles: ['classic_bodybuilding'],
+      trainingStyle: 'classic_bodybuilding',
       bodyParts: ['full_body'],
       duration: 45,
       experienceLevel: 'beginner',
+      goal: 'build_muscle',
     },
     expectations: {
       minExercises: 5,
@@ -585,15 +581,15 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Upper/Lower - Bodybuilding (Beginner)',
-    split: 'upper_lower',
-    dayFocus: 'Upper',
+    name: 'Beginner Upper/Lower Split - Upper',
+    category: 'beginner',
     request: {
       equipment: ['dumbbell', 'cable', 'leverage machine'],
-      trainingStyles: ['classic_bodybuilding'],
+      trainingStyle: 'classic_bodybuilding',
       bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
       duration: 40,
       experienceLevel: 'beginner',
+      goal: 'build_muscle',
     },
     expectations: {
       minExercises: 4,
@@ -606,18 +602,18 @@ export const TEST_SCENARIOS = [
     },
   },
 
-  // ADVANCED PPL SCENARIOS
+  // ADVANCED SCENARIOS
   {
-    name: 'PPL - Bodybuilding (Push)',
-    split: 'push_pull_legs',
-    dayFocus: 'Push',
+    name: 'Advanced Push Day',
+    category: 'advanced',
     request: {
       equipment: ['barbell', 'dumbbell', 'cable', 'leverage machine'],
-      trainingStyles: ['classic_bodybuilding'],
+      trainingStyle: 'classic_bodybuilding',
       bodyParts: ['chest', 'shoulders', 'upper arms'],
       targetMuscles: ['pectorals', 'delts', 'triceps'],
       duration: 75,
       experienceLevel: 'advanced',
+      goal: 'build_muscle',
     },
     expectations: {
       minExercises: 7,
@@ -630,16 +626,16 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'PPL - Bodybuilding (Pull)',
-    split: 'push_pull_legs',
-    dayFocus: 'Pull',
+    name: 'Advanced Pull Day',
+    category: 'advanced',
     request: {
       equipment: ['barbell', 'dumbbell', 'cable', 'leverage machine', 'body weight'],
-      trainingStyles: ['classic_bodybuilding'],
+      trainingStyle: 'classic_bodybuilding',
       bodyParts: ['back', 'upper arms'],
       targetMuscles: ['lats', 'upper back', 'biceps'],
       duration: 75,
       experienceLevel: 'advanced',
+      goal: 'build_muscle',
     },
     expectations: {
       minExercises: 7,
@@ -651,124 +647,14 @@ export const TEST_SCENARIOS = [
       requiredMuscleBalance: { lats: 0.35, 'upper back': 0.25, biceps: 0.25 },
     },
   },
-
-  // BLENDED STYLE SCENARIOS
-  {
-    name: 'PPL - Strength + Bodybuilding (Push)',
-    split: 'push_pull_legs',
-    dayFocus: 'Push',
-    request: {
-      equipment: ['barbell', 'dumbbell', 'cable', 'leverage machine'],
-      trainingStyles: ['strength_focused', 'classic_bodybuilding'],
-      bodyParts: ['chest', 'shoulders', 'upper arms'],
-      targetMuscles: ['pectorals', 'delts', 'triceps'],
-      duration: 75,
-      experienceLevel: 'advanced',
-    },
-    expectations: {
-      minExercises: 6,
-      maxExercises: 9,
-      setsRange: [3, 5],
-      repsRange: [4, 12],
-      restRange: [60, 180],
-      shouldIncludeTechniques: ['supersets'],
-      requiredMuscleBalance: { pectorals: 0.35, delts: 0.3, triceps: 0.25 },
-    },
-  },
-  {
-    name: 'Upper/Lower - HIT + Bodybuilding (Upper)',
-    split: 'upper_lower',
-    dayFocus: 'Upper',
-    request: {
-      equipment: ['leverage machine', 'dumbbell', 'cable'],
-      trainingStyles: ['high_intensity_hit', 'classic_bodybuilding'],
-      bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
-      targetMuscles: ['pectorals', 'lats', 'delts', 'biceps', 'triceps'],
-      duration: 50,
-      experienceLevel: 'advanced',
-    },
-    expectations: {
-      minExercises: 5,
-      maxExercises: 8,
-      setsRange: [1, 4],
-      repsRange: [6, 12],
-      restRange: [60, 180],
-      shouldIncludeTechniques: ['slow_negatives', 'supersets'],
-      requiredMuscleBalance: { pectorals: 0.25, lats: 0.25, delts: 0.2, biceps: 0.15, triceps: 0.15 },
-    },
-  },
-  {
-    name: 'Full Body - Strength + Endurance',
-    split: 'full_body',
-    dayFocus: 'Full Body',
-    request: {
-      equipment: ['barbell', 'dumbbell', 'kettlebell', 'body weight'],
-      trainingStyles: ['strength_focused', 'muscular_endurance'],
-      bodyParts: ['full_body'],
-      duration: 60,
-      experienceLevel: 'intermediate',
-    },
-    expectations: {
-      minExercises: 6,
-      maxExercises: 10,
-      setsRange: [2, 5],
-      repsRange: [4, 20],
-      restRange: [30, 180],
-      shouldIncludeTechniques: ['circuit'],
-      requiredMuscleBalance: {},
-    },
-  },
-  {
-    name: 'Arnold Split - Bodybuilding (Chest/Back)',
-    split: 'arnold_split',
-    dayFocus: 'Chest/Back',
-    request: {
-      equipment: ['barbell', 'dumbbell', 'cable', 'leverage machine', 'body weight'],
-      trainingStyles: ['classic_bodybuilding'],
-      bodyParts: ['chest', 'back'],
-      targetMuscles: ['pectorals', 'lats', 'upper back'],
-      duration: 75,
-      experienceLevel: 'advanced',
-    },
-    expectations: {
-      minExercises: 8,
-      maxExercises: 12,
-      setsRange: [3, 5],
-      repsRange: [6, 15],
-      restRange: [45, 120],
-      shouldIncludeTechniques: ['supersets', 'drop sets'],
-      requiredMuscleBalance: { pectorals: 0.4, lats: 0.35, 'upper back': 0.15 },
-    },
-  },
-  {
-    name: 'Arnold Split - Bodybuilding (Shoulders/Arms)',
-    split: 'arnold_split',
-    dayFocus: 'Shoulders/Arms',
-    request: {
-      equipment: ['barbell', 'dumbbell', 'cable', 'ez barbell'],
-      trainingStyles: ['classic_bodybuilding'],
-      bodyParts: ['shoulders', 'upper arms'],
-      targetMuscles: ['delts', 'biceps', 'triceps'],
-      duration: 60,
-      experienceLevel: 'advanced',
-    },
-    expectations: {
-      minExercises: 7,
-      maxExercises: 10,
-      setsRange: [3, 4],
-      repsRange: [8, 15],
-      restRange: [45, 90],
-      shouldIncludeTechniques: ['supersets', 'drop sets'],
-      requiredMuscleBalance: { delts: 0.35, biceps: 0.3, triceps: 0.3 },
-    },
-  },
 ];
 
 // ============================================================================
-// TRAINING STYLE PARAMETERS
+// MODULE: benchmark-style-params.mjs
+// Training style parameter definitions and validation
 // ============================================================================
 
-export const TRAINING_STYLE_PARAMS = {
+const TRAINING_STYLE_PARAMS = {
   classic_bodybuilding: {
     name: 'Classic Bodybuilding',
     description: 'Moderate volume, pump-focused, mix of compound and isolation',
@@ -834,143 +720,16 @@ export const TRAINING_STYLE_PARAMS = {
   },
 };
 
-// ============================================================================
-// MODELS TO BENCHMARK
-// ============================================================================
-
-export const MODELS = [
-  { id: 'openai/gpt-5', name: 'GPT-5', tier: 'premium' },
-  { id: 'anthropic/claude-sonnet-4.5', name: 'Claude Sonnet 4.5', tier: 'premium' },
-  { id: 'anthropic/claude-sonnet-4', name: 'Claude Sonnet 4', tier: 'premium' },
-  { id: 'anthropic/claude-haiku-4.5', name: 'Claude 4.5 Haiku', tier: 'fast' },
-  { id: 'google/gemini-3-pro-preview', name: 'Gemini 3 Pro', tier: 'premium' },
-  { id: 'google/gemini-3-flash-preview', name: 'Gemini 3 Flash', tier: 'fast' },
-  { id: 'deepseek/deepseek-r1', name: 'DeepSeek R1', tier: 'reasoning' },
-  { id: 'x-ai/grok-4.1-fast', name: 'Grok 4.1', tier: 'fast' },
-];
 
 // ============================================================================
-// HELPER FUNCTIONS
+// MODULE: benchmark-simple-metrics.mjs
+// Simple metrics - just report what the LLM returned, no scoring
 // ============================================================================
-
-/**
- * Extracts all exercises from workout sections
- */
-export function extractExercises(workout) {
-  return workout.sections?.flatMap(s => s.exercises || []) || [];
-}
-
-/**
- * Map user-friendly equipment names to ExerciseDB format
- */
-const USER_TO_DB_EQUIPMENT = {
-  'dumbbells': ['dumbbell'],
-  'barbell': ['barbell'],
-  'kettlebells': ['kettlebell'],
-  'ez bar': ['ez barbell'],
-  'cable machine': ['cable'],
-  'lat pulldown': ['leverage machine', 'cable'],
-  'leg press': ['leverage machine'],
-  'chest press': ['leverage machine'],
-  'pec deck': ['leverage machine'],
-  'smith machine': ['smith machine'],
-  'leg curl machine': ['leverage machine'],
-  'leg extension machine': ['leverage machine'],
-  'shoulder press machine': ['leverage machine'],
-  'hack squat': ['leverage machine'],
-  'hip abductor machine': ['leverage machine'],
-  'hip adductor machine': ['leverage machine'],
-  'seated row machine': ['leverage machine'],
-  'resistance bands': ['band', 'resistance band'],
-  'stability ball': ['stability ball'],
-  'medicine ball': ['medicine ball'],
-  'weighted vest': ['weighted'],
-  'ab wheel': ['wheel roller'],
-  'flat bench': ['dumbbell', 'barbell'],
-  'incline bench': ['dumbbell', 'barbell'],
-  'squat rack': ['barbell'],
-  'pull-up bar': ['body weight', 'assisted'],
-  'dip station': ['body weight', 'assisted'],
-  'body weight': ['body weight'],
-  // Also support raw ExerciseDB names for backwards compat
-  'dumbbell': ['dumbbell'],
-  'cable': ['cable'],
-  'leverage machine': ['leverage machine'],
-  'kettlebell': ['kettlebell'],
-  'band': ['band'],
-};
-
-/**
- * Calculate equipment match rate as percentage
- * Uses the exercise's equipment field directly from response (not MOCK_EXERCISES lookup)
- * Handles both user-friendly names and ExerciseDB format
- */
-function calculateEquipmentMatchRate(exercises, requestedEquipment, mockExercises) {
-  if (!exercises || exercises.length === 0) return 0;
-
-  // Expand user-friendly equipment to ExerciseDB format
-  const dbEquipment = new Set();
-  for (const eq of requestedEquipment) {
-    const eqLower = eq.toLowerCase();
-    const mapped = USER_TO_DB_EQUIPMENT[eqLower];
-    if (mapped) {
-      mapped.forEach(e => dbEquipment.add(e));
-    } else {
-      dbEquipment.add(eqLower);
-    }
-  }
-
-  let matchCount = 0;
-  for (const ex of exercises) {
-    // Use equipment directly from exercise response, fallback to MOCK_EXERCISES lookup
-    let exEquipment = ex.equipment;
-
-    if (!exEquipment) {
-      const exerciseInfo = mockExercises.find(m => m.id === ex.id);
-      exEquipment = exerciseInfo?.equipment;
-    }
-
-    if (exEquipment) {
-      const exEquipLower = exEquipment.toLowerCase();
-      if (dbEquipment.has(exEquipLower)) {
-        matchCount++;
-      }
-    }
-  }
-
-  return Math.round((matchCount / exercises.length) * 100);
-}
-
-/**
- * Get typical reps representation from an array of rep values
- */
-function getTypicalReps(repsValues) {
-  if (repsValues.length === 0) return '-';
-
-  // Count occurrences of each rep value
-  const counts = {};
-  for (const rep of repsValues) {
-    const repStr = String(rep);
-    counts[repStr] = (counts[repStr] || 0) + 1;
-  }
-
-  // Find most common
-  let mostCommon = repsValues[0];
-  let maxCount = 0;
-  for (const [rep, count] of Object.entries(counts)) {
-    if (count > maxCount) {
-      maxCount = count;
-      mostCommon = rep;
-    }
-  }
-
-  return mostCommon;
-}
 
 /**
  * Calculates simple metrics for a workout response - no scoring, just raw values
  */
-export function calculateEnhancedMetrics(workout, request, mockExercises) {
+function calculateEnhancedMetrics(workout, request, mockExercises) {
   if (!workout) {
     return {
       success: false,
@@ -1014,9 +773,92 @@ export function calculateEnhancedMetrics(workout, request, mockExercises) {
 }
 
 /**
+ * Calculate equipment match rate as percentage
+ */
+function calculateEquipmentMatchRate(exercises, requestedEquipment, mockExercises) {
+  if (!exercises || exercises.length === 0) return 0;
+
+  const normalizedEquipment = requestedEquipment.map(eq => eq.toLowerCase());
+
+  let matchCount = 0;
+  for (const ex of exercises) {
+    const exerciseInfo = mockExercises.find(m => m.id === ex.id);
+    if (exerciseInfo) {
+      const matches = normalizedEquipment.some(eq =>
+        exerciseInfo.equipment.toLowerCase().includes(eq) ||
+        (eq === 'body weight' && exerciseInfo.equipment === 'body weight') ||
+        (eq === 'resistance band' && exerciseInfo.equipment === 'band') ||
+        (eq === 'band' && exerciseInfo.equipment === 'band')
+      );
+      if (matches) matchCount++;
+    }
+  }
+
+  return Math.round((matchCount / exercises.length) * 100);
+}
+
+/**
+ * Get typical reps representation from an array of rep values
+ */
+function getTypicalReps(repsValues) {
+  if (repsValues.length === 0) return '-';
+
+  // Count occurrences of each rep value
+  const counts = {};
+  for (const rep of repsValues) {
+    const repStr = String(rep);
+    counts[repStr] = (counts[repStr] || 0) + 1;
+  }
+
+  // Find most common
+  let mostCommon = repsValues[0];
+  let maxCount = 0;
+  for (const [rep, count] of Object.entries(counts)) {
+    if (count > maxCount) {
+      maxCount = count;
+      mostCommon = rep;
+    }
+  }
+
+  return mostCommon;
+}
+
+/**
+ * Extracts all exercises from workout sections
+ */
+function extractExercises(workout) {
+  return workout.sections?.flatMap(s => s.exercises || []) || [];
+}
+
+// ============================================================================
+// MODELS TO BENCHMARK
+// Testing LLM compliance with training style specifications:
+// - Classic Bodybuilding: 3-4 sets, 8-12 reps, 60-90s rest
+// - Strength Focused: 4-5 sets, 4-6 reps, 120-240s rest, straight sets only
+// - High Intensity (HIT): 1-2 sets to failure, slow negatives, machine preference
+// - Muscular Endurance: 2-3 sets, 15-20 reps, circuit/tri-set structure
+// Evaluates: set/rep/rest compliance, technique usage, equipment adherence
+// ============================================================================
+
+const MODELS = [
+  { id: 'openai/gpt-5', name: 'GPT-5', tier: 'premium' },
+  { id: 'anthropic/claude-sonnet-4.5', name: 'Claude Sonnet 4.5', tier: 'premium' },
+  { id: 'anthropic/claude-sonnet-4', name: 'Claude Sonnet 4', tier: 'premium' },
+  { id: 'anthropic/claude-haiku-4.5', name: 'Claude 4.5 Haiku', tier: 'fast' },
+  { id: 'google/gemini-3-pro-preview', name: 'Gemini 3 Pro', tier: 'premium' },
+  { id: 'google/gemini-3-flash-preview', name: 'Gemini 3 Flash', tier: 'fast' },
+  { id: 'deepseek/deepseek-r1', name: 'DeepSeek R1', tier: 'reasoning' },
+  { id: 'x-ai/grok-4.1-fast', name: 'Grok 4.1', tier: 'fast' },
+];
+
+// ============================================================================
+// PROMPT BUILDER (Enhanced version with style-specific instructions)
+// ============================================================================
+
+/**
  * Builds style-specific critical instructions based on training type
  */
-export function getStyleSpecificInstructions(trainingStyle, trainingStyles) {
+function getStyleSpecificInstructions(trainingStyle, trainingStyles) {
   const styles = trainingStyles || [trainingStyle];
   const instructions = [];
 
@@ -1076,17 +918,11 @@ BLENDING ${nameA.toUpperCase()} + ${nameB.toUpperCase()}:
   return instructions.join('\n');
 }
 
-/**
- * Builds the workout generation prompt for the LLM
- */
-export function buildWorkoutPrompt(request, exerciseList, scenario) {
-  // Support both old and new format
-  const trainingStyles = request.trainingStyles || [request.trainingStyle];
-  const primaryStyle = trainingStyles[0];
-  const secondaryStyle = trainingStyles[1] || null;
-
-  const styleParams = TRAINING_STYLE_PARAMS[primaryStyle];
-  const styleName = styleParams?.name || primaryStyle;
+function buildWorkoutPrompt(request, exerciseList) {
+  const trainingStyle = request.trainingStyle;
+  const trainingStyles = request.trainingStyles || [trainingStyle];
+  const styleParams = TRAINING_STYLE_PARAMS[trainingStyle];
+  const styleName = styleParams?.name || trainingStyle;
   const styleDesc = styleParams?.description || '';
 
   const advancedTechSection = styleParams?.advancedTechniques?.length > 0
@@ -1094,14 +930,14 @@ export function buildWorkoutPrompt(request, exerciseList, scenario) {
     : '';
 
   // Get style-specific critical instructions
-  const styleSpecificInstructions = getStyleSpecificInstructions(primaryStyle, trainingStyles);
+  const styleSpecificInstructions = getStyleSpecificInstructions(trainingStyle, trainingStyles);
 
-  let prompt = `You are a professional fitness trainer creating a personalized workout.
+  return `You are a professional fitness trainer creating a personalized workout.
 
 USER PROFILE:
 - Goal: ${request.goal}
 - Experience: ${request.experienceLevel}
-- Training Style: ${styleName}${styleDesc ? ` (${styleDesc})` : ''}${secondaryStyle ? ` + ${TRAINING_STYLE_PARAMS[secondaryStyle]?.name || secondaryStyle}` : ''}
+- Training Style: ${styleName}${styleDesc ? ` (${styleDesc})` : ''}
 - Target Duration: ${request.duration} minutes
 - Body Parts: ${request.bodyParts.join(', ')}
 - Target Muscles: ${request.targetMuscles?.length ? request.targetMuscles.join(', ') : 'any'}
@@ -1111,26 +947,7 @@ TRAINING STYLE PARAMETERS (${styleName}):
 - Sets: ${styleParams?.sets ? `${styleParams.sets.min}-${styleParams.sets.max}` : '3-4'}
 - Reps: ${styleParams?.reps ? `${styleParams.reps.min}-${styleParams.reps.max}` : '8-12'}
 - Rest: ${styleParams?.rest ? `${styleParams.rest.min}-${styleParams.rest.max}s` : '60-90s'}${advancedTechSection}
-${styleSpecificInstructions}`;
-
-  // Handle blended styles in instructions (when 2 styles selected)
-  if (secondaryStyle) {
-    const secondary = TRAINING_STYLE_PARAMS[secondaryStyle];
-    prompt += `
-
-## Blended Training Approach
-Primary style for compound movements: ${styleParams.name}
-- Sets: ${styleParams.sets.min}-${styleParams.sets.max}, Reps: ${styleParams.reps.min}-${styleParams.reps.max}, Rest: ${styleParams.rest.min}-${styleParams.rest.max}s
-
-Secondary style for isolation/accessory movements: ${secondary.name}
-- Sets: ${secondary.sets.min}-${secondary.sets.max}, Reps: ${secondary.reps.min}-${secondary.reps.max}, Rest: ${secondary.rest.min}-${secondary.rest.max}s
-
-Apply the primary style parameters to the first 2-3 compound exercises.
-Apply the secondary style parameters to remaining isolation exercises.
-`;
-  }
-
-  prompt += `
+${styleSpecificInstructions}
 
 CRITICAL EQUIPMENT RULE:
 - User's equipment: ${request.equipment.length > 0 ? request.equipment.join(', ') : 'body weight only'}
@@ -1138,19 +955,7 @@ CRITICAL EQUIPMENT RULE:
 - Body weight exercises are ONLY allowed if user explicitly listed "body weight"
 
 AVAILABLE EXERCISES (pick from these ONLY):
-${JSON.stringify(exerciseList, null, 2)}`;
-
-  // Add split and dayFocus context to prompt when scenario is provided
-  if (scenario?.split && scenario?.dayFocus) {
-    prompt += `
-
-## Workout Context
-Split: ${scenario.split.replace(/_/g, ' ').toUpperCase()}
-Day Focus: ${scenario.dayFocus}
-`;
-  }
-
-  prompt += `
+${JSON.stringify(exerciseList, null, 2)}
 
 Create a workout program. Return ONLY valid JSON (no markdown, no code blocks) in this exact format:
 {
@@ -1181,25 +986,97 @@ IMPORTANT GUIDELINES:
 4. Group exercises logically into sections
 5. Include relevant tips for the training style
 6. For ${request.experienceLevel} level, ensure appropriate exercise selection`;
-
-  return prompt;
 }
 
-/**
- * Filters exercises from MOCK_EXERCISES based on scenario requirements
- */
-export function filterExercisesForScenario(scenario) {
-  const equipment = scenario.request.equipment;
+// ============================================================================
+// OPENROUTER API CALL (Same structure as v1)
+// ============================================================================
 
-  // Use DAY_FOCUS_MAPPING if scenario has dayFocus, otherwise use request values
-  let bodyParts = scenario.request.bodyParts;
-  let targetMuscles = scenario.request.targetMuscles;
+async function callOpenRouter(modelId, prompt) {
+  const startTime = Date.now();
 
-  if (scenario.dayFocus && DAY_FOCUS_MAPPING[scenario.dayFocus]) {
-    const mapping = DAY_FOCUS_MAPPING[scenario.dayFocus];
-    bodyParts = mapping.bodyParts;
-    targetMuscles = mapping.targetMuscles;
+  try {
+    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
+        'Content-Type': 'application/json',
+        'HTTP-Referer': 'https://fitness-app-benchmark.local',
+        'X-Title': 'Fitness App LLM Benchmark v2',
+      },
+      body: JSON.stringify({
+        model: modelId,
+        messages: [{ role: 'user', content: prompt }],
+        temperature: 0.7,
+        max_tokens: 2500,
+      }),
+    });
+
+    const latency = Date.now() - startTime;
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      return {
+        success: false,
+        error: `HTTP ${response.status}: ${errorText}`,
+        latency,
+        rawResponse: null,
+        parsedWorkout: null,
+      };
+    }
+
+    const data = await response.json();
+    const content = data.choices?.[0]?.message?.content || '';
+
+    // Parse JSON from response
+    let parsedWorkout = null;
+    let parseError = null;
+
+    try {
+      let jsonString = content.trim();
+      // Remove markdown code blocks if present
+      if (jsonString.startsWith('```json')) jsonString = jsonString.slice(7);
+      if (jsonString.startsWith('```')) jsonString = jsonString.slice(3);
+      if (jsonString.endsWith('```')) jsonString = jsonString.slice(0, -3);
+      jsonString = jsonString.trim();
+
+      // Handle potential thinking blocks (e.g., from reasoning models)
+      const jsonMatch = jsonString.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        jsonString = jsonMatch[0];
+      }
+
+      parsedWorkout = JSON.parse(jsonString);
+    } catch (e) {
+      parseError = e.message;
+    }
+
+    return {
+      success: true,
+      latency,
+      rawResponse: content,
+      parsedWorkout,
+      parseError,
+      usage: data.usage,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: error.message,
+      latency: Date.now() - startTime,
+      rawResponse: null,
+      parsedWorkout: null,
+    };
   }
+}
+
+// ============================================================================
+// FILTER EXERCISES FOR SCENARIO
+// ============================================================================
+
+function filterExercisesForScenario(scenario) {
+  const equipment = scenario.request.equipment;
+  const bodyParts = scenario.request.bodyParts;
 
   return MOCK_EXERCISES.filter(ex => {
     // Equipment match
@@ -1224,19 +1101,7 @@ export function filterExercisesForScenario(scenario) {
         (bpLower === 'arms' && ex.bodyPart === 'upper arms');
     });
 
-    if (!bodyPartMatch) return false;
-
-    // Target muscle match - CRITICAL: prevents wrong muscles (e.g., biceps on chest+triceps day)
-    // If targetMuscles specified, exercise.target must be in the list
-    if (targetMuscles && targetMuscles.length > 0) {
-      const targetLower = targetMuscles.map(t => t.toLowerCase());
-      const exTargetLower = ex.target.toLowerCase();
-      if (!targetLower.includes(exTargetLower)) {
-        return false;
-      }
-    }
-
-    return true;
+    return bodyPartMatch;
   }).map(ex => ({
     id: ex.id,
     name: ex.name,
@@ -1245,3 +1110,323 @@ export function filterExercisesForScenario(scenario) {
     difficulty: ex.difficulty,
   }));
 }
+
+// ============================================================================
+// MAIN BENCHMARK RUNNER
+// ============================================================================
+
+async function runBenchmark() {
+  console.log('LLM Workout Generation Benchmark v2');
+  console.log('====================================\n');
+  console.log(`Testing ${MODELS.length} models across ${TEST_SCENARIOS.length} scenarios\n`);
+
+  const results = {
+    timestamp: new Date().toISOString(),
+    version: '2.0',
+    models: MODELS,
+    scenarios: [],
+    modelSummaries: {},
+  };
+
+  // Initialize model summaries with simple metrics
+  for (const model of MODELS) {
+    results.modelSummaries[model.id] = {
+      name: model.name,
+      tier: model.tier,
+      totalTests: 0,
+      successCount: 0,
+      parseErrorCount: 0,
+      apiErrorCount: 0,
+      totalLatency: 0,
+      // Simple metrics (raw values, no scoring)
+      totalExerciseCount: 0,
+      totalEquipmentMatchRate: 0,
+      totalSets: 0,
+      totalRest: 0,
+      repsCounts: {}, // Track frequency of each reps value
+    };
+  }
+
+  for (const scenario of TEST_SCENARIOS) {
+    console.log(`\nScenario: ${scenario.name}`);
+    console.log(`Category: ${scenario.category} | Style: ${scenario.request.trainingStyle}`);
+    console.log(`Equipment: ${scenario.request.equipment.join(', ')}`);
+    console.log('-'.repeat(70));
+
+    // Filter exercises for this scenario
+    const availableExercises = filterExercisesForScenario(scenario);
+    console.log(`Available exercises: ${availableExercises.length}`);
+
+    const prompt = buildWorkoutPrompt(scenario.request, availableExercises);
+
+    const scenarioResults = {
+      name: scenario.name,
+      category: scenario.category,
+      request: scenario.request,
+      expectations: scenario.expectations,
+      exercisesAvailable: availableExercises.length,
+      modelResults: [],
+    };
+
+    for (const model of MODELS) {
+      process.stdout.write(`  ${model.name.padEnd(20)}... `);
+
+      const result = await callOpenRouter(model.id, prompt);
+      const metrics = calculateEnhancedMetrics(result.parsedWorkout, scenario.request, MOCK_EXERCISES);
+
+      const modelResult = {
+        model,
+        ...result,
+        metrics,
+      };
+
+      scenarioResults.modelResults.push(modelResult);
+
+      // Update model summary
+      const summary = results.modelSummaries[model.id];
+      summary.totalTests++;
+
+      if (result.success && result.parsedWorkout) {
+        summary.successCount++;
+        summary.totalLatency += result.latency;
+
+        // Track simple metrics (raw values)
+        summary.totalExerciseCount += metrics.exerciseCount || 0;
+        summary.totalEquipmentMatchRate += metrics.equipmentMatchRate || 0;
+        summary.totalSets += metrics.avgSets || 0;
+        summary.totalRest += metrics.avgRest || 0;
+
+        // Track reps frequency
+        const reps = String(metrics.avgReps || '-');
+        summary.repsCounts[reps] = (summary.repsCounts[reps] || 0) + 1;
+
+        console.log(`OK ${result.latency}ms | Exercises: ${metrics.exerciseCount} | Equip: ${metrics.equipmentMatchRate}% | Sets: ${metrics.avgSets} | Reps: ${metrics.avgReps} | Rest: ${metrics.avgRest}s`);
+      } else if (result.success && result.parseError) {
+        summary.parseErrorCount++;
+        console.log(`Parse Error: ${result.parseError.substring(0, 50)}`);
+      } else {
+        summary.apiErrorCount++;
+        console.log(`API Error: ${result.error?.substring(0, 50)}`);
+      }
+
+      // Rate limiting
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    }
+
+    results.scenarios.push(scenarioResults);
+  }
+
+  // Finalize model summaries (calculate averages)
+  for (const model of MODELS) {
+    const summary = results.modelSummaries[model.id];
+    if (summary.successCount > 0) {
+      summary.avgLatency = Math.round(summary.totalLatency / summary.successCount);
+
+      // Simple metrics averages
+      summary.avgExerciseCount = Math.round((summary.totalExerciseCount / summary.successCount) * 10) / 10;
+      summary.avgEquipmentMatchRate = Math.round(summary.totalEquipmentMatchRate / summary.successCount);
+      summary.avgSets = Math.round((summary.totalSets / summary.successCount) * 10) / 10;
+      summary.avgRest = Math.round(summary.totalRest / summary.successCount);
+
+      // Find most common reps value
+      let mostCommonReps = '-';
+      let maxCount = 0;
+      for (const [reps, count] of Object.entries(summary.repsCounts)) {
+        if (count > maxCount) {
+          maxCount = count;
+          mostCommonReps = reps;
+        }
+      }
+      summary.avgReps = mostCommonReps;
+    }
+    summary.successRate = Math.round((summary.successCount / summary.totalTests) * 100);
+  }
+
+  // Save results
+  const outputDir = path.join(__dirname, '../benchmark-results');
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+
+  // Save JSON
+  const jsonPath = path.join(outputDir, `workout-llm-benchmark-v2-${timestamp}.json`);
+  fs.writeFileSync(jsonPath, JSON.stringify(results, null, 2));
+  console.log(`\nJSON results saved to: ${jsonPath}`);
+
+  // Generate Enhanced Markdown report
+  const mdPath = path.join(outputDir, `workout-llm-benchmark-v2-${timestamp}.md`);
+  const mdContent = generateEnhancedMarkdownReport(results);
+  fs.writeFileSync(mdPath, mdContent);
+  console.log(`Markdown report saved to: ${mdPath}`);
+
+  // Print summary
+  printEnhancedSummary(results);
+}
+
+// ============================================================================
+// SIMPLE MARKDOWN REPORT GENERATOR
+// ============================================================================
+
+function generateEnhancedMarkdownReport(results) {
+  let md = `# LLM Workout Generation Benchmark v2\n\n`;
+  md += `**Generated:** ${results.timestamp}\n`;
+  md += `**Version:** ${results.version}\n`;
+  md += `**Scenarios Tested:** ${results.scenarios.length}\n`;
+  md += `**Models Tested:** ${results.models.length}\n\n`;
+
+  // Models Overview with simple metrics
+  md += `## Models Overview\n\n`;
+  md += `| Model | Tier | Success Rate | Avg Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |\n`;
+  md += `|-------|------|--------------|-------------|-----------|-------------|----------|----------|----------|\n`;
+  for (const model of results.models) {
+    const summary = results.modelSummaries[model.id];
+    md += `| ${model.name} | ${model.tier} | ${summary.successRate}% | ${summary.avgLatency || '-'}ms | ${summary.avgExerciseCount || '-'} | ${summary.avgEquipmentMatchRate || '-'}% | ${summary.avgSets || '-'} | ${summary.avgReps || '-'} | ${summary.avgRest || '-'}s |\n`;
+  }
+
+  // Detailed Results by Scenario Category
+  md += `\n## Results by Category\n\n`;
+
+  const categories = [...new Set(results.scenarios.map(s => s.category))];
+
+  for (const category of categories) {
+    md += `### ${category.charAt(0).toUpperCase() + category.slice(1)} Scenarios\n\n`;
+
+    const categoryScenarios = results.scenarios.filter(s => s.category === category);
+
+    for (const scenario of categoryScenarios) {
+      md += `#### ${scenario.name}\n\n`;
+      md += `**Config:** ${scenario.request.equipment.join(', ')} | ${scenario.request.trainingStyle} | ${scenario.request.duration}min\n\n`;
+
+      md += `| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |\n`;
+      md += `|-------|--------|---------|-----------|-------------|----------|----------|----------|\n`;
+
+      for (const result of scenario.modelResults) {
+        const status = result.success && result.parsedWorkout ? 'OK' : result.success ? 'Parse Err' : 'API Err';
+        const latency = `${result.latency}ms`;
+        const exercises = result.metrics?.exerciseCount || '-';
+        const equipMatch = result.metrics?.equipmentMatchRate !== undefined ? `${result.metrics.equipmentMatchRate}%` : '-';
+        const avgSets = result.metrics?.avgSets || '-';
+        const avgReps = result.metrics?.avgReps || '-';
+        const avgRest = result.metrics?.avgRest !== undefined ? `${result.metrics.avgRest}s` : '-';
+
+        md += `| ${result.model.name} | ${status} | ${latency} | ${exercises} | ${equipMatch} | ${avgSets} | ${avgReps} | ${avgRest} |\n`;
+      }
+
+      md += `\n`;
+    }
+  }
+
+  // Sample Outputs
+  md += `## Sample Workout Outputs\n\n`;
+  md += `Selected examples showing workout structure:\n\n`;
+
+  // Pick first successful result from first scenario for each model
+  const firstScenario = results.scenarios[0];
+  if (firstScenario) {
+    md += `### ${firstScenario.name}\n\n`;
+
+    for (const result of firstScenario.modelResults) {
+      if (result.parsedWorkout?.title) {
+        md += `#### ${result.model.name}\n\n`;
+        md += `**Title:** ${result.parsedWorkout.title}\n\n`;
+        md += `**Description:** ${result.parsedWorkout.description || 'N/A'}\n\n`;
+
+        if (result.parsedWorkout.sections) {
+          for (const section of result.parsedWorkout.sections) {
+            md += `**${section.name}:**\n`;
+            for (const ex of section.exercises || []) {
+              const exInfo = MOCK_EXERCISES.find(m => m.id === ex.id);
+              md += `- ${exInfo?.name || ex.id}: ${ex.sets} x ${ex.reps}, ${ex.restSeconds}s rest\n`;
+            }
+            md += '\n';
+          }
+        }
+
+        md += `---\n\n`;
+      }
+    }
+  }
+
+  // Methodology
+  md += `## Methodology\n\n`;
+  md += `### Metrics Reported\n\n`;
+  md += `- **Exercise Count:** Number of exercises in the workout\n`;
+  md += `- **Equipment Match Rate:** Percentage of exercises using requested equipment\n`;
+  md += `- **Avg Sets:** Average sets per exercise\n`;
+  md += `- **Avg Reps:** Most common reps value returned\n`;
+  md += `- **Avg Rest:** Average rest period in seconds\n\n`;
+
+  md += `### Training Style Parameters (Reference)\n\n`;
+  md += `| Style | Sets | Reps | Rest |\n`;
+  md += `|-------|------|------|------|\n`;
+  for (const [key, params] of Object.entries(TRAINING_STYLE_PARAMS)) {
+    md += `| ${params.name} | ${params.sets.min}-${params.sets.max} | ${params.reps.min}-${params.reps.max} | ${params.rest.min}-${params.rest.max}s |\n`;
+  }
+
+  return md;
+}
+
+// ============================================================================
+// SIMPLE SUMMARY PRINTER
+// ============================================================================
+
+function printEnhancedSummary(results) {
+  console.log('\n' + '='.repeat(90));
+  console.log('BENCHMARK SUMMARY v2 (Simple Metrics)');
+  console.log('='.repeat(90));
+
+  // Models by Success Rate
+  const rankedModels = Object.values(results.modelSummaries)
+    .filter(s => s.successCount > 0)
+    .sort((a, b) => b.successRate - a.successRate);
+
+  console.log('\nMODEL RESULTS:');
+  console.log('-'.repeat(90));
+  console.log('| Model                | Success | Latency | Exercises | Equip Match | Sets | Reps    | Rest  |');
+  console.log('|----------------------|---------|---------|-----------|-------------|------|---------|-------|');
+
+  rankedModels.forEach((model) => {
+    const name = model.name.padEnd(20);
+    const success = `${model.successRate}%`.padEnd(7);
+    const latency = `${model.avgLatency || '-'}ms`.padEnd(7);
+    const exercises = String(model.avgExerciseCount || '-').padEnd(9);
+    const equipMatch = `${model.avgEquipmentMatchRate || '-'}%`.padEnd(11);
+    const sets = String(model.avgSets || '-').padEnd(4);
+    const reps = String(model.avgReps || '-').padEnd(7);
+    const rest = `${model.avgRest || '-'}s`.padEnd(5);
+
+    console.log(`| ${name} | ${success} | ${latency} | ${exercises} | ${equipMatch} | ${sets} | ${reps} | ${rest} |`);
+  });
+
+  // Quick Stats
+  console.log('\nQUICK STATS:');
+  console.log('-'.repeat(90));
+
+  if (rankedModels.length > 0) {
+    const fastestSuccessful = Object.values(results.modelSummaries)
+      .filter(s => s.successCount > 0 && s.avgLatency)
+      .sort((a, b) => a.avgLatency - b.avgLatency)[0];
+    if (fastestSuccessful) {
+      console.log(`  Fastest Response:       ${fastestSuccessful.name} (${fastestSuccessful.avgLatency}ms avg)`);
+    }
+
+    const highestSuccess = rankedModels[0];
+    console.log(`  Highest Success Rate:   ${highestSuccess.name} (${highestSuccess.successRate}%)`);
+
+    const bestEquipment = Object.values(results.modelSummaries)
+      .filter(s => s.successCount > 0)
+      .sort((a, b) => (b.avgEquipmentMatchRate || 0) - (a.avgEquipmentMatchRate || 0))[0];
+    if (bestEquipment) {
+      console.log(`  Best Equipment Match:   ${bestEquipment.name} (${bestEquipment.avgEquipmentMatchRate}%)`);
+    }
+  }
+
+  console.log('\n' + '='.repeat(90));
+  console.log('Benchmark complete!');
+  console.log('='.repeat(90) + '\n');
+}
+
+// Run the benchmark
+runBenchmark().catch(console.error);

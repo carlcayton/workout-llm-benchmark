@@ -1,67 +1,64 @@
-import { useState } from 'react'
-import { TabsList, TabsTrigger, TabsContent } from './components/ui/tabs'
+import { Routes, Route, NavLink, Navigate } from 'react-router-dom'
 import { Gallery } from './components/gallery'
 import { VideoComparison } from './components/comparison'
 import { LLMBenchmark } from './components/benchmark'
 import { Beaker, Image, Video, Brain } from 'lucide-react'
 
-function App() {
-  const [activeTab, setActiveTab] = useState('gallery')
+function NavTab({ to, children }) {
+  return (
+    <NavLink
+      to={to}
+      className={({ isActive }) =>
+        `inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+          isActive
+            ? 'bg-zinc-900 text-white'
+            : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100'
+        }`
+      }
+    >
+      {children}
+    </NavLink>
+  )
+}
 
+function App() {
   return (
     <div className="min-h-screen bg-zinc-50">
       {/* Header */}
       <header className="bg-white border-b sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div className="flex items-center gap-2">
+            <NavLink to="/" className="flex items-center gap-2">
               <Beaker className="w-6 h-6 text-zinc-700" />
               <h1 className="text-xl font-semibold">Prototype Showcase</h1>
-            </div>
+            </NavLink>
 
-            <TabsList>
-              <TabsTrigger
-                value="gallery"
-                activeValue={activeTab}
-                onClick={setActiveTab}
-              >
+            <nav className="flex gap-1">
+              <NavTab to="/gallery">
                 <Image className="w-4 h-4 mr-1.5" />
                 Gallery
-              </TabsTrigger>
-              <TabsTrigger
-                value="video"
-                activeValue={activeTab}
-                onClick={setActiveTab}
-              >
+              </NavTab>
+              <NavTab to="/video">
                 <Video className="w-4 h-4 mr-1.5" />
                 Video Models
-              </TabsTrigger>
-              <TabsTrigger
-                value="benchmark"
-                activeValue={activeTab}
-                onClick={setActiveTab}
-              >
+              </NavTab>
+              <NavTab to="/benchmark">
                 <Brain className="w-4 h-4 mr-1.5" />
                 LLM Benchmark
-              </TabsTrigger>
-            </TabsList>
+              </NavTab>
+            </nav>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-6">
-        <TabsContent value="gallery" activeValue={activeTab}>
-          <Gallery />
-        </TabsContent>
-
-        <TabsContent value="video" activeValue={activeTab}>
-          <VideoComparison />
-        </TabsContent>
-
-        <TabsContent value="benchmark" activeValue={activeTab}>
-          <LLMBenchmark />
-        </TabsContent>
+        <Routes>
+          <Route path="/" element={<Navigate to="/gallery" replace />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/video" element={<VideoComparison />} />
+          <Route path="/benchmark" element={<LLMBenchmark />} />
+        </Routes>
       </main>
 
       {/* Footer */}

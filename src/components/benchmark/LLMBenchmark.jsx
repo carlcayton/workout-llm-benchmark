@@ -1,15 +1,16 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
 import { Badge } from '../ui/badge'
 import { Button } from '../ui/button'
-import { Select } from '../ui/select'
-import { Trophy, Clock, Target, Dumbbell, CheckCircle, XCircle, Layers, Loader2 } from 'lucide-react'
+import { Trophy, Clock, Target, Dumbbell, CheckCircle, XCircle, Layers, Loader2, ChevronLeft, ChevronRight } from 'lucide-react'
 
 export function LLMBenchmark() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const [selectedScenario, setSelectedScenario] = useState(null)
+  const [selectedScenarioIndex, setSelectedScenarioIndex] = useState(0)
+  const [selectedSplit, setSelectedSplit] = useState(null)
+  const chipContainerRef = useRef(null)
 
   useEffect(() => {
     fetch('/benchmark-data.json')
@@ -19,9 +20,6 @@ export function LLMBenchmark() {
       })
       .then(json => {
         setData(json)
-        if (json.scenarios?.length > 0) {
-          setSelectedScenario(json.scenarios[0].name)
-        }
         setLoading(false)
       })
       .catch(err => {
@@ -58,7 +56,62 @@ export function LLMBenchmark() {
     return a.avgLatency - b.avgLatency
   })
 
-  const currentScenario = scenarios.find(s => s.name === selectedScenario)
+  // Group scenarios by split type
+  const splitGroups = scenarios.reduce((acc, scenario, index) => {
+    const split = scenario.split || 'Other'
+    if (!acc[split]) acc[split] = []
+    acc[split].push({ ...scenario, originalIndex: index })
+    return acc
+  }, {})
+
+  const splitTypes = Object.keys(splitGroups)
+
+  // Filter scenarios by selected split (null = show all)
+  const filteredScenarios = selectedSplit
+    ? scenarios.filter(s => (s.split || 'Other') === selectedSplit)
+    : scenarios
+
+  const currentScenario = scenarios[selectedScenarioIndex]
+  const filteredIndex = filteredScenarios.findIndex(s => s.name === currentScenario?.name)
+
+  // Navigation handlers
+  const goToPrev = () => {
+    if (selectedScenarioIndex > 0) {
+      setSelectedScenarioIndex(selectedScenarioIndex - 1)
+    }
+  }
+
+  const goToNext = () => {
+    if (selectedScenarioIndex < scenarios.length - 1) {
+      setSelectedScenarioIndex(selectedScenarioIndex + 1)
+    }
+  }
+
+  const scrollChips = (direction) => {
+    if (chipContainerRef.current) {
+      const scrollAmount = 300
+      chipContainerRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      })
+    }
+  }
+
+  // Split type colors
+  const getSplitColor = (split) => {
+    const colors = {
+      'bro_split': 'bg-orange-100 text-orange-700 border-orange-300 hover:bg-orange-200',
+      'ppl': 'bg-blue-100 text-blue-700 border-blue-300 hover:bg-blue-200',
+      'upper_lower': 'bg-purple-100 text-purple-700 border-purple-300 hover:bg-purple-200',
+      'full_body': 'bg-green-100 text-green-700 border-green-300 hover:bg-green-200',
+      'arnold_split': 'bg-red-100 text-red-700 border-red-300 hover:bg-red-200',
+    }
+    return colors[split] || 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200'
+  }
+
+  const formatSplitName = (split) => {
+    return split.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+  }
 
   return (
     <div className="space-y-6 p-6">
@@ -153,35 +206,179 @@ export function LLMBenchmark() {
         </CardContent>
       </Card>
 
-      {/* Scenario Selector */}
+      {/* Scenario Results with Improved Navigation */}
       <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center justify-between">
-            <span>Scenario Results</span>
-            <select
-              value={selectedScenario || ''}
-              onChange={(e) => setSelectedScenario(e.target.value)}
-              className="text-sm font-normal border border-gray-300 rounded-md px-3 py-2 bg-white"
+        <CardHeader className="pb-4">
+          <div className="flex items-center justify-between mb-4">
+            <CardTitle>Scenario Results</CardTitle>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-500">
+                {selectedScenarioIndex + 1} of {scenarios.length}
+              </span>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={goToPrev}
+                disabled={selectedScenarioIndex === 0}
+                className="h-8 w-8 p-0"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={goToNext}
+                disabled={selectedScenarioIndex === scenarios.length - 1}
+                className="h-8 w-8 p-0"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Split Type Filter Chips */}
+          <div className="flex gap-2 mb-4 flex-wrap">
+            <button
+              onClick={() => setSelectedSplit(null)}
+              className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${
+                selectedSplit === null
+                  ? 'bg-gray-900 text-white border-gray-900'
+                  : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-100'
+              }`}
             >
-              {scenarios.map(scenario => (
-                <option key={scenario.name} value={scenario.name}>
-                  {scenario.name} ({scenario.category} - {scenario.trainingStyle})
-                </option>
-              ))}
-            </select>
-          </CardTitle>
+              All Splits
+            </button>
+            {splitTypes.map(split => (
+              <button
+                key={split}
+                onClick={() => setSelectedSplit(split)}
+                className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${
+                  selectedSplit === split
+                    ? 'bg-gray-900 text-white border-gray-900'
+                    : getSplitColor(split)
+                }`}
+              >
+                {formatSplitName(split)} ({splitGroups[split].length})
+              </button>
+            ))}
+          </div>
+
+          {/* Horizontal Scrollable Scenario Chips */}
+          <div className="relative">
+            <button
+              onClick={() => scrollChips('left')}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm shadow-md rounded-full p-1.5 hover:bg-gray-100 border border-gray-200"
+            >
+              <ChevronLeft className="h-4 w-4 text-gray-600" />
+            </button>
+
+            <div
+              ref={chipContainerRef}
+              className="flex gap-2 overflow-x-auto scrollbar-hide px-8 py-2 scroll-smooth"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {(selectedSplit ? filteredScenarios : scenarios).map((scenario, idx) => {
+                const actualIndex = selectedSplit
+                  ? scenarios.findIndex(s => s.name === scenario.name)
+                  : idx
+                const isActive = actualIndex === selectedScenarioIndex
+
+                return (
+                  <button
+                    key={scenario.name}
+                    onClick={() => setSelectedScenarioIndex(actualIndex)}
+                    className={`flex-shrink-0 px-3 py-2 rounded-lg text-xs font-medium border transition-all ${
+                      isActive
+                        ? 'bg-blue-600 text-white border-blue-600 shadow-md scale-105'
+                        : 'bg-white text-gray-700 border-gray-200 hover:border-blue-300 hover:bg-blue-50'
+                    }`}
+                  >
+                    <div className="whitespace-nowrap">{scenario.name}</div>
+                    <div className={`text-[10px] mt-0.5 flex items-center gap-1 ${isActive ? 'text-blue-200' : 'text-gray-400'}`}>
+                      <span>{scenario.duration}min</span>
+                      {scenario.equipment && scenario.equipment.length > 0 && (
+                        <>
+                          <span>•</span>
+                          <span className="flex items-center gap-0.5">
+                            <Dumbbell className="w-2.5 h-2.5" />
+                            {scenario.equipment.length}
+                          </span>
+                        </>
+                      )}
+                    </div>
+                  </button>
+                )
+              })}
+            </div>
+
+            <button
+              onClick={() => scrollChips('right')}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm shadow-md rounded-full p-1.5 hover:bg-gray-100 border border-gray-200"
+            >
+              <ChevronRight className="h-4 w-4 text-gray-600" />
+            </button>
+          </div>
         </CardHeader>
+
         <CardContent>
           {currentScenario && (
             <div className="space-y-4">
-              <div className="flex gap-2 mb-4">
-                <Badge variant="outline">{currentScenario.category}</Badge>
-                <Badge variant="outline">{currentScenario.trainingStyle}</Badge>
+              {/* Scenario metadata badges */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {currentScenario.split && (
+                  <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
+                    {currentScenario.split.replace(/_/g, ' ').toUpperCase()}
+                  </Badge>
+                )}
+
+                {currentScenario.dayFocus && (
+                  <Badge variant="outline" className="bg-purple-50 text-purple-700 border-purple-200">
+                    {currentScenario.dayFocus}
+                  </Badge>
+                )}
+
+                {currentScenario.trainingStyles?.map((style, idx) => (
+                  <Badge key={idx} variant="outline" className="bg-green-50 text-green-700 border-green-200">
+                    {style.replace(/_/g, ' ').replace('classic ', '').toUpperCase()}
+                  </Badge>
+                ))}
+
+                {/* Fallback for old data structure */}
+                {!currentScenario.split && !currentScenario.dayFocus && !currentScenario.trainingStyles && (
+                  <>
+                    <Badge variant="outline">{currentScenario.category}</Badge>
+                    {currentScenario.trainingStyle !== currentScenario.category && (
+                      <Badge variant="outline">{currentScenario.trainingStyle}</Badge>
+                    )}
+                  </>
+                )}
+
+                {/* Duration badge */}
+                <Badge variant="outline" className="flex items-center gap-1">
+                  <Clock className="w-3 h-3" />
+                  {currentScenario.duration} min
+                </Badge>
               </div>
 
+              {/* Equipment badges */}
+              {currentScenario.equipment && currentScenario.equipment.length > 0 && (
+                <div className="flex flex-wrap gap-1.5">
+                  <span className="text-xs text-gray-500 mr-1 self-center">Equipment:</span>
+                  {currentScenario.equipment.map(eq => (
+                    <span
+                      key={eq}
+                      className="px-2 py-0.5 bg-zinc-100 text-zinc-600 text-xs rounded-full"
+                    >
+                      {eq.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {/* Model results grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {currentScenario.results.map((result, idx) => (
-                  <Card key={result.modelId || idx} className={`${result.status === 'success' ? 'border-green-200' : 'border-red-200'}`}>
+                  <Card key={`${result.modelId}-${idx}`} className={`${result.status === 'success' ? 'border-green-200' : 'border-red-200'}`}>
                     <CardHeader className="pb-2">
                       <CardTitle className="text-sm flex items-center justify-between">
                         <span>{result.model}</span>
@@ -216,12 +413,23 @@ export function LLMBenchmark() {
                           {result.exercises && result.exercises.length > 0 && (
                             <div className="mt-3 pt-3 border-t border-gray-100">
                               <p className="text-xs text-gray-500 mb-2">Exercises:</p>
-                              <ul className="text-xs space-y-2">
+                              <ul className="text-xs space-y-3">
                                 {result.exercises.map((ex, i) => (
-                                  <li key={i}>
-                                    <div className="font-medium text-gray-800">{ex.name}</div>
-                                    <div className="text-gray-500">
-                                      {ex.sets} sets x {ex.reps} reps{ex.rest ? ` · ${ex.rest}s rest` : ''}
+                                  <li key={i} className="flex gap-3">
+                                    {ex.gifUrl && (
+                                      <img
+                                        src={ex.gifUrl}
+                                        alt={ex.name}
+                                        className="w-16 h-16 rounded-md object-cover bg-gray-100 flex-shrink-0"
+                                        loading="lazy"
+                                        onError={(e) => e.target.style.display = 'none'}
+                                      />
+                                    )}
+                                    <div className="flex-1 min-w-0">
+                                      <div className="font-medium text-gray-800 truncate">{ex.name}</div>
+                                      <div className="text-gray-500">
+                                        {ex.sets} sets x {ex.reps} reps{ex.rest ? ` · ${ex.rest}s rest` : ''}
+                                      </div>
                                     </div>
                                   </li>
                                 ))}
