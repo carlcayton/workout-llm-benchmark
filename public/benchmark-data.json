@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-28T19:49:31.114Z",
+  "timestamp": "2025-12-29T09:27:19.405Z",
   "modelStats": [
     {
       "modelId": "anthropic/claude-sonnet-4.5",
@@ -35,24 +35,24 @@
       "parseErrorCount": 0
     },
     {
-      "modelId": "google/gemini-3-pro-preview",
-      "modelName": "Gemini 3 Pro",
+      "modelId": "openai/gpt-5",
+      "modelName": "GPT-5",
       "tier": "premium",
       "successRate": 100,
-      "avgLatency": 11914,
+      "avgLatency": 1357,
       "avgExerciseCount": 6.7,
-      "avgEquipmentMatchRate": 7,
+      "avgEquipmentMatchRate": 100,
       "successCount": 26,
       "parseErrorCount": 0
     },
     {
-      "modelId": "openai/gpt-5.2",
-      "modelName": "gpt-5.2",
-      "tier": "unknown",
+      "modelId": "google/gemini-3-pro-preview",
+      "modelName": "Gemini 3 Pro",
+      "tier": "premium",
       "successRate": 100,
-      "avgLatency": 12057,
+      "avgLatency": 1421,
       "avgExerciseCount": 6.7,
-      "avgEquipmentMatchRate": 8,
+      "avgEquipmentMatchRate": 100,
       "successCount": 26,
       "parseErrorCount": 0
     }
@@ -70,89 +70,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 26632,
-          "equipmentMatch": 38,
-          "exerciseCount": 8,
-          "avgSets": 4,
-          "avgReps": 10,
-          "avgRest": 60,
-          "error": null,
-          "exercises": [
-            {
-              "name": "Barbell Bench Press",
-              "id": "0025",
-              "sets": 4,
-              "reps": 10,
-              "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0025.gif"
-            },
-            {
-              "name": "Barbell Incline Bench Press",
-              "id": "0047",
-              "sets": 4,
-              "reps": 10,
-              "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0047.gif"
-            },
-            {
-              "name": "Dumbbell Incline Fly",
-              "id": "0319",
-              "sets": 4,
-              "reps": 10,
-              "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0319.gif"
-            },
-            {
-              "name": "Dumbbell Fly",
-              "id": "0308",
-              "sets": 4,
-              "reps": 10,
-              "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0308.gif"
-            },
-            {
-              "name": "Cable Middle Fly",
-              "id": "0188",
-              "sets": 4,
-              "reps": 10,
-              "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0188.gif"
-            },
-            {
-              "name": "Cable Low Fly",
-              "id": "0179",
-              "sets": 4,
-              "reps": 10,
-              "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0179.gif"
-            },
-            {
-              "name": "Unknown Exercise (0596)",
-              "id": "0596",
-              "sets": 4,
-              "reps": 10,
-              "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0596.gif"
-            },
-            {
-              "name": "Push-Up Plus",
-              "id": "3145",
-              "sets": 4,
-              "reps": 10,
-              "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3145.gif"
-            }
-          ]
-        },
-        {
-          "model": "Gemini 3 Pro",
-          "modelId": "google/gemini-3-pro-preview",
-          "status": "success",
-          "latency": 55887,
-          "equipmentMatch": 0,
+          "latency": 3438,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4,
           "avgReps": 10,
@@ -192,12 +114,82 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1734.gif"
             },
             {
-              "name": "Push And Pull Bodyweight",
-              "id": "1689",
+              "name": "Dumbbell Lying Single Extension",
+              "id": "1735",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1689.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1735.gif"
+            },
+            {
+              "name": "Barbell Seated Close Grip Behind Neck Triceps Extension",
+              "id": "1718",
+              "sets": 4,
+              "reps": 10,
+              "rest": 60,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1718.gif"
+            },
+            {
+              "name": "Barbell Lying Back Of The Head Tricep Extension",
+              "id": "1720",
+              "sets": 4,
+              "reps": 10,
+              "rest": 60,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1720.gif"
+            },
+            {
+              "name": "Barbell Reverse Grip Skullcrusher",
+              "id": "1721",
+              "sets": 4,
+              "reps": 10,
+              "rest": 60,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1721.gif"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "modelId": "google/gemini-3-pro-preview",
+          "status": "success",
+          "latency": 3775,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 60,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Assisted Chest Dip (Kneeling)",
+              "id": "0009",
+              "sets": 4,
+              "reps": 10,
+              "rest": 60,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0009.gif"
+            },
+            {
+              "name": "Barbell Incline Close Grip Bench Press",
+              "id": "1719",
+              "sets": 4,
+              "reps": 10,
+              "rest": 60,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1719.gif"
+            },
+            {
+              "name": "Barbell Standing Overhead Triceps Extension",
+              "id": "0109",
+              "sets": 4,
+              "reps": 10,
+              "rest": 60,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0109.gif"
+            },
+            {
+              "name": "Dumbbell Kickbacks On Exercise Ball",
+              "id": "1734",
+              "sets": 4,
+              "reps": 10,
+              "rest": 60,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1734.gif"
             },
             {
               "name": "Dumbbell Lying Single Extension",
@@ -222,6 +214,14 @@
               "reps": 10,
               "rest": 60,
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1720.gif"
+            },
+            {
+              "name": "Barbell Reverse Grip Skullcrusher",
+              "id": "1721",
+              "sets": 4,
+              "reps": 10,
+              "rest": 60,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1721.gif"
             }
           ]
         },
@@ -478,11 +478,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 81030,
-          "equipmentMatch": 0,
+          "latency": 1953,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4,
           "avgReps": 10,
@@ -559,8 +559,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 56042,
-          "equipmentMatch": 0,
+          "latency": 2119,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4,
           "avgReps": 10,
@@ -885,11 +885,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 49411,
-          "equipmentMatch": 0,
+          "latency": 1781,
+          "equipmentMatch": 100,
           "exerciseCount": 6,
           "avgSets": 4,
           "avgReps": 10,
@@ -897,36 +897,20 @@
           "error": null,
           "exercises": [
             {
-              "name": "Barbell Upright Row V. 2",
-              "id": "0119",
+              "name": "Dumbbell Push Press",
+              "id": "1700",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0119.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1700.gif"
             },
             {
-              "name": "Barbell Upright Row",
-              "id": "0120",
+              "name": "Dumbbell Upright Row (Back Pov)",
+              "id": "1765",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0120.gif"
-            },
-            {
-              "name": "Landmine Lateral Raise",
-              "id": "3237",
-              "sets": 4,
-              "reps": 12,
-              "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3237.gif"
-            },
-            {
-              "name": "Barbell Front Raise",
-              "id": "0041",
-              "sets": 4,
-              "reps": 12,
-              "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0041.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1765.gif"
             },
             {
               "name": "Barbell Standing Front Raise Over Head",
@@ -937,12 +921,28 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0107.gif"
             },
             {
-              "name": "Barbell Rear Delt Raise",
-              "id": "0075",
+              "name": "Dumbbell Standing Around World",
+              "id": "2143",
               "sets": 4,
-              "reps": 12,
+              "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0075.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2143.gif"
+            },
+            {
+              "name": "Dumbbell Rear Delt Raise",
+              "id": "2292",
+              "sets": 4,
+              "reps": 10,
+              "rest": 60,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2292.gif"
+            },
+            {
+              "name": "Dumbbell Seated Bent Arm Lateral Raise",
+              "id": "2317",
+              "sets": 4,
+              "reps": 10,
+              "rest": 60,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2317.gif"
             }
           ]
         },
@@ -950,8 +950,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 55603,
-          "equipmentMatch": 0,
+          "latency": 1588,
+          "equipmentMatch": 100,
           "exerciseCount": 6,
           "avgSets": 4,
           "avgReps": 10,
@@ -959,20 +959,20 @@
           "error": null,
           "exercises": [
             {
-              "name": "Barbell Upright Row V. 2",
-              "id": "0119",
+              "name": "Dumbbell Push Press",
+              "id": "1700",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0119.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1700.gif"
             },
             {
-              "name": "Barbell Upright Row",
-              "id": "0120",
+              "name": "Dumbbell Upright Row (Back Pov)",
+              "id": "1765",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0120.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1765.gif"
             },
             {
               "name": "Barbell Standing Front Raise Over Head",
@@ -983,28 +983,28 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0107.gif"
             },
             {
-              "name": "Landmine Lateral Raise",
-              "id": "3237",
+              "name": "Dumbbell Standing Around World",
+              "id": "2143",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3237.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2143.gif"
             },
             {
-              "name": "Barbell Front Raise",
-              "id": "0041",
+              "name": "Dumbbell Rear Delt Raise",
+              "id": "2292",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0041.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2292.gif"
             },
             {
-              "name": "Barbell Rear Delt Raise",
-              "id": "0075",
+              "name": "Dumbbell Seated Bent Arm Lateral Raise",
+              "id": "2317",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0075.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2317.gif"
             }
           ]
         },
@@ -1214,11 +1214,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 67039,
-          "equipmentMatch": 0,
+          "latency": 891,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4,
           "avgReps": 10,
@@ -1226,20 +1226,20 @@
           "error": null,
           "exercises": [
             {
-              "name": "Lever Seated Calf Press",
-              "id": "2335",
+              "name": "Barbell Bench Front Squat",
+              "id": "0024",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2335.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0024.gif"
             },
             {
-              "name": "Lever Seated Squat Calf Raise On Leg Press Machine",
-              "id": "1385",
+              "name": "Barbell Straight Leg Deadlift",
+              "id": "0116",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1385.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0116.gif"
             },
             {
               "name": "Barbell Standing Leg Calf Raise",
@@ -1258,36 +1258,36 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0111.gif"
             },
             {
-              "name": "Barbell Seated Calf Raise",
-              "id": "0088",
+              "name": "Barbell Step-Up",
+              "id": "0114",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0088.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0114.gif"
             },
             {
-              "name": "Barbell Floor Calf Raise",
-              "id": "1370",
+              "name": "Barbell Stiff Leg Good Morning",
+              "id": "0115",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1370.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0115.gif"
             },
             {
-              "name": "Barbell Seated Calf Raise",
-              "id": "1371",
+              "name": "Farmers Walk",
+              "id": "2133",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1371.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2133.gif"
             },
             {
-              "name": "Barbell Standing Calf Raise",
-              "id": "1372",
+              "name": "Lever Rotary Calf",
+              "id": "2315",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1372.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2315.gif"
             }
           ]
         },
@@ -1295,8 +1295,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 54463,
-          "equipmentMatch": 0,
+          "latency": 1888,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4,
           "avgReps": 10,
@@ -1304,20 +1304,20 @@
           "error": null,
           "exercises": [
             {
-              "name": "Lever Seated Calf Press",
-              "id": "2335",
+              "name": "Barbell Bench Front Squat",
+              "id": "0024",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2335.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0024.gif"
             },
             {
-              "name": "Lever Seated Squat Calf Raise On Leg Press Machine",
-              "id": "1385",
+              "name": "Barbell Straight Leg Deadlift",
+              "id": "0116",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1385.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0116.gif"
             },
             {
               "name": "Barbell Standing Leg Calf Raise",
@@ -1336,36 +1336,36 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0111.gif"
             },
             {
-              "name": "Barbell Seated Calf Raise",
-              "id": "0088",
+              "name": "Barbell Step-Up",
+              "id": "0114",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0088.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0114.gif"
             },
             {
-              "name": "Barbell Floor Calf Raise",
-              "id": "1370",
+              "name": "Barbell Stiff Leg Good Morning",
+              "id": "0115",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1370.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0115.gif"
             },
             {
-              "name": "Barbell Seated Calf Raise",
-              "id": "1371",
+              "name": "Farmers Walk",
+              "id": "2133",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1371.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2133.gif"
             },
             {
-              "name": "Barbell Standing Calf Raise",
-              "id": "1372",
+              "name": "Lever Rotary Calf",
+              "id": "2315",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1372.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2315.gif"
             }
           ]
         },
@@ -1620,11 +1620,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 62517,
-          "equipmentMatch": 13,
+          "latency": 1359,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 5,
           "avgReps": 5,
@@ -1640,60 +1640,60 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0022.gif"
             },
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Dumbbell Push Press",
+              "id": "1700",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1700.gif"
             },
             {
-              "name": "Bench Pull-Ups",
-              "id": "3019",
+              "name": "Cable Squat Row (With Rope Attachment)",
+              "id": "1717",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3019.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1717.gif"
             },
             {
-              "name": "Barbell Decline Bent Arm Pullover",
-              "id": "0034",
+              "name": "Alternate Lateral Pulldown",
+              "id": "0007",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0034.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0007.gif"
             },
             {
-              "name": "Barbell Decline Wide-Grip Pullover",
-              "id": "0037",
+              "name": "Barbell Standing Front Raise Over Head",
+              "id": "0107",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0037.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0107.gif"
             },
             {
-              "name": "Barbell Pullover",
-              "id": "0073",
+              "name": "Dumbbell Standing Around World",
+              "id": "2143",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0073.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2143.gif"
             },
             {
-              "name": "Barbell Bent Arm Pullover",
-              "id": "1316",
+              "name": "Dumbbell Rear Delt Raise",
+              "id": "2292",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1316.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2292.gif"
             },
             {
-              "name": "Archer Pull Up",
-              "id": "3293",
+              "name": "Dumbbell Seated Bent Arm Lateral Raise",
+              "id": "2317",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3293.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2317.gif"
             }
           ]
         },
@@ -1701,8 +1701,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 60061,
-          "equipmentMatch": 13,
+          "latency": 696,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 5,
           "avgReps": 5,
@@ -1718,60 +1718,60 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0022.gif"
             },
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Dumbbell Push Press",
+              "id": "1700",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1700.gif"
             },
             {
-              "name": "Bench Pull-Ups",
-              "id": "3019",
+              "name": "Cable Squat Row (With Rope Attachment)",
+              "id": "1717",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3019.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1717.gif"
             },
             {
-              "name": "Barbell Decline Bent Arm Pullover",
-              "id": "0034",
+              "name": "Alternate Lateral Pulldown",
+              "id": "0007",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0034.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0007.gif"
             },
             {
-              "name": "Barbell Decline Wide-Grip Pullover",
-              "id": "0037",
+              "name": "Barbell Standing Front Raise Over Head",
+              "id": "0107",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0037.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0107.gif"
             },
             {
-              "name": "Barbell Pullover",
-              "id": "0073",
+              "name": "Dumbbell Standing Around World",
+              "id": "2143",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0073.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2143.gif"
             },
             {
-              "name": "Barbell Bent Arm Pullover",
-              "id": "1316",
+              "name": "Dumbbell Rear Delt Raise",
+              "id": "2292",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1316.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2292.gif"
             },
             {
-              "name": "Archer Pull Up",
-              "id": "3293",
+              "name": "Dumbbell Seated Bent Arm Lateral Raise",
+              "id": "2317",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3293.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2317.gif"
             }
           ]
         },
@@ -2026,11 +2026,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1360,
-          "equipmentMatch": 0,
+          "latency": 1161,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 5,
           "avgReps": 5,
@@ -2107,8 +2107,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1396,
-          "equipmentMatch": 0,
+          "latency": 1197,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 5,
           "avgReps": 5,
@@ -2431,11 +2431,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 828,
-          "equipmentMatch": 25,
+          "latency": 970,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 5,
           "avgReps": 5,
@@ -2467,53 +2467,53 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0033.gif"
             },
             {
-              "name": "Hyperextension (On Bench)",
-              "id": "0488",
+              "name": "Barbell Front Raise And Pullover",
+              "id": "0040",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0488.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0040.gif"
             },
             {
-              "name": "Hyperextension",
-              "id": "0489",
+              "name": "Floor Fly (With Barbell)",
+              "id": "0458",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0489.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0458.gif"
             },
             {
-              "name": "Spine Stretch",
-              "id": "1363",
+              "name": "Barbell Decline Pullover",
+              "id": "1255",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1363.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1255.gif"
             },
             {
-              "name": "Standing Pelvic Tilt",
-              "id": "1364",
+              "name": "Hyght Dumbbell Fly",
+              "id": "3234",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1364.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3234.gif"
             },
             {
-              "name": "Lower Back Curl",
-              "id": "1352",
+              "name": "Dumbbell Around Pullover",
+              "id": "0288",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1352.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0288.gif"
             }
           ]
         },
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1115,
-          "equipmentMatch": 0,
+          "latency": 998,
+          "equipmentMatch": 100,
           "exerciseCount": 5,
           "avgSets": 5,
           "avgReps": 5,
@@ -2521,44 +2521,44 @@
           "error": null,
           "exercises": [
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Kettlebell Seated Press",
+              "id": "0546",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0546.gif"
             },
             {
-              "name": "One Arm Towel Row",
-              "id": "1773",
+              "name": "Kettlebell Seesaw Press",
+              "id": "0547",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1773.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0547.gif"
             },
             {
-              "name": "Inverted Row On Bench",
-              "id": "2298",
+              "name": "Kettlebell Alternating Press On Floor",
+              "id": "0519",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2298.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0519.gif"
             },
             {
-              "name": "Elbow Lift - Reverse Push-Up",
-              "id": "1772",
+              "name": "Kettlebell Double Alternating Hang Clean",
+              "id": "0526",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1772.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0526.gif"
             },
             {
-              "name": "Elevator",
-              "id": "3292",
+              "name": "Kettlebell Hang Clean",
+              "id": "0535",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3292.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0535.gif"
             }
           ]
         },
@@ -2566,8 +2566,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1241,
-          "equipmentMatch": 25,
+          "latency": 1174,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 5,
           "avgReps": 5,
@@ -2599,44 +2599,44 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0033.gif"
             },
             {
-              "name": "Hyperextension (On Bench)",
-              "id": "0488",
+              "name": "Barbell Front Raise And Pullover",
+              "id": "0040",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0488.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0040.gif"
             },
             {
-              "name": "Hyperextension",
-              "id": "0489",
+              "name": "Floor Fly (With Barbell)",
+              "id": "0458",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0489.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0458.gif"
             },
             {
-              "name": "Spine Stretch",
-              "id": "1363",
+              "name": "Barbell Decline Pullover",
+              "id": "1255",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1363.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1255.gif"
             },
             {
-              "name": "Standing Pelvic Tilt",
-              "id": "1364",
+              "name": "Hyght Dumbbell Fly",
+              "id": "3234",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1364.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3234.gif"
             },
             {
-              "name": "Lower Back Curl",
-              "id": "1352",
+              "name": "Dumbbell Around Pullover",
+              "id": "0288",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1352.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0288.gif"
             }
           ]
         },
@@ -2644,8 +2644,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1128,
-          "equipmentMatch": 0,
+          "latency": 959,
+          "equipmentMatch": 100,
           "exerciseCount": 5,
           "avgSets": 5,
           "avgReps": 5,
@@ -2653,44 +2653,44 @@
           "error": null,
           "exercises": [
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Kettlebell Seated Press",
+              "id": "0546",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0546.gif"
             },
             {
-              "name": "One Arm Towel Row",
-              "id": "1773",
+              "name": "Kettlebell Seesaw Press",
+              "id": "0547",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1773.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0547.gif"
             },
             {
-              "name": "Inverted Row On Bench",
-              "id": "2298",
+              "name": "Kettlebell Alternating Press On Floor",
+              "id": "0519",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2298.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0519.gif"
             },
             {
-              "name": "Elbow Lift - Reverse Push-Up",
-              "id": "1772",
+              "name": "Kettlebell Double Alternating Hang Clean",
+              "id": "0526",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1772.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0526.gif"
             },
             {
-              "name": "Elevator",
-              "id": "3292",
+              "name": "Kettlebell Hang Clean",
+              "id": "0535",
               "sets": 5,
               "reps": 5,
               "rest": 180,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3292.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0535.gif"
             }
           ]
         },
@@ -3109,11 +3109,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 2010,
-          "equipmentMatch": 0,
+          "latency": 1381,
+          "equipmentMatch": 100,
           "exerciseCount": 4,
           "avgSets": 2,
           "avgReps": 8,
@@ -3121,36 +3121,36 @@
           "error": null,
           "exercises": [
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Cable Squat Row (With Rope Attachment)",
+              "id": "1717",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1717.gif"
             },
             {
-              "name": "Bench Pull-Ups",
-              "id": "3019",
+              "name": "Unknown Exercise (0213)",
+              "id": "0213",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3019.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0213.gif"
             },
             {
-              "name": "Archer Pull Up",
-              "id": "3293",
+              "name": "Alternate Lateral Pulldown",
+              "id": "0007",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3293.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0007.gif"
             },
             {
-              "name": "Gironda Sternum Chin",
-              "id": "0466",
+              "name": "Cable Lat Pulldown Full Range Of Motion",
+              "id": "2330",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0466.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2330.gif"
             }
           ]
         },
@@ -3158,8 +3158,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1309,
-          "equipmentMatch": 0,
+          "latency": 1187,
+          "equipmentMatch": 100,
           "exerciseCount": 4,
           "avgSets": 2,
           "avgReps": 8,
@@ -3167,36 +3167,36 @@
           "error": null,
           "exercises": [
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Cable Squat Row (With Rope Attachment)",
+              "id": "1717",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1717.gif"
             },
             {
-              "name": "Bench Pull-Ups",
-              "id": "3019",
+              "name": "Unknown Exercise (0213)",
+              "id": "0213",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3019.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0213.gif"
             },
             {
-              "name": "Archer Pull Up",
-              "id": "3293",
+              "name": "Alternate Lateral Pulldown",
+              "id": "0007",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3293.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0007.gif"
             },
             {
-              "name": "Gironda Sternum Chin",
-              "id": "0466",
+              "name": "Cable Lat Pulldown Full Range Of Motion",
+              "id": "2330",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0466.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2330.gif"
             }
           ]
         },
@@ -3354,11 +3354,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1129,
-          "equipmentMatch": 0,
+          "latency": 1680,
+          "equipmentMatch": 100,
           "exerciseCount": 4,
           "avgSets": 2,
           "avgReps": 8,
@@ -3366,36 +3366,36 @@
           "error": null,
           "exercises": [
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Assisted Chest Dip (Kneeling)",
+              "id": "0009",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0009.gif"
             },
             {
-              "name": "One Arm Towel Row",
-              "id": "1773",
+              "name": "Dumbbell Push Press",
+              "id": "1700",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1773.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1700.gif"
             },
             {
-              "name": "Elbow Lift - Reverse Push-Up",
-              "id": "1772",
+              "name": "Dumbbell One Arm Standing Curl",
+              "id": "1670",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1772.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1670.gif"
             },
             {
-              "name": "Elevator",
-              "id": "3292",
+              "name": "Dumbbell One Arm Standing Hammer Curl",
+              "id": "1671",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3292.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1671.gif"
             }
           ]
         },
@@ -3403,8 +3403,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1974,
-          "equipmentMatch": 0,
+          "latency": 1447,
+          "equipmentMatch": 100,
           "exerciseCount": 4,
           "avgSets": 2,
           "avgReps": 8,
@@ -3412,36 +3412,36 @@
           "error": null,
           "exercises": [
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Assisted Chest Dip (Kneeling)",
+              "id": "0009",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0009.gif"
             },
             {
-              "name": "One Arm Towel Row",
-              "id": "1773",
+              "name": "Dumbbell Push Press",
+              "id": "1700",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1773.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1700.gif"
             },
             {
-              "name": "Elbow Lift - Reverse Push-Up",
-              "id": "1772",
+              "name": "Dumbbell One Arm Standing Curl",
+              "id": "1670",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1772.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1670.gif"
             },
             {
-              "name": "Elevator",
-              "id": "3292",
+              "name": "Dumbbell One Arm Standing Hammer Curl",
+              "id": "1671",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3292.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1671.gif"
             }
           ]
         },
@@ -3599,11 +3599,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1656,
-          "equipmentMatch": 0,
+          "latency": 1209,
+          "equipmentMatch": 100,
           "exerciseCount": 3,
           "avgSets": 2,
           "avgReps": 8,
@@ -3640,8 +3640,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1512,
-          "equipmentMatch": 0,
+          "latency": 1175,
+          "equipmentMatch": 100,
           "exerciseCount": 3,
           "avgSets": 2,
           "avgReps": 8,
@@ -3805,11 +3805,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1135,
-          "equipmentMatch": 0,
+          "latency": 1425,
+          "equipmentMatch": 100,
           "exerciseCount": 6,
           "avgSets": 3,
           "avgReps": 20,
@@ -3817,61 +3817,61 @@
           "error": null,
           "exercises": [
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Kettlebell Seated Press",
+              "id": "0546",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0546.gif"
             },
             {
-              "name": "One Arm Towel Row",
-              "id": "1773",
+              "name": "Squat To Overhead Reach",
+              "id": "1685",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1773.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1685.gif"
             },
             {
-              "name": "Elbow Lift - Reverse Push-Up",
-              "id": "1772",
+              "name": "Balance Board",
+              "id": "0020",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1772.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0020.gif"
             },
             {
-              "name": "Elevator",
-              "id": "3292",
+              "name": "Dumbbell One Arm Standing Curl",
+              "id": "1670",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3292.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1670.gif"
             },
             {
-              "name": "Standing Archer",
-              "id": "3669",
+              "name": "Dumbbell One Arm Standing Hammer Curl",
+              "id": "1671",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3669.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1671.gif"
             },
             {
-              "name": "Hyperextension (On Bench)",
-              "id": "0488",
+              "name": "Dumbbell One Arm Zottman Preacher Curl",
+              "id": "1672",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0488.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1672.gif"
             }
           ]
         },
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1549,
-          "equipmentMatch": 0,
+          "latency": 1416,
+          "equipmentMatch": 100,
           "exerciseCount": 6,
           "avgSets": 3,
           "avgReps": 20,
@@ -3929,11 +3929,11 @@
           ]
         },
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1303,
-          "equipmentMatch": 0,
+          "latency": 993,
+          "equipmentMatch": 100,
           "exerciseCount": 7,
           "avgSets": 3,
           "avgReps": 20,
@@ -3941,60 +3941,60 @@
           "error": null,
           "exercises": [
             {
-              "name": "Band Assisted Pull-Up",
-              "id": "0970",
+              "name": "Squat To Overhead Reach",
+              "id": "1685",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0970.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1685.gif"
             },
             {
-              "name": "Band One Arm Standing Low Row",
-              "id": "0988",
+              "name": "Squat To Overhead Reach With Twist",
+              "id": "1686",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0988.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1686.gif"
             },
             {
-              "name": "Band Fixed Back Underhand Pulldown",
-              "id": "3116",
+              "name": "Bodyweight Side Lying Biceps Curl",
+              "id": "1769",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3116.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1769.gif"
             },
             {
-              "name": "Band Fixed Back Close Grip Pulldown",
-              "id": "3117",
+              "name": "Biceps Leg Concentration Curl",
+              "id": "1770",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3117.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1770.gif"
             },
             {
-              "name": "Band Close-Grip Pulldown",
-              "id": "0974",
+              "name": "Elbow Lift - Reverse Push-Up",
+              "id": "1772",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0974.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1772.gif"
             },
             {
-              "name": "Band Kneeling One Arm Pulldown",
-              "id": "0983",
+              "name": "Close-Grip Push-Up (On Knees)",
+              "id": "2398",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0983.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2398.gif"
             },
             {
-              "name": "Band Underhand Pulldown",
-              "id": "1013",
+              "name": "Seated Piriformis Stretch",
+              "id": "2567",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1013.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2567.gif"
             }
           ]
         },
@@ -4002,8 +4002,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1298,
-          "equipmentMatch": 0,
+          "latency": 1409,
+          "equipmentMatch": 100,
           "exerciseCount": 6,
           "avgSets": 3,
           "avgReps": 20,
@@ -4064,8 +4064,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1288,
-          "equipmentMatch": 0,
+          "latency": 1095,
+          "equipmentMatch": 100,
           "exerciseCount": 6,
           "avgSets": 3,
           "avgReps": 20,
@@ -4126,8 +4126,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1429,
-          "equipmentMatch": 0,
+          "latency": 1241,
+          "equipmentMatch": 100,
           "exerciseCount": 7,
           "avgSets": 3,
           "avgReps": 20,
@@ -4135,60 +4135,60 @@
           "error": null,
           "exercises": [
             {
-              "name": "Band Assisted Pull-Up",
-              "id": "0970",
+              "name": "Squat To Overhead Reach",
+              "id": "1685",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0970.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1685.gif"
             },
             {
-              "name": "Band One Arm Standing Low Row",
-              "id": "0988",
+              "name": "Squat To Overhead Reach With Twist",
+              "id": "1686",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0988.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1686.gif"
             },
             {
-              "name": "Band Fixed Back Underhand Pulldown",
-              "id": "3116",
+              "name": "Bodyweight Side Lying Biceps Curl",
+              "id": "1769",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3116.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1769.gif"
             },
             {
-              "name": "Band Fixed Back Close Grip Pulldown",
-              "id": "3117",
+              "name": "Biceps Leg Concentration Curl",
+              "id": "1770",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3117.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1770.gif"
             },
             {
-              "name": "Band Close-Grip Pulldown",
-              "id": "0974",
+              "name": "Elbow Lift - Reverse Push-Up",
+              "id": "1772",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0974.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1772.gif"
             },
             {
-              "name": "Band Kneeling One Arm Pulldown",
-              "id": "0983",
+              "name": "Close-Grip Push-Up (On Knees)",
+              "id": "2398",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0983.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2398.gif"
             },
             {
-              "name": "Band Underhand Pulldown",
-              "id": "1013",
+              "name": "Seated Piriformis Stretch",
+              "id": "2567",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1013.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2567.gif"
             }
           ]
         },
@@ -4791,11 +4791,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1527,
-          "equipmentMatch": 0,
+          "latency": 1413,
+          "equipmentMatch": 100,
           "exerciseCount": 7,
           "avgSets": 3,
           "avgReps": 20,
@@ -4811,12 +4811,12 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0970.gif"
             },
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Cable Squat Row (With Rope Attachment)",
+              "id": "1717",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1717.gif"
             },
             {
               "name": "Band Fixed Back Underhand Pulldown",
@@ -4861,11 +4861,11 @@
           ]
         },
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 665,
-          "equipmentMatch": 0,
+          "latency": 1036,
+          "equipmentMatch": 100,
           "exerciseCount": 6,
           "avgSets": 3,
           "avgReps": 20,
@@ -4926,8 +4926,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1166,
-          "equipmentMatch": 0,
+          "latency": 1441,
+          "equipmentMatch": 100,
           "exerciseCount": 7,
           "avgSets": 3,
           "avgReps": 20,
@@ -4943,12 +4943,12 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0970.gif"
             },
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Cable Squat Row (With Rope Attachment)",
+              "id": "1717",
               "sets": 3,
               "reps": 20,
               "rest": 30,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1717.gif"
             },
             {
               "name": "Band Fixed Back Underhand Pulldown",
@@ -4996,8 +4996,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 882,
-          "equipmentMatch": 0,
+          "latency": 870,
+          "equipmentMatch": 100,
           "exerciseCount": 6,
           "avgSets": 3,
           "avgReps": 20,
@@ -5465,11 +5465,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1257,
-          "equipmentMatch": 0,
+          "latency": 1163,
+          "equipmentMatch": 100,
           "exerciseCount": 6,
           "avgSets": 4,
           "avgReps": 10,
@@ -5477,61 +5477,61 @@
           "error": null,
           "exercises": [
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Dumbbell Incline Alternate Press",
+              "id": "3545",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3545.gif"
             },
             {
-              "name": "Bench Pull-Ups",
-              "id": "3019",
+              "name": "Dumbbell Bench Press",
+              "id": "0289",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3019.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0289.gif"
             },
             {
-              "name": "Pull Up (Neutral Grip)",
-              "id": "0651",
+              "name": "Hyght Dumbbell Fly",
+              "id": "3234",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0651.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3234.gif"
             },
             {
-              "name": "Seated Lower Back Stretch",
-              "id": "0690",
+              "name": "Dumbbell Around Pullover",
+              "id": "0288",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0690.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0288.gif"
             },
             {
-              "name": "Standing Lateral Stretch",
-              "id": "0794",
+              "name": "Dumbbell Decline Fly",
+              "id": "0302",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0794.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0302.gif"
             },
             {
-              "name": "Kneeling Lat Stretch",
-              "id": "1346",
+              "name": "Dumbbell Decline Twist Fly",
+              "id": "0307",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1346.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0307.gif"
             }
           ]
         },
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1085,
-          "equipmentMatch": 0,
+          "latency": 288,
+          "equipmentMatch": 100,
           "exerciseCount": 5,
           "avgSets": 4,
           "avgReps": 10,
@@ -5539,44 +5539,44 @@
           "error": null,
           "exercises": [
             {
-              "name": "Inverted Row On Bench",
-              "id": "2298",
+              "name": "Cable Seated Row",
+              "id": "0861",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2298.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0861.gif"
             },
             {
-              "name": "Inverted Row Bent Knees",
-              "id": "2300",
+              "name": "Cable Upper Row",
+              "id": "1324",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2300.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1324.gif"
             },
             {
-              "name": "Elbow Lift - Reverse Push-Up",
-              "id": "1772",
+              "name": "Alternate Lateral Pulldown",
+              "id": "0007",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1772.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0007.gif"
             },
             {
-              "name": "Elevator",
-              "id": "3292",
+              "name": "Cable Lat Pulldown Full Range Of Motion",
+              "id": "2330",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3292.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2330.gif"
             },
             {
-              "name": "Standing Archer",
-              "id": "3669",
+              "name": "Cable Lateral Pulldown With V-Bar",
+              "id": "2616",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3669.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2616.gif"
             }
           ]
         },
@@ -5584,8 +5584,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1581,
-          "equipmentMatch": 0,
+          "latency": 1209,
+          "equipmentMatch": 100,
           "exerciseCount": 6,
           "avgSets": 4,
           "avgReps": 10,
@@ -5593,52 +5593,52 @@
           "error": null,
           "exercises": [
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Dumbbell Incline Alternate Press",
+              "id": "3545",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3545.gif"
             },
             {
-              "name": "Bench Pull-Ups",
-              "id": "3019",
+              "name": "Dumbbell Bench Press",
+              "id": "0289",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3019.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0289.gif"
             },
             {
-              "name": "Pull Up (Neutral Grip)",
-              "id": "0651",
+              "name": "Hyght Dumbbell Fly",
+              "id": "3234",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0651.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3234.gif"
             },
             {
-              "name": "Seated Lower Back Stretch",
-              "id": "0690",
+              "name": "Dumbbell Around Pullover",
+              "id": "0288",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0690.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0288.gif"
             },
             {
-              "name": "Standing Lateral Stretch",
-              "id": "0794",
+              "name": "Dumbbell Decline Fly",
+              "id": "0302",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0794.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0302.gif"
             },
             {
-              "name": "Kneeling Lat Stretch",
-              "id": "1346",
+              "name": "Dumbbell Decline Twist Fly",
+              "id": "0307",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1346.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0307.gif"
             }
           ]
         },
@@ -5646,8 +5646,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1121,
-          "equipmentMatch": 0,
+          "latency": 1344,
+          "equipmentMatch": 100,
           "exerciseCount": 5,
           "avgSets": 4,
           "avgReps": 10,
@@ -5655,44 +5655,44 @@
           "error": null,
           "exercises": [
             {
-              "name": "Inverted Row On Bench",
-              "id": "2298",
+              "name": "Cable Seated Row",
+              "id": "0861",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2298.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0861.gif"
             },
             {
-              "name": "Inverted Row Bent Knees",
-              "id": "2300",
+              "name": "Cable Upper Row",
+              "id": "1324",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2300.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1324.gif"
             },
             {
-              "name": "Elbow Lift - Reverse Push-Up",
-              "id": "1772",
+              "name": "Alternate Lateral Pulldown",
+              "id": "0007",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1772.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0007.gif"
             },
             {
-              "name": "Elevator",
-              "id": "3292",
+              "name": "Cable Lat Pulldown Full Range Of Motion",
+              "id": "2330",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3292.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2330.gif"
             },
             {
-              "name": "Standing Archer",
-              "id": "3669",
+              "name": "Cable Lateral Pulldown With V-Bar",
+              "id": "2616",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3669.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2616.gif"
             }
           ]
         },
@@ -6061,11 +6061,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1251,
-          "equipmentMatch": 0,
+          "latency": 1390,
+          "equipmentMatch": 100,
           "exerciseCount": 6,
           "avgSets": 4,
           "avgReps": 10,
@@ -6126,8 +6126,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1201,
-          "equipmentMatch": 0,
+          "latency": 1272,
+          "equipmentMatch": 100,
           "exerciseCount": 6,
           "avgSets": 4,
           "avgReps": 10,
@@ -6388,11 +6388,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1040,
-          "equipmentMatch": 38,
+          "latency": 1389,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4,
           "avgReps": 10,
@@ -6440,28 +6440,28 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1255.gif"
             },
             {
-              "name": "Push And Pull Bodyweight",
-              "id": "1689",
+              "name": "Cable Incline Fly (On Stability Ball)",
+              "id": "0170",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1689.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0170.gif"
             },
             {
-              "name": "Push-Up Plus",
-              "id": "3145",
+              "name": "Cable Low Fly",
+              "id": "0179",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3145.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0179.gif"
             },
             {
-              "name": "Archer Push Up",
-              "id": "3294",
+              "name": "Cable Lying Fly",
+              "id": "0185",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3294.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0185.gif"
             }
           ]
         },
@@ -6469,8 +6469,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1237,
-          "equipmentMatch": 38,
+          "latency": 1213,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4,
           "avgReps": 10,
@@ -6518,28 +6518,28 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1255.gif"
             },
             {
-              "name": "Push And Pull Bodyweight",
-              "id": "1689",
+              "name": "Cable Incline Fly (On Stability Ball)",
+              "id": "0170",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1689.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0170.gif"
             },
             {
-              "name": "Push-Up Plus",
-              "id": "3145",
+              "name": "Cable Low Fly",
+              "id": "0179",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3145.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0179.gif"
             },
             {
-              "name": "Archer Push Up",
-              "id": "3294",
+              "name": "Cable Lying Fly",
+              "id": "0185",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3294.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0185.gif"
             }
           ]
         },
@@ -6796,11 +6796,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1569,
-          "equipmentMatch": 13,
+          "latency": 1461,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4,
           "avgReps": 10,
@@ -6877,8 +6877,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1238,
-          "equipmentMatch": 13,
+          "latency": 1468,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4,
           "avgReps": 10,
@@ -7203,11 +7203,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1137,
-          "equipmentMatch": 50,
+          "latency": 1340,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4.4,
           "avgReps": 10,
@@ -7263,20 +7263,20 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1255.gif"
             },
             {
-              "name": "Push And Pull Bodyweight",
-              "id": "1689",
+              "name": "Cable Incline Fly (On Stability Ball)",
+              "id": "0170",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1689.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0170.gif"
             },
             {
-              "name": "Push-Up Plus",
-              "id": "3145",
+              "name": "Cable Low Fly",
+              "id": "0179",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3145.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0179.gif"
             }
           ]
         },
@@ -7284,8 +7284,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1215,
-          "equipmentMatch": 50,
+          "latency": 1266,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4.4,
           "avgReps": 10,
@@ -7341,20 +7341,20 @@
               "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1255.gif"
             },
             {
-              "name": "Push And Pull Bodyweight",
-              "id": "1689",
+              "name": "Cable Incline Fly (On Stability Ball)",
+              "id": "0170",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1689.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0170.gif"
             },
             {
-              "name": "Push-Up Plus",
-              "id": "3145",
+              "name": "Cable Low Fly",
+              "id": "0179",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3145.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0179.gif"
             }
           ]
         },
@@ -7610,11 +7610,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1156,
-          "equipmentMatch": 0,
+          "latency": 1417,
+          "equipmentMatch": 100,
           "exerciseCount": 5,
           "avgSets": 3.2,
           "avgReps": 10,
@@ -7622,44 +7622,44 @@
           "error": null,
           "exercises": [
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Cable Squat Row (With Rope Attachment)",
+              "id": "1717",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1717.gif"
             },
             {
-              "name": "Bench Pull-Ups",
-              "id": "3019",
+              "name": "Unknown Exercise (0213)",
+              "id": "0213",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3019.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0213.gif"
             },
             {
-              "name": "Archer Pull Up",
-              "id": "3293",
+              "name": "Alternate Lateral Pulldown",
+              "id": "0007",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3293.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0007.gif"
             },
             {
-              "name": "Gironda Sternum Chin",
-              "id": "0466",
+              "name": "Cable Lat Pulldown Full Range Of Motion",
+              "id": "2330",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0466.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2330.gif"
             },
             {
-              "name": "Kipping Muscle Up",
-              "id": "0558",
+              "name": "Cable Lateral Pulldown With V-Bar",
+              "id": "2616",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0558.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2616.gif"
             }
           ]
         },
@@ -7667,8 +7667,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1515,
-          "equipmentMatch": 0,
+          "latency": 1712,
+          "equipmentMatch": 100,
           "exerciseCount": 5,
           "avgSets": 3.2,
           "avgReps": 10,
@@ -7676,44 +7676,44 @@
           "error": null,
           "exercises": [
             {
-              "name": "Shoulder Grip Pull-Up",
-              "id": "1763",
+              "name": "Cable Squat Row (With Rope Attachment)",
+              "id": "1717",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1763.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1717.gif"
             },
             {
-              "name": "Bench Pull-Ups",
-              "id": "3019",
+              "name": "Unknown Exercise (0213)",
+              "id": "0213",
               "sets": 2,
               "reps": 8,
               "rest": 120,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3019.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0213.gif"
             },
             {
-              "name": "Archer Pull Up",
-              "id": "3293",
+              "name": "Alternate Lateral Pulldown",
+              "id": "0007",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3293.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0007.gif"
             },
             {
-              "name": "Gironda Sternum Chin",
-              "id": "0466",
+              "name": "Cable Lat Pulldown Full Range Of Motion",
+              "id": "2330",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0466.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2330.gif"
             },
             {
-              "name": "Kipping Muscle Up",
-              "id": "0558",
+              "name": "Cable Lateral Pulldown With V-Bar",
+              "id": "2616",
               "sets": 4,
               "reps": 10,
               "rest": 60,
-              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0558.gif"
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2616.gif"
             }
           ]
         },
@@ -7898,11 +7898,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1681,
-          "equipmentMatch": 11,
+          "latency": 1503,
+          "equipmentMatch": 100,
           "exerciseCount": 9,
           "avgSets": 3.7,
           "avgReps": 20,
@@ -7987,8 +7987,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1380,
-          "equipmentMatch": 11,
+          "latency": 1473,
+          "equipmentMatch": 100,
           "exerciseCount": 9,
           "avgSets": 3.7,
           "avgReps": 20,
@@ -8347,11 +8347,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1337,
-          "equipmentMatch": 13,
+          "latency": 1145,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4,
           "avgReps": 10,
@@ -8428,8 +8428,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1387,
-          "equipmentMatch": 13,
+          "latency": 1433,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4,
           "avgReps": 10,
@@ -8754,11 +8754,11 @@
       ],
       "results": [
         {
-          "model": "gpt-5.2",
-          "modelId": "openai/gpt-5.2",
+          "model": "GPT-5",
+          "modelId": "openai/gpt-5",
           "status": "success",
-          "latency": 1066,
-          "equipmentMatch": 13,
+          "latency": 1089,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4,
           "avgReps": 10,
@@ -8835,8 +8835,8 @@
           "model": "Gemini 3 Pro",
           "modelId": "google/gemini-3-pro-preview",
           "status": "success",
-          "latency": 1217,
-          "equipmentMatch": 13,
+          "latency": 1301,
+          "equipmentMatch": 100,
           "exerciseCount": 8,
           "avgSets": 4,
           "avgReps": 10,
