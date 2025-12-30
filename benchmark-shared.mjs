@@ -251,6 +251,50 @@ export const TEST_SCENARIOS = [
     },
   },
   {
+    name: 'Bro Split - Bodybuilding (Arms)',
+    split: 'bro_split',
+    dayFocus: 'Arms',
+    request: {
+      equipment: ['Dumbbells', 'Barbell', 'Cable Machine', 'EZ Bar'],
+      trainingStyles: ['classic_bodybuilding'],
+      bodyParts: ['upper arms'],
+      targetMuscles: ['biceps', 'triceps'],
+      duration: 45,
+      experienceLevel: 'intermediate',
+    },
+    expectations: {
+      minExercises: 6,
+      maxExercises: 8,
+      setsRange: [3, 4],
+      repsRange: [10, 15],
+      restRange: [45, 75],
+      shouldIncludeTechniques: ['supersets'],
+      requiredMuscleBalance: { biceps: 0.5, triceps: 0.5 },
+    },
+  },
+  {
+    name: 'Bro Split - Bodybuilding (Legs)',
+    split: 'bro_split',
+    dayFocus: 'Legs',
+    request: {
+      equipment: ['Barbell', 'Dumbbells', 'Leg Press', 'Leg Curl Machine', 'Leg Extension Machine'],
+      trainingStyles: ['classic_bodybuilding'],
+      bodyParts: ['upper legs', 'lower legs'],
+      targetMuscles: ['quads', 'hamstrings', 'glutes', 'calves'],
+      duration: 60,
+      experienceLevel: 'intermediate',
+    },
+    expectations: {
+      minExercises: 6,
+      maxExercises: 8,
+      setsRange: [3, 4],
+      repsRange: [10, 15],
+      restRange: [60, 90],
+      shouldIncludeTechniques: [],
+      requiredMuscleBalance: { quads: 0.35, hamstrings: 0.25, glutes: 0.2, calves: 0.1 },
+    },
+  },
+  {
     name: 'PPL - Bodybuilding (Legs)',
     split: 'push_pull_legs',
     dayFocus: 'Legs',
@@ -351,7 +395,7 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['high_intensity_hit'],
       bodyParts: ['chest', 'back', 'shoulders'],
       targetMuscles: ['pectorals', 'lats', 'delts'],
-      duration: 45,
+      duration: 30,
       experienceLevel: 'advanced',
     },
     expectations: {
@@ -372,7 +416,7 @@ export const TEST_SCENARIOS = [
       equipment: ['leverage machine', 'dumbbell'],
       trainingStyles: ['high_intensity_hit'],
       bodyParts: ['full_body'],
-      duration: 40,
+      duration: 45,
       experienceLevel: 'intermediate',
     },
     expectations: {
@@ -394,7 +438,7 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['high_intensity_hit'],
       bodyParts: ['upper legs', 'lower legs'],
       targetMuscles: ['quads', 'hamstrings', 'glutes', 'calves'],
-      duration: 35,
+      duration: 30,
       experienceLevel: 'advanced',
     },
     expectations: {
@@ -439,7 +483,7 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['muscular_endurance'],
       bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
       targetMuscles: ['pectorals', 'lats', 'delts', 'biceps', 'triceps'],
-      duration: 35,
+      duration: 45,
       experienceLevel: 'intermediate',
     },
     expectations: {
@@ -460,7 +504,7 @@ export const TEST_SCENARIOS = [
       equipment: ['body weight'],
       trainingStyles: ['muscular_endurance'],
       bodyParts: ['full_body', 'cardio'],
-      duration: 25,
+      duration: 30,
       experienceLevel: 'beginner',
     },
     expectations: {
@@ -506,7 +550,7 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['muscular_endurance'],
       bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
       targetMuscles: ['pectorals', 'lats', 'delts', 'triceps'],
-      duration: 30,
+      duration: 45,
       experienceLevel: 'beginner',
     },
     expectations: {
@@ -527,7 +571,7 @@ export const TEST_SCENARIOS = [
       equipment: ['Resistance Bands', 'body weight'],
       trainingStyles: ['muscular_endurance'],
       bodyParts: ['full_body'],
-      duration: 35,
+      duration: 45,
       experienceLevel: 'beginner',
     },
     expectations: {
@@ -548,7 +592,7 @@ export const TEST_SCENARIOS = [
       equipment: ['Kettlebells'],
       trainingStyles: ['strength_focused'],
       bodyParts: ['full_body'],
-      duration: 40,
+      duration: 60,
       experienceLevel: 'intermediate',
     },
     expectations: {
@@ -571,7 +615,7 @@ export const TEST_SCENARIOS = [
       equipment: ['dumbbell', 'leverage machine', 'body weight'],
       trainingStyles: ['classic_bodybuilding'],
       bodyParts: ['full_body'],
-      duration: 45,
+      duration: 60,
       experienceLevel: 'beginner',
     },
     expectations: {
@@ -592,7 +636,7 @@ export const TEST_SCENARIOS = [
       equipment: ['dumbbell', 'cable', 'leverage machine'],
       trainingStyles: ['classic_bodybuilding'],
       bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
-      duration: 40,
+      duration: 45,
       experienceLevel: 'beginner',
     },
     expectations: {
@@ -684,7 +728,7 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['high_intensity_hit', 'classic_bodybuilding'],
       bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
       targetMuscles: ['pectorals', 'lats', 'delts', 'biceps', 'triceps'],
-      duration: 50,
+      duration: 60,
       experienceLevel: 'advanced',
     },
     expectations: {
@@ -705,7 +749,7 @@ export const TEST_SCENARIOS = [
       equipment: ['barbell', 'dumbbell', 'kettlebell', 'body weight'],
       trainingStyles: ['strength_focused', 'muscular_endurance'],
       bodyParts: ['full_body'],
-      duration: 60,
+      duration: 90,
       experienceLevel: 'intermediate',
     },
     expectations: {
@@ -727,7 +771,7 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['classic_bodybuilding'],
       bodyParts: ['chest', 'back'],
       targetMuscles: ['pectorals', 'lats', 'upper back'],
-      duration: 75,
+      duration: 90,
       experienceLevel: 'advanced',
     },
     expectations: {
@@ -839,6 +883,7 @@ export const TRAINING_STYLE_PARAMS = {
 // ============================================================================
 
 export const MODELS = [
+  { id: 'openai/gpt-5.2', name: 'GPT-5.2', tier: 'premium' },
   { id: 'openai/gpt-5', name: 'GPT-5', tier: 'premium' },
   { id: 'anthropic/claude-sonnet-4.5', name: 'Claude Sonnet 4.5', tier: 'premium' },
   { id: 'anthropic/claude-sonnet-4', name: 'Claude Sonnet 4', tier: 'premium' },
@@ -861,52 +906,90 @@ export function extractExercises(workout) {
 }
 
 /**
- * Map user-friendly equipment names to ExerciseDB format
+ * Map user-friendly equipment names to ExerciseDB equipment values
+ * Only uses ACTUAL values from exercises.equipment column in Supabase
+ *
+ * Valid ExerciseDB equipment values:
+ * assisted, band, barbell, body weight, bosu ball, cable, dumbbell,
+ * elliptical machine, ez barbell, hammer, kettlebell, leverage machine,
+ * medicine ball, olympic barbell, resistance band, roller, rope,
+ * skierg machine, sled machine, smith machine, stability ball,
+ * stationary bike, stepmill machine, tire, trap bar,
+ * upper body ergometer, weighted, wheel roller
  */
 const USER_TO_DB_EQUIPMENT = {
+  // Free weights
   'dumbbells': ['dumbbell'],
   'barbell': ['barbell'],
   'kettlebells': ['kettlebell'],
   'ez bar': ['ez barbell'],
+  'trap bar': ['trap bar'],
+
+  // Machines - synced with edge function EQUIPMENT_TO_DB_MAP (index.ts lines 254-286)
   'cable machine': ['cable'],
   'lat pulldown': ['leverage machine', 'cable'],
-  'leg press': ['leverage machine'],
-  'chest press': ['leverage machine'],
-  'pec deck': ['leverage machine'],
+  'leg press': ['leverage machine', 'sled machine', 'smith machine'],
+  'chest press': ['leverage machine', 'cable', 'smith machine'],
+  'pec deck': ['leverage machine', 'cable'],
   'smith machine': ['smith machine'],
-  'leg curl machine': ['leverage machine'],
-  'leg extension machine': ['leverage machine'],
-  'shoulder press machine': ['leverage machine'],
-  'hack squat': ['leverage machine'],
-  'hip abductor machine': ['leverage machine'],
-  'hip adductor machine': ['leverage machine'],
-  'seated row machine': ['leverage machine'],
+  'leg curl machine': ['leverage machine', 'cable'],
+  'leg extension machine': ['leverage machine', 'resistance band'],
+  'shoulder press machine': ['leverage machine', 'smith machine', 'cable'],
+  'hack squat': ['sled machine', 'smith machine', 'barbell'],
+  'hip abductor machine': ['leverage machine', 'resistance band'],
+  'hip adductor machine': ['leverage machine', 'cable'],
+  'seated row machine': ['leverage machine', 'cable'],
+
+  // Accessories
   'resistance bands': ['band', 'resistance band'],
   'stability ball': ['stability ball'],
   'medicine ball': ['medicine ball'],
   'weighted vest': ['weighted'],
   'ab wheel': ['wheel roller'],
+  'bosu ball': ['bosu ball'],
+  'foam roller': ['roller'],
+  'battle ropes': ['rope'],
+
+  // Benches & Racks - synced with edge function
   'flat bench': ['dumbbell', 'barbell'],
   'incline bench': ['dumbbell', 'barbell'],
-  'squat rack': ['barbell'],
-  'pull-up bar': ['body weight', 'assisted'],
-  'dip station': ['body weight', 'assisted'],
+  'squat rack': ['barbell', 'smith machine'],
+  'pull-up bar': ['body weight', 'assisted', 'weighted'],
+  'dip station': ['body weight', 'assisted', 'leverage machine', 'weighted'],
+
+  // Cardio - synced with edge function (treadmill/rowing have no DB match)
+  'treadmill': [],
+  'bike': ['stationary bike'],
+  'rowing machine': [],
+  'elliptical': ['elliptical machine'],
+  'stairmaster': ['stepmill machine'],
+  'skierg': ['skierg machine'],
+
+  // Bodyweight
   'body weight': ['body weight'],
-  // Also support raw ExerciseDB names for backwards compat
+
+  // Raw ExerciseDB names for backwards compat
   'dumbbell': ['dumbbell'],
   'cable': ['cable'],
   'leverage machine': ['leverage machine'],
+  'sled machine': ['sled machine'],
   'kettlebell': ['kettlebell'],
   'band': ['band'],
+  'assisted': ['assisted'],
 };
 
 /**
  * Calculate equipment match rate as percentage
  * Uses the exercise's equipment field directly from response (not MOCK_EXERCISES lookup)
  * Handles both user-friendly names and ExerciseDB format
+ *
+ * Body weight and assisted exercises always count as matches (everyone has a body)
  */
 function calculateEquipmentMatchRate(exercises, requestedEquipment, mockExercises) {
   if (!exercises || exercises.length === 0) return 0;
+
+  // Equipment that's always available (no gym needed)
+  const ALWAYS_AVAILABLE = new Set(['body weight', 'assisted']);
 
   // Expand user-friendly equipment to ExerciseDB format
   const dbEquipment = new Set();
@@ -932,7 +1015,8 @@ function calculateEquipmentMatchRate(exercises, requestedEquipment, mockExercise
 
     if (exEquipment) {
       const exEquipLower = exEquipment.toLowerCase();
-      if (dbEquipment.has(exEquipLower)) {
+      // Body weight/assisted always counts as a match
+      if (ALWAYS_AVAILABLE.has(exEquipLower) || dbEquipment.has(exEquipLower)) {
         matchCount++;
       }
     }

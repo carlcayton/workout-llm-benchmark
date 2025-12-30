@@ -1,0 +1,2340 @@
+{
+  "timestamp": "2025-12-30T12:30:22.296Z",
+  "modelStats": [
+    {
+      "modelId": "anthropic/claude-4.5-haiku",
+      "modelName": "claude-4.5-haiku",
+      "tier": "unknown",
+      "successRate": 100,
+      "avgLatency": 1846,
+      "avgExerciseCount": 7.6,
+      "avgEquipmentMatchRate": 95,
+      "successCount": 5,
+      "parseErrorCount": 0
+    },
+    {
+      "modelId": "x-ai/grok-4.1",
+      "modelName": "grok-4.1",
+      "tier": "unknown",
+      "successRate": 100,
+      "avgLatency": 1850,
+      "avgExerciseCount": 7.6,
+      "avgEquipmentMatchRate": 88,
+      "successCount": 5,
+      "parseErrorCount": 0
+    },
+    {
+      "modelId": "google/gemini-3-flash-preview",
+      "modelName": "Gemini 3 Flash",
+      "tier": "fast",
+      "successRate": 100,
+      "avgLatency": 17714,
+      "avgExerciseCount": 7.6,
+      "avgEquipmentMatchRate": 90,
+      "successCount": 5,
+      "parseErrorCount": 0
+    },
+    {
+      "modelId": "anthropic/claude-sonnet-4.5",
+      "modelName": "Claude Sonnet 4.5",
+      "tier": "premium",
+      "successRate": 100,
+      "avgLatency": 51940,
+      "avgExerciseCount": 7.6,
+      "avgEquipmentMatchRate": 93,
+      "successCount": 5,
+      "parseErrorCount": 0
+    },
+    {
+      "modelId": "openai/gpt-5.2",
+      "modelName": "GPT-5.2",
+      "tier": "premium",
+      "successRate": 100,
+      "avgLatency": 74332,
+      "avgExerciseCount": 7.6,
+      "avgEquipmentMatchRate": 90,
+      "successCount": 5,
+      "parseErrorCount": 0
+    },
+    {
+      "modelId": "google/gemini-3-pro-preview",
+      "modelName": "Gemini 3 Pro",
+      "tier": "premium",
+      "successRate": 80,
+      "avgLatency": 64385,
+      "avgExerciseCount": 7.5,
+      "avgEquipmentMatchRate": 97,
+      "successCount": 4,
+      "parseErrorCount": 0
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Bro Split - Bodybuilding (Chest)",
+      "duration": 60,
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Chest Press",
+        "Pec Deck"
+      ],
+      "results": [
+        {
+          "model": "grok-4.1",
+          "modelId": "x-ai/grok-4.1",
+          "status": "success",
+          "latency": 2346,
+          "equipmentMatch": 88,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 78,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Lever Standing Chest Press",
+              "id": "3758",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3758.gif"
+            },
+            {
+              "name": "Smith Incline Reverse-Grip Press",
+              "id": "0758",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0758.gif"
+            },
+            {
+              "name": "Dumbbell Incline Twisted Flyes",
+              "id": "0331",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0331.gif"
+            },
+            {
+              "name": "Barbell Front Raise And Pullover",
+              "id": "0040",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0040.gif"
+            },
+            {
+              "name": "Barbell Seated Overhead Triceps Extension",
+              "id": "0092",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0092.gif"
+            },
+            {
+              "name": "Cable One Arm Lateral Bent-Over",
+              "id": "0191",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0191.gif"
+            },
+            {
+              "name": "Barbell Seated Close Grip Behind Neck Triceps Extension",
+              "id": "1718",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1718.gif"
+            },
+            {
+              "name": "Dumbbell Standing One Arm Extension",
+              "id": "0423",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0423.gif"
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "modelId": "openai/gpt-5.2",
+          "status": "success",
+          "latency": 88915,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 78,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Dumbbell Incline One Arm Hammer Press On Exercise Ball",
+              "id": "1620",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1620.gif"
+            },
+            {
+              "name": "Barbell Incline Reverse-Grip Press",
+              "id": "0048",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0048.gif"
+            },
+            {
+              "name": "Cable Overhead Triceps Extension (Rope Attachment)",
+              "id": "0194",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0194.gif"
+            },
+            {
+              "name": "Cable Concentration Extension (On Knee)",
+              "id": "0152",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0152.gif"
+            },
+            {
+              "name": "Cable Rope Lying On Floor Tricep Extension",
+              "id": "1726",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1726.gif"
+            },
+            {
+              "name": "Dumbbell Standing Bent Over Two Arm Triceps Extension",
+              "id": "1741",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1741.gif"
+            },
+            {
+              "name": "Dumbbell Seated Reverse Grip One Arm Overhead Tricep Extension",
+              "id": "1738",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1738.gif"
+            },
+            {
+              "name": "Dumbbell Kickbacks On Exercise Ball",
+              "id": "1734",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1734.gif"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "modelId": "google/gemini-3-pro-preview",
+          "status": "success",
+          "latency": 77817,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 78,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Dumbbell Decline Hammer Press",
+              "id": "0303",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0303.gif"
+            },
+            {
+              "name": "Barbell Pin Presses",
+              "id": "1751",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1751.gif"
+            },
+            {
+              "name": "Barbell Lying Back Of The Head Tricep Extension",
+              "id": "1720",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1720.gif"
+            },
+            {
+              "name": "Cable Middle Fly",
+              "id": "0188",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0188.gif"
+            },
+            {
+              "name": "Exercise Ball Supine Triceps Extension",
+              "id": "1746",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1746.gif"
+            },
+            {
+              "name": "Dumbbell Standing One Arm Extension",
+              "id": "0423",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0423.gif"
+            },
+            {
+              "name": "Cable Standing Fly",
+              "id": "0227",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0227.gif"
+            },
+            {
+              "name": "Cable High Pulley Overhead Tricep Extension",
+              "id": "1722",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1722.gif"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Flash",
+          "modelId": "google/gemini-3-flash-preview",
+          "status": "success",
+          "latency": 19746,
+          "equipmentMatch": 88,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 78,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Smith Machine Reverse Decline Close Grip Bench Press",
+              "id": "1626",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1626.gif"
+            },
+            {
+              "name": "Machine Inner Chest Press",
+              "id": "1301",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1301.gif"
+            },
+            {
+              "name": "Dumbbell Incline Twisted Flyes",
+              "id": "0331",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0331.gif"
+            },
+            {
+              "name": "Dumbbell Pullover Hip Extension On Exercise Ball",
+              "id": "1294",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1294.gif"
+            },
+            {
+              "name": "Cable One Arm Fly On Exercise Ball",
+              "id": "1263",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1263.gif"
+            },
+            {
+              "name": "Dumbbell Around Pullover",
+              "id": "0288",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0288.gif"
+            },
+            {
+              "name": "Floor Fly (With Barbell)",
+              "id": "0458",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0458.gif"
+            },
+            {
+              "name": "Cable One Arm Lateral Bent-Over",
+              "id": "0191",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0191.gif"
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "modelId": "anthropic/claude-sonnet-4.5",
+          "status": "success",
+          "latency": 63092,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 78,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Barbell Pin Presses",
+              "id": "1751",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1751.gif"
+            },
+            {
+              "name": "Dumbbell Bench Press",
+              "id": "0289",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0289.gif"
+            },
+            {
+              "name": "Cable Alternate Triceps Extension",
+              "id": "0149",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0149.gif"
+            },
+            {
+              "name": "Cable Decline Fly",
+              "id": "0158",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0158.gif"
+            },
+            {
+              "name": "Dumbbell Fly",
+              "id": "0308",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0308.gif"
+            },
+            {
+              "name": "Dumbbell Decline Twist Fly",
+              "id": "0307",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0307.gif"
+            },
+            {
+              "name": "Barbell Seated Overhead Triceps Extension",
+              "id": "0092",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0092.gif"
+            },
+            {
+              "name": "Dumbbell Kickbacks On Exercise Ball",
+              "id": "1734",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1734.gif"
+            }
+          ]
+        },
+        {
+          "model": "claude-4.5-haiku",
+          "modelId": "anthropic/claude-4.5-haiku",
+          "status": "success",
+          "latency": 2428,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 78,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Barbell Wide Bench Press",
+              "id": "0122",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0122.gif"
+            },
+            {
+              "name": "Cable Press On Exercise Ball",
+              "id": "1268",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1268.gif"
+            },
+            {
+              "name": "Dumbbell Seated Bent Over Triceps Extension",
+              "id": "1737",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1737.gif"
+            },
+            {
+              "name": "Dumbbell Lying Extension (Across Face)",
+              "id": "0337",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0337.gif"
+            },
+            {
+              "name": "Barbell Standing Overhead Triceps Extension",
+              "id": "0109",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0109.gif"
+            },
+            {
+              "name": "Cable One Arm Tricep Pushdown",
+              "id": "1723",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1723.gif"
+            },
+            {
+              "name": "Cable Standing Up Straight Crossovers",
+              "id": "1269",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1269.gif"
+            },
+            {
+              "name": "Dumbbell One Arm Pullover On Exercise Ball",
+              "id": "1291",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1291.gif"
+            }
+          ]
+        }
+      ],
+      "split": "bro_split",
+      "dayFocus": "Chest",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ]
+    },
+    {
+      "name": "Bro Split - Bodybuilding (Back)",
+      "duration": 60,
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Lat Pulldown",
+        "Seated Row Machine"
+      ],
+      "results": [
+        {
+          "model": "grok-4.1",
+          "modelId": "x-ai/grok-4.1",
+          "status": "success",
+          "latency": 3121,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 78,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Assisted Parallel Close Grip Pull-Up",
+              "id": "0015",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0015.gif"
+            },
+            {
+              "name": "Cable Straight Back Seated Row",
+              "id": "0239",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0239.gif"
+            },
+            {
+              "name": "Cable Pulldown (Pro Lat Bar)",
+              "id": "0197",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0197.gif"
+            },
+            {
+              "name": "Barbell Curl",
+              "id": "0031",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0031.gif"
+            },
+            {
+              "name": "Dumbbell Standing One Arm Reverse Curl",
+              "id": "0425",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0425.gif"
+            },
+            {
+              "name": "Reverse Grip Machine Lat Pulldown",
+              "id": "0673",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0673.gif"
+            },
+            {
+              "name": "Dumbbell High Curl",
+              "id": "1664",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1664.gif"
+            },
+            {
+              "name": "Dumbbell One Arm Concentration Curl (On Stability Ball)",
+              "id": "0353",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0353.gif"
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "modelId": "openai/gpt-5.2",
+          "status": "success",
+          "latency": 90938,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 78,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Cable Standing Row (V-Bar)",
+              "id": "0234",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0234.gif"
+            },
+            {
+              "name": "Dumbbell Reverse Grip Incline Bench One Arm Row",
+              "id": "1330",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1330.gif"
+            },
+            {
+              "name": "Cable Reverse Preacher Curl",
+              "id": "0209",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0209.gif"
+            },
+            {
+              "name": "Dumbbell Seated Alternate Hammer Curl On Exercise Ball",
+              "id": "1676",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1676.gif"
+            },
+            {
+              "name": "Cable Two Arm Curl On Incline Bench",
+              "id": "1645",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1645.gif"
+            },
+            {
+              "name": "Cable Pulldown Bicep Curl",
+              "id": "1638",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1638.gif"
+            },
+            {
+              "name": "Cable Lateral Pulldown With V-Bar",
+              "id": "2616",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2616.gif"
+            },
+            {
+              "name": "Barbell Standing Wide-Grip Curl",
+              "id": "0113",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0113.gif"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "modelId": "google/gemini-3-pro-preview",
+          "status": "success",
+          "latency": 56873,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 78,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Cable Squatting Curl",
+              "id": "1644",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1644.gif"
+            },
+            {
+              "name": "Cable Seated Row",
+              "id": "0861",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0861.gif"
+            },
+            {
+              "name": "Reverse Grip Machine Lat Pulldown",
+              "id": "0673",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0673.gif"
+            },
+            {
+              "name": "Cable Reverse Preacher Curl",
+              "id": "0209",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0209.gif"
+            },
+            {
+              "name": "Barbell Standing Wide Grip Biceps Curl",
+              "id": "1629",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1629.gif"
+            },
+            {
+              "name": "Dumbbell Incline Hammer Curl",
+              "id": "0320",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0320.gif"
+            },
+            {
+              "name": "Dumbbell Zottman Preacher Curl",
+              "id": "2294",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2294.gif"
+            },
+            {
+              "name": "Dumbbell Preacher Hammer Curl",
+              "id": "0370",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0370.gif"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Flash",
+          "modelId": "google/gemini-3-flash-preview",
+          "status": "success",
+          "latency": 17417,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 78,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Cable Thibaudeau Kayak Row",
+              "id": "2464",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2464.gif"
+            },
+            {
+              "name": "Lever T-Bar Reverse Grip Row",
+              "id": "1351",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1351.gif"
+            },
+            {
+              "name": "Lever Pullover",
+              "id": "2285",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2285.gif"
+            },
+            {
+              "name": "Dumbbell Incline Y-Raise",
+              "id": "3541",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3541.gif"
+            },
+            {
+              "name": "Cable Pulldown Bicep Curl",
+              "id": "1638",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1638.gif"
+            },
+            {
+              "name": "Dumbbell Zottman Curl",
+              "id": "0439",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0439.gif"
+            },
+            {
+              "name": "Dumbbell One Arm Reverse Spider Curl",
+              "id": "1667",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1667.gif"
+            },
+            {
+              "name": "Dumbbell Waiter Biceps Curl",
+              "id": "5201",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/5201.gif"
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "modelId": "anthropic/claude-sonnet-4.5",
+          "status": "success",
+          "latency": 39274,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 78,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Cable Squat Row (With Rope Attachment)",
+              "id": "1717",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1717.gif"
+            },
+            {
+              "name": "Lever One Arm Lateral High Row",
+              "id": "1356",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1356.gif"
+            },
+            {
+              "name": "Dumbbell Zottman Curl",
+              "id": "0439",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0439.gif"
+            },
+            {
+              "name": "Cable Incline Pushdown",
+              "id": "0172",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0172.gif"
+            },
+            {
+              "name": "Cable Rope One Arm Hammer Preacher Curl",
+              "id": "1640",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1640.gif"
+            },
+            {
+              "name": "Dumbbell Incline Y-Raise",
+              "id": "3541",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3541.gif"
+            },
+            {
+              "name": "Dumbbell Lying Wide Curl",
+              "id": "1662",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1662.gif"
+            },
+            {
+              "name": "Cable Lying Extension Pullover (With Rope Attachment)",
+              "id": "0184",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0184.gif"
+            }
+          ]
+        },
+        {
+          "model": "claude-4.5-haiku",
+          "modelId": "anthropic/claude-4.5-haiku",
+          "status": "success",
+          "latency": 3227,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 78,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Barbell Pullover To Press",
+              "id": "0022",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0022.gif"
+            },
+            {
+              "name": "Cable Seated High Row (V-Bar)",
+              "id": "0213",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0213.gif"
+            },
+            {
+              "name": "Dumbbell Standing One Arm Curl Over Incline Bench",
+              "id": "1680",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1680.gif"
+            },
+            {
+              "name": "Dumbbell Prone Incline Hammer Curl",
+              "id": "1674",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1674.gif"
+            },
+            {
+              "name": "Twin Handle Parallel Grip Lat Pulldown",
+              "id": "0818",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0818.gif"
+            },
+            {
+              "name": "Dumbbell Reverse Preacher Curl",
+              "id": "0384",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0384.gif"
+            },
+            {
+              "name": "Cable Close Grip Curl",
+              "id": "1630",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1630.gif"
+            },
+            {
+              "name": "Dumbbell Standing Inner Biceps Curl V. 2",
+              "id": "2321",
+              "sets": 4,
+              "reps": 10,
+              "rest": 78,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2321.gif"
+            }
+          ]
+        }
+      ],
+      "split": "bro_split",
+      "dayFocus": "Back",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ]
+    },
+    {
+      "name": "Bro Split - Bodybuilding (Shoulders)",
+      "duration": 45,
+      "equipment": [
+        "dumbbell",
+        "barbell",
+        "cable",
+        "leverage machine"
+      ],
+      "results": [
+        {
+          "model": "grok-4.1",
+          "modelId": "x-ai/grok-4.1",
+          "status": "success",
+          "latency": 1336,
+          "equipmentMatch": 100,
+          "exerciseCount": 6,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 73,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Cable Rear Delt Row (Stirrups)",
+              "id": "0202",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0202.gif"
+            },
+            {
+              "name": "Cable Upright Row",
+              "id": "0246",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0246.gif"
+            },
+            {
+              "name": "Lever Seated Reverse Fly (Parallel Grip)",
+              "id": "0601",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0601.gif"
+            },
+            {
+              "name": "Dumbbell Seated Bent Arm Lateral Raise",
+              "id": "2317",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2317.gif"
+            },
+            {
+              "name": "Dumbbell Standing Around World",
+              "id": "2143",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2143.gif"
+            },
+            {
+              "name": "Dumbbell Seated Front Raise",
+              "id": "0392",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0392.gif"
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "modelId": "openai/gpt-5.2",
+          "status": "success",
+          "latency": 57395,
+          "equipmentMatch": 100,
+          "exerciseCount": 6,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 73,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Dumbbell Upright Row (Back Pov)",
+              "id": "1765",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1765.gif"
+            },
+            {
+              "name": "Dumbbell Seated Shoulder Press (Parallel Grip)",
+              "id": "0404",
+              "sets": 4,
+              "reps": 8,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0404.gif"
+            },
+            {
+              "name": "Dumbbell Raise",
+              "id": "0376",
+              "sets": 4,
+              "reps": 12,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0376.gif"
+            },
+            {
+              "name": "Dumbbell Rear Fly",
+              "id": "0378",
+              "sets": 4,
+              "reps": 12,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0378.gif"
+            },
+            {
+              "name": "Dumbbell Rear Lateral Raise (Support Head)",
+              "id": "0379",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0379.gif"
+            },
+            {
+              "name": "Dumbbell Seated Alternate Shoulder",
+              "id": "3546",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3546.gif"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "modelId": "google/gemini-3-pro-preview",
+          "status": "success",
+          "latency": 62320,
+          "equipmentMatch": 100,
+          "exerciseCount": 6,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 73,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Lever Shoulder Press",
+              "id": "0603",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0603.gif"
+            },
+            {
+              "name": "Dumbbell Standing Palms In Press",
+              "id": "0427",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0427.gif"
+            },
+            {
+              "name": "Cable One Arm Lateral Raise",
+              "id": "0192",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0192.gif"
+            },
+            {
+              "name": "Dumbbell One Arm Reverse Fly (With Support)",
+              "id": "0359",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0359.gif"
+            },
+            {
+              "name": "Dumbbell Iron Cross",
+              "id": "0332",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0332.gif"
+            },
+            {
+              "name": "Dumbbell Standing Alternate Raise",
+              "id": "0415",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0415.gif"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Flash",
+          "modelId": "google/gemini-3-flash-preview",
+          "status": "success",
+          "latency": 15127,
+          "equipmentMatch": 100,
+          "exerciseCount": 6,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 73,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Barbell Standing Bradford Press",
+              "id": "0105",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0105.gif"
+            },
+            {
+              "name": "Dumbbell Scott Press",
+              "id": "2397",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2397.gif"
+            },
+            {
+              "name": "Dumbbell Single Arm Overhead Carry",
+              "id": "3548",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3548.gif"
+            },
+            {
+              "name": "Barbell Skier",
+              "id": "0100",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0100.gif"
+            },
+            {
+              "name": "Landmine Lateral Raise",
+              "id": "3237",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3237.gif"
+            },
+            {
+              "name": "Lever Seated Reverse Fly (Parallel Grip)",
+              "id": "0601",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0601.gif"
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "modelId": "anthropic/claude-sonnet-4.5",
+          "status": "success",
+          "latency": 37816,
+          "equipmentMatch": 100,
+          "exerciseCount": 6,
+          "avgSets": 4,
+          "avgReps": 12,
+          "avgRest": 73,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Dumbbell Cuban Press V. 2",
+              "id": "2136",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2136.gif"
+            },
+            {
+              "name": "Cable Alternate Shoulder Press",
+              "id": "0148",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0148.gif"
+            },
+            {
+              "name": "Cable Seated Rear Lateral Raise",
+              "id": "0215",
+              "sets": 4,
+              "reps": 12,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0215.gif"
+            },
+            {
+              "name": "Landmine Lateral Raise",
+              "id": "3237",
+              "sets": 4,
+              "reps": 12,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3237.gif"
+            },
+            {
+              "name": "Dumbbell Raise",
+              "id": "0376",
+              "sets": 4,
+              "reps": 12,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0376.gif"
+            },
+            {
+              "name": "Dumbbell Standing Alternate Raise",
+              "id": "0415",
+              "sets": 4,
+              "reps": 12,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0415.gif"
+            }
+          ]
+        },
+        {
+          "model": "claude-4.5-haiku",
+          "modelId": "anthropic/claude-4.5-haiku",
+          "status": "success",
+          "latency": 1222,
+          "equipmentMatch": 100,
+          "exerciseCount": 6,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 73,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Cable Upright Row",
+              "id": "0246",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0246.gif"
+            },
+            {
+              "name": "Dumbbell One Arm Shoulder Press V. 2",
+              "id": "0360",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0360.gif"
+            },
+            {
+              "name": "Cable Supine Reverse Fly",
+              "id": "0240",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0240.gif"
+            },
+            {
+              "name": "Dumbbell Lying External Shoulder Rotation",
+              "id": "0863",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0863.gif"
+            },
+            {
+              "name": "Dumbbell Side Lying One Hand Raise",
+              "id": "0408",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0408.gif"
+            },
+            {
+              "name": "Dumbbell Front Raise",
+              "id": "0310",
+              "sets": 4,
+              "reps": 10,
+              "rest": 73,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0310.gif"
+            }
+          ]
+        }
+      ],
+      "split": "bro_split",
+      "dayFocus": "Shoulders",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ]
+    },
+    {
+      "name": "Push Pull Legs - Bodybuilding (Legs)",
+      "duration": 65,
+      "equipment": [
+        "Barbell",
+        "Dumbbells",
+        "Leg Press",
+        "Leg Curl Machine",
+        "Leg Extension Machine",
+        "Hack Squat"
+      ],
+      "results": [
+        {
+          "model": "grok-4.1",
+          "modelId": "x-ai/grok-4.1",
+          "status": "success",
+          "latency": 1276,
+          "equipmentMatch": 50,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 90,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Barbell Rear Lunge",
+              "id": "0078",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0078.gif"
+            },
+            {
+              "name": "Sled Calf Press On Leg Press",
+              "id": "1391",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1391.gif"
+            },
+            {
+              "name": "Single Leg Calf Raise (On A Dumbbell)",
+              "id": "0727",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0727.gif"
+            },
+            {
+              "name": "Smith Reverse Calf Raises",
+              "id": "1394",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1394.gif"
+            },
+            {
+              "name": "Smith Standing Leg Calf Raise",
+              "id": "0773",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0773.gif"
+            },
+            {
+              "name": "Cable Standing Calf Raise",
+              "id": "1375",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1375.gif"
+            },
+            {
+              "name": "Dumbbell Sumo Pull Through",
+              "id": "2808",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2808.gif"
+            },
+            {
+              "name": "Lever Lying Leg Curl",
+              "id": "0586",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0586.gif"
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "modelId": "openai/gpt-5.2",
+          "status": "success",
+          "latency": 71026,
+          "equipmentMatch": 50,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 90,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Sled 45° Leg Wide Press",
+              "id": "0740",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0740.gif"
+            },
+            {
+              "name": "Smith Low Bar Squat",
+              "id": "1434",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1434.gif"
+            },
+            {
+              "name": "Lever Seated Calf Raise",
+              "id": "0594",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0594.gif"
+            },
+            {
+              "name": "Cable Pull Through (With Rope)",
+              "id": "0196",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0196.gif"
+            },
+            {
+              "name": "Dumbbell Step-Up",
+              "id": "0431",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0431.gif"
+            },
+            {
+              "name": "Cable Standing Hip Extension",
+              "id": "0228",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0228.gif"
+            },
+            {
+              "name": "Lever Donkey Calf Raise",
+              "id": "1253",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1253.gif"
+            },
+            {
+              "name": "Power Clean",
+              "id": "0648",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0648.gif"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "modelId": "google/gemini-3-pro-preview",
+          "status": "success",
+          "latency": 60529,
+          "equipmentMatch": 88,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 90,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Dumbbell Rear Lunge",
+              "id": "0381",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0381.gif"
+            },
+            {
+              "name": "Barbell Sumo Deadlift",
+              "id": "0117",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0117.gif"
+            },
+            {
+              "name": "Dumbbell Standing Calf Raise",
+              "id": "0417",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0417.gif"
+            },
+            {
+              "name": "Snatch Pull",
+              "id": "0776",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0776.gif"
+            },
+            {
+              "name": "Dumbbell Single Leg Calf Raise",
+              "id": "0409",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0409.gif"
+            },
+            {
+              "name": "Barbell Seated Good Morning",
+              "id": "0090",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0090.gif"
+            },
+            {
+              "name": "Smith Bent Knee Good Morning",
+              "id": "0749",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0749.gif"
+            },
+            {
+              "name": "Lever Leg Extension",
+              "id": "0585",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0585.gif"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Flash",
+          "modelId": "google/gemini-3-flash-preview",
+          "status": "success",
+          "latency": 19069,
+          "equipmentMatch": 63,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 90,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Barbell Jefferson Squat",
+              "id": "0051",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0051.gif"
+            },
+            {
+              "name": "Barbell Zercher Squat",
+              "id": "0127",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0127.gif"
+            },
+            {
+              "name": "Lever Kneeling Leg Curl",
+              "id": "0582",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0582.gif"
+            },
+            {
+              "name": "Resistance Band Leg Extension",
+              "id": "3007",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3007.gif"
+            },
+            {
+              "name": "Lever Seated Good Morning",
+              "id": "3759",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3759.gif"
+            },
+            {
+              "name": "Cable Pull Through (With Rope)",
+              "id": "0196",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0196.gif"
+            },
+            {
+              "name": "Smith Toe Raise",
+              "id": "1396",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1396.gif"
+            },
+            {
+              "name": "Lever Donkey Calf Raise",
+              "id": "1253",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1253.gif"
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "modelId": "anthropic/claude-sonnet-4.5",
+          "status": "success",
+          "latency": 58800,
+          "equipmentMatch": 63,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 90,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Dumbbell Single Leg Split Squat",
+              "id": "0410",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0410.gif"
+            },
+            {
+              "name": "Sled Lying Squat",
+              "id": "0744",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0744.gif"
+            },
+            {
+              "name": "Lever Lying Two-One Leg Curl",
+              "id": "3195",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3195.gif"
+            },
+            {
+              "name": "Dumbbell Seated Calf Raise",
+              "id": "1379",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1379.gif"
+            },
+            {
+              "name": "Barbell Floor Calf Raise",
+              "id": "1370",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1370.gif"
+            },
+            {
+              "name": "Lever Rotary Calf",
+              "id": "2315",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2315.gif"
+            },
+            {
+              "name": "Hack Calf Raise",
+              "id": "1383",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1383.gif"
+            },
+            {
+              "name": "Cable Assisted Inverse Leg Curl",
+              "id": "3235",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3235.gif"
+            }
+          ]
+        },
+        {
+          "model": "claude-4.5-haiku",
+          "modelId": "anthropic/claude-4.5-haiku",
+          "status": "success",
+          "latency": 1062,
+          "equipmentMatch": 75,
+          "exerciseCount": 8,
+          "avgSets": 4,
+          "avgReps": 10,
+          "avgRest": 90,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Lever Seated Calf Press",
+              "id": "2335",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2335.gif"
+            },
+            {
+              "name": "Barbell Hack Squat",
+              "id": "0046",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0046.gif"
+            },
+            {
+              "name": "Smith Toe Raise",
+              "id": "1396",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1396.gif"
+            },
+            {
+              "name": "Barbell Standing Leg Calf Raise",
+              "id": "0108",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0108.gif"
+            },
+            {
+              "name": "Lever Leg Extension",
+              "id": "0585",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0585.gif"
+            },
+            {
+              "name": "Lever Kneeling Leg Curl",
+              "id": "0582",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0582.gif"
+            },
+            {
+              "name": "Barbell Step-Up",
+              "id": "0114",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0114.gif"
+            },
+            {
+              "name": "Hack One Leg Calf Raise",
+              "id": "1384",
+              "sets": 4,
+              "reps": 10,
+              "rest": 90,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1384.gif"
+            }
+          ]
+        }
+      ],
+      "split": "push_pull_legs",
+      "dayFocus": "Legs",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ]
+    },
+    {
+      "name": "Upper/Lower - Strength (Upper)",
+      "duration": 131,
+      "equipment": [
+        "barbell",
+        "dumbbell",
+        "cable"
+      ],
+      "results": [
+        {
+          "model": "grok-4.1",
+          "modelId": "x-ai/grok-4.1",
+          "status": "success",
+          "latency": 1170,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 5,
+          "avgReps": 5,
+          "avgRest": 180,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Dumbbell Seated Alternate Press",
+              "id": "0388",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0388.gif"
+            },
+            {
+              "name": "Dumbbell Standing Overhead Press",
+              "id": "0426",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0426.gif"
+            },
+            {
+              "name": "Dumbbell W-Press",
+              "id": "0438",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0438.gif"
+            },
+            {
+              "name": "Barbell One Arm Snatch",
+              "id": "0067",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0067.gif"
+            },
+            {
+              "name": "Dumbbell Incline One Arm Fly",
+              "id": "1279",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1279.gif"
+            },
+            {
+              "name": "Dumbbell Rotation Reverse Fly",
+              "id": "0386",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0386.gif"
+            },
+            {
+              "name": "Dumbbell Seated Alternate Shoulder",
+              "id": "3546",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3546.gif"
+            },
+            {
+              "name": "Barbell Pullover",
+              "id": "0073",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0073.gif"
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "modelId": "openai/gpt-5.2",
+          "status": "success",
+          "latency": 63385,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 5,
+          "avgReps": 5,
+          "avgRest": 180,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Barbell Standing Bradford Press",
+              "id": "0105",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0105.gif"
+            },
+            {
+              "name": "Barbell Seated Bradford Rocky Press",
+              "id": "0087",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0087.gif"
+            },
+            {
+              "name": "Dumbbell Incline Palm-In Press",
+              "id": "0324",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0324.gif"
+            },
+            {
+              "name": "Cable Standing Fly",
+              "id": "0227",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0227.gif"
+            },
+            {
+              "name": "Dumbbell One Arm Reverse Fly (With Support)",
+              "id": "0359",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0359.gif"
+            },
+            {
+              "name": "Dumbbell Decline One Arm Fly",
+              "id": "1276",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1276.gif"
+            },
+            {
+              "name": "Cable Supine Reverse Fly",
+              "id": "0240",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0240.gif"
+            },
+            {
+              "name": "Dumbbell Full Can Lateral Raise",
+              "id": "0311",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0311.gif"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "modelId": "google/gemini-3-pro-preview",
+          "status": "error",
+          "latency": 158896,
+          "equipmentMatch": 0,
+          "exerciseCount": 0,
+          "avgSets": 0,
+          "avgReps": 10,
+          "avgRest": 0,
+          "error": "HTTP 504: ",
+          "exercises": []
+        },
+        {
+          "model": "Gemini 3 Flash",
+          "modelId": "google/gemini-3-flash-preview",
+          "status": "success",
+          "latency": 17210,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 5,
+          "avgReps": 5,
+          "avgRest": 180,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Barbell Seated Bradford Rocky Press",
+              "id": "0087",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0087.gif"
+            },
+            {
+              "name": "Barbell Reverse Grip Decline Bench Press",
+              "id": "1256",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1256.gif"
+            },
+            {
+              "name": "Cable Thibaudeau Kayak Row",
+              "id": "2464",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2464.gif"
+            },
+            {
+              "name": "Barbell One Arm Snatch",
+              "id": "0067",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0067.gif"
+            },
+            {
+              "name": "Dumbbell Incline Twisted Flyes",
+              "id": "0331",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0331.gif"
+            },
+            {
+              "name": "Dumbbell Around Pullover",
+              "id": "0288",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0288.gif"
+            },
+            {
+              "name": "Cable Wide Grip Rear Pulldown Behind Neck",
+              "id": "1325",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1325.gif"
+            },
+            {
+              "name": "Cable Seated Shoulder Internal Rotation",
+              "id": "0216",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0216.gif"
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "modelId": "anthropic/claude-sonnet-4.5",
+          "status": "success",
+          "latency": 60718,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 5,
+          "avgReps": 5,
+          "avgRest": 180,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Dumbbell Seated Shoulder Press (Parallel Grip)",
+              "id": "0404",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0404.gif"
+            },
+            {
+              "name": "Cable Decline One Arm Press",
+              "id": "1260",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1260.gif"
+            },
+            {
+              "name": "Dumbbell Incline One Arm Press",
+              "id": "1281",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1281.gif"
+            },
+            {
+              "name": "Cable Standing Cross-Over High Reverse Fly",
+              "id": "0225",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0225.gif"
+            },
+            {
+              "name": "Dumbbell Incline T-Raise",
+              "id": "3542",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3542.gif"
+            },
+            {
+              "name": "Cable Pulldown",
+              "id": "0198",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0198.gif"
+            },
+            {
+              "name": "Cable Straight Arm Pulldown (With Rope)",
+              "id": "0237",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0237.gif"
+            },
+            {
+              "name": "Cable Lateral Pulldown With V-Bar",
+              "id": "2616",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2616.gif"
+            }
+          ]
+        },
+        {
+          "model": "claude-4.5-haiku",
+          "modelId": "anthropic/claude-4.5-haiku",
+          "status": "success",
+          "latency": 1292,
+          "equipmentMatch": 100,
+          "exerciseCount": 8,
+          "avgSets": 5,
+          "avgReps": 5,
+          "avgRest": 180,
+          "error": null,
+          "exercises": [
+            {
+              "name": "Dumbbell Standing Palms In Press",
+              "id": "0427",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0427.gif"
+            },
+            {
+              "name": "Barbell Seated Bradford Rocky Press",
+              "id": "0087",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0087.gif"
+            },
+            {
+              "name": "Barbell Rear Delt Row",
+              "id": "0076",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0076.gif"
+            },
+            {
+              "name": "Dumbbell Raise",
+              "id": "0376",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0376.gif"
+            },
+            {
+              "name": "Alternate Lateral Pulldown",
+              "id": "0007",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0007.gif"
+            },
+            {
+              "name": "Cable Incline Fly",
+              "id": "0171",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0171.gif"
+            },
+            {
+              "name": "Cable Pulldown",
+              "id": "0198",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0198.gif"
+            },
+            {
+              "name": "Cable One Arm Decline Chest Fly",
+              "id": "1262",
+              "sets": 5,
+              "reps": 5,
+              "rest": 180,
+              "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1262.gif"
+            }
+          ]
+        }
+      ],
+      "split": "upper_lower",
+      "dayFocus": "Upper",
+      "trainingStyles": [
+        "strength_focused"
+      ]
+    }
+  ]
+}

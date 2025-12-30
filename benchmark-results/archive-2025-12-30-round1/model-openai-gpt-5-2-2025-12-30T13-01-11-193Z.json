@@ -1,0 +1,47 @@
+{
+  "modelId": "openai/gpt-5.2",
+  "modelName": "GPT-5.2",
+  "tier": "premium",
+  "timestamp": "2025-12-30T13:01:11.193Z",
+  "totalScenarios": 1,
+  "scenarios": [
+    {
+      "name": "Bro Split - Bodybuilding (Chest)",
+      "split": "bro_split",
+      "dayFocus": "Chest",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Chest Press",
+        "Pec Deck"
+      ],
+      "success": false,
+      "latency": 149612,
+      "exerciseCount": 0,
+      "equipmentMatchRate": 0,
+      "avgSets": 0,
+      "avgReps": "-",
+      "avgRest": 0,
+      "error": "HTTP 502: <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>\r\n</html>\r\n",
+      "workout": null
+    }
+  ],
+  "summary": {
+    "successCount": 0,
+    "parseErrorCount": 0,
+    "apiErrorCount": 1,
+    "totalLatency": 0,
+    "avgLatency": 0,
+    "avgExerciseCount": 0,
+    "avgEquipmentMatchRate": 0,
+    "avgSets": 0,
+    "avgRest": 0,
+    "repsCounts": {},
+    "avgReps": "-",
+    "successRate": 0
+  }
+}
