@@ -13,10 +13,12 @@ import { TEST_SCENARIOS } from './benchmark-shared.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Build scenario name -> equipment mapping from TEST_SCENARIOS
+// Build scenario name -> equipment/duration mapping from TEST_SCENARIOS
 const SCENARIO_EQUIPMENT_MAP = {};
+const SCENARIO_DURATION_MAP = {};
 for (const scenario of TEST_SCENARIOS) {
   SCENARIO_EQUIPMENT_MAP[scenario.name] = scenario.request?.equipment || [];
+  SCENARIO_DURATION_MAP[scenario.name] = scenario.request?.duration || 60;
 }
 
 // Supabase config
@@ -29,29 +31,41 @@ let exerciseNamesCache = null;
 
 /**
  * Fetch all exercise names from Supabase database
+ * Uses pagination to get all 1324+ exercises (default limit is 1000)
  */
 async function fetchExerciseNames() {
   if (exerciseNamesCache) return exerciseNamesCache;
 
   console.log('Fetching exercise names from Supabase...');
 
-  const response = await fetch(`${SUPABASE_URL}/rest/v1/exercises?select=id,name`, {
-    headers: {
-      'apikey': SUPABASE_ANON_KEY,
-      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-    },
-  });
-
-  if (!response.ok) {
-    throw new Error(`Failed to fetch exercises: ${response.status}`);
-  }
-
-  const exercises = await response.json();
-
-  // Build ID -> name mapping
   exerciseNamesCache = {};
-  for (const ex of exercises) {
-    exerciseNamesCache[ex.id] = ex.name;
+  let offset = 0;
+  const batchSize = 1000;
+
+  while (true) {
+    const response = await fetch(
+      `${SUPABASE_URL}/rest/v1/exercises?select=id,name&offset=${offset}&limit=${batchSize}`,
+      {
+        headers: {
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch exercises: ${response.status}`);
+    }
+
+    const exercises = await response.json();
+    if (exercises.length === 0) break;
+
+    for (const ex of exercises) {
+      exerciseNamesCache[ex.id] = ex.name;
+    }
+
+    offset += batchSize;
+    if (exercises.length < batchSize) break;
   }
 
   console.log(`Loaded ${Object.keys(exerciseNamesCache).length} exercise names from database`);
@@ -130,34 +144,9 @@ const OLD_NAME_MAPPINGS = {
   'Arnold Split - Shoulders/Arms': { split: 'arnold_split', styles: ['classic_bodybuilding'], dayFocus: 'Shoulders/Arms' },
 };
 
-// Build clean scenario name from split + training styles + day focus
+// Use original scenario name - it already contains all variation info
+// (equipment, experience level, etc.) that would be lost by rebuilding from fields
 function buildScenarioName(scenario) {
-  let split = scenario.split;
-  let styles = scenario.trainingStyles || [];
-  let dayFocus = scenario.dayFocus || '';
-
-  // If missing, try to extract from old name mappings
-  if (!split && OLD_NAME_MAPPINGS[scenario.name]) {
-    const mapping = OLD_NAME_MAPPINGS[scenario.name];
-    split = mapping.split;
-    styles = mapping.styles;
-    dayFocus = mapping.dayFocus;
-  }
-
-  // Format split name
-  const splitName = SPLIT_NAMES[split] || split || '';
-
-  // Format training styles
-  const styleNames = styles.map(s => STYLE_NAMES[s] || s).join(' + ');
-
-  // Build name: "{Split} - {Training Style(s)} ({Day Focus})" or simpler variants
-  if (splitName && styleNames && dayFocus && dayFocus !== 'Full Body') {
-    return `${splitName} - ${styleNames} (${dayFocus})`;
-  } else if (splitName && styleNames) {
-    return `${splitName} - ${styleNames}`;
-  }
-
-  // Fallback to original name
   return scenario.name;
 }
 
@@ -198,7 +187,7 @@ async function main() {
       if (!scenarioMap[cleanName]) {
         const scenarioEntry = {
           name: cleanName,
-          duration: scenario.workout?.estimatedDuration || 60,
+          duration: SCENARIO_DURATION_MAP[scenario.name] || scenario.request?.duration || 60,
           equipment: scenario.equipment || scenario.request?.equipment || SCENARIO_EQUIPMENT_MAP[scenario.name] || [],
           results: []
         };

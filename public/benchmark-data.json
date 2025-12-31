@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-30T13:31:31.747Z",
+  "timestamp": "2025-12-31T01:45:56.165Z",
   "modelStats": [
     {
       "modelId": "google/gemini-3-flash-preview",
@@ -1383,7 +1383,7 @@
     },
     {
       "name": "PPL - Bodybuilding (Legs)",
-      "duration": 65,
+      "duration": 75,
       "equipment": [
         "Barbell",
         "Dumbbells",
@@ -1792,7 +1792,7 @@
     },
     {
       "name": "Upper/Lower - Strength (Upper)",
-      "duration": 131,
+      "duration": 60,
       "equipment": [
         "barbell",
         "dumbbell",
@@ -2198,7 +2198,7 @@
     },
     {
       "name": "Upper/Lower - Strength (Lower)",
-      "duration": 131,
+      "duration": 60,
       "equipment": [
         "barbell",
         "dumbbell",
@@ -2604,7 +2604,7 @@
     },
     {
       "name": "Full Body - Strength",
-      "duration": 131,
+      "duration": 90,
       "equipment": [
         "barbell",
         "dumbbell"
@@ -3009,7 +3009,7 @@
     },
     {
       "name": "Upper/Lower - HIT (Upper)",
-      "duration": 22,
+      "duration": 30,
       "equipment": [
         "Chest Press",
         "Lat Pulldown",
@@ -3217,7 +3217,7 @@
     },
     {
       "name": "Full Body - HIT",
-      "duration": 27,
+      "duration": 45,
       "equipment": [
         "leverage machine",
         "dumbbell"
@@ -3462,7 +3462,7 @@
     },
     {
       "name": "Upper/Lower - HIT (Lower)",
-      "duration": 22,
+      "duration": 30,
       "equipment": [
         "leverage machine",
         "barbell"
@@ -3919,7 +3919,7 @@
     },
     {
       "name": "Upper/Lower - Endurance (Upper)",
-      "duration": 39,
+      "duration": 45,
       "equipment": [
         "dumbbell",
         "cable",
@@ -4891,7 +4891,7 @@
     },
     {
       "name": "Upper/Lower - Endurance (Bodyweight)",
-      "duration": 39,
+      "duration": 45,
       "equipment": [
         "body weight"
       ],
@@ -5335,7 +5335,7 @@
     },
     {
       "name": "Full Body - Endurance (Bands)",
-      "duration": 39,
+      "duration": 45,
       "equipment": [
         "Resistance Bands",
         "body weight"
@@ -5780,7 +5780,7 @@
     },
     {
       "name": "Full Body - Strength (Kettlebell)",
-      "duration": 131,
+      "duration": 60,
       "equipment": [
         "Kettlebells"
       ],
@@ -6525,7 +6525,7 @@
     },
     {
       "name": "Upper/Lower - Bodybuilding (Beginner)",
-      "duration": 53,
+      "duration": 45,
       "equipment": [
         "dumbbell",
         "cable",
@@ -7714,7 +7714,7 @@
     },
     {
       "name": "PPL - Strength + Bodybuilding (Push)",
-      "duration": 156,
+      "duration": 75,
       "equipment": [
         "barbell",
         "dumbbell",
@@ -8489,7 +8489,7 @@
     },
     {
       "name": "Full Body - Strength + Endurance",
-      "duration": 142,
+      "duration": 90,
       "equipment": [
         "barbell",
         "dumbbell",
@@ -8961,7 +8961,7 @@
     },
     {
       "name": "Arnold Split - Bodybuilding (Chest/Back)",
-      "duration": 80,
+      "duration": 90,
       "equipment": [
         "barbell",
         "dumbbell",
