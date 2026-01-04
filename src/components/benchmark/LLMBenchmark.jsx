@@ -10,6 +10,7 @@ export function LLMBenchmark() {
   const [error, setError] = useState(null)
   const [selectedScenarioIndex, setSelectedScenarioIndex] = useState(0)
   const [selectedSplit, setSelectedSplit] = useState(null)
+  const [selectedDuration, setSelectedDuration] = useState(null)
   const chipContainerRef = useRef(null)
 
   useEffect(() => {
@@ -66,10 +67,27 @@ export function LLMBenchmark() {
 
   const splitTypes = Object.keys(splitGroups)
 
-  // Filter scenarios by selected split (null = show all)
-  const filteredScenarios = selectedSplit
-    ? scenarios.filter(s => (s.split || 'Other') === selectedSplit)
-    : scenarios
+  // Group scenarios by duration
+  const durationGroups = scenarios.reduce((acc, scenario) => {
+    const duration = scenario.duration
+    if (duration) {
+      if (!acc[duration]) acc[duration] = []
+      acc[duration].push(scenario)
+    }
+    return acc
+  }, {})
+
+  // Sort durations numerically
+  const durationTypes = Object.keys(durationGroups)
+    .map(d => parseInt(d, 10))
+    .sort((a, b) => a - b)
+
+  // Filter scenarios by selected split AND duration (null = show all)
+  const filteredScenarios = scenarios.filter(s => {
+    const matchesSplit = selectedSplit === null || (s.split || 'Other') === selectedSplit
+    const matchesDuration = selectedDuration === null || s.duration === selectedDuration
+    return matchesSplit && matchesDuration
+  })
 
   const currentScenario = scenarios[selectedScenarioIndex]
   const filteredIndex = filteredScenarios.findIndex(s => s.name === currentScenario?.name)
@@ -111,6 +129,18 @@ export function LLMBenchmark() {
 
   const formatSplitName = (split) => {
     return split.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+  }
+
+  // Duration colors (gradient from short to long workouts)
+  const getDurationColor = (duration) => {
+    const colors = {
+      30: 'bg-emerald-100 text-emerald-700 border-emerald-300 hover:bg-emerald-200',
+      45: 'bg-teal-100 text-teal-700 border-teal-300 hover:bg-teal-200',
+      60: 'bg-cyan-100 text-cyan-700 border-cyan-300 hover:bg-cyan-200',
+      75: 'bg-sky-100 text-sky-700 border-sky-300 hover:bg-sky-200',
+      90: 'bg-indigo-100 text-indigo-700 border-indigo-300 hover:bg-indigo-200',
+    }
+    return colors[duration] || 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200'
   }
 
   return (
@@ -208,7 +238,7 @@ export function LLMBenchmark() {
 
       {/* Scenario Results with Improved Navigation */}
       <Card>
-        <CardHeader className="pb-4">
+        <CardHeader className="pb-4 sticky top-0 z-20 bg-white border-b shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <CardTitle>Scenario Results</CardTitle>
             <div className="flex items-center gap-2">
@@ -259,6 +289,33 @@ export function LLMBenchmark() {
                 }`}
               >
                 {formatSplitName(split)} ({splitGroups[split].length})
+              </button>
+            ))}
+          </div>
+
+          {/* Duration Filter Chips */}
+          <div className="flex gap-2 mb-4 flex-wrap">
+            <button
+              onClick={() => setSelectedDuration(null)}
+              className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${
+                selectedDuration === null
+                  ? 'bg-gray-900 text-white border-gray-900'
+                  : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-100'
+              }`}
+            >
+              All Durations
+            </button>
+            {durationTypes.map(duration => (
+              <button
+                key={duration}
+                onClick={() => setSelectedDuration(duration)}
+                className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${
+                  selectedDuration === duration
+                    ? 'bg-gray-900 text-white border-gray-900'
+                    : getDurationColor(duration)
+                }`}
+              >
+                {duration} min ({durationGroups[duration].length})
               </button>
             ))}
           </div>
@@ -323,8 +380,9 @@ export function LLMBenchmark() {
         <CardContent>
           {currentScenario && (
             <div className="space-y-4">
-              {/* Scenario metadata badges */}
-              <div className="flex flex-wrap gap-2 mb-4">
+              {/* Scenario metadata badges - sticky below header */}
+              <div className="sticky top-[180px] z-10 bg-white py-2 -mx-6 px-6 border-b border-gray-100">
+              <div className="flex flex-wrap gap-2 mb-2">
                 {currentScenario.split && (
                   <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
                     {currentScenario.split.replace(/_/g, ' ').toUpperCase()}
@@ -362,7 +420,7 @@ export function LLMBenchmark() {
 
               {/* Equipment badges */}
               {currentScenario.equipment && currentScenario.equipment.length > 0 && (
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-1.5 mt-2">
                   <span className="text-xs text-gray-500 mr-1 self-center">Equipment:</span>
                   {currentScenario.equipment.map(eq => (
                     <span
@@ -374,6 +432,7 @@ export function LLMBenchmark() {
                   ))}
                 </div>
               )}
+              </div>
 
               {/* Model results grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
