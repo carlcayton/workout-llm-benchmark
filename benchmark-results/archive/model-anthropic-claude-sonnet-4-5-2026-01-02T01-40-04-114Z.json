@@ -1,0 +1,1220 @@
+{
+  "modelId": "anthropic/claude-sonnet-4.5",
+  "modelName": "Claude Sonnet 4.5",
+  "tier": "premium",
+  "timestamp": "2026-01-02T01:40:04.114Z",
+  "totalScenarios": 5,
+  "scenarios": [
+    {
+      "name": "PPL - Bodybuilding (Legs)",
+      "split": "push_pull_legs",
+      "dayFocus": "Legs",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Barbell",
+        "Dumbbells",
+        "Leg Press",
+        "Leg Curl Machine",
+        "Leg Extension Machine",
+        "Hack Squat"
+      ],
+      "success": true,
+      "latency": 50716,
+      "exerciseCount": 12,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "10",
+      "avgRest": 60,
+      "error": null,
+      "workout": {
+        "title": "Generated Workout",
+        "description": "A balanced workout targeting your selected muscle groups.",
+        "estimatedDuration": 75,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0051",
+                "exerciseId": "0051",
+                "name": "barbell jefferson squat",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0051.gif",
+                "target": "glutes",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and toes slightly turned out.",
+                  "Hold the barbell with an overhand grip, resting it on the front of your body, just below your waist.",
+                  "Step your left foot forward and your right foot back, keeping your feet shoulder-width apart.",
+                  "Bend your knees and lower your body down into a squat position, keeping your back straight and chest up.",
+                  "Push through your heels to stand back up to the starting position.",
+                  "Repeat the movement, alternating your forward and back foot with each repetition."
+                ],
+                "description": "The barbell Jefferson squat is a compound lower body exercise that targets the glutes, quadriceps, hamstrings, and calves. It involves holding a barbell between the legs and performing a squat with a staggered stance, alternating foot positions with each repetition.",
+                "secondaryMuscles": [
+                  "quadriceps",
+                  "hamstrings",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1545",
+                "exerciseId": "1545",
+                "name": "barbell full zercher squat",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1545.gif",
+                "target": "glutes",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and toes slightly turned out.",
+                  "Hold the barbell in the crooks of your elbows, with your hands gripping the barbell for stability.",
+                  "Engage your core and keep your chest lifted as you lower your hips back and down into a squat position.",
+                  "Keep your knees in line with your toes and your weight in your heels.",
+                  "Lower until your thighs are parallel to the ground, or as low as you can comfortably go.",
+                  "Drive through your heels to stand back up, squeezing your glutes at the top of the movement.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell full Zercher squat is a compound lower body exercise where the barbell is held in the crooks of the elbows. It targets the glutes and also works the quadriceps, hamstrings, calves, and core. This squat variation requires significant core strength and stability due to the bar position.",
+                "secondaryMuscles": [
+                  "quadriceps",
+                  "hamstrings",
+                  "calves",
+                  "core"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "2796",
+                "exerciseId": "2796",
+                "name": "dumbbell step-up lunge",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2796.gif",
+                "target": "quads",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Stand in front of a step or platform with a dumbbell in each hand, palms facing your sides.",
+                  "Place your right foot on the step, ensuring your entire foot is on the surface.",
+                  "Push through your right heel and lift your body up onto the step, bringing your left foot up as well.",
+                  "Once both feet are on the step, lower your left foot back down to the starting position, keeping your right foot on the step.",
+                  "Repeat the movement, alternating which foot you step up with each time.",
+                  "Continue for the desired number of repetitions."
+                ],
+                "description": "The dumbbell step-up lunge is a compound lower body exercise that targets the quadriceps while also engaging the glutes, hamstrings, and calves. It involves stepping onto a raised platform while holding dumbbells, requiring balance, coordination, and lower body strength.",
+                "secondaryMuscles": [
+                  "glutes",
+                  "hamstrings",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0068",
+                "exerciseId": "0068",
+                "name": "barbell one leg squat",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0068.gif",
+                "target": "quads",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and hold a barbell across your upper back.",
+                  "Lift one foot off the ground and extend it forward, keeping it parallel to the ground.",
+                  "Bend your standing leg and lower your body down as if sitting back into a chair, keeping your chest up and your back straight.",
+                  "Lower yourself until your thigh is parallel to the ground, then push through your heel to return to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch legs and repeat."
+                ],
+                "description": "The barbell one leg squat is a challenging lower body exercise that targets the quadriceps while also engaging the glutes, hamstrings, and calves. It requires significant balance, strength, and coordination, as you perform a squat on one leg while holding a barbell across your upper back.",
+                "secondaryMuscles": [
+                  "glutes",
+                  "hamstrings",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0776",
+                "exerciseId": "0776",
+                "name": "snatch pull",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0776.gif",
+                "target": "quads",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and the barbell on the ground in front of you.",
+                  "Bend your knees and hinge at the hips to lower into a squat position, gripping the barbell with an overhand grip.",
+                  "Keep your back straight and chest up as you drive through your heels to lift the barbell off the ground, extending your hips and knees.",
+                  "As the barbell reaches hip level, explosively pull it upwards, shrugging your shoulders and pulling your elbows high and to the sides.",
+                  "As the barbell reaches its highest point, quickly drop underneath it, pulling yourself into a deep squat position.",
+                  "Catch the barbell overhead with your arms fully extended and your knees bent.",
+                  "Stand up by extending your hips and knees, keeping the barbell overhead.",
+                  "Lower the barbell back down to the starting position by reversing the movement.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The snatch pull is a compound Olympic weightlifting movement that develops explosive power and strength in the lower body, particularly targeting the quads, hamstrings, and glutes. It requires coordination, balance, and proper technique to perform safely and effectively.",
+                "secondaryMuscles": [
+                  "hamstrings",
+                  "glutes",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0102",
+                "exerciseId": "0102",
+                "name": "barbell squat (on knees)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0102.gif",
+                "target": "quads",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Start by kneeling on the ground with your knees hip-width apart and your toes pointing forward.",
+                  "Place a barbell across your shoulders, gripping it with an overhand grip and your hands slightly wider than shoulder-width apart.",
+                  "Engage your core and keep your chest lifted as you slowly lower your body down by bending your knees, keeping your back straight.",
+                  "Continue lowering until your thighs are parallel to the ground, or as low as you can comfortably go.",
+                  "Pause for a moment at the bottom, then push through your heels to return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell squat (on knees) is a variation of the traditional squat performed from a kneeling position. This exercise targets the quadriceps while also engaging the glutes, hamstrings, and calves. It requires good core stability and balance, as well as proper technique to safely handle the barbell.",
+                "secondaryMuscles": [
+                  "glutes",
+                  "hamstrings",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "3007",
+                "exerciseId": "3007",
+                "name": "resistance band leg extension",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3007.gif",
+                "target": "quads",
+                "equipment": "resistance band",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Attach the resistance band to a sturdy anchor point and secure it around your ankle.",
+                  "Stand facing the anchor point with your feet shoulder-width apart.",
+                  "Keeping your core engaged and your upper body stable, extend your leg straight out in front of you.",
+                  "Pause for a moment at the top, then slowly return your leg to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch legs."
+                ],
+                "description": "The resistance band leg extension targets the quadriceps by extending the leg against the resistance of a band, helping to build strength and endurance in the upper legs.",
+                "secondaryMuscles": [
+                  "hamstrings"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0648",
+                "exerciseId": "0648",
+                "name": "power clean",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0648.gif",
+                "target": "hamstrings",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Start with the barbell on the ground in front of you, with your feet shoulder-width apart.",
+                  "Bend down and grip the barbell with an overhand grip, slightly wider than shoulder-width apart.",
+                  "Keep your back straight and chest up as you lift the barbell off the ground, extending your hips and knees.",
+                  "As the barbell reaches your mid-thigh, explosively pull it upwards, shrugging your shoulders and pulling your elbows high and to the sides.",
+                  "As the barbell reaches its highest point, quickly drop underneath it, rotating your elbows around and catching the barbell on your shoulders in a front squat position.",
+                  "Stand up with the barbell, fully extending your hips and knees.",
+                  "Lower the barbell back down to the starting position, keeping control of the weight throughout the movement.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The power clean is a compound Olympic weightlifting movement that involves lifting a barbell from the floor to the shoulders in one explosive motion. It targets the hamstrings, glutes, quadriceps, and calves, and requires significant strength, coordination, and technique.",
+                "secondaryMuscles": [
+                  "glutes",
+                  "quadriceps",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "2808",
+                "exerciseId": "2808",
+                "name": "dumbbell sumo pull through",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2808.gif",
+                "target": "glutes",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Stand with your feet wider than shoulder-width apart, toes pointed outwards.",
+                  "Hold a dumbbell with both hands in front of your body, arms extended.",
+                  "Bend your knees and lower your hips down into a squat position, keeping your back straight.",
+                  "Lower the dumbbell down between your legs, keeping your arms straight.",
+                  "Drive through your heels and extend your hips forward, pulling the dumbbell up and in front of your body.",
+                  "Squeeze your glutes at the top of the movement, then lower the dumbbell back down between your legs.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell sumo pull through is a lower body exercise that targets the glutes, with secondary emphasis on the hamstrings, quadriceps, and core. It involves a wide-stance squat and a hip hinge movement, using a dumbbell for resistance.",
+                "secondaryMuscles": [
+                  "hamstrings",
+                  "quadriceps",
+                  "core"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "3759",
+                "exerciseId": "3759",
+                "name": "lever seated good morning",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3759.gif",
+                "target": "glutes",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the seat height so that your hips are slightly higher than your knees.",
+                  "Sit on the machine with your back against the pad and your feet flat on the footrests.",
+                  "Grasp the handles or the sides of the seat for stability.",
+                  "Keeping your back straight, slowly lean forward from your hips until your upper body is parallel to the ground.",
+                  "Pause for a moment, then slowly return to the starting position by pushing through your glutes and hamstrings.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever seated good morning is a machine-based exercise targeting the glutes, with secondary emphasis on the hamstrings and lower back. It involves hinging at the hips while seated, using a leverage machine to provide resistance.",
+                "secondaryMuscles": [
+                  "hamstrings",
+                  "lower back"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1253",
+                "exerciseId": "1253",
+                "name": "lever donkey calf raise",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1253.gif",
+                "target": "calves",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the leverage machine to the appropriate height for your body.",
+                  "Position yourself facing the machine, with your toes on the foot platform and your heels hanging off the edge.",
+                  "Place your hands on the handles or the support bars for stability.",
+                  "Engage your calves and lift your heels as high as possible, using the balls of your feet.",
+                  "Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever donkey calf raise is a machine-based exercise targeting the calf muscles. It involves standing on a platform with your heels hanging off, then raising and lowering your heels to work the calves. The leverage machine provides resistance and support, making it a controlled movement.",
+                "secondaryMuscles": [
+                  "hamstrings",
+                  "glutes"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "2315",
+                "exerciseId": "2315",
+                "name": "lever rotary calf",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2315.gif",
+                "target": "calves",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the seat height so that your knees are slightly bent and your feet are flat on the footplate.",
+                  "Place your toes on the footplate, with your heels hanging off the edge.",
+                  "Grasp the handles or the sides of the machine for stability.",
+                  "Push through the balls of your feet, raising your heels as high as possible.",
+                  "Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever rotary calf exercise targets the calves using a leverage machine. It involves raising and lowering the heels while seated, focusing on the calf muscles and ankle stabilizers.",
+                "secondaryMuscles": [
+                  "soleus",
+                  "ankle stabilizers"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [
+          "Focus on form",
+          "Control the eccentric phase"
+        ],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0051",
+              "name": "barbell jefferson squat",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      }
+    },
+    {
+      "name": "Upper/Lower - Strength (Upper)",
+      "split": "upper_lower",
+      "dayFocus": "Upper",
+      "trainingStyles": [
+        "strength_focused"
+      ],
+      "equipment": [
+        "barbell",
+        "dumbbell",
+        "cable"
+      ],
+      "success": true,
+      "latency": 40645,
+      "exerciseCount": 3,
+      "equipmentMatchRate": 100,
+      "avgSets": 5,
+      "avgReps": "5",
+      "avgRest": 180,
+      "error": null,
+      "workout": {
+        "title": "Upper Body - STRENGTH",
+        "description": "Upper Body workout focusing on strength training.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0289",
+                "exerciseId": "0289",
+                "name": "dumbbell bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0289.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Keep elbows at a 90-degree angle as you lower the dumbbells to the sides of your chest.",
+                "instructions": [
+                  "Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
+                  "Hold a dumbbell in each hand, with your palms facing forward and your arms extended above your chest.",
+                  "Lower the dumbbells slowly to the sides of your chest, keeping your elbows at a 90-degree angle.",
+                  "Pause for a moment, then push the dumbbells back up to the starting position, fully extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell bench press is a classic upper body strength exercise that targets the pectoral muscles, with secondary emphasis on the triceps and shoulders. It is performed lying on a bench, pressing dumbbells from chest level to full arm extension.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0122",
+                "exerciseId": "0122",
+                "name": "barbell wide bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0122.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Keep your elbows slightly flared out as you lower the barbell towards your chest.",
+                "instructions": [
+                  "Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
+                  "Grasp the barbell with a wide grip, slightly wider than shoulder-width apart.",
+                  "Lift the barbell off the rack and hold it directly above your chest with your arms fully extended.",
+                  "Lower the barbell slowly towards your chest, keeping your elbows slightly flared out.",
+                  "Pause for a moment when the barbell touches your chest, then push it back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell wide bench press is a compound strength exercise targeting the pectoral muscles, with secondary emphasis on the shoulders and triceps. It requires a barbell and a bench, and involves lowering the barbell to the chest with a wide grip before pressing it back up.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0340",
+                "exerciseId": "0340",
+                "name": "dumbbell lying hammer press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0340.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 5,
+                "reps": 6,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Maintain palms facing each other throughout the entire movement.",
+                "instructions": [
+                  "Lie flat on a bench with a dumbbell in each hand, palms facing each other and arms extended straight up.",
+                  "Lower the dumbbells to the sides of your chest, keeping your elbows at a 90-degree angle.",
+                  "Press the dumbbells back up to the starting position, fully extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell lying hammer press is a chest exercise performed on a bench with dumbbells held in a neutral grip (palms facing each other). It targets the pectorals while also engaging the triceps and shoulders.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0289",
+              "name": "dumbbell bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0289",
+              "name": "dumbbell bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "70%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0289",
+              "name": "dumbbell bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "85%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0122",
+              "name": "barbell wide bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0122",
+              "name": "barbell wide bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "70%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0122",
+              "name": "barbell wide bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "85%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 12,
+          "notes": "Progressive warmup to prepare CNS and joints for heavy lifting. Rest 60-90 seconds between warmup sets."
+        }
+      }
+    },
+    {
+      "name": "Upper/Lower - Strength (Lower)",
+      "split": "upper_lower",
+      "dayFocus": "Lower",
+      "trainingStyles": [
+        "strength_focused"
+      ],
+      "equipment": [
+        "barbell",
+        "dumbbell",
+        "leverage machine"
+      ],
+      "success": true,
+      "latency": 33511,
+      "exerciseCount": 3,
+      "equipmentMatchRate": 100,
+      "avgSets": 5,
+      "avgReps": "4",
+      "avgRest": 180,
+      "error": null,
+      "workout": {
+        "title": "Lower Body - STRENGTH",
+        "description": "Lower Body workout focusing on strength training.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0786",
+                "exerciseId": "0786",
+                "name": "squat jerk",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0786.gif",
+                "target": "quads",
+                "equipment": "barbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Explosively drive through your legs and push the barbell overhead as you reach the bottom of the squat.",
+                "instructions": [
+                  "Start with the barbell resting on your shoulders, with your feet shoulder-width apart.",
+                  "Lower your body into a squat position, keeping your chest up and your knees tracking over your toes.",
+                  "As you reach the bottom of the squat, explosively drive through your legs and push the barbell overhead.",
+                  "As the barbell reaches its peak, quickly drop into a split position, with one foot forward and one foot back.",
+                  "Catch the barbell overhead with your arms fully extended and your back knee slightly touching the ground.",
+                  "Stand up from the split position, bringing your feet back together.",
+                  "Lower the barbell back to your shoulders and repeat for the desired number of repetitions."
+                ],
+                "description": "The squat jerk is an advanced Olympic weightlifting movement that combines a squat and a jerk, requiring explosive power, coordination, and balance. It targets the quads primarily, with significant involvement from the glutes, hamstrings, calves, and core.",
+                "secondaryMuscles": [
+                  "glutes",
+                  "hamstrings",
+                  "calves",
+                  "core"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "2798",
+                "exerciseId": "2798",
+                "name": "barbell squat jump step rear lunge",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2798.gif",
+                "target": "quads",
+                "equipment": "barbell",
+                "sets": 5,
+                "reps": 4,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Land softly on your feet after the jump and immediately step back into a reverse lunge.",
+                "instructions": [
+                  "Start by standing with your feet shoulder-width apart, holding a barbell across your upper back.",
+                  "Lower your body into a squat position by bending your knees and pushing your hips back.",
+                  "Explode upwards, jumping off the ground as high as you can.",
+                  "Land softly on your feet and immediately step back with one leg into a reverse lunge.",
+                  "Lower your body down until your front thigh is parallel to the ground, keeping your back straight.",
+                  "Push through your front heel to return to the starting position.",
+                  "Repeat the jump and lunge sequence on the other leg.",
+                  "Continue alternating legs for the desired number of repetitions."
+                ],
+                "description": "The barbell squat jump step rear lunge is a dynamic lower body exercise that combines a squat jump with a reverse lunge, performed while holding a barbell across the upper back. This movement targets the quadriceps, glutes, hamstrings, and calves, and requires strength, coordination, and balance.",
+                "secondaryMuscles": [
+                  "glutes",
+                  "hamstrings",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0102",
+                "exerciseId": "0102",
+                "name": "barbell squat (on knees)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0102.gif",
+                "target": "quads",
+                "equipment": "barbell",
+                "sets": 5,
+                "reps": 6,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Keep your chest lifted and back straight as you lower down by bending your knees.",
+                "instructions": [
+                  "Start by kneeling on the ground with your knees hip-width apart and your toes pointing forward.",
+                  "Place a barbell across your shoulders, gripping it with an overhand grip and your hands slightly wider than shoulder-width apart.",
+                  "Engage your core and keep your chest lifted as you slowly lower your body down by bending your knees, keeping your back straight.",
+                  "Continue lowering until your thighs are parallel to the ground, or as low as you can comfortably go.",
+                  "Pause for a moment at the bottom, then push through your heels to return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell squat (on knees) is a variation of the traditional squat performed from a kneeling position. This exercise targets the quadriceps while also engaging the glutes, hamstrings, and calves. It requires good core stability and balance, as well as proper technique to safely handle the barbell.",
+                "secondaryMuscles": [
+                  "glutes",
+                  "hamstrings",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0786",
+              "name": "squat jerk",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0786",
+              "name": "squat jerk",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "70%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0786",
+              "name": "squat jerk",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "85%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "2798",
+              "name": "barbell squat jump step rear lunge",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "2798",
+              "name": "barbell squat jump step rear lunge",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "70%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "2798",
+              "name": "barbell squat jump step rear lunge",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "85%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 12,
+          "notes": "Progressive warmup to prepare CNS and joints for heavy lifting. Rest 60-90 seconds between warmup sets."
+        }
+      }
+    },
+    {
+      "name": "Full Body - Strength",
+      "split": "full_body",
+      "dayFocus": "Full Body",
+      "trainingStyles": [
+        "strength_focused"
+      ],
+      "equipment": [
+        "barbell",
+        "dumbbell"
+      ],
+      "success": true,
+      "latency": 40395,
+      "exerciseCount": 5,
+      "equipmentMatchRate": 100,
+      "avgSets": 5,
+      "avgReps": "5",
+      "avgRest": 144,
+      "error": null,
+      "workout": {
+        "title": "Full Body - STRENGTH",
+        "description": "Full Body workout focusing on strength training.",
+        "estimatedDuration": 90,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "1290",
+                "exerciseId": "1290",
+                "name": "dumbbell one arm press on exercise ball",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1290.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Keep your core engaged and maintain balance on the exercise ball throughout the movement.",
+                "instructions": [
+                  "Sit on an exercise ball with your feet flat on the ground and your knees bent at a 90-degree angle.",
+                  "Hold a dumbbell in one hand and position it at shoulder height, with your elbow bent and palm facing forward.",
+                  "Slowly press the dumbbell upward until your arm is fully extended, while keeping your core engaged and maintaining balance on the exercise ball.",
+                  "Pause for a moment at the top, then slowly lower the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch to the other arm."
+                ],
+                "description": "The dumbbell one arm press on exercise ball is a unilateral chest exercise that also challenges your core and balance by performing the movement on an unstable surface. It targets the pectorals while also engaging the shoulders, triceps, and core muscles.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps",
+                  "core"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1622",
+                "exerciseId": "1622",
+                "name": "dumbbell one arm reverse grip press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1622.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Keep your elbow close to your body as you raise and press the dumbbell.",
+                "instructions": [
+                  "Sit on a flat bench with a dumbbell in one hand, palm facing towards your body.",
+                  "Place your feet flat on the ground and keep your back straight.",
+                  "Raise the dumbbell to shoulder height, keeping your elbow close to your body.",
+                  "Press the dumbbell upwards until your arm is fully extended.",
+                  "Pause for a moment at the top, then slowly lower the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch to the other arm."
+                ],
+                "description": "The dumbbell one arm reverse grip press is a unilateral chest exercise that targets the pectorals with a unique grip, also engaging the triceps and shoulders. It requires stability and control due to the reverse grip and single-arm execution.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "2810",
+                "exerciseId": "2810",
+                "name": "barbell split squat v. 2",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2810.gif",
+                "target": "quads",
+                "equipment": "barbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Keep your torso upright and lower until your front thigh is parallel to the ground.",
+                "instructions": [
+                  "Start by standing with your feet shoulder-width apart, holding a barbell across your upper back.",
+                  "Take a large step forward with your right foot, keeping your torso upright.",
+                  "Lower your body by bending your knees and hips until your right thigh is parallel to the ground.",
+                  "Pause for a moment, then push through your right heel to return to the starting position.",
+                  "Repeat with your left leg forward for the desired number of repetitions."
+                ],
+                "description": "The barbell split squat v. 2 is a lower body strength exercise that targets the quadriceps, while also engaging the glutes, hamstrings, and calves. It involves stepping forward into a split stance and lowering the body with a barbell across the upper back.",
+                "secondaryMuscles": [
+                  "glutes",
+                  "hamstrings",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0308",
+                "exerciseId": "0308",
+                "name": "dumbbell fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0308.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 90,
+                "tempo": "X-1-1",
+                "notes": "Lower your arms out to the sides in a wide arc until you feel a stretch in your chest.",
+                "instructions": [
+                  "Lie flat on a bench with a dumbbell in each hand, palms facing each other.",
+                  "Extend your arms straight up over your chest, with a slight bend in your elbows.",
+                  "Keeping a slight bend in your elbows, lower your arms out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then reverse the movement and bring the dumbbells back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell fly is a chest exercise performed lying on a bench, using dumbbells to stretch and contract the pectoral muscles through a wide arc motion.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0375",
+                "exerciseId": "0375",
+                "name": "dumbbell pullover",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0375.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 90,
+                "tempo": "X-1-1",
+                "notes": "Keep a slight bend in your elbows and lower the dumbbell behind your head until you feel a stretch.",
+                "instructions": [
+                  "Lie flat on a bench with your head at one end and your feet on the floor.",
+                  "Hold a dumbbell with both hands and extend your arms straight above your chest.",
+                  "Keeping a slight bend in your elbows, slowly lower the dumbbell behind your head until you feel a stretch in your chest and shoulders.",
+                  "Pause for a moment, then raise the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell pullover is a chest exercise performed lying on a bench, where you lower a dumbbell behind your head and then bring it back over your chest, targeting the pectorals and also engaging the lats and triceps.",
+                "secondaryMuscles": [
+                  "latissimus dorsi",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "1290",
+              "name": "dumbbell one arm press on exercise ball",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "1290",
+              "name": "dumbbell one arm press on exercise ball",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "70%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "1290",
+              "name": "dumbbell one arm press on exercise ball",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "85%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "1622",
+              "name": "dumbbell one arm reverse grip press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "1622",
+              "name": "dumbbell one arm reverse grip press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "70%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "1622",
+              "name": "dumbbell one arm reverse grip press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "85%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 12,
+          "notes": "Progressive warmup to prepare CNS and joints for heavy lifting. Rest 60-90 seconds between warmup sets."
+        }
+      }
+    },
+    {
+      "name": "Upper/Lower - HIT (Upper)",
+      "split": "upper_lower",
+      "dayFocus": "Upper",
+      "trainingStyles": [
+        "high_intensity_hit"
+      ],
+      "equipment": [
+        "Chest Press",
+        "Lat Pulldown",
+        "Shoulder Press Machine",
+        "Dumbbells",
+        "Cable Machine"
+      ],
+      "success": true,
+      "latency": 38086,
+      "exerciseCount": 6,
+      "equipmentMatchRate": 100,
+      "avgSets": 2,
+      "avgReps": "9",
+      "avgRest": 120,
+      "error": null,
+      "workout": {
+        "title": "Upper Body - HIT",
+        "description": "Upper Body workout focusing on hit training.",
+        "estimatedDuration": 30,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0576",
+                "exerciseId": "0576",
+                "name": "lever chest press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0576.gif",
+                "target": "pectorals",
+                "equipment": "leverage machine",
+                "sets": 2,
+                "reps": 8,
+                "restSeconds": 180,
+                "tempo": "4-2-4",
+                "notes": "Keep your back flat against the pad and push until arms are fully extended. Train to muscular failure.",
+                "intensityTechnique": "rest-pause",
+                "instructions": [
+                  "Adjust the seat height and position yourself on the machine with your back flat against the pad.",
+                  "Grasp the handles with an overhand grip and position your elbows at a 90-degree angle.",
+                  "Push the handles forward until your arms are fully extended, exhaling during the movement.",
+                  "Pause briefly at the end of the movement, then slowly return to the starting position, inhaling as you do so.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever chest press is a machine-based exercise that targets the pectoral muscles, with secondary emphasis on the triceps and shoulders. It is performed on a leverage machine, providing guided movement for safety and stability.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0301",
+                "exerciseId": "0301",
+                "name": "dumbbell decline bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0301.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 2,
+                "reps": 8,
+                "restSeconds": 180,
+                "tempo": "4-2-4",
+                "notes": "Lower dumbbells to sides of chest with elbows at 90 degrees. Train to muscular failure.",
+                "intensityTechnique": "rest-pause",
+                "instructions": [
+                  "Lie down on a decline bench with your feet secured and your head lower than your hips.",
+                  "Hold a dumbbell in each hand and extend your arms straight up above your chest, palms facing forward.",
+                  "Lower the dumbbells slowly to the sides of your chest, keeping your elbows at a 90-degree angle.",
+                  "Push the dumbbells back up to the starting position, fully extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell decline bench press is a chest exercise performed on a decline bench, targeting the lower pectorals. It also engages the triceps and shoulders as secondary muscles. The movement involves pressing dumbbells upward from a declined position, requiring good form and control.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0179",
+                "exerciseId": "0179",
+                "name": "cable low fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0179.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 2,
+                "reps": 9,
+                "restSeconds": 90,
+                "tempo": "4-2-4",
+                "notes": "Maintain slight elbow bend and bring arms forward in a sweeping motion. Train to muscular failure.",
+                "intensityTechnique": "static-hold",
+                "instructions": [
+                  "Attach the handles to the low pulleys of a cable machine and select an appropriate weight.",
+                  "Stand in the middle of the machine with your feet shoulder-width apart and a slight bend in your knees.",
+                  "Grasp the handles with an overhand grip and extend your arms out to the sides, keeping a slight bend in your elbows.",
+                  "Maintaining control, slowly bring your arms forward in a sweeping motion, crossing them in front of your body.",
+                  "Pause for a moment at the peak of the movement, feeling the stretch in your chest muscles.",
+                  "Reverse the motion and slowly return your arms to the starting position, keeping tension on your chest muscles throughout.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable low fly is an isolation exercise targeting the pectoral muscles using a cable machine. It involves bringing the arms together in front of the body from a low starting position, emphasizing the lower and inner chest.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0375",
+                "exerciseId": "0375",
+                "name": "dumbbell pullover",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0375.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 2,
+                "reps": 9,
+                "restSeconds": 90,
+                "tempo": "4-2-4",
+                "notes": "Keep slight elbow bend and lower dumbbell behind head until you feel a chest stretch. Train to muscular failure.",
+                "intensityTechnique": "static-hold",
+                "instructions": [
+                  "Lie flat on a bench with your head at one end and your feet on the floor.",
+                  "Hold a dumbbell with both hands and extend your arms straight above your chest.",
+                  "Keeping a slight bend in your elbows, slowly lower the dumbbell behind your head until you feel a stretch in your chest and shoulders.",
+                  "Pause for a moment, then raise the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell pullover is a chest exercise performed lying on a bench, where you lower a dumbbell behind your head and then bring it back over your chest, targeting the pectorals and also engaging the lats and triceps.",
+                "secondaryMuscles": [
+                  "latissimus dorsi",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0171",
+                "exerciseId": "0171",
+                "name": "cable incline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0171.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 2,
+                "reps": 9,
+                "restSeconds": 90,
+                "tempo": "4-2-4",
+                "notes": "Keep slight elbow bend and open arms out to sides in a controlled motion. Train to muscular failure.",
+                "intensityTechnique": "static-hold",
+                "instructions": [
+                  "Adjust the cable machine to a low position and attach the handles.",
+                  "Sit on an incline bench with your back against the pad and feet flat on the floor.",
+                  "Grasp the handles with an overhand grip and extend your arms straight out in front of you.",
+                  "Keeping a slight bend in your elbows, open your arms out to the sides in a controlled motion.",
+                  "Pause for a moment at the fully extended position, then slowly return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable incline fly is an isolation exercise targeting the upper chest (pectorals) using a cable machine. It involves opening and closing the arms in a fly motion while lying on an incline bench, providing constant tension throughout the movement.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0162",
+                "exerciseId": "0162",
+                "name": "cable front raise",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0162.gif",
+                "target": "delts",
+                "equipment": "cable",
+                "sets": 2,
+                "reps": 9,
+                "restSeconds": 90,
+                "tempo": "4-2-4",
+                "notes": "Keep arms straight and raise until parallel to floor. Train to muscular failure.",
+                "intensityTechnique": "static-hold",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and grasp the cable handle with an overhand grip.",
+                  "Keep your back straight and your core engaged.",
+                  "Raise the cable handle in front of you, keeping your arms straight and your palms facing down.",
+                  "Continue lifting until your arms are parallel to the floor.",
+                  "Pause for a moment at the top, then slowly lower the cable handle back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable front raise is a shoulder exercise that targets the deltoid muscles, particularly the anterior (front) delts. It involves lifting a cable handle in front of the body to shoulder height, emphasizing controlled movement and muscle engagement.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0576",
+              "name": "lever chest press",
+              "sets": 2,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0301",
+              "name": "dumbbell decline bench press",
+              "sets": 2,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 8,
+          "notes": "Light warmup to prepare muscles without pre-fatigue. Working sets will be to absolute failure."
+        }
+      }
+    }
+  ],
+  "summary": {
+    "successCount": 5,
+    "parseErrorCount": 0,
+    "apiErrorCount": 0,
+    "totalLatency": 203353,
+    "avgLatency": 40671,
+    "avgExerciseCount": 5.8,
+    "avgEquipmentMatchRate": 100,
+    "avgSets": 4.2,
+    "avgRest": 137,
+    "repsCounts": {
+      "4": 1,
+      "5": 2,
+      "9": 1,
+      "10": 1
+    },
+    "avgReps": "5",
+    "successRate": 100
+  }
+}

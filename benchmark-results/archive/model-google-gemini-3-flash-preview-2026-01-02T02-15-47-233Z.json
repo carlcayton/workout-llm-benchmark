@@ -1,0 +1,724 @@
+{
+  "modelId": "google/gemini-3-flash-preview",
+  "modelName": "Gemini 3 Flash",
+  "tier": "fast",
+  "timestamp": "2026-01-02T02:15:47.233Z",
+  "totalScenarios": 2,
+  "scenarios": [
+    {
+      "name": "Bro Split - Bodybuilding (Chest)",
+      "split": "bro_split",
+      "dayFocus": "Chest",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Chest Press",
+        "Pec Deck"
+      ],
+      "success": true,
+      "latency": 15589,
+      "exerciseCount": 10,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "12",
+      "avgRest": 63,
+      "error": null,
+      "workout": {
+        "title": "Chest Day - BODYBUILD",
+        "description": "Chest Day workout focusing on bodybuild training.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0025",
+                "exerciseId": "0025",
+                "name": "barbell bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0025.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 8,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "notes": "Lower the barbell slowly towards your chest while keeping your elbows tucked in.",
+                "instructions": [
+                  "Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
+                  "Grasp the barbell with an overhand grip slightly wider than shoulder-width apart.",
+                  "Lift the barbell off the rack and hold it directly above your chest with your arms fully extended.",
+                  "Lower the barbell slowly towards your chest, keeping your elbows tucked in.",
+                  "Pause for a moment when the barbell touches your chest.",
+                  "Push the barbell back up to the starting position by extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell bench press is a classic compound exercise that primarily targets the pectoral muscles, while also engaging the triceps and shoulders. It is performed by lying on a bench and pressing a barbell up and down in a controlled manner.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "3758",
+                "exerciseId": "3758",
+                "name": "lever standing chest press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3758.gif",
+                "target": "pectorals",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "notes": "Push the handles forward until your arms are fully extended while keeping your elbows slightly bent.",
+                "instructions": [
+                  "Adjust the seat height and position yourself on the machine with your feet flat on the ground.",
+                  "Grasp the handles with an overhand grip and position your hands at chest level.",
+                  "Push the handles forward until your arms are fully extended, keeping your elbows slightly bent.",
+                  "Pause for a moment, then slowly bring the handles back towards your chest, maintaining control throughout the movement.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever standing chest press is a machine-based exercise that targets the pectoral muscles, with secondary emphasis on the shoulders and triceps. It is performed standing, using a leverage machine, and involves pressing handles forward from chest level to full extension.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0314",
+                "exerciseId": "0314",
+                "name": "dumbbell incline bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0314.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "notes": "Slowly lower the dumbbells to the sides of your chest while keeping your elbows at a 90-degree angle.",
+                "instructions": [
+                  "Set up an incline bench at a 45-degree angle.",
+                  "Sit on the bench with your feet flat on the ground and your back pressed firmly against the bench.",
+                  "Hold a dumbbell in each hand, palms facing forward, and lift them to shoulder height.",
+                  "Slowly lower the dumbbells to the sides of your chest, keeping your elbows at a 90-degree angle.",
+                  "Push the dumbbells back up to the starting position, fully extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell incline bench press is a compound upper body exercise that targets the upper portion of the pectoral muscles, with additional emphasis on the shoulders and triceps. It is performed on an incline bench using dumbbells, requiring stability and control throughout the movement.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0047",
+                "exerciseId": "0047",
+                "name": "barbell incline bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0047.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 8,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "notes": "Lower the barbell slowly towards your chest while keeping your elbows at a 45-degree angle.",
+                "instructions": [
+                  "Set up an incline bench at a 45-degree angle.",
+                  "Lie down on the bench with your feet flat on the ground.",
+                  "Grasp the barbell with an overhand grip, slightly wider than shoulder-width apart.",
+                  "Unrack the barbell and lower it slowly towards your chest, keeping your elbows at a 45-degree angle.",
+                  "Pause for a moment at the bottom, then push the barbell back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell incline bench press is a compound upper-body exercise that targets the upper portion of the pectoral muscles, with secondary emphasis on the shoulders and triceps. It is performed on an incline bench using a barbell, making it a staple in strength training routines for developing chest size and strength.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0155",
+                "exerciseId": "0155",
+                "name": "cable cross-over variation",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0155.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Bring your hands together in front of your chest while maintaining a slight bend in your elbows.",
+                "instructions": [
+                  "Adjust the cable pulleys to chest height.",
+                  "Stand in the center of the cable machine with one foot in front of the other.",
+                  "Grasp the handles with your palms facing down and your arms extended out to the sides.",
+                  "Take a step forward, keeping your arms slightly bent.",
+                  "With a slight bend in your elbows, bring your hands together in front of your chest.",
+                  "Pause for a moment, then slowly return your arms back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable cross-over variation is a chest exercise performed using a cable machine. It targets the pectoral muscles and also engages the deltoids and triceps. The movement involves bringing the handles together in front of the chest while maintaining a slight bend in the elbows.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0375",
+                "exerciseId": "0375",
+                "name": "dumbbell pullover",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0375.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Slowly lower the dumbbell behind your head until you feel a deep stretch in your chest and shoulders.",
+                "instructions": [
+                  "Lie flat on a bench with your head at one end and your feet on the floor.",
+                  "Hold a dumbbell with both hands and extend your arms straight above your chest.",
+                  "Keeping a slight bend in your elbows, slowly lower the dumbbell behind your head until you feel a stretch in your chest and shoulders.",
+                  "Pause for a moment, then raise the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell pullover is a chest exercise performed lying on a bench, where you lower a dumbbell behind your head and then bring it back over your chest, targeting the pectorals and also engaging the lats and triceps.",
+                "secondaryMuscles": [
+                  "latissimus dorsi",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0308",
+                "exerciseId": "0308",
+                "name": "dumbbell fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0308.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Lower your arms out to the sides in a wide arc until you feel a stretch in your chest.",
+                "instructions": [
+                  "Lie flat on a bench with a dumbbell in each hand, palms facing each other.",
+                  "Extend your arms straight up over your chest, with a slight bend in your elbows.",
+                  "Keeping a slight bend in your elbows, lower your arms out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then reverse the movement and bring the dumbbells back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell fly is a chest exercise performed lying on a bench, using dumbbells to stretch and contract the pectoral muscles through a wide arc motion.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0171",
+                "exerciseId": "0171",
+                "name": "cable incline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0171.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Open your arms out to the sides in a controlled motion while keeping a slight bend in your elbows.",
+                "instructions": [
+                  "Adjust the cable machine to a low position and attach the handles.",
+                  "Sit on an incline bench with your back against the pad and feet flat on the floor.",
+                  "Grasp the handles with an overhand grip and extend your arms straight out in front of you.",
+                  "Keeping a slight bend in your elbows, open your arms out to the sides in a controlled motion.",
+                  "Pause for a moment at the fully extended position, then slowly return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable incline fly is an isolation exercise targeting the upper chest (pectorals) using a cable machine. It involves opening and closing the arms in a fly motion while lying on an incline bench, providing constant tension throughout the movement.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0302",
+                "exerciseId": "0302",
+                "name": "dumbbell decline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0302.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Squeeze your chest muscles to bring the dumbbells back to the starting position after feeling the stretch.",
+                "instructions": [
+                  "Lie on a decline bench with your feet secured and your head lower than your hips.",
+                  "Hold a dumbbell in each hand with your palms facing each other and your arms extended above your chest.",
+                  "Lower the dumbbells out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then squeeze your chest muscles to bring the dumbbells back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell decline fly is a chest exercise performed on a decline bench, targeting the lower pectoral muscles. It involves lowering dumbbells out to the sides in a wide arc and then bringing them back together, emphasizing chest muscle stretch and contraction.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0596",
+                "exerciseId": "0596",
+                "name": "lever seated fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0596.gif",
+                "target": "pectorals",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Push the handles forward and bring them together in front of your chest while squeezing the muscles.",
+                "instructions": [
+                  "Adjust the seat height and position yourself on the machine with your back against the pad.",
+                  "Grasp the handles with a pronated grip and keep your elbows slightly bent.",
+                  "Exhale and push the handles forward, bringing them together in front of your chest.",
+                  "Pause for a moment, squeezing your chest muscles.",
+                  "Inhale and slowly return to the starting position, allowing your chest muscles to stretch.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever seated fly is a machine-based exercise targeting the pectoral muscles, performed by bringing the handles together in front of the chest while seated.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "trapezius"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0025",
+              "name": "barbell bench press",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      },
+      "meta": {
+        "usedFallback": false,
+        "fallbackReason": null,
+        "exercisesAvailable": 82,
+        "appliedStyles": [
+          "BODYBUILD"
+        ],
+        "isCircuitMode": false,
+        "metaPlanAttempts": 0,
+        "exerciseSelectionAttempts": 1,
+        "paramAssignmentAttempts": 1,
+        "primaryExerciseCount": 82,
+        "supplementaryExerciseCount": 0,
+        "equipmentMatchRate": 100,
+        "equipmentViolations": [],
+        "primaryEquipmentViolations": [],
+        "deprecationWarnings": [
+          "experienceLevel as string is deprecated. Use a number from 1-10."
+        ]
+      }
+    },
+    {
+      "name": "Bro Split - Bodybuilding (Back)",
+      "split": "bro_split",
+      "dayFocus": "Back",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Lat Pulldown",
+        "Seated Row Machine"
+      ],
+      "success": true,
+      "latency": 13333,
+      "exerciseCount": 10,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "12",
+      "avgRest": 63,
+      "error": null,
+      "workout": {
+        "title": "Back Day - BODYBUILD",
+        "description": "Back Day workout focusing on bodybuild training.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0572",
+                "exerciseId": "0572",
+                "name": "lever assisted chin-up",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0572.gif",
+                "target": "lats",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "notes": "Engage your back muscles and pull your body up towards the handles, leading with your chest.",
+                "instructions": [
+                  "Adjust the leverage machine to your desired resistance level.",
+                  "Stand on the foot platform and grip the handles with an overhand grip, slightly wider than shoulder-width apart.",
+                  "Hang with your arms fully extended, keeping your body straight.",
+                  "Engage your back muscles and pull your body up towards the handles, leading with your chest.",
+                  "Continue pulling until your chin is above the handles.",
+                  "Pause for a moment at the top, then slowly lower your body back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever assisted chin-up is a machine-based exercise that helps users perform chin-ups with assistance, making it easier to build strength in the lats, biceps, and forearms. It is ideal for those who are not yet able to perform unassisted chin-ups.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0017",
+                "exerciseId": "0017",
+                "name": "assisted pull-up",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0017.gif",
+                "target": "lats",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "notes": "Engage your back muscles and pull your body up towards the handles while keeping your elbows close to your body.",
+                "instructions": [
+                  "Adjust the machine to your desired weight and height settings.",
+                  "Grasp the handles with an overhand grip, slightly wider than shoulder-width apart.",
+                  "Hang with your arms fully extended and your feet off the ground.",
+                  "Engage your back muscles and pull your body up towards the handles, keeping your elbows close to your body.",
+                  "Continue pulling until your chin is above the handles.",
+                  "Pause for a moment at the top, then slowly lower your body back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The assisted pull-up is a machine-based exercise that helps users perform pull-ups with added support, making it easier to lift their body weight. It primarily targets the latissimus dorsi (lats) and also engages the biceps and forearms.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0022",
+                "exerciseId": "0022",
+                "name": "barbell pullover to press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0022.gif",
+                "target": "lats",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "notes": "Lower the barbell behind your head in an arc-like motion until you feel a deep stretch in your lats.",
+                "instructions": [
+                  "Lie flat on a bench with your head at one end and your feet on the ground.",
+                  "Hold the barbell with a pronated grip (palms facing away from you) and extend your arms straight above your chest.",
+                  "Keeping your arms straight, lower the barbell behind your head in an arc-like motion until you feel a stretch in your lats.",
+                  "Pause for a moment, then reverse the motion and press the barbell back to the starting position above your chest.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell pullover to press is a compound exercise that targets the lats and also works the triceps, chest, and shoulders. It involves lowering a barbell behind your head while lying on a bench, then pressing it back up over your chest.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "chest",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1432",
+                "exerciseId": "1432",
+                "name": "assisted standing pull-up",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1432.gif",
+                "target": "lats",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "notes": "Engage your lats and biceps to pull yourself up towards the handles and squeeze your back muscles at the top.",
+                "instructions": [
+                  "Adjust the machine to your desired weight and height settings.",
+                  "Stand facing the machine with your feet shoulder-width apart.",
+                  "Grasp the handles with an overhand grip, slightly wider than shoulder-width apart.",
+                  "Engage your lats and biceps, and pull yourself up towards the handles.",
+                  "Pause for a moment at the top, squeezing your back muscles.",
+                  "Slowly lower yourself back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The assisted standing pull-up is a machine-based exercise targeting the latissimus dorsi (lats) with assistance to help perform the pull-up movement. It is suitable for those building strength to perform unassisted pull-ups.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "2736",
+                "exerciseId": "2736",
+                "name": "lever reverse grip lateral pulldown",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2736.gif",
+                "target": "lats",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Pull the handles down towards your chest, leading with your elbows and squeezing your shoulder blades together.",
+                "instructions": [
+                  "Adjust the seat height and position yourself on the machine with your knees under the pads and your feet flat on the ground.",
+                  "Grasp the handles with an overhand grip, slightly wider than shoulder-width apart.",
+                  "Sit upright with your chest out and shoulders back, maintaining a slight arch in your lower back.",
+                  "Pull the handles down towards your chest, leading with your elbows and squeezing your shoulder blades together.",
+                  "Pause for a moment at the bottom of the movement, then slowly release the handles back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever reverse grip lateral pulldown is a machine-based exercise targeting the latissimus dorsi (lats) with a reverse (underhand) grip, also engaging the biceps, rhomboids, and rear deltoids. It is performed on a leverage machine, making it accessible and safe for most users.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "rhomboids",
+                  "rear deltoids"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "2285",
+                "exerciseId": "2285",
+                "name": "lever pullover",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2285.gif",
+                "target": "lats",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Slowly pull the handles towards your chest while squeezing your lats and maintaining an engaged core.",
+                "instructions": [
+                  "Adjust the seat and handles of the leverage machine to a comfortable position.",
+                  "Sit on the machine with your back against the pad and grasp the handles with an overhand grip.",
+                  "Keep your arms slightly bent and your core engaged.",
+                  "Slowly pull the handles towards your chest, squeezing your lats.",
+                  "Pause for a moment at the peak contraction, then slowly return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever pullover is a machine-based exercise targeting the latissimus dorsi (lats) and also engaging the triceps and shoulders. It is performed by sitting on a leverage machine, grasping the handles, and pulling them towards the chest in a controlled motion.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0579",
+                "exerciseId": "0579",
+                "name": "lever front pulldown",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0579.gif",
+                "target": "lats",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Engage your lats and pull the handles down towards your chest, squeezing your shoulder blades together.",
+                "instructions": [
+                  "Adjust the seat height and position yourself on the machine with your knees under the pads and your feet flat on the ground.",
+                  "Grasp the handles with an overhand grip, slightly wider than shoulder-width apart.",
+                  "Sit upright with your chest lifted and your shoulders back, maintaining a slight arch in your lower back.",
+                  "Engage your lats and pull the handles down towards your chest, squeezing your shoulder blades together.",
+                  "Pause for a moment at the bottom of the movement, then slowly release the handles back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever front pulldown is a machine-based exercise targeting the latissimus dorsi (lats) and is commonly used to build back strength and muscle mass. It involves pulling handles down towards the chest while seated, using a leverage machine.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "rhomboids",
+                  "rear deltoids"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0245",
+                "exerciseId": "0245",
+                "name": "cable underhand pulldown",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0245.gif",
+                "target": "lats",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Pull the bar down towards your chest using an underhand grip and squeeze your shoulder blades together.",
+                "instructions": [
+                  "Adjust the cable machine so that the pulldown bar is at a height above your head.",
+                  "Sit down on the seat and grab the pulldown bar with an underhand grip, hands slightly wider than shoulder-width apart.",
+                  "Keep your back straight and lean back slightly.",
+                  "Pull the bar down towards your chest, squeezing your shoulder blades together.",
+                  "Pause for a moment at the bottom of the movement, then slowly release the bar back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable underhand pulldown is a strength exercise targeting the latissimus dorsi (lats) with secondary emphasis on the biceps and forearms. It involves pulling a cable bar down towards the chest using an underhand grip, which can help improve back strength and muscle definition.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0237",
+                "exerciseId": "0237",
+                "name": "cable straight arm pulldown (with rope)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0237.gif",
+                "target": "lats",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Engage your lats and slowly pull the rope down towards your thighs while keeping your arms straight.",
+                "instructions": [
+                  "Attach a rope to the cable machine at the highest setting.",
+                  "Stand facing the machine with your feet shoulder-width apart.",
+                  "Grasp the rope with both hands, palms facing down.",
+                  "Extend your arms fully in front of you, keeping your elbows slightly bent.",
+                  "Engage your lats and slowly pull the rope down towards your thighs, keeping your arms straight.",
+                  "Pause for a moment at the bottom, then slowly release the tension and return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable straight arm pulldown (with rope) is an isolation exercise that targets the latissimus dorsi (lats) using a cable machine and rope attachment. It emphasizes controlled movement and proper form to effectively engage the back muscles while minimizing arm involvement.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "2330",
+                "exerciseId": "2330",
+                "name": "cable lat pulldown full range of motion",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2330.gif",
+                "target": "lats",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Pull the bar down towards your upper chest while leaning back slightly and keeping your chest up.",
+                "instructions": [
+                  "Sit on the lat pulldown machine with your knees positioned under the pads.",
+                  "Grasp the cable bar with an overhand grip, slightly wider than shoulder-width apart.",
+                  "Lean back slightly and keep your chest up, maintaining a slight arch in your lower back.",
+                  "Pull the bar down towards your upper chest, squeezing your shoulder blades together.",
+                  "Pause for a moment at the bottom of the movement, then slowly release the bar back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable lat pulldown full range of motion is a strength exercise targeting the latissimus dorsi (lats) using a cable machine. It also engages the biceps, rhomboids, and rear deltoids. The movement involves pulling a cable bar down towards the chest while seated, emphasizing a full range of motion for optimal muscle activation.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "rhomboids",
+                  "rear deltoids"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0572",
+              "name": "lever assisted chin-up",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      },
+      "meta": {
+        "usedFallback": false,
+        "fallbackReason": null,
+        "exercisesAvailable": 95,
+        "appliedStyles": [
+          "BODYBUILD"
+        ],
+        "isCircuitMode": false,
+        "metaPlanAttempts": 0,
+        "exerciseSelectionAttempts": 1,
+        "paramAssignmentAttempts": 1,
+        "primaryExerciseCount": 95,
+        "supplementaryExerciseCount": 0,
+        "equipmentMatchRate": 100,
+        "equipmentViolations": [],
+        "primaryEquipmentViolations": [],
+        "deprecationWarnings": [
+          "experienceLevel as string is deprecated. Use a number from 1-10."
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "successCount": 2,
+    "parseErrorCount": 0,
+    "apiErrorCount": 0,
+    "totalLatency": 28922,
+    "avgLatency": 14461,
+    "avgExerciseCount": 10,
+    "avgEquipmentMatchRate": 100,
+    "avgSets": 4,
+    "avgRest": 63,
+    "repsCounts": {
+      "12": 2
+    },
+    "avgReps": "12",
+    "successRate": 100
+  }
+}

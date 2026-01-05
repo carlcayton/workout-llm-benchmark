@@ -15,15 +15,24 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Models to benchmark
-const MODELS = [
+// All available models
+const ALL_MODELS = [
   { id: 'openai/gpt-5.2', name: 'GPT-5.2' },
   { id: 'anthropic/claude-sonnet-4.5', name: 'Claude Sonnet 4.5' },
-  // { id: 'anthropic/claude-sonnet-4', name: 'Claude Sonnet 4' },
-  // { id: 'anthropic/claude-haiku-4.5', name: 'Claude 4.5 Haiku' },
-  // { id: 'google/gemini-3-flash-preview', name: 'Gemini 3 Flash' },
-  // { id: 'x-ai/grok-4.1-fast', name: 'Grok 4.1' },
+  { id: 'anthropic/claude-haiku-4.5', name: 'Claude 4.5 Haiku' },
+  { id: 'google/gemini-3-flash-preview', name: 'Gemini 3 Flash' },
+  { id: 'google/gemini-3-pro-preview', name: 'Gemini 3 Pro' },
+  { id: 'x-ai/grok-4.1-fast', name: 'Grok 4.1' },
 ];
+
+// Fast models for dry runs (DRY_RUN=1)
+const DRY_RUN_MODELS = [
+  { id: 'anthropic/claude-haiku-4.5', name: 'Claude 4.5 Haiku' },
+  { id: 'google/gemini-3-flash-preview', name: 'Gemini 3 Flash' },
+];
+
+// Select models based on DRY_RUN env var
+const MODELS = process.env.DRY_RUN === '1' ? DRY_RUN_MODELS : ALL_MODELS;
 
 // ANSI color codes for terminal output
 const colors = {

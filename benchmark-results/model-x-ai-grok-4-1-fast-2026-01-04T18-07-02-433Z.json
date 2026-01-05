@@ -1,0 +1,1435 @@
+{
+  "modelId": "x-ai/grok-4.1-fast",
+  "modelName": "Grok 4.1",
+  "tier": "fast",
+  "timestamp": "2026-01-04T18:07:02.433Z",
+  "totalScenarios": 5,
+  "scenarios": [
+    {
+      "name": "Bro Split (Chest)",
+      "split": "bro_split",
+      "dayFocus": "Chest",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Chest Press",
+        "Pec Deck"
+      ],
+      "success": true,
+      "latency": 92604,
+      "exerciseCount": 8,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "10",
+      "avgRest": 67,
+      "error": null,
+      "workout": {
+        "title": "Generated Workout",
+        "description": "A balanced workout targeting your selected muscle groups.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0025",
+                "exerciseId": "0025",
+                "name": "barbell bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0025.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
+                  "Grasp the barbell with an overhand grip slightly wider than shoulder-width apart.",
+                  "Lift the barbell off the rack and hold it directly above your chest with your arms fully extended.",
+                  "Lower the barbell slowly towards your chest, keeping your elbows tucked in.",
+                  "Pause for a moment when the barbell touches your chest.",
+                  "Push the barbell back up to the starting position by extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell bench press is a classic compound exercise that primarily targets the pectoral muscles, while also engaging the triceps and shoulders. It is performed by lying on a bench and pressing a barbell up and down in a controlled manner.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0314",
+                "exerciseId": "0314",
+                "name": "dumbbell incline bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0314.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Set up an incline bench at a 45-degree angle.",
+                  "Sit on the bench with your feet flat on the ground and your back pressed firmly against the bench.",
+                  "Hold a dumbbell in each hand, palms facing forward, and lift them to shoulder height.",
+                  "Slowly lower the dumbbells to the sides of your chest, keeping your elbows at a 90-degree angle.",
+                  "Push the dumbbells back up to the starting position, fully extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell incline bench press is a compound upper body exercise that targets the upper portion of the pectoral muscles, with additional emphasis on the shoulders and triceps. It is performed on an incline bench using dumbbells, requiring stability and control throughout the movement.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0308",
+                "exerciseId": "0308",
+                "name": "dumbbell fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0308.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Lie flat on a bench with a dumbbell in each hand, palms facing each other.",
+                  "Extend your arms straight up over your chest, with a slight bend in your elbows.",
+                  "Keeping a slight bend in your elbows, lower your arms out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then reverse the movement and bring the dumbbells back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell fly is a chest exercise performed lying on a bench, using dumbbells to stretch and contract the pectoral muscles through a wide arc motion.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0319",
+                "exerciseId": "0319",
+                "name": "dumbbell incline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0319.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Set an incline bench to a 45-degree angle.",
+                  "Sit on the bench with a dumbbell in each hand, palms facing each other.",
+                  "Lie back on the bench and press the dumbbells up to the starting position, directly above your chest.",
+                  "Lower the dumbbells out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then squeeze your chest muscles to bring the dumbbells back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell incline fly is a chest exercise performed on an incline bench, targeting the upper pectoral muscles. It involves lowering dumbbells out to the sides in a wide arc and then bringing them back together, emphasizing a stretch and contraction of the chest.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0302",
+                "exerciseId": "0302",
+                "name": "dumbbell decline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0302.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Lie on a decline bench with your feet secured and your head lower than your hips.",
+                  "Hold a dumbbell in each hand with your palms facing each other and your arms extended above your chest.",
+                  "Lower the dumbbells out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then squeeze your chest muscles to bring the dumbbells back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell decline fly is a chest exercise performed on a decline bench, targeting the lower pectoral muscles. It involves lowering dumbbells out to the sides in a wide arc and then bringing them back together, emphasizing chest muscle stretch and contraction.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0155",
+                "exerciseId": "0155",
+                "name": "cable cross-over variation",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0155.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the cable pulleys to chest height.",
+                  "Stand in the center of the cable machine with one foot in front of the other.",
+                  "Grasp the handles with your palms facing down and your arms extended out to the sides.",
+                  "Take a step forward, keeping your arms slightly bent.",
+                  "With a slight bend in your elbows, bring your hands together in front of your chest.",
+                  "Pause for a moment, then slowly return your arms back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable cross-over variation is a chest exercise performed using a cable machine. It targets the pectoral muscles and also engages the deltoids and triceps. The movement involves bringing the handles together in front of the chest while maintaining a slight bend in the elbows.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0375",
+                "exerciseId": "0375",
+                "name": "dumbbell pullover",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0375.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Lie flat on a bench with your head at one end and your feet on the floor.",
+                  "Hold a dumbbell with both hands and extend your arms straight above your chest.",
+                  "Keeping a slight bend in your elbows, slowly lower the dumbbell behind your head until you feel a stretch in your chest and shoulders.",
+                  "Pause for a moment, then raise the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell pullover is a chest exercise performed lying on a bench, where you lower a dumbbell behind your head and then bring it back over your chest, targeting the pectorals and also engaging the lats and triceps.",
+                "secondaryMuscles": [
+                  "latissimus dorsi",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0227",
+                "exerciseId": "0227",
+                "name": "cable standing fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0227.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Attach the handles to the cables at chest height.",
+                  "Stand with your feet shoulder-width apart, facing away from the cable machine.",
+                  "Grasp the handles with an overhand grip, palms facing forward.",
+                  "Step forward slightly to create tension in the cables.",
+                  "Keep your core engaged and your back straight throughout the exercise.",
+                  "With a slight bend in your elbows, slowly bring your arms forward and together in front of your chest.",
+                  "Squeeze your chest muscles at the peak of the movement.",
+                  "Slowly reverse the movement, returning your arms to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable standing fly is a chest isolation exercise performed using a cable machine. It targets the pectoral muscles and also engages the deltoids and triceps. The movement requires good form, balance, and control to execute safely and effectively.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [
+          "Focus on form",
+          "Control the eccentric phase"
+        ],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0025",
+              "name": "barbell bench press",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      },
+      "meta": {
+        "usedFallback": true,
+        "fallbackReason": null,
+        "exercisesAvailable": 82,
+        "appliedStyles": [
+          "BODYBUILD"
+        ],
+        "isCircuitMode": false,
+        "metaPlanAttempts": 0,
+        "exerciseSelectionAttempts": 1,
+        "paramAssignmentAttempts": 3,
+        "requestedDuration": 60,
+        "targetExerciseCount": 8,
+        "targetSetsPerExercise": 4,
+        "primaryExerciseCount": 82,
+        "supplementaryExerciseCount": 0,
+        "equipmentMatchRate": 100,
+        "equipmentViolations": [],
+        "primaryEquipmentViolations": [],
+        "deprecationWarnings": [
+          "experienceLevel as string is deprecated. Use a number from 1-10."
+        ]
+      }
+    },
+    {
+      "name": "PPL - Bodybuilding (Legs)",
+      "split": "push_pull_legs",
+      "dayFocus": "Legs",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Barbell",
+        "Dumbbells",
+        "Leg Press",
+        "Leg Curl Machine",
+        "Leg Extension Machine",
+        "Hack Squat"
+      ],
+      "success": true,
+      "latency": 80555,
+      "exerciseCount": 8,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "12",
+      "avgRest": 67,
+      "error": null,
+      "workout": {
+        "title": "Leg Day - BODYBUILD",
+        "description": "Leg Day workout focusing on bodybuild training.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "1760",
+                "exerciseId": "1760",
+                "name": "dumbbell goblet squat",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1760.gif",
+                "target": "quads",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 97,
+                "tempo": "2-0-1",
+                "notes": "Keep your chest up and core engaged as you push hips back and bend knees to lower.",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart, holding a dumbbell vertically against your chest with both hands.",
+                  "Keeping your chest up and core engaged, lower your body down into a squat position by pushing your hips back and bending your knees.",
+                  "Continue lowering until your thighs are parallel to the ground, or as low as you can comfortably go.",
+                  "Pause for a moment at the bottom, then push through your heels to return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell goblet squat is a lower body exercise that targets the quadriceps while also engaging the glutes, hamstrings, and calves. It is performed by holding a dumbbell close to the chest and squatting down, making it a great movement for building strength and improving squat technique.",
+                "secondaryMuscles": [
+                  "glutes",
+                  "hamstrings",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0116",
+                "exerciseId": "0116",
+                "name": "barbell straight leg deadlift",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0116.gif",
+                "target": "hamstrings",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 97,
+                "tempo": "2-0-1",
+                "notes": "Keep your back straight and knees slightly bent as you bend at the hips to lower the barbell.",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and your toes pointing forward.",
+                  "Hold the barbell with an overhand grip, hands slightly wider than shoulder-width apart.",
+                  "Bend at your hips and lower the barbell towards the ground, keeping your back straight and your knees slightly bent.",
+                  "Lower the barbell until you feel a stretch in your hamstrings.",
+                  "Engage your hamstrings and glutes to lift the barbell back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell straight leg deadlift is a compound exercise targeting the hamstrings, with secondary emphasis on the glutes and lower back. It requires maintaining a straight back and proper hip hinge to safely stretch and strengthen the posterior chain.",
+                "secondaryMuscles": [
+                  "glutes",
+                  "lower back"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1392",
+                "exerciseId": "1392",
+                "name": "sled one leg calf press on leg press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1392.gif",
+                "target": "calves",
+                "equipment": "sled machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 97,
+                "tempo": "2-0-1",
+                "notes": "Push the sled forward by extending your ankles using the balls of your feet, keeping knees slightly bent.",
+                "instructions": [
+                  "Adjust the seat of the leg press machine so that your knees are slightly bent when your feet are on the sled.",
+                  "Sit on the machine with your back against the backrest and your feet on the sled, shoulder-width apart.",
+                  "Place your toes and the balls of your feet on the sled, keeping your heels off.",
+                  "Push the sled forward by extending your ankles, keeping your knees slightly bent.",
+                  "Pause for a moment at the top, then slowly lower the sled back down by flexing your ankles.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The sled one leg calf press on leg press is a machine-based exercise targeting the calves, performed one leg at a time for increased isolation and intensity. It also engages the hamstrings and glutes as secondary muscles.",
+                "secondaryMuscles": [
+                  "hamstrings",
+                  "glutes"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0585",
+                "exerciseId": "0585",
+                "name": "lever leg extension",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0585.gif",
+                "target": "quads",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 49,
+                "tempo": "2-0-1",
+                "notes": "Extend your legs forward by straightening your knees and pause to squeeze quads at the top.",
+                "instructions": [
+                  "Adjust the seat height and backrest of the machine to fit your body.",
+                  "Sit on the machine with your back against the backrest and your feet on the footpad.",
+                  "Grasp the handles or sidebars for stability.",
+                  "Extend your legs forward by straightening your knees, lifting the weight.",
+                  "Pause for a moment at the top, then slowly lower the weight back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever leg extension is an isolation exercise performed on a leverage machine to target the quadriceps. It involves extending the knees to lift a weight, primarily working the front of the thighs.",
+                "secondaryMuscles": [
+                  "hamstrings"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0599",
+                "exerciseId": "0599",
+                "name": "lever seated leg curl",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0599.gif",
+                "target": "hamstrings",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 49,
+                "tempo": "2-0-1",
+                "notes": "Curl your legs up as far as possible while keeping upper legs stationary and squeeze hamstrings.",
+                "instructions": [
+                  "Adjust the machine to fit your body and sit on it with your back against the backrest.",
+                  "Place your lower legs under the padded lever, just above your ankles.",
+                  "Grasp the handles on the sides of the machine for support.",
+                  "Keeping your upper legs stationary, exhale and curl your legs up as far as possible.",
+                  "Hold the contracted position for a brief pause as you squeeze your hamstrings.",
+                  "Inhale and slowly lower the lever back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever seated leg curl is a machine-based exercise that targets the hamstrings. It involves curling your lower legs against resistance while seated, isolating the hamstrings and minimizing involvement from other muscle groups.",
+                "secondaryMuscles": [
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "3007",
+                "exerciseId": "3007",
+                "name": "resistance band leg extension",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3007.gif",
+                "target": "quads",
+                "equipment": "resistance band",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 49,
+                "tempo": "2-0-1",
+                "notes": "Extend your leg straight out in front while keeping core engaged and upper body stable.",
+                "instructions": [
+                  "Attach the resistance band to a sturdy anchor point and secure it around your ankle.",
+                  "Stand facing the anchor point with your feet shoulder-width apart.",
+                  "Keeping your core engaged and your upper body stable, extend your leg straight out in front of you.",
+                  "Pause for a moment at the top, then slowly return your leg to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch legs."
+                ],
+                "description": "The resistance band leg extension targets the quadriceps by extending the leg against the resistance of a band, helping to build strength and endurance in the upper legs.",
+                "secondaryMuscles": [
+                  "hamstrings"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0586",
+                "exerciseId": "0586",
+                "name": "lever lying leg curl",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0586.gif",
+                "target": "hamstrings",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 49,
+                "tempo": "2-0-1",
+                "notes": "Curl your legs up as far as possible without lifting hips and squeeze hamstrings at top.",
+                "instructions": [
+                  "Adjust the machine to fit your body and select the desired weight.",
+                  "Lie face down on the machine with your legs straight and your heels against the padded lever.",
+                  "Grasp the handles or the sides of the machine for stability.",
+                  "Keeping your upper body stationary, exhale and curl your legs up as far as possible without lifting your hips off the pad.",
+                  "Hold the contracted position for a brief pause as you squeeze your hamstrings.",
+                  "Inhale and slowly lower the lever back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever lying leg curl is an isolation exercise targeting the hamstrings, performed on a leverage machine. It involves curling the legs upward against resistance while lying face down, emphasizing hamstring contraction and control.",
+                "secondaryMuscles": [
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0196",
+                "exerciseId": "0196",
+                "name": "cable pull through (with rope)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0196.gif",
+                "target": "glutes",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 49,
+                "tempo": "2-0-1",
+                "notes": "Bend at hips keeping back straight to lower upper body parallel to ground.",
+                "instructions": [
+                  "Stand facing away from the cable machine with your feet shoulder-width apart.",
+                  "Grab the rope attachment with both hands and step forward, creating tension in the cable.",
+                  "Bend at the hips and lower your upper body until it is parallel to the ground, keeping your back straight.",
+                  "Engage your glutes and hamstrings to pull your body back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable pull through (with rope) is a hip hinge exercise that targets the glutes, with secondary emphasis on the hamstrings and lower back. It is performed using a cable machine and a rope attachment, focusing on hip extension and posterior chain activation.",
+                "secondaryMuscles": [
+                  "hamstrings",
+                  "lower back"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "1760",
+              "name": "dumbbell goblet squat",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "1392",
+              "name": "sled one leg calf press on leg press",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 4,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      },
+      "meta": {
+        "usedFallback": false,
+        "fallbackReason": null,
+        "exercisesAvailable": 148,
+        "appliedStyles": [
+          "BODYBUILD"
+        ],
+        "isCircuitMode": false,
+        "metaPlanAttempts": 0,
+        "exerciseSelectionAttempts": 1,
+        "paramAssignmentAttempts": 1,
+        "requestedDuration": 60,
+        "targetExerciseCount": 8,
+        "targetSetsPerExercise": 4,
+        "primaryExerciseCount": 148,
+        "supplementaryExerciseCount": 0,
+        "equipmentMatchRate": 100,
+        "equipmentViolations": [],
+        "primaryEquipmentViolations": [],
+        "deprecationWarnings": [
+          "experienceLevel as string is deprecated. Use a number from 1-10."
+        ]
+      }
+    },
+    {
+      "name": "Upper/Lower - Strength (Upper)",
+      "split": "upper_lower",
+      "dayFocus": "Upper",
+      "trainingStyles": [
+        "strength_focused"
+      ],
+      "equipment": [
+        "barbell",
+        "dumbbell",
+        "cable"
+      ],
+      "success": true,
+      "latency": 36537,
+      "exerciseCount": 3,
+      "equipmentMatchRate": 100,
+      "avgSets": 5,
+      "avgReps": "5",
+      "avgRest": 180,
+      "error": null,
+      "workout": {
+        "title": "Upper Body - STRENGTH",
+        "description": "Upper Body workout focusing on strength training.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0025",
+                "exerciseId": "0025",
+                "name": "barbell bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0025.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Lower the barbell slowly towards your chest, keeping your elbows tucked in.",
+                "instructions": [
+                  "Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
+                  "Grasp the barbell with an overhand grip slightly wider than shoulder-width apart.",
+                  "Lift the barbell off the rack and hold it directly above your chest with your arms fully extended.",
+                  "Lower the barbell slowly towards your chest, keeping your elbows tucked in.",
+                  "Pause for a moment when the barbell touches your chest.",
+                  "Push the barbell back up to the starting position by extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell bench press is a classic compound exercise that primarily targets the pectoral muscles, while also engaging the triceps and shoulders. It is performed by lying on a bench and pressing a barbell up and down in a controlled manner.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0047",
+                "exerciseId": "0047",
+                "name": "barbell incline bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0047.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Lower the barbell slowly towards your chest, keeping your elbows at a 45-degree angle.",
+                "instructions": [
+                  "Set up an incline bench at a 45-degree angle.",
+                  "Lie down on the bench with your feet flat on the ground.",
+                  "Grasp the barbell with an overhand grip, slightly wider than shoulder-width apart.",
+                  "Unrack the barbell and lower it slowly towards your chest, keeping your elbows at a 45-degree angle.",
+                  "Pause for a moment at the bottom, then push the barbell back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell incline bench press is a compound upper-body exercise that targets the upper portion of the pectoral muscles, with secondary emphasis on the shoulders and triceps. It is performed on an incline bench using a barbell, making it a staple in strength training routines for developing chest size and strength.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1717",
+                "exerciseId": "1717",
+                "name": "cable squat row (with rope attachment)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1717.gif",
+                "target": "lats",
+                "equipment": "cable",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Squeeze your shoulder blades together as you pull the rope towards your body.",
+                "instructions": [
+                  "Attach a rope to a cable machine at waist height.",
+                  "Stand facing the cable machine with your feet shoulder-width apart.",
+                  "Bend your knees and lower your body into a squat position, keeping your back straight and chest up.",
+                  "Grasp the rope with an overhand grip, with your hands shoulder-width apart.",
+                  "Engage your core and pull the rope towards your body, squeezing your shoulder blades together.",
+                  "Keep your elbows close to your body and continue pulling until your hands reach your chest.",
+                  "Pause for a moment at the top of the movement, then slowly release the rope and extend your arms back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable squat row (with rope attachment) is a compound exercise that combines a squat with a rowing motion, targeting the lats and engaging the biceps, rhomboids, and rear deltoids. It requires coordination, core stability, and strength.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "rhomboids",
+                  "rear deltoids"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0025",
+              "name": "barbell bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0025",
+              "name": "barbell bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "70%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0025",
+              "name": "barbell bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "85%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0047",
+              "name": "barbell incline bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0047",
+              "name": "barbell incline bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "70%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0047",
+              "name": "barbell incline bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "85%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 12,
+          "notes": "Progressive warmup to prepare CNS and joints for heavy lifting. Rest 60-90 seconds between warmup sets."
+        }
+      },
+      "meta": {
+        "usedFallback": false,
+        "fallbackReason": null,
+        "exercisesAvailable": 196,
+        "appliedStyles": [
+          "STRENGTH"
+        ],
+        "isCircuitMode": false,
+        "metaPlanAttempts": 0,
+        "exerciseSelectionAttempts": 1,
+        "paramAssignmentAttempts": 1,
+        "requestedDuration": 60,
+        "targetExerciseCount": 3,
+        "targetSetsPerExercise": 5,
+        "primaryExerciseCount": 196,
+        "supplementaryExerciseCount": 0,
+        "equipmentMatchRate": 100,
+        "equipmentViolations": [],
+        "primaryEquipmentViolations": [],
+        "deprecationWarnings": [
+          "experienceLevel as string is deprecated. Use a number from 1-10."
+        ]
+      }
+    },
+    {
+      "name": "Full Body - Strength",
+      "split": "full_body",
+      "dayFocus": "Full Body",
+      "trainingStyles": [
+        "strength_focused"
+      ],
+      "equipment": [
+        "barbell",
+        "dumbbell"
+      ],
+      "success": true,
+      "latency": 31048,
+      "exerciseCount": 5,
+      "equipmentMatchRate": 100,
+      "avgSets": 5,
+      "avgReps": "5",
+      "avgRest": 126,
+      "error": null,
+      "workout": {
+        "title": "Full Body - STRENGTH",
+        "description": "Full Body workout focusing on strength training.",
+        "estimatedDuration": 90,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "2810",
+                "exerciseId": "2810",
+                "name": "barbell split squat v. 2",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2810.gif",
+                "target": "quads",
+                "equipment": "barbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Keep your torso upright as you lower until your thigh is parallel to the ground.",
+                "instructions": [
+                  "Start by standing with your feet shoulder-width apart, holding a barbell across your upper back.",
+                  "Take a large step forward with your right foot, keeping your torso upright.",
+                  "Lower your body by bending your knees and hips until your right thigh is parallel to the ground.",
+                  "Pause for a moment, then push through your right heel to return to the starting position.",
+                  "Repeat with your left leg forward for the desired number of repetitions."
+                ],
+                "description": "The barbell split squat v. 2 is a lower body strength exercise that targets the quadriceps, while also engaging the glutes, hamstrings, and calves. It involves stepping forward into a split stance and lowering the body with a barbell across the upper back.",
+                "secondaryMuscles": [
+                  "glutes",
+                  "hamstrings",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0025",
+                "exerciseId": "0025",
+                "name": "barbell bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0025.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "notes": "Keep your elbows tucked in as you lower the barbell slowly towards your chest.",
+                "instructions": [
+                  "Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
+                  "Grasp the barbell with an overhand grip slightly wider than shoulder-width apart.",
+                  "Lift the barbell off the rack and hold it directly above your chest with your arms fully extended.",
+                  "Lower the barbell slowly towards your chest, keeping your elbows tucked in.",
+                  "Pause for a moment when the barbell touches your chest.",
+                  "Push the barbell back up to the starting position by extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell bench press is a classic compound exercise that primarily targets the pectoral muscles, while also engaging the triceps and shoulders. It is performed by lying on a bench and pressing a barbell up and down in a controlled manner.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0047",
+                "exerciseId": "0047",
+                "name": "barbell incline bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0047.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 90,
+                "tempo": "X-1-1",
+                "notes": "Keep your elbows at a 45-degree angle as you lower the barbell towards your chest.",
+                "instructions": [
+                  "Set up an incline bench at a 45-degree angle.",
+                  "Lie down on the bench with your feet flat on the ground.",
+                  "Grasp the barbell with an overhand grip, slightly wider than shoulder-width apart.",
+                  "Unrack the barbell and lower it slowly towards your chest, keeping your elbows at a 45-degree angle.",
+                  "Pause for a moment at the bottom, then push the barbell back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell incline bench press is a compound upper-body exercise that targets the upper portion of the pectoral muscles, with secondary emphasis on the shoulders and triceps. It is performed on an incline bench using a barbell, making it a staple in strength training routines for developing chest size and strength.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0776",
+                "exerciseId": "0776",
+                "name": "snatch pull",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0776.gif",
+                "target": "quads",
+                "equipment": "barbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 90,
+                "tempo": "X-1-1",
+                "notes": "Keep your back straight and chest up as you drive through your heels to lift the barbell.",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and the barbell on the ground in front of you.",
+                  "Bend your knees and hinge at the hips to lower into a squat position, gripping the barbell with an overhand grip.",
+                  "Keep your back straight and chest up as you drive through your heels to lift the barbell off the ground, extending your hips and knees.",
+                  "As the barbell reaches hip level, explosively pull it upwards, shrugging your shoulders and pulling your elbows high and to the sides.",
+                  "As the barbell reaches its highest point, quickly drop underneath it, pulling yourself into a deep squat position.",
+                  "Catch the barbell overhead with your arms fully extended and your knees bent.",
+                  "Stand up by extending your hips and knees, keeping the barbell overhead.",
+                  "Lower the barbell back down to the starting position by reversing the movement.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The snatch pull is a compound Olympic weightlifting movement that develops explosive power and strength in the lower body, particularly targeting the quads, hamstrings, and glutes. It requires coordination, balance, and proper technique to perform safely and effectively.",
+                "secondaryMuscles": [
+                  "hamstrings",
+                  "glutes",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0308",
+                "exerciseId": "0308",
+                "name": "dumbbell fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0308.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 90,
+                "tempo": "X-1-1",
+                "notes": "Keeping a slight bend in your elbows, lower your arms out to the sides in a wide arc until you feel a stretch in your chest.",
+                "instructions": [
+                  "Lie flat on a bench with a dumbbell in each hand, palms facing each other.",
+                  "Extend your arms straight up over your chest, with a slight bend in your elbows.",
+                  "Keeping a slight bend in your elbows, lower your arms out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then reverse the movement and bring the dumbbells back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell fly is a chest exercise performed lying on a bench, using dumbbells to stretch and contract the pectoral muscles through a wide arc motion.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "2810",
+              "name": "barbell split squat v. 2",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "2810",
+              "name": "barbell split squat v. 2",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "70%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "2810",
+              "name": "barbell split squat v. 2",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "85%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0025",
+              "name": "barbell bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0025",
+              "name": "barbell bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "70%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0025",
+              "name": "barbell bench press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "85%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 12,
+          "notes": "Progressive warmup to prepare CNS and joints for heavy lifting. Rest 60-90 seconds between warmup sets."
+        }
+      },
+      "meta": {
+        "usedFallback": false,
+        "fallbackReason": null,
+        "exercisesAvailable": 70,
+        "appliedStyles": [
+          "STRENGTH"
+        ],
+        "isCircuitMode": false,
+        "metaPlanAttempts": 0,
+        "exerciseSelectionAttempts": 1,
+        "paramAssignmentAttempts": 1,
+        "requestedDuration": 90,
+        "targetExerciseCount": 5,
+        "targetSetsPerExercise": 5,
+        "primaryExerciseCount": 70,
+        "supplementaryExerciseCount": 0,
+        "equipmentMatchRate": 100,
+        "equipmentViolations": [],
+        "primaryEquipmentViolations": [],
+        "deprecationWarnings": [
+          "experienceLevel as string is deprecated. Use a number from 1-10."
+        ]
+      }
+    },
+    {
+      "name": "Arnold Split - Bodybuilding (Chest/Back)",
+      "split": "arnold_split",
+      "dayFocus": "Chest/Back",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "barbell",
+        "dumbbell",
+        "cable",
+        "leverage machine",
+        "body weight"
+      ],
+      "success": true,
+      "latency": 49974,
+      "exerciseCount": 10,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "10",
+      "avgRest": 100,
+      "error": null,
+      "workout": {
+        "title": "Chest/Back - BODYBUILD",
+        "description": "Chest/Back workout focusing on bodybuild training.",
+        "estimatedDuration": 90,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0025",
+                "exerciseId": "0025",
+                "name": "barbell bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0025.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 167,
+                "tempo": "2-0-1",
+                "notes": "Lower the barbell slowly towards your chest, keeping your elbows tucked in.",
+                "instructions": [
+                  "Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
+                  "Grasp the barbell with an overhand grip slightly wider than shoulder-width apart.",
+                  "Lift the barbell off the rack and hold it directly above your chest with your arms fully extended.",
+                  "Lower the barbell slowly towards your chest, keeping your elbows tucked in.",
+                  "Pause for a moment when the barbell touches your chest.",
+                  "Push the barbell back up to the starting position by extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell bench press is a classic compound exercise that primarily targets the pectoral muscles, while also engaging the triceps and shoulders. It is performed by lying on a bench and pressing a barbell up and down in a controlled manner.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0027",
+                "exerciseId": "0027",
+                "name": "barbell bent over row",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0027.gif",
+                "target": "upper back",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 167,
+                "tempo": "2-0-1",
+                "notes": "Bend forward at the hips while keeping your back straight and chest up.",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and knees slightly bent.",
+                  "Bend forward at the hips while keeping your back straight and chest up.",
+                  "Grasp the barbell with an overhand grip, hands slightly wider than shoulder-width apart.",
+                  "Pull the barbell towards your lower chest by retracting your shoulder blades and squeezing your back muscles.",
+                  "Pause for a moment at the top, then slowly lower the barbell back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell bent over row is a compound exercise targeting the upper back, requiring the lifter to hinge at the hips and pull a barbell towards the torso. It develops strength and muscle mass in the upper back, biceps, and forearms, and demands good posture and core stability.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0155",
+                "exerciseId": "0155",
+                "name": "cable cross-over variation",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0155.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 83,
+                "tempo": "2-0-1",
+                "notes": "With a slight bend in your elbows, bring your hands together in front of your chest.",
+                "instructions": [
+                  "Adjust the cable pulleys to chest height.",
+                  "Stand in the center of the cable machine with one foot in front of the other.",
+                  "Grasp the handles with your palms facing down and your arms extended out to the sides.",
+                  "Take a step forward, keeping your arms slightly bent.",
+                  "With a slight bend in your elbows, bring your hands together in front of your chest.",
+                  "Pause for a moment, then slowly return your arms back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable cross-over variation is a chest exercise performed using a cable machine. It targets the pectoral muscles and also engages the deltoids and triceps. The movement involves bringing the handles together in front of the chest while maintaining a slight bend in the elbows.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0184",
+                "exerciseId": "0184",
+                "name": "cable lying extension pullover (with rope attachment)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0184.gif",
+                "target": "lats",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 83,
+                "tempo": "2-0-1",
+                "notes": "Keeping your arms straight, slowly lower the rope behind your head while maintaining control.",
+                "instructions": [
+                  "Attach a rope to a cable machine and set the pulley at the highest position.",
+                  "Lie down on a bench with your head towards the cable machine.",
+                  "Hold the rope with both hands and extend your arms straight up above your chest.",
+                  "Keeping your arms straight, slowly lower the rope behind your head while maintaining control.",
+                  "Pause for a moment at the bottom, then slowly raise the rope back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable lying extension pullover (with rope attachment) is an isolation exercise targeting the lats, performed lying on a bench with a cable machine. It requires maintaining proper form and control throughout the movement to effectively engage the back muscles while minimizing risk to the shoulders.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0185",
+                "exerciseId": "0185",
+                "name": "cable lying fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0185.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 83,
+                "tempo": "2-0-1",
+                "notes": "Keeping a slight bend in your elbows, lower your arms out to the sides in a wide arc until you feel a stretch in your chest.",
+                "instructions": [
+                  "Attach the handles to the cables and lie flat on a bench with your feet flat on the ground.",
+                  "Hold the handles with your palms facing each other and your arms extended straight above your chest.",
+                  "Keeping a slight bend in your elbows, lower your arms out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then squeeze your chest muscles to bring your arms back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable lying fly is a chest isolation exercise performed on a bench using cable machines. It targets the pectoral muscles and also engages the deltoids and triceps as secondary muscles. The movement involves lowering the arms in a wide arc and then bringing them back together, focusing on squeezing the chest.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0237",
+                "exerciseId": "0237",
+                "name": "cable straight arm pulldown (with rope)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0237.gif",
+                "target": "lats",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 83,
+                "tempo": "2-0-1",
+                "notes": "Engage your lats and slowly pull the rope down towards your thighs, keeping your arms straight.",
+                "instructions": [
+                  "Attach a rope to the cable machine at the highest setting.",
+                  "Stand facing the machine with your feet shoulder-width apart.",
+                  "Grasp the rope with both hands, palms facing down.",
+                  "Extend your arms fully in front of you, keeping your elbows slightly bent.",
+                  "Engage your lats and slowly pull the rope down towards your thighs, keeping your arms straight.",
+                  "Pause for a moment at the bottom, then slowly release the tension and return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable straight arm pulldown (with rope) is an isolation exercise that targets the latissimus dorsi (lats) using a cable machine and rope attachment. It emphasizes controlled movement and proper form to effectively engage the back muscles while minimizing arm involvement.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0171",
+                "exerciseId": "0171",
+                "name": "cable incline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0171.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 83,
+                "tempo": "2-0-1",
+                "notes": "Keeping a slight bend in your elbows, open your arms out to the sides in a controlled motion.",
+                "instructions": [
+                  "Adjust the cable machine to a low position and attach the handles.",
+                  "Sit on an incline bench with your back against the pad and feet flat on the floor.",
+                  "Grasp the handles with an overhand grip and extend your arms straight out in front of you.",
+                  "Keeping a slight bend in your elbows, open your arms out to the sides in a controlled motion.",
+                  "Pause for a moment at the fully extended position, then slowly return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable incline fly is an isolation exercise targeting the upper chest (pectorals) using a cable machine. It involves opening and closing the arms in a fly motion while lying on an incline bench, providing constant tension throughout the movement.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0177",
+                "exerciseId": "0177",
+                "name": "cable lateral pulldown (with rope attachment)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0177.gif",
+                "target": "lats",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 83,
+                "tempo": "2-0-1",
+                "notes": "Pull the rope down towards your sides, squeezing your shoulder blades together.",
+                "instructions": [
+                  "Attach a rope attachment to the cable machine at a high position.",
+                  "Stand facing the machine with your feet shoulder-width apart.",
+                  "Grasp the rope with an overhand grip, palms facing each other.",
+                  "Keep your back straight and lean slightly back.",
+                  "Pull the rope down towards your sides, squeezing your shoulder blades together.",
+                  "Pause for a moment at the bottom of the movement.",
+                  "Slowly release the tension and allow the rope to return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable lateral pulldown (with rope attachment) is a strength exercise targeting the latissimus dorsi (lats) using a cable machine with a rope attachment. It also engages the biceps and forearms as secondary muscles. The movement involves pulling the rope down towards your sides while maintaining proper posture and squeezing the shoulder blades together.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0308",
+                "exerciseId": "0308",
+                "name": "dumbbell fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0308.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 83,
+                "tempo": "2-0-1",
+                "notes": "Keeping a slight bend in your elbows, lower your arms out to the sides in a wide arc until you feel a stretch in your chest.",
+                "instructions": [
+                  "Lie flat on a bench with a dumbbell in each hand, palms facing each other.",
+                  "Extend your arms straight up over your chest, with a slight bend in your elbows.",
+                  "Keeping a slight bend in your elbows, lower your arms out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then reverse the movement and bring the dumbbells back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell fly is a chest exercise performed lying on a bench, using dumbbells to stretch and contract the pectoral muscles through a wide arc motion.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0238",
+                "exerciseId": "0238",
+                "name": "cable straight arm pulldown",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0238.gif",
+                "target": "lats",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 83,
+                "tempo": "2-0-1",
+                "notes": "Engage your lats and pull the bar down towards your thighs, keeping your arms straight throughout the movement.",
+                "instructions": [
+                  "Attach a straight bar to the high pulley of a cable machine.",
+                  "Stand facing the machine with your feet shoulder-width apart.",
+                  "Grasp the bar with an overhand grip, keeping your arms straight and your palms facing down.",
+                  "Engage your lats and pull the bar down towards your thighs, keeping your arms straight throughout the movement.",
+                  "Pause for a moment at the bottom, then slowly return the bar to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable straight arm pulldown is an isolation exercise targeting the latissimus dorsi, performed using a cable machine and a straight bar attachment. It emphasizes keeping the arms straight to maximize lat engagement and minimize biceps involvement.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "biceps"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0025",
+              "name": "barbell bench press",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0027",
+              "name": "barbell bent over row",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 4,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      },
+      "meta": {
+        "usedFallback": false,
+        "fallbackReason": null,
+        "exercisesAvailable": 253,
+        "appliedStyles": [
+          "BODYBUILD"
+        ],
+        "isCircuitMode": false,
+        "metaPlanAttempts": 0,
+        "exerciseSelectionAttempts": 1,
+        "paramAssignmentAttempts": 1,
+        "requestedDuration": 90,
+        "targetExerciseCount": 10,
+        "targetSetsPerExercise": 4,
+        "primaryExerciseCount": 253,
+        "supplementaryExerciseCount": 0,
+        "equipmentMatchRate": 100,
+        "equipmentViolations": [],
+        "primaryEquipmentViolations": [],
+        "deprecationWarnings": [
+          "experienceLevel as string is deprecated. Use a number from 1-10."
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "successCount": 5,
+    "parseErrorCount": 0,
+    "apiErrorCount": 0,
+    "totalLatency": 290718,
+    "avgLatency": 58144,
+    "avgExerciseCount": 6.8,
+    "avgEquipmentMatchRate": 100,
+    "avgSets": 4.4,
+    "avgRest": 108,
+    "repsCounts": {
+      "5": 2,
+      "10": 2,
+      "12": 1
+    },
+    "avgReps": "5",
+    "successRate": 100
+  }
+}

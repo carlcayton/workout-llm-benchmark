@@ -3,7 +3,7 @@
  * Single Model Benchmark Runner - Production Edge Function Edition
  *
  * Tests the PRODUCTION Supabase edge function (generate-workout) by running
- * ALL 22 scenarios with a single model via the ?model=<model-id> parameter.
+ * scenarios with a single model via the ?model=<model-id> parameter.
  *
  * This tests the complete production stack including:
  * - Edge function validation and normalization
@@ -12,8 +12,8 @@
  * - Response enrichment with GIF URLs
  *
  * Usage:
- *   node benchmark-single-model.mjs openai/gpt-5
- *   node benchmark-single-model.mjs anthropic/claude-sonnet-4.5
+ *   node benchmark-single-model.mjs openai/gpt-5           # Run all 26 scenarios
+ *   LIMIT=5 node benchmark-single-model.mjs openai/gpt-5   # Run first 5 scenarios only
  */
 
 import fs from 'fs';
@@ -55,6 +55,39 @@ const modelInfo = MODELS.find(m => m.id === modelId) || {
   name: modelId.split('/').pop() || modelId,
   tier: 'unknown',
 };
+
+// Support LIMIT and OFFSET env vars for quick test runs
+// e.g., LIMIT=5 OFFSET=5 node benchmark-single-model.mjs openai/gpt-5  # Run scenarios 6-10
+const SCENARIO_OFFSET = parseInt(process.env.OFFSET, 10) || 0;
+const SCENARIO_LIMIT = parseInt(process.env.LIMIT, 10) || TEST_SCENARIOS.length;
+let SCENARIOS_TO_RUN = TEST_SCENARIOS.slice(SCENARIO_OFFSET, SCENARIO_OFFSET + SCENARIO_LIMIT);
+
+// Support specific scenario indices
+// e.g., SCENARIOS=0,5,6,8,19 node benchmark-single-model.mjs openai/gpt-5
+if (process.env.SCENARIOS) {
+  const indices = process.env.SCENARIOS.split(',').map(i => parseInt(i.trim(), 10));
+  SCENARIOS_TO_RUN = indices.map(i => TEST_SCENARIOS[i]).filter(Boolean);
+  console.log(`Running specific scenarios: ${indices.join(', ')}`);
+}
+
+// TEMPORARY: Duration permutation for testing time adherence
+// e.g., DURATIONS=30,45,60 node benchmark-single-model.mjs ...
+// This multiplies each scenario by the number of durations specified
+if (process.env.DURATIONS) {
+  const durations = process.env.DURATIONS.split(',').map(d => parseInt(d.trim(), 10));
+  const permuted = [];
+  for (const scenario of SCENARIOS_TO_RUN) {
+    for (const duration of durations) {
+      permuted.push({
+        ...scenario,
+        name: `${scenario.name} (${duration}min)`,
+        request: { ...scenario.request, duration },
+      });
+    }
+  }
+  SCENARIOS_TO_RUN = permuted;
+  console.log(`Duration permutation enabled: ${durations.join(', ')} min`);
+}
 
 // ============================================================================
 // TRAINING STYLE MAPPING
@@ -154,7 +187,7 @@ async function runSingleModelBenchmark() {
   console.log('='.repeat(60));
   console.log(`Model ID: ${modelId}`);
   console.log(`Tier: ${modelInfo.tier}`);
-  console.log(`Scenarios: ${TEST_SCENARIOS.length}`);
+  console.log(`Scenarios: ${SCENARIOS_TO_RUN.length}${SCENARIO_LIMIT < TEST_SCENARIOS.length ? ` (limited from ${TEST_SCENARIOS.length})` : ''}`);
   console.log('='.repeat(60) + '\n');
 
   const timestamp = new Date().toISOString();
@@ -164,7 +197,7 @@ async function runSingleModelBenchmark() {
     modelName: modelInfo.name,
     tier: modelInfo.tier,
     timestamp,
-    totalScenarios: TEST_SCENARIOS.length,
+    totalScenarios: SCENARIOS_TO_RUN.length,
     scenarios: [],
     summary: {
       successCount: 0,
@@ -187,18 +220,19 @@ async function runSingleModelBenchmark() {
   let totalSets = 0;
   let totalRest = 0;
 
-  for (let i = 0; i < TEST_SCENARIOS.length; i++) {
-    const scenario = TEST_SCENARIOS[i];
+  for (let i = 0; i < SCENARIOS_TO_RUN.length; i++) {
+    const scenario = SCENARIOS_TO_RUN[i];
     const scenarioNum = i + 1;
 
-    console.log(`[${scenarioNum}/${TEST_SCENARIOS.length}] ${scenario.name}`);
-    console.log(`  Category: ${scenario.category} | Style: ${scenario.request.trainingStyle}`);
+    console.log(`[${scenarioNum}/${SCENARIOS_TO_RUN.length}] ${scenario.name}`);
+    console.log(`  Style: ${(scenario.request.trainingStyles || [scenario.request.trainingStyle]).join(', ')}`);
 
     // Build edge function request payload
     // Map scenario.request to WorkoutRequest format expected by edge function
     const benchmarkStyles = scenario.request.trainingStyles || [scenario.request.trainingStyle];
     const mappedStyles = benchmarkStyles.map(mapTrainingStyle);
 
+    const dayTypeValue = scenario.request.splitDayType || scenario.dayFocus?.toLowerCase() || null;
     const edgeRequest = {
       equipment: scenario.request.equipment || [],
       bodyParts: scenario.request.bodyParts || [],
@@ -208,8 +242,12 @@ async function runSingleModelBenchmark() {
       selectedStyles: mappedStyles,
       goal: scenario.request.goal || 'general fitness',
       workoutSplit: scenario.split ? mapWorkoutSplit(scenario.split) : null,
-      splitDayType: scenario.dayFocus || null,
+      dayType: dayTypeValue,  // Edge function checks this first
+      splitDayType: dayTypeValue,  // Fallback
       excludedAreas: scenario.request.excludedAreas || [],
+      // Match real app API surface
+      recentlyUsedExerciseIds: [],  // Empty for benchmark (clean slate each run)
+      includeWarmup: true,
     };
 
     // Call production edge function
@@ -238,6 +276,7 @@ async function runSingleModelBenchmark() {
       avgRest: metrics.avgRest,
       error: result.error || result.parseError || null,
       workout: result.parsedWorkout,
+      meta: result.meta || null,  // Include edge function debug info
     };
 
     results.scenarios.push(scenarioResult);
@@ -271,7 +310,7 @@ async function runSingleModelBenchmark() {
     console.log('');
 
     // Rate limiting - wait 1 second between requests
-    if (i < TEST_SCENARIOS.length - 1) {
+    if (i < SCENARIOS_TO_RUN.length - 1) {
       await new Promise(resolve => setTimeout(resolve, 1000));
     }
   }

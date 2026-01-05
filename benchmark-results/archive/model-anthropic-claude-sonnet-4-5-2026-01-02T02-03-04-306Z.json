@@ -1,0 +1,326 @@
+{
+  "modelId": "anthropic/claude-sonnet-4.5",
+  "modelName": "Claude Sonnet 4.5",
+  "tier": "premium",
+  "timestamp": "2026-01-02T02:03:04.306Z",
+  "totalScenarios": 1,
+  "scenarios": [
+    {
+      "name": "Bro Split - Bodybuilding (Chest)",
+      "split": "bro_split",
+      "dayFocus": "Chest",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Chest Press",
+        "Pec Deck"
+      ],
+      "success": true,
+      "latency": 40324,
+      "exerciseCount": 8,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "12",
+      "avgRest": 67,
+      "error": null,
+      "workout": {
+        "title": "Chest Day - BODYBUILD",
+        "description": "Chest Day workout focusing on bodybuild training.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0764",
+                "exerciseId": "0764",
+                "name": "smith reverse-grip press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0764.gif",
+                "target": "pectorals",
+                "equipment": "smith machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "notes": "Keep your elbows tucked in throughout the entire movement to maximize chest engagement.",
+                "instructions": [
+                  "Adjust the height of the smith machine bar to chest level.",
+                  "Stand facing the bar with your feet shoulder-width apart.",
+                  "Grasp the bar with an overhand grip, hands slightly wider than shoulder-width apart.",
+                  "Step back and position yourself with a slight bend in your knees.",
+                  "Keep your chest up and core engaged throughout the exercise.",
+                  "Lower the bar towards your chest, keeping your elbows tucked in.",
+                  "Pause for a moment at the bottom, then push the bar back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The smith reverse-grip press is a chest exercise performed on a smith machine using a reverse (underhand) grip. This variation targets the upper chest and also engages the triceps and shoulders. The smith machine provides stability, making it suitable for those looking to focus on form and muscle activation.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0033",
+                "exerciseId": "0033",
+                "name": "barbell decline bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0033.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "notes": "Keep your elbows tucked in and lower the barbell slowly towards your chest.",
+                "instructions": [
+                  "Lie on a decline bench with your feet secured and your head lower than your hips.",
+                  "Grasp the barbell with an overhand grip slightly wider than shoulder-width apart.",
+                  "Unrack the barbell and lower it slowly towards your chest, keeping your elbows tucked in.",
+                  "Pause for a moment at the bottom, then push the barbell back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell decline bench press is a compound exercise targeting the lower portion of the pectoral muscles. It is performed on a decline bench, requiring the lifter to press a barbell upward from a declined position, engaging the chest, triceps, and shoulders.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0171",
+                "exerciseId": "0171",
+                "name": "cable incline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0171.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "notes": "Keep a slight bend in your elbows and control the movement as you open your arms to the sides.",
+                "instructions": [
+                  "Adjust the cable machine to a low position and attach the handles.",
+                  "Sit on an incline bench with your back against the pad and feet flat on the floor.",
+                  "Grasp the handles with an overhand grip and extend your arms straight out in front of you.",
+                  "Keeping a slight bend in your elbows, open your arms out to the sides in a controlled motion.",
+                  "Pause for a moment at the fully extended position, then slowly return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable incline fly is an isolation exercise targeting the upper chest (pectorals) using a cable machine. It involves opening and closing the arms in a fly motion while lying on an incline bench, providing constant tension throughout the movement.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1263",
+                "exerciseId": "1263",
+                "name": "cable one arm fly on exercise ball",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1263.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "notes": "Squeeze your chest muscles as you bring your arm across your body.",
+                "instructions": [
+                  "Sit on an exercise ball with your feet flat on the ground and your back straight.",
+                  "Hold a cable handle in one hand and extend your arm out to the side, parallel to the ground.",
+                  "Keep your elbow slightly bent and your palm facing forward.",
+                  "Slowly bring your arm across your body, squeezing your chest muscles.",
+                  "Pause for a moment at the end of the movement, then slowly return to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch sides."
+                ],
+                "description": "The cable one arm fly on exercise ball is a unilateral chest exercise performed while seated on an exercise ball, which adds a balance component to the traditional cable fly movement. It targets the pectorals while also engaging the deltoids and triceps, and requires core stability to maintain posture on the ball.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0158",
+                "exerciseId": "0158",
+                "name": "cable decline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0158.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "notes": "Keep a slight bend in your elbows and open your arms out to the sides in a controlled motion.",
+                "instructions": [
+                  "Adjust the cable machine to a decline position.",
+                  "Stand facing away from the machine with your feet shoulder-width apart.",
+                  "Hold the handles with your palms facing forward and your arms extended straight out in front of you.",
+                  "Keeping a slight bend in your elbows, open your arms out to the sides in a controlled motion.",
+                  "Pause for a moment at the fully extended position, then slowly return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable decline fly is an isolation exercise targeting the pectoral muscles using a cable machine set to a decline angle. It emphasizes the lower chest and involves controlled arm movement to stretch and contract the chest muscles.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1294",
+                "exerciseId": "1294",
+                "name": "dumbbell pullover hip extension on exercise ball",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1294.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "notes": "Keep your arms straight and maintain control as you lower the dumbbell behind your head.",
+                "instructions": [
+                  "Sit on an exercise ball with your feet flat on the ground and the dumbbell resting on your thighs.",
+                  "Slowly walk your feet forward, rolling the exercise ball down your back until your head, neck, and upper back are supported on the ball.",
+                  "Hold the dumbbell with both hands and extend your arms straight up over your chest, keeping a slight bend in your elbows.",
+                  "Lower the dumbbell behind your head, keeping your arms straight and maintaining control.",
+                  "Pause for a moment, then raise the dumbbell back to the starting position.",
+                  "While keeping your arms extended, lift your hips off the ground, squeezing your glutes and engaging your core.",
+                  "Lower your hips back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell pullover hip extension on exercise ball is a compound exercise that targets the pectorals while also engaging the triceps, shoulders, and core. It combines a pullover movement with a hip extension, performed on an unstable surface (exercise ball), which increases the demand for balance and coordination.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders",
+                  "core"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0227",
+                "exerciseId": "0227",
+                "name": "cable standing fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0227.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "notes": "Squeeze your chest muscles at the peak of the movement as your arms come together.",
+                "instructions": [
+                  "Attach the handles to the cables at chest height.",
+                  "Stand with your feet shoulder-width apart, facing away from the cable machine.",
+                  "Grasp the handles with an overhand grip, palms facing forward.",
+                  "Step forward slightly to create tension in the cables.",
+                  "Keep your core engaged and your back straight throughout the exercise.",
+                  "With a slight bend in your elbows, slowly bring your arms forward and together in front of your chest.",
+                  "Squeeze your chest muscles at the peak of the movement.",
+                  "Slowly reverse the movement, returning your arms to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable standing fly is a chest isolation exercise performed using a cable machine. It targets the pectoral muscles and also engages the deltoids and triceps. The movement requires good form, balance, and control to execute safely and effectively.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1291",
+                "exerciseId": "1291",
+                "name": "dumbbell one arm pullover on exercise ball",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1291.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "notes": "Keep your arm straight as you lower the dumbbell behind your head.",
+                "instructions": [
+                  "Sit on an exercise ball with your feet flat on the ground and your knees bent at a 90-degree angle.",
+                  "Hold a dumbbell with one hand and extend your arm straight up above your chest.",
+                  "Slowly lower the dumbbell behind your head while keeping your arm straight.",
+                  "Pause for a moment, then raise the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch arms."
+                ],
+                "description": "The dumbbell one arm pullover on exercise ball is a chest exercise that also engages the triceps, latissimus dorsi, and rhomboids. It requires balance and core stability due to the use of the exercise ball, as well as unilateral strength and coordination.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "latissimus dorsi",
+                  "rhomboids"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0764",
+              "name": "smith reverse-grip press",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      },
+      "meta": {
+        "usedFallback": true,
+        "fallbackReason": null,
+        "exercisesAvailable": 82,
+        "appliedStyles": [
+          "BODYBUILD"
+        ],
+        "isCircuitMode": false,
+        "metaPlanAttempts": 0,
+        "exerciseSelectionAttempts": 3,
+        "paramAssignmentAttempts": 1,
+        "primaryExerciseCount": 82,
+        "supplementaryExerciseCount": 0,
+        "equipmentMatchRate": 100,
+        "equipmentViolations": [],
+        "primaryEquipmentViolations": [],
+        "deprecationWarnings": [
+          "experienceLevel as string is deprecated. Use a number from 1-10."
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "successCount": 1,
+    "parseErrorCount": 0,
+    "apiErrorCount": 0,
+    "totalLatency": 40324,
+    "avgLatency": 40324,
+    "avgExerciseCount": 8,
+    "avgEquipmentMatchRate": 100,
+    "avgSets": 4,
+    "avgRest": 67,
+    "repsCounts": {
+      "12": 1
+    },
+    "avgReps": "12",
+    "successRate": 100
+  }
+}

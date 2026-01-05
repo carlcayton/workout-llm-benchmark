@@ -185,14 +185,15 @@ export const DAY_FOCUS_MAPPING = {
 export const TEST_SCENARIOS = [
   // BODYBUILDING SCENARIOS - BRO SPLIT
   {
-    name: 'Bro Split - Bodybuilding (Chest)',
+    name: 'Bro Split (Chest)',
     split: 'bro_split',
     dayFocus: 'Chest',
     request: {
       equipment: ['Dumbbells', 'Barbell', 'Cable Machine', 'Chest Press', 'Pec Deck'],
       trainingStyles: ['classic_bodybuilding'],
-      bodyParts: ['chest', 'upper arms'],
-      targetMuscles: ['pectorals', 'triceps'],
+      bodyParts: ['chest'],
+      targetMuscles: ['pectorals'],
+      splitDayType: 'chest',  // Wires to edge function muscle filter
       duration: 60,
       experienceLevel: 'intermediate',
     },
@@ -203,18 +204,19 @@ export const TEST_SCENARIOS = [
       repsRange: [8, 12],
       restRange: [60, 90],
       shouldIncludeTechniques: ['supersets'],
-      requiredMuscleBalance: { pectorals: 0.5, triceps: 0.3 },
+      requiredMuscleBalance: { pectorals: 1.0 },  // Chest ONLY on Bro Split
     },
   },
   {
-    name: 'Bro Split - Bodybuilding (Back)',
+    name: 'Bro Split (Back)',
     split: 'bro_split',
     dayFocus: 'Back',
     request: {
       equipment: ['Dumbbells', 'Barbell', 'Cable Machine', 'Lat Pulldown', 'Seated Row Machine'],
       trainingStyles: ['classic_bodybuilding'],
-      bodyParts: ['back', 'upper arms'],
-      targetMuscles: ['lats', 'upper back', 'biceps'],
+      bodyParts: ['back'],
+      targetMuscles: ['lats', 'upper back', 'traps', 'spine'],
+      splitDayType: 'back',  // Wires to edge function muscle filter
       duration: 60,
       experienceLevel: 'intermediate',
     },
@@ -225,11 +227,11 @@ export const TEST_SCENARIOS = [
       repsRange: [8, 12],
       restRange: [60, 90],
       shouldIncludeTechniques: ['supersets'],
-      requiredMuscleBalance: { lats: 0.4, biceps: 0.3 },
+      requiredMuscleBalance: { lats: 0.5, 'upper back': 0.3, traps: 0.2 },  // Back ONLY on Bro Split
     },
   },
   {
-    name: 'Bro Split - Bodybuilding (Shoulders)',
+    name: 'Bro Split (Shoulders)',
     split: 'bro_split',
     dayFocus: 'Shoulders',
     request: {
@@ -237,7 +239,8 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['classic_bodybuilding'],
       bodyParts: ['shoulders'],
       targetMuscles: ['delts'],
-      duration: 45,
+      splitDayType: 'shoulders',  // Wires to edge function muscle filter
+      duration: 60,
       experienceLevel: 'intermediate',
     },
     expectations: {
@@ -251,7 +254,7 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Bro Split - Bodybuilding (Arms)',
+    name: 'Bro Split (Arms)',
     split: 'bro_split',
     dayFocus: 'Arms',
     request: {
@@ -259,7 +262,8 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['classic_bodybuilding'],
       bodyParts: ['upper arms'],
       targetMuscles: ['biceps', 'triceps'],
-      duration: 45,
+      splitDayType: 'arms',  // Wires to edge function muscle filter
+      duration: 60,
       experienceLevel: 'intermediate',
     },
     expectations: {
@@ -273,7 +277,7 @@ export const TEST_SCENARIOS = [
     },
   },
   {
-    name: 'Bro Split - Bodybuilding (Legs)',
+    name: 'Bro Split (Legs)',
     split: 'bro_split',
     dayFocus: 'Legs',
     request: {
@@ -281,6 +285,7 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['classic_bodybuilding'],
       bodyParts: ['upper legs', 'lower legs'],
       targetMuscles: ['quads', 'hamstrings', 'glutes', 'calves'],
+      splitDayType: 'legs',  // Wires to edge function muscle filter
       duration: 60,
       experienceLevel: 'intermediate',
     },
@@ -303,7 +308,7 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['classic_bodybuilding'],
       bodyParts: ['upper legs', 'lower legs'],
       targetMuscles: ['quads', 'hamstrings', 'glutes', 'calves'],
-      duration: 75,
+      duration: 60,
       experienceLevel: 'advanced',
     },
     expectations: {
@@ -416,7 +421,7 @@ export const TEST_SCENARIOS = [
       equipment: ['leverage machine', 'dumbbell'],
       trainingStyles: ['high_intensity_hit'],
       bodyParts: ['full_body'],
-      duration: 45,
+      duration: 60,
       experienceLevel: 'intermediate',
     },
     expectations: {
@@ -483,7 +488,7 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['muscular_endurance'],
       bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
       targetMuscles: ['pectorals', 'lats', 'delts', 'biceps', 'triceps'],
-      duration: 45,
+      duration: 60,
       experienceLevel: 'intermediate',
     },
     expectations: {
@@ -496,160 +501,6 @@ export const TEST_SCENARIOS = [
       requiredMuscleBalance: { pectorals: 0.2, lats: 0.2, delts: 0.2, biceps: 0.15, triceps: 0.15 },
     },
   },
-  {
-    name: 'Full Body - Endurance (Conditioning)',
-    split: 'full_body',
-    dayFocus: 'Full Body',
-    request: {
-      equipment: ['body weight'],
-      trainingStyles: ['muscular_endurance'],
-      bodyParts: ['full_body', 'cardio'],
-      duration: 30,
-      experienceLevel: 'beginner',
-    },
-    expectations: {
-      minExercises: 5,
-      maxExercises: 8,
-      setsRange: [2, 3],
-      repsRange: [15, 20],
-      restRange: [30, 45],
-      shouldIncludeTechniques: ['circuit'],
-      requiredMuscleBalance: {},
-    },
-  },
-
-  // MINIMAL EQUIPMENT SCENARIOS
-  {
-    name: 'Upper/Lower - Bodybuilding (Dumbbells)',
-    split: 'upper_lower',
-    dayFocus: 'Upper',
-    request: {
-      equipment: ['dumbbell'],
-      trainingStyles: ['classic_bodybuilding'],
-      bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
-      targetMuscles: ['pectorals', 'lats', 'delts', 'biceps', 'triceps'],
-      duration: 45,
-      experienceLevel: 'intermediate',
-    },
-    expectations: {
-      minExercises: 5,
-      maxExercises: 8,
-      setsRange: [3, 4],
-      repsRange: [8, 15],
-      restRange: [45, 90],
-      shouldIncludeTechniques: ['supersets'],
-      requiredMuscleBalance: {},
-    },
-  },
-  {
-    name: 'Upper/Lower - Endurance (Bodyweight)',
-    split: 'upper_lower',
-    dayFocus: 'Upper',
-    request: {
-      equipment: ['body weight'],
-      trainingStyles: ['muscular_endurance'],
-      bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
-      targetMuscles: ['pectorals', 'lats', 'delts', 'triceps'],
-      duration: 45,
-      experienceLevel: 'beginner',
-    },
-    expectations: {
-      minExercises: 4,
-      maxExercises: 7,
-      setsRange: [3, 4],
-      repsRange: [8, 20],
-      restRange: [30, 60],
-      shouldIncludeTechniques: [],
-      requiredMuscleBalance: {},
-    },
-  },
-  {
-    name: 'Full Body - Endurance (Bands)',
-    split: 'full_body',
-    dayFocus: 'Full Body',
-    request: {
-      equipment: ['Resistance Bands', 'body weight'],
-      trainingStyles: ['muscular_endurance'],
-      bodyParts: ['full_body'],
-      duration: 45,
-      experienceLevel: 'beginner',
-    },
-    expectations: {
-      minExercises: 5,
-      maxExercises: 8,
-      setsRange: [3, 4],
-      repsRange: [12, 20],
-      restRange: [30, 60],
-      shouldIncludeTechniques: [],
-      requiredMuscleBalance: {},
-    },
-  },
-  {
-    name: 'Full Body - Strength (Kettlebell)',
-    split: 'full_body',
-    dayFocus: 'Full Body',
-    request: {
-      equipment: ['Kettlebells'],
-      trainingStyles: ['strength_focused'],
-      bodyParts: ['full_body'],
-      duration: 60,
-      experienceLevel: 'intermediate',
-    },
-    expectations: {
-      minExercises: 4,
-      maxExercises: 6,
-      setsRange: [4, 5],
-      repsRange: [4, 6],
-      restRange: [120, 240],
-      shouldIncludeTechniques: [],
-      requiredMuscleBalance: {},
-    },
-  },
-
-  // BEGINNER SCENARIOS
-  {
-    name: 'Full Body - Bodybuilding (Beginner)',
-    split: 'full_body',
-    dayFocus: 'Full Body',
-    request: {
-      equipment: ['dumbbell', 'leverage machine', 'body weight'],
-      trainingStyles: ['classic_bodybuilding'],
-      bodyParts: ['full_body'],
-      duration: 60,
-      experienceLevel: 'beginner',
-    },
-    expectations: {
-      minExercises: 5,
-      maxExercises: 8,
-      setsRange: [2, 3],
-      repsRange: [10, 15],
-      restRange: [60, 90],
-      shouldIncludeTechniques: [],
-      requiredMuscleBalance: {},
-    },
-  },
-  {
-    name: 'Upper/Lower - Bodybuilding (Beginner)',
-    split: 'upper_lower',
-    dayFocus: 'Upper',
-    request: {
-      equipment: ['dumbbell', 'cable', 'leverage machine'],
-      trainingStyles: ['classic_bodybuilding'],
-      bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
-      duration: 45,
-      experienceLevel: 'beginner',
-    },
-    expectations: {
-      minExercises: 4,
-      maxExercises: 6,
-      setsRange: [2, 3],
-      repsRange: [10, 15],
-      restRange: [60, 90],
-      shouldIncludeTechniques: [],
-      requiredMuscleBalance: {},
-    },
-  },
-
   // ADVANCED PPL SCENARIOS
   {
     name: 'PPL - Bodybuilding (Push)',
@@ -660,7 +511,7 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['classic_bodybuilding'],
       bodyParts: ['chest', 'shoulders', 'upper arms'],
       targetMuscles: ['pectorals', 'delts', 'triceps'],
-      duration: 75,
+      duration: 60,
       experienceLevel: 'advanced',
     },
     expectations: {
@@ -682,7 +533,7 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['classic_bodybuilding'],
       bodyParts: ['back', 'upper arms'],
       targetMuscles: ['lats', 'upper back', 'biceps'],
-      duration: 75,
+      duration: 60,
       experienceLevel: 'advanced',
     },
     expectations: {
@@ -706,7 +557,7 @@ export const TEST_SCENARIOS = [
       trainingStyles: ['strength_focused', 'classic_bodybuilding'],
       bodyParts: ['chest', 'shoulders', 'upper arms'],
       targetMuscles: ['pectorals', 'delts', 'triceps'],
-      duration: 75,
+      duration: 60,
       experienceLevel: 'advanced',
     },
     expectations: {

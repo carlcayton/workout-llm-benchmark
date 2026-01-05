@@ -1,0 +1,319 @@
+{
+  "modelId": "google/gemini-3-pro-preview",
+  "modelName": "Gemini 3 Pro",
+  "tier": "premium",
+  "timestamp": "2026-01-04T17:46:13.027Z",
+  "totalScenarios": 1,
+  "scenarios": [
+    {
+      "name": "Bro Split (Chest)",
+      "split": "bro_split",
+      "dayFocus": "Chest",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Chest Press",
+        "Pec Deck"
+      ],
+      "success": true,
+      "latency": 67690,
+      "exerciseCount": 8,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "10",
+      "avgRest": 67,
+      "error": null,
+      "workout": {
+        "title": "Generated Workout",
+        "description": "A balanced workout targeting your selected muscle groups.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0151",
+                "exerciseId": "0151",
+                "name": "cable bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0151.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the cable machine to chest height and attach the handles.",
+                  "Stand facing away from the machine with your feet shoulder-width apart.",
+                  "Grasp the handles with an overhand grip and step forward to create tension in the cables.",
+                  "Position your feet firmly on the ground and engage your core.",
+                  "Bend your elbows and bring your hands to shoulder level, keeping your elbows at a 90-degree angle.",
+                  "Push the handles forward, extending your arms fully in front of you.",
+                  "Pause for a moment, then slowly reverse the movement, bringing your hands back to shoulder level.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable bench press is a chest exercise performed using a cable machine. It targets the pectoral muscles and also works the triceps and shoulders. The movement is similar to a traditional bench press but uses cables for constant tension throughout the range of motion.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1261",
+                "exerciseId": "1261",
+                "name": "cable decline press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1261.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the cable machine to a decline position.",
+                  "Sit on the decline bench facing the cable machine.",
+                  "Grasp the handles with an overhand grip and position them at chest level.",
+                  "Keep your feet flat on the ground and your back firmly against the bench.",
+                  "Exhale and push the handles away from your body, extending your arms fully.",
+                  "Pause for a moment at the end of the movement, squeezing your chest muscles.",
+                  "Inhale and slowly return the handles back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable decline press is a chest exercise performed on a cable machine with a decline bench. It targets the lower portion of the pectoral muscles and also engages the triceps and shoulders. The movement involves pressing the handles away from the body in a decline position, providing constant tension through the range of motion.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "1269",
+                "exerciseId": "1269",
+                "name": "cable standing up straight crossovers",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1269.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Stand in the middle of a cable machine with your feet shoulder-width apart.",
+                  "Hold the handles of the cables with your palms facing down and your arms extended straight out to the sides.",
+                  "Keeping your arms straight, bring your hands together in front of your body, crossing them over each other.",
+                  "Pause for a moment, then slowly return to the starting position, keeping your arms extended.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "Cable standing up straight crossovers are a chest exercise performed using a cable machine. The movement involves bringing the arms together in front of the body, crossing them over each other, which targets the pectoral muscles and also engages the deltoids and triceps.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1262",
+                "exerciseId": "1262",
+                "name": "cable one arm decline chest fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1262.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Attach a D-handle to a low pulley cable machine and set the bench to a decline angle.",
+                  "Lie down on the bench with your head towards the machine and grab the handle with your right hand.",
+                  "Extend your arm straight up above your chest, keeping a slight bend in your elbow.",
+                  "With a controlled motion, lower your arm out to the side until your hand is in line with your shoulder.",
+                  "Pause for a moment, then reverse the motion and bring your arm back to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch to your left arm and repeat the exercise."
+                ],
+                "description": "The cable one arm decline chest fly is an isolation exercise targeting the pectoral muscles using a cable machine and a decline bench. It emphasizes unilateral strength and control, helping to improve muscle symmetry and chest development.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1255",
+                "exerciseId": "1255",
+                "name": "barbell decline pullover",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1255.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Lie down on a decline bench with your head lower than your hips and your feet secured.",
+                  "Hold the barbell with a pronated grip (palms facing away from you) and your hands slightly wider than shoulder-width apart.",
+                  "Extend your arms above your chest, keeping a slight bend in your elbows.",
+                  "Lower the barbell in an arc motion behind your head, feeling a stretch in your chest and shoulders.",
+                  "Pause for a moment, then return the barbell to the starting position by reversing the motion.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell decline pullover is a chest exercise performed on a decline bench, targeting the pectorals with secondary emphasis on the triceps and shoulders. It involves lowering a barbell in an arc behind the head and returning to the starting position, requiring control and stability.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0331",
+                "exerciseId": "0331",
+                "name": "dumbbell incline twisted flyes",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0331.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Set an incline bench to a 45-degree angle and sit on it with a dumbbell in each hand, palms facing each other.",
+                  "Lie back on the bench and press the dumbbells up to the starting position, directly above your chest, with your arms extended.",
+                  "Lower the dumbbells out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "As you lower the dumbbells, rotate your wrists so that your palms face forward at the bottom of the movement.",
+                  "Reverse the motion and bring the dumbbells back up to the starting position, squeezing your chest muscles together at the top.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell incline twisted flye is a chest exercise performed on an incline bench, targeting the upper pectorals with an added wrist rotation for increased muscle activation.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0307",
+                "exerciseId": "0307",
+                "name": "dumbbell decline twist fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0307.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Lie down on a decline bench with your head lower than your hips.",
+                  "Hold a dumbbell in each hand with your palms facing each other and your arms extended straight up over your chest.",
+                  "Lower the dumbbells out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "As you lower the dumbbells, twist your wrists so that your palms face forward at the bottom of the movement.",
+                  "Reverse the motion and bring the dumbbells back up to the starting position, squeezing your chest muscles at the top.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell decline twist fly is a chest exercise performed on a decline bench, targeting the pectoral muscles while also engaging the shoulders and triceps. The movement involves lowering dumbbells in a wide arc with a twisting motion, increasing the stretch and contraction of the chest.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0375",
+                "exerciseId": "0375",
+                "name": "dumbbell pullover",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0375.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Lie flat on a bench with your head at one end and your feet on the floor.",
+                  "Hold a dumbbell with both hands and extend your arms straight above your chest.",
+                  "Keeping a slight bend in your elbows, slowly lower the dumbbell behind your head until you feel a stretch in your chest and shoulders.",
+                  "Pause for a moment, then raise the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell pullover is a chest exercise performed lying on a bench, where you lower a dumbbell behind your head and then bring it back over your chest, targeting the pectorals and also engaging the lats and triceps.",
+                "secondaryMuscles": [
+                  "latissimus dorsi",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [
+          "Focus on form",
+          "Control the eccentric phase"
+        ],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0151",
+              "name": "cable bench press",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      },
+      "meta": {
+        "usedFallback": true,
+        "fallbackReason": null,
+        "exercisesAvailable": 82,
+        "appliedStyles": [
+          "BODYBUILD"
+        ],
+        "isCircuitMode": false,
+        "metaPlanAttempts": 0,
+        "exerciseSelectionAttempts": 3,
+        "paramAssignmentAttempts": 3,
+        "requestedDuration": 60,
+        "targetExerciseCount": 8,
+        "targetSetsPerExercise": 4,
+        "primaryExerciseCount": 82,
+        "supplementaryExerciseCount": 0,
+        "equipmentMatchRate": 100,
+        "equipmentViolations": [],
+        "primaryEquipmentViolations": [],
+        "deprecationWarnings": [
+          "experienceLevel as string is deprecated. Use a number from 1-10."
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "successCount": 1,
+    "parseErrorCount": 0,
+    "apiErrorCount": 0,
+    "totalLatency": 67690,
+    "avgLatency": 67690,
+    "avgExerciseCount": 8,
+    "avgEquipmentMatchRate": 100,
+    "avgSets": 4,
+    "avgRest": 67,
+    "repsCounts": {
+      "10": 1
+    },
+    "avgReps": "10",
+    "successRate": 100
+  }
+}

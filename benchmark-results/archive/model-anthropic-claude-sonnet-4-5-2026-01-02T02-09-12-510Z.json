@@ -1,0 +1,369 @@
+{
+  "modelId": "anthropic/claude-sonnet-4.5",
+  "modelName": "Claude Sonnet 4.5",
+  "tier": "premium",
+  "timestamp": "2026-01-02T02:09:12.510Z",
+  "totalScenarios": 1,
+  "scenarios": [
+    {
+      "name": "Bro Split - Bodybuilding (Chest)",
+      "split": "bro_split",
+      "dayFocus": "Chest",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Chest Press",
+        "Pec Deck"
+      ],
+      "success": true,
+      "latency": 24073,
+      "exerciseCount": 10,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "12",
+      "avgRest": 63,
+      "error": null,
+      "workout": {
+        "title": "Chest Day - BODYBUILD",
+        "description": "Chest Day workout focusing on bodybuild training.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0047",
+                "exerciseId": "0047",
+                "name": "barbell incline bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0047.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "notes": "Keep your elbows at a 45-degree angle throughout the movement to protect your shoulders.",
+                "instructions": [
+                  "Set up an incline bench at a 45-degree angle.",
+                  "Lie down on the bench with your feet flat on the ground.",
+                  "Grasp the barbell with an overhand grip, slightly wider than shoulder-width apart.",
+                  "Unrack the barbell and lower it slowly towards your chest, keeping your elbows at a 45-degree angle.",
+                  "Pause for a moment at the bottom, then push the barbell back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell incline bench press is a compound upper-body exercise that targets the upper portion of the pectoral muscles, with secondary emphasis on the shoulders and triceps. It is performed on an incline bench using a barbell, making it a staple in strength training routines for developing chest size and strength.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0289",
+                "exerciseId": "0289",
+                "name": "dumbbell bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0289.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "notes": "Keep your elbows at a 90-degree angle when lowering the dumbbells to the sides of your chest.",
+                "instructions": [
+                  "Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
+                  "Hold a dumbbell in each hand, with your palms facing forward and your arms extended above your chest.",
+                  "Lower the dumbbells slowly to the sides of your chest, keeping your elbows at a 90-degree angle.",
+                  "Pause for a moment, then push the dumbbells back up to the starting position, fully extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell bench press is a classic upper body strength exercise that targets the pectoral muscles, with secondary emphasis on the triceps and shoulders. It is performed lying on a bench, pressing dumbbells from chest level to full arm extension.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0122",
+                "exerciseId": "0122",
+                "name": "barbell wide bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0122.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "notes": "Keep your elbows slightly flared out as you lower the barbell towards your chest.",
+                "instructions": [
+                  "Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
+                  "Grasp the barbell with a wide grip, slightly wider than shoulder-width apart.",
+                  "Lift the barbell off the rack and hold it directly above your chest with your arms fully extended.",
+                  "Lower the barbell slowly towards your chest, keeping your elbows slightly flared out.",
+                  "Pause for a moment when the barbell touches your chest, then push it back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell wide bench press is a compound strength exercise targeting the pectoral muscles, with secondary emphasis on the shoulders and triceps. It requires a barbell and a bench, and involves lowering the barbell to the chest with a wide grip before pressing it back up.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1261",
+                "exerciseId": "1261",
+                "name": "cable decline press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1261.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "notes": "Keep your back firmly against the bench and extend your arms fully at the top.",
+                "instructions": [
+                  "Adjust the cable machine to a decline position.",
+                  "Sit on the decline bench facing the cable machine.",
+                  "Grasp the handles with an overhand grip and position them at chest level.",
+                  "Keep your feet flat on the ground and your back firmly against the bench.",
+                  "Exhale and push the handles away from your body, extending your arms fully.",
+                  "Pause for a moment at the end of the movement, squeezing your chest muscles.",
+                  "Inhale and slowly return the handles back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable decline press is a chest exercise performed on a cable machine with a decline bench. It targets the lower portion of the pectoral muscles and also engages the triceps and shoulders. The movement involves pressing the handles away from the body in a decline position, providing constant tension through the range of motion.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0319",
+                "exerciseId": "0319",
+                "name": "dumbbell incline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0319.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Lower the dumbbells in a wide arc until you feel a stretch in your chest, maintaining a slight elbow bend.",
+                "instructions": [
+                  "Set an incline bench to a 45-degree angle.",
+                  "Sit on the bench with a dumbbell in each hand, palms facing each other.",
+                  "Lie back on the bench and press the dumbbells up to the starting position, directly above your chest.",
+                  "Lower the dumbbells out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then squeeze your chest muscles to bring the dumbbells back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell incline fly is a chest exercise performed on an incline bench, targeting the upper pectoral muscles. It involves lowering dumbbells out to the sides in a wide arc and then bringing them back together, emphasizing a stretch and contraction of the chest.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0302",
+                "exerciseId": "0302",
+                "name": "dumbbell decline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0302.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Keep your arms in a wide arc and squeeze your chest muscles at the top of the movement.",
+                "instructions": [
+                  "Lie on a decline bench with your feet secured and your head lower than your hips.",
+                  "Hold a dumbbell in each hand with your palms facing each other and your arms extended above your chest.",
+                  "Lower the dumbbells out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then squeeze your chest muscles to bring the dumbbells back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell decline fly is a chest exercise performed on a decline bench, targeting the lower pectoral muscles. It involves lowering dumbbells out to the sides in a wide arc and then bringing them back together, emphasizing chest muscle stretch and contraction.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0308",
+                "exerciseId": "0308",
+                "name": "dumbbell fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0308.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Maintain a slight bend in your elbows throughout the entire movement to protect your joints.",
+                "instructions": [
+                  "Lie flat on a bench with a dumbbell in each hand, palms facing each other.",
+                  "Extend your arms straight up over your chest, with a slight bend in your elbows.",
+                  "Keeping a slight bend in your elbows, lower your arms out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then reverse the movement and bring the dumbbells back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell fly is a chest exercise performed lying on a bench, using dumbbells to stretch and contract the pectoral muscles through a wide arc motion.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0155",
+                "exerciseId": "0155",
+                "name": "cable cross-over variation",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0155.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Bring your hands together in front of your chest with a slight elbow bend and pause at peak contraction.",
+                "instructions": [
+                  "Adjust the cable pulleys to chest height.",
+                  "Stand in the center of the cable machine with one foot in front of the other.",
+                  "Grasp the handles with your palms facing down and your arms extended out to the sides.",
+                  "Take a step forward, keeping your arms slightly bent.",
+                  "With a slight bend in your elbows, bring your hands together in front of your chest.",
+                  "Pause for a moment, then slowly return your arms back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable cross-over variation is a chest exercise performed using a cable machine. It targets the pectoral muscles and also engages the deltoids and triceps. The movement involves bringing the handles together in front of the chest while maintaining a slight bend in the elbows.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0375",
+                "exerciseId": "0375",
+                "name": "dumbbell pullover",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0375.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Keep a slight bend in your elbows and lower the dumbbell behind your head until you feel a stretch.",
+                "instructions": [
+                  "Lie flat on a bench with your head at one end and your feet on the floor.",
+                  "Hold a dumbbell with both hands and extend your arms straight above your chest.",
+                  "Keeping a slight bend in your elbows, slowly lower the dumbbell behind your head until you feel a stretch in your chest and shoulders.",
+                  "Pause for a moment, then raise the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell pullover is a chest exercise performed lying on a bench, where you lower a dumbbell behind your head and then bring it back over your chest, targeting the pectorals and also engaging the lats and triceps.",
+                "secondaryMuscles": [
+                  "latissimus dorsi",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0596",
+                "exerciseId": "0596",
+                "name": "lever seated fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0596.gif",
+                "target": "pectorals",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 45,
+                "tempo": "2-0-1",
+                "notes": "Pause at peak contraction and squeeze your chest muscles before slowly returning to the starting position.",
+                "instructions": [
+                  "Adjust the seat height and position yourself on the machine with your back against the pad.",
+                  "Grasp the handles with a pronated grip and keep your elbows slightly bent.",
+                  "Exhale and push the handles forward, bringing them together in front of your chest.",
+                  "Pause for a moment, squeezing your chest muscles.",
+                  "Inhale and slowly return to the starting position, allowing your chest muscles to stretch.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever seated fly is a machine-based exercise targeting the pectoral muscles, performed by bringing the handles together in front of the chest while seated.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "trapezius"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0047",
+              "name": "barbell incline bench press",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      },
+      "meta": {
+        "usedFallback": false,
+        "fallbackReason": null,
+        "exercisesAvailable": 82,
+        "appliedStyles": [
+          "BODYBUILD"
+        ],
+        "isCircuitMode": false,
+        "metaPlanAttempts": 0,
+        "exerciseSelectionAttempts": 1,
+        "paramAssignmentAttempts": 1,
+        "primaryExerciseCount": 82,
+        "supplementaryExerciseCount": 0,
+        "equipmentMatchRate": 100,
+        "equipmentViolations": [],
+        "primaryEquipmentViolations": [],
+        "deprecationWarnings": [
+          "experienceLevel as string is deprecated. Use a number from 1-10."
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "successCount": 1,
+    "parseErrorCount": 0,
+    "apiErrorCount": 0,
+    "totalLatency": 24073,
+    "avgLatency": 24073,
+    "avgExerciseCount": 10,
+    "avgEquipmentMatchRate": 100,
+    "avgSets": 4,
+    "avgRest": 63,
+    "repsCounts": {
+      "12": 1
+    },
+    "avgReps": "12",
+    "successRate": 100
+  }
+}

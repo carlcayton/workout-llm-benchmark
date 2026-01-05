@@ -85,9 +85,23 @@ function parseModelFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf-8');
     const data = JSON.parse(content);
 
-    // Validate expected structure
-    if (!data.model || !data.scenarios) {
-      console.warn(`  Warning: ${fileName} missing expected structure (model, scenarios)`);
+    // Support both old format (modelId/modelName) and new format (model object)
+    if (!data.scenarios) {
+      console.warn(`  Warning: ${fileName} missing scenarios array`);
+      return null;
+    }
+
+    // Normalize to new format if using old format
+    if (!data.model && (data.modelId || data.modelName)) {
+      data.model = {
+        id: data.modelId,
+        name: data.modelName,
+        tier: data.tier || 'unknown',
+      };
+    }
+
+    if (!data.model) {
+      console.warn(`  Warning: ${fileName} missing model information`);
       return null;
     }
 
@@ -136,7 +150,12 @@ function combineResults(modelFiles) {
 
     // Build or use existing summary
     if (data.summary) {
-      modelSummaries[model.id] = data.summary;
+      // Ensure summary has model name and tier
+      modelSummaries[model.id] = {
+        ...data.summary,
+        name: data.summary.name || model.name,
+        tier: data.summary.tier || model.tier,
+      };
     } else {
       // Calculate summary from scenarios if not provided
       modelSummaries[model.id] = calculateModelSummary(model, data.scenarios);
@@ -160,12 +179,23 @@ function combineResults(modelFiles) {
       const scenario = scenarioMap.get(scenarioName);
 
       // Add this model's result to the scenario
+      // Support both old format (workout, metrics at top level) and new format (parsedWorkout, metrics nested)
+      const metrics = scenarioResult.metrics || {
+        // Old format has metrics at top level
+        exerciseCount: scenarioResult.exerciseCount,
+        equipmentMatchRate: scenarioResult.equipmentMatchRate,
+        avgSets: scenarioResult.avgSets,
+        avgReps: scenarioResult.avgReps,
+        avgRest: scenarioResult.avgRest,
+      };
+
       scenario.modelResults.push({
         model,
         success: scenarioResult.success,
         latency: scenarioResult.latency,
         parsedWorkout: scenarioResult.parsedWorkout,
-        metrics: scenarioResult.metrics,
+        workout: scenarioResult.workout, // Old format support
+        metrics,
         error: scenarioResult.error,
         parseError: scenarioResult.parseError,
         rawResponse: scenarioResult.rawResponse,
@@ -218,11 +248,21 @@ function calculateModelSummary(model, scenarios) {
   };
 
   for (const scenario of scenarios) {
-    if (scenario.success && scenario.parsedWorkout) {
+    // Support both old format (workout) and new format (parsedWorkout)
+    const hasWorkout = scenario.parsedWorkout || scenario.workout;
+
+    if (scenario.success && hasWorkout) {
       summary.successCount++;
       summary.totalLatency += scenario.latency || 0;
 
-      const metrics = scenario.metrics || {};
+      // Support both nested metrics and top-level metrics (old format)
+      const metrics = scenario.metrics || {
+        exerciseCount: scenario.exerciseCount,
+        equipmentMatchRate: scenario.equipmentMatchRate,
+        avgSets: scenario.avgSets,
+        avgReps: scenario.avgReps,
+        avgRest: scenario.avgRest,
+      };
       summary.totalExerciseCount += metrics.exerciseCount || 0;
       summary.totalEquipmentMatchRate += metrics.equipmentMatchRate || 0;
       summary.totalSets += metrics.avgSets || 0;
@@ -336,10 +376,18 @@ function generateMarkdownReport(results) {
   // Results by Category
   md += `\n## Results by Category\n\n`;
 
-  const categories = [...new Set(results.scenarios.map(s => s.category))];
+  const categories = [...new Set(results.scenarios.map(s => s.category).filter(Boolean))];
+
+  // If no categories, use "uncategorized" for all scenarios
+  if (categories.length === 0) {
+    categories.push(undefined);
+  }
 
   for (const category of categories) {
-    md += `### ${category.charAt(0).toUpperCase() + category.slice(1)} Scenarios\n\n`;
+    const categoryName = category
+      ? category.charAt(0).toUpperCase() + category.slice(1)
+      : 'Uncategorized';
+    md += `### ${categoryName} Scenarios\n\n`;
 
     const categoryScenarios = results.scenarios.filter(s => s.category === category);
 
@@ -357,7 +405,8 @@ function generateMarkdownReport(results) {
       md += `|-------|--------|---------|-----------|-------------|----------|----------|----------|\n`;
 
       for (const result of scenario.modelResults) {
-        const status = result.success && result.parsedWorkout ? 'OK' :
+        const hasWorkout = result.parsedWorkout || result.workout;
+        const status = result.success && hasWorkout ? 'OK' :
                        result.success ? 'Parse Err' : 'API Err';
         const latency = result.latency ? `${result.latency}ms` : '-';
         const exercises = result.metrics?.exerciseCount || '-';

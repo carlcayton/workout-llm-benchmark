@@ -1,0 +1,292 @@
+{
+  "modelId": "anthropic/claude-sonnet-4.5",
+  "modelName": "Claude Sonnet 4.5",
+  "tier": "premium",
+  "timestamp": "2026-01-02T01:38:48.793Z",
+  "totalScenarios": 1,
+  "scenarios": [
+    {
+      "name": "Bro Split - Bodybuilding (Chest)",
+      "split": "bro_split",
+      "dayFocus": "Chest",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Chest Press",
+        "Pec Deck"
+      ],
+      "success": true,
+      "latency": 62835,
+      "exerciseCount": 8,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "10",
+      "avgRest": 67,
+      "error": null,
+      "workout": {
+        "title": "Generated Workout",
+        "description": "A balanced workout targeting your selected muscle groups.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "1293",
+                "exerciseId": "1293",
+                "name": "dumbbell press on exercise ball",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1293.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Sit on an exercise ball with your feet flat on the ground and dumbbells in each hand, resting on your thighs.",
+                  "Slowly walk your feet forward, rolling the exercise ball until your lower back is supported on the ball and your knees are at a 90-degree angle.",
+                  "Raise the dumbbells to shoulder height, palms facing forward.",
+                  "Press the dumbbells upward until your arms are fully extended.",
+                  "Pause for a moment at the top, then slowly lower the dumbbells back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell press on exercise ball is a chest exercise that also engages the shoulders and triceps, performed while balancing on an exercise ball to increase core activation and stability demands.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1289",
+                "exerciseId": "1289",
+                "name": "dumbbell one arm incline chest press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1289.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the incline bench to a 45-degree angle.",
+                  "Sit on the bench with your back against the pad and feet flat on the ground.",
+                  "Hold a dumbbell in one hand with an overhand grip, resting it on your shoulder.",
+                  "Push the dumbbell up and away from your body, extending your arm fully.",
+                  "Pause for a moment at the top, then slowly lower the dumbbell back down to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch to the other arm."
+                ],
+                "description": "The dumbbell one arm incline chest press is a unilateral upper body exercise that targets the pectoral muscles, with secondary emphasis on the shoulders and triceps. It is performed on an incline bench using a single dumbbell, which increases the demand for core stability and coordination.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0458",
+                "exerciseId": "0458",
+                "name": "floor fly (with barbell)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0458.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Lie flat on your back on the floor with your knees bent and feet flat on the ground.",
+                  "Hold a barbell with an overhand grip, arms extended straight up over your chest.",
+                  "Slowly lower the barbell out to the sides, keeping a slight bend in your elbows.",
+                  "Lower the barbell until your arms are parallel to the floor, feeling a stretch in your chest.",
+                  "Pause for a moment, then squeeze your chest muscles to bring the barbell back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The floor fly with barbell is a chest exercise performed lying on the floor, focusing on stretching and contracting the pectoral muscles while using a barbell for resistance.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0158",
+                "exerciseId": "0158",
+                "name": "cable decline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0158.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the cable machine to a decline position.",
+                  "Stand facing away from the machine with your feet shoulder-width apart.",
+                  "Hold the handles with your palms facing forward and your arms extended straight out in front of you.",
+                  "Keeping a slight bend in your elbows, open your arms out to the sides in a controlled motion.",
+                  "Pause for a moment at the fully extended position, then slowly return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable decline fly is an isolation exercise targeting the pectoral muscles using a cable machine set to a decline angle. It emphasizes the lower chest and involves controlled arm movement to stretch and contract the chest muscles.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1269",
+                "exerciseId": "1269",
+                "name": "cable standing up straight crossovers",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1269.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Stand in the middle of a cable machine with your feet shoulder-width apart.",
+                  "Hold the handles of the cables with your palms facing down and your arms extended straight out to the sides.",
+                  "Keeping your arms straight, bring your hands together in front of your body, crossing them over each other.",
+                  "Pause for a moment, then slowly return to the starting position, keeping your arms extended.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "Cable standing up straight crossovers are a chest exercise performed using a cable machine. The movement involves bringing the arms together in front of the body, crossing them over each other, which targets the pectoral muscles and also engages the deltoids and triceps.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0155",
+                "exerciseId": "0155",
+                "name": "cable cross-over variation",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0155.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the cable pulleys to chest height.",
+                  "Stand in the center of the cable machine with one foot in front of the other.",
+                  "Grasp the handles with your palms facing down and your arms extended out to the sides.",
+                  "Take a step forward, keeping your arms slightly bent.",
+                  "With a slight bend in your elbows, bring your hands together in front of your chest.",
+                  "Pause for a moment, then slowly return your arms back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable cross-over variation is a chest exercise performed using a cable machine. It targets the pectoral muscles and also engages the deltoids and triceps. The movement involves bringing the handles together in front of the chest while maintaining a slight bend in the elbows.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0375",
+                "exerciseId": "0375",
+                "name": "dumbbell pullover",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0375.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Lie flat on a bench with your head at one end and your feet on the floor.",
+                  "Hold a dumbbell with both hands and extend your arms straight above your chest.",
+                  "Keeping a slight bend in your elbows, slowly lower the dumbbell behind your head until you feel a stretch in your chest and shoulders.",
+                  "Pause for a moment, then raise the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell pullover is a chest exercise performed lying on a bench, where you lower a dumbbell behind your head and then bring it back over your chest, targeting the pectorals and also engaging the lats and triceps.",
+                "secondaryMuscles": [
+                  "latissimus dorsi",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0319",
+                "exerciseId": "0319",
+                "name": "dumbbell incline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0319.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Set an incline bench to a 45-degree angle.",
+                  "Sit on the bench with a dumbbell in each hand, palms facing each other.",
+                  "Lie back on the bench and press the dumbbells up to the starting position, directly above your chest.",
+                  "Lower the dumbbells out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then squeeze your chest muscles to bring the dumbbells back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell incline fly is a chest exercise performed on an incline bench, targeting the upper pectoral muscles. It involves lowering dumbbells out to the sides in a wide arc and then bringing them back together, emphasizing a stretch and contraction of the chest.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [
+          "Focus on form",
+          "Control the eccentric phase"
+        ],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "1293",
+              "name": "dumbbell press on exercise ball",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      }
+    }
+  ],
+  "summary": {
+    "successCount": 1,
+    "parseErrorCount": 0,
+    "apiErrorCount": 0,
+    "totalLatency": 62835,
+    "avgLatency": 62835,
+    "avgExerciseCount": 8,
+    "avgEquipmentMatchRate": 100,
+    "avgSets": 4,
+    "avgRest": 67,
+    "repsCounts": {
+      "10": 1
+    },
+    "avgReps": "10",
+    "successRate": 100
+  }
+}

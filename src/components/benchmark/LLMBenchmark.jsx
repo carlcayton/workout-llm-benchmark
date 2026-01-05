@@ -131,13 +131,11 @@ export function LLMBenchmark() {
     return split.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
   }
 
-  // Duration colors (gradient from short to long workouts)
+  // Duration colors - valid durations: 30, 60, 90 minutes only
   const getDurationColor = (duration) => {
     const colors = {
       30: 'bg-emerald-100 text-emerald-700 border-emerald-300 hover:bg-emerald-200',
-      45: 'bg-teal-100 text-teal-700 border-teal-300 hover:bg-teal-200',
       60: 'bg-cyan-100 text-cyan-700 border-cyan-300 hover:bg-cyan-200',
-      75: 'bg-sky-100 text-sky-700 border-sky-300 hover:bg-sky-200',
       90: 'bg-indigo-100 text-indigo-700 border-indigo-300 hover:bg-indigo-200',
     }
     return colors[duration] || 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200'

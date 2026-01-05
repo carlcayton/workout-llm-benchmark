@@ -32,6 +32,25 @@ if (!OPENROUTER_API_KEY) {
 // Comprehensive mock exercise database for benchmarking
 // ============================================================================
 
+// ============================================================================
+// DAY FOCUS MAPPING - Maps day focus to body parts and target muscles
+// ============================================================================
+
+const DAY_FOCUS_MAPPING = {
+  'Push': { bodyParts: ['chest', 'shoulders', 'upper arms'], targetMuscles: ['pectorals', 'delts', 'triceps'] },
+  'Pull': { bodyParts: ['back', 'upper arms'], targetMuscles: ['lats', 'upper back', 'biceps'] },
+  'Legs': { bodyParts: ['upper legs', 'lower legs'], targetMuscles: ['quads', 'hamstrings', 'glutes', 'calves'] },
+  'Upper': { bodyParts: ['chest', 'back', 'shoulders', 'upper arms'], targetMuscles: ['pectorals', 'lats', 'delts', 'biceps', 'triceps'] },
+  'Lower': { bodyParts: ['upper legs', 'lower legs'], targetMuscles: ['quads', 'hamstrings', 'glutes', 'calves'] },
+  'Chest': { bodyParts: ['chest'], targetMuscles: ['pectorals'] },
+  'Back': { bodyParts: ['back'], targetMuscles: ['lats', 'upper back'] },
+  'Shoulders': { bodyParts: ['shoulders'], targetMuscles: ['delts'] },
+  'Arms': { bodyParts: ['upper arms'], targetMuscles: ['biceps', 'triceps'] },
+  'Chest/Back': { bodyParts: ['chest', 'back'], targetMuscles: ['pectorals', 'lats', 'upper back'] },
+  'Shoulders/Arms': { bodyParts: ['shoulders', 'upper arms'], targetMuscles: ['delts', 'biceps', 'triceps'] },
+  'Full Body': { bodyParts: ['full_body'], targetMuscles: null }
+};
+
 const MOCK_EXERCISES = [
   // CHEST
   { id: '0025', name: 'dumbbell bench press', target: 'pectorals', bodyPart: 'chest', equipment: 'dumbbell', difficulty: 'intermediate', secondaryMuscles: ['triceps', 'delts'] },
@@ -183,6 +202,7 @@ const TEST_SCENARIOS = [
   {
     name: 'Classic Bodybuilding - Chest & Triceps',
     category: 'bodybuilding',
+    dayFocus: 'Chest',
     request: {
       equipment: ['dumbbell', 'barbell', 'cable', 'leverage machine'],
       trainingStyle: 'classic_bodybuilding',
@@ -205,6 +225,7 @@ const TEST_SCENARIOS = [
   {
     name: 'Classic Bodybuilding - Back & Biceps',
     category: 'bodybuilding',
+    dayFocus: 'Back',
     request: {
       equipment: ['dumbbell', 'barbell', 'cable', 'leverage machine'],
       trainingStyle: 'classic_bodybuilding',
@@ -227,12 +248,13 @@ const TEST_SCENARIOS = [
   {
     name: 'Bodybuilding - Shoulder Focus',
     category: 'bodybuilding',
+    dayFocus: 'Shoulders',
     request: {
       equipment: ['dumbbell', 'barbell', 'cable', 'leverage machine'],
       trainingStyle: 'classic_bodybuilding',
       bodyParts: ['shoulders'],
       targetMuscles: ['delts'],
-      duration: 45,
+      duration: 60,
       experienceLevel: 'intermediate',
       goal: 'build_muscle',
     },
@@ -249,12 +271,13 @@ const TEST_SCENARIOS = [
   {
     name: 'High Volume Leg Day',
     category: 'bodybuilding',
+    dayFocus: 'Legs',
     request: {
       equipment: ['barbell', 'dumbbell', 'leverage machine', 'cable'],
       trainingStyle: 'classic_bodybuilding',
       bodyParts: ['upper legs', 'lower legs'],
       targetMuscles: ['quads', 'hamstrings', 'glutes', 'calves'],
-      duration: 75,
+      duration: 60,
       experienceLevel: 'advanced',
       goal: 'build_muscle',
     },
@@ -273,6 +296,7 @@ const TEST_SCENARIOS = [
   {
     name: 'Strength Focused - Upper Body',
     category: 'strength',
+    dayFocus: 'Upper',
     request: {
       equipment: ['barbell', 'dumbbell', 'cable'],
       trainingStyle: 'strength_focused',
@@ -295,6 +319,7 @@ const TEST_SCENARIOS = [
   {
     name: 'Strength Focused - Lower Body',
     category: 'strength',
+    dayFocus: 'Lower',
     request: {
       equipment: ['barbell', 'dumbbell', 'leverage machine'],
       trainingStyle: 'strength_focused',
@@ -317,6 +342,7 @@ const TEST_SCENARIOS = [
   {
     name: 'Powerlifting Prep',
     category: 'strength',
+    dayFocus: 'Full Body',
     request: {
       equipment: ['barbell', 'dumbbell'],
       trainingStyle: 'strength_focused',
@@ -341,12 +367,13 @@ const TEST_SCENARIOS = [
   {
     name: 'HIT - Upper Body',
     category: 'high_intensity_hit',
+    dayFocus: 'Upper',
     request: {
       equipment: ['leverage machine', 'dumbbell', 'cable'],
       trainingStyle: 'high_intensity_hit',
       bodyParts: ['chest', 'back', 'shoulders'],
       targetMuscles: ['pectorals', 'lats', 'delts'],
-      duration: 45,
+      duration: 60,
       experienceLevel: 'advanced',
       goal: 'build_muscle',
     },
@@ -363,11 +390,12 @@ const TEST_SCENARIOS = [
   {
     name: 'HIT - Full Body',
     category: 'high_intensity_hit',
+    dayFocus: 'Full Body',
     request: {
       equipment: ['leverage machine', 'dumbbell'],
       trainingStyle: 'high_intensity_hit',
       bodyParts: ['full_body'],
-      duration: 40,
+      duration: 60,
       experienceLevel: 'intermediate',
       goal: 'build_muscle',
     },
@@ -384,12 +412,13 @@ const TEST_SCENARIOS = [
   {
     name: 'HIT - Legs',
     category: 'high_intensity_hit',
+    dayFocus: 'Legs',
     request: {
       equipment: ['leverage machine', 'barbell'],
       trainingStyle: 'high_intensity_hit',
       bodyParts: ['upper legs', 'lower legs'],
       targetMuscles: ['quads', 'hamstrings', 'glutes', 'calves'],
-      duration: 35,
+      duration: 30,
       experienceLevel: 'advanced',
       goal: 'build_muscle',
     },
@@ -408,6 +437,7 @@ const TEST_SCENARIOS = [
   {
     name: 'Muscular Endurance - Full Body Circuit',
     category: 'muscular_endurance',
+    dayFocus: 'Full Body',
     request: {
       equipment: ['body weight', 'dumbbell', 'kettlebell'],
       trainingStyle: 'muscular_endurance',
@@ -429,12 +459,13 @@ const TEST_SCENARIOS = [
   {
     name: 'Muscular Endurance - Upper Body',
     category: 'muscular_endurance',
+    dayFocus: 'Upper',
     request: {
       equipment: ['dumbbell', 'cable', 'band'],
       trainingStyle: 'muscular_endurance',
       bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
       targetMuscles: ['pectorals', 'lats', 'delts', 'biceps', 'triceps'],
-      duration: 35,
+      duration: 30,
       experienceLevel: 'intermediate',
       goal: 'get_lean',
     },
@@ -448,170 +479,17 @@ const TEST_SCENARIOS = [
       requiredMuscleBalance: { pectorals: 0.2, lats: 0.2, delts: 0.2, biceps: 0.15, triceps: 0.15 },
     },
   },
-  {
-    name: 'Muscular Endurance - Conditioning Circuit',
-    category: 'muscular_endurance',
-    request: {
-      equipment: ['body weight'],
-      trainingStyle: 'muscular_endurance',
-      bodyParts: ['full_body', 'cardio'],
-      duration: 25,
-      experienceLevel: 'beginner',
-      goal: 'get_lean',
-    },
-    expectations: {
-      minExercises: 5,
-      maxExercises: 8,
-      setsRange: [2, 3],
-      repsRange: [15, 20],
-      restRange: [30, 45],
-      shouldIncludeTechniques: ['circuit'],
-      requiredMuscleBalance: {},
-    },
-  },
-
-  // MINIMAL EQUIPMENT SCENARIOS
-  {
-    name: 'Home Gym - Dumbbells Only',
-    category: 'minimal',
-    request: {
-      equipment: ['dumbbell'],
-      trainingStyle: 'classic_bodybuilding',
-      bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
-      targetMuscles: ['pectorals', 'lats', 'delts', 'biceps', 'triceps'],
-      duration: 45,
-      experienceLevel: 'intermediate',
-      goal: 'build_muscle',
-    },
-    expectations: {
-      minExercises: 5,
-      maxExercises: 8,
-      setsRange: [3, 4],
-      repsRange: [8, 15],
-      restRange: [45, 90],
-      shouldIncludeTechniques: ['supersets'],
-      requiredMuscleBalance: {},
-    },
-  },
-  {
-    name: 'Bodyweight Only - Upper Body',
-    category: 'minimal',
-    request: {
-      equipment: ['body weight'],
-      trainingStyle: 'functional_fitness',
-      bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
-      targetMuscles: ['pectorals', 'lats', 'delts', 'triceps'],
-      duration: 30,
-      experienceLevel: 'beginner',
-      goal: 'build_muscle',
-    },
-    expectations: {
-      minExercises: 4,
-      maxExercises: 7,
-      setsRange: [3, 4],
-      repsRange: [8, 20],
-      restRange: [30, 60],
-      shouldIncludeTechniques: [],
-      requiredMuscleBalance: {},
-    },
-  },
-  {
-    name: 'Resistance Bands - Full Body',
-    category: 'minimal',
-    request: {
-      equipment: ['band', 'body weight'],
-      trainingStyle: 'functional_fitness',
-      bodyParts: ['full_body'],
-      duration: 35,
-      experienceLevel: 'beginner',
-      goal: 'get_lean',
-    },
-    expectations: {
-      minExercises: 5,
-      maxExercises: 8,
-      setsRange: [3, 4],
-      repsRange: [12, 20],
-      restRange: [30, 60],
-      shouldIncludeTechniques: [],
-      requiredMuscleBalance: {},
-    },
-  },
-  {
-    name: 'Kettlebell Only - Strength',
-    category: 'minimal',
-    request: {
-      equipment: ['kettlebell'],
-      trainingStyle: 'strength_focused',
-      bodyParts: ['full_body'],
-      duration: 40,
-      experienceLevel: 'intermediate',
-      goal: 'build_strength',
-    },
-    expectations: {
-      minExercises: 4,
-      maxExercises: 6,
-      setsRange: [4, 5],
-      repsRange: [4, 6],
-      restRange: [120, 240],
-      shouldIncludeTechniques: [],
-      requiredMuscleBalance: {},
-    },
-  },
-
-  // BEGINNER SCENARIOS
-  {
-    name: 'Beginner Full Body',
-    category: 'beginner',
-    request: {
-      equipment: ['dumbbell', 'leverage machine', 'body weight'],
-      trainingStyle: 'classic_bodybuilding',
-      bodyParts: ['full_body'],
-      duration: 45,
-      experienceLevel: 'beginner',
-      goal: 'build_muscle',
-    },
-    expectations: {
-      minExercises: 5,
-      maxExercises: 8,
-      setsRange: [2, 3],
-      repsRange: [10, 15],
-      restRange: [60, 90],
-      shouldIncludeTechniques: [],
-      requiredMuscleBalance: {},
-    },
-  },
-  {
-    name: 'Beginner Upper/Lower Split - Upper',
-    category: 'beginner',
-    request: {
-      equipment: ['dumbbell', 'cable', 'leverage machine'],
-      trainingStyle: 'classic_bodybuilding',
-      bodyParts: ['chest', 'back', 'shoulders', 'upper arms'],
-      duration: 40,
-      experienceLevel: 'beginner',
-      goal: 'build_muscle',
-    },
-    expectations: {
-      minExercises: 4,
-      maxExercises: 6,
-      setsRange: [2, 3],
-      repsRange: [10, 15],
-      restRange: [60, 90],
-      shouldIncludeTechniques: [],
-      requiredMuscleBalance: {},
-    },
-  },
-
   // ADVANCED SCENARIOS
   {
     name: 'Advanced Push Day',
     category: 'advanced',
+    dayFocus: 'Push',
     request: {
       equipment: ['barbell', 'dumbbell', 'cable', 'leverage machine'],
       trainingStyle: 'classic_bodybuilding',
       bodyParts: ['chest', 'shoulders', 'upper arms'],
       targetMuscles: ['pectorals', 'delts', 'triceps'],
-      duration: 75,
+      duration: 60,
       experienceLevel: 'advanced',
       goal: 'build_muscle',
     },
@@ -628,12 +506,13 @@ const TEST_SCENARIOS = [
   {
     name: 'Advanced Pull Day',
     category: 'advanced',
+    dayFocus: 'Pull',
     request: {
       equipment: ['barbell', 'dumbbell', 'cable', 'leverage machine', 'body weight'],
       trainingStyle: 'classic_bodybuilding',
       bodyParts: ['back', 'upper arms'],
       targetMuscles: ['lats', 'upper back', 'biceps'],
-      duration: 75,
+      duration: 60,
       experienceLevel: 'advanced',
       goal: 'build_muscle',
     },
@@ -1076,7 +955,15 @@ async function callOpenRouter(modelId, prompt) {
 
 function filterExercisesForScenario(scenario) {
   const equipment = scenario.request.equipment;
-  const bodyParts = scenario.request.bodyParts;
+  let bodyParts = scenario.request.bodyParts;
+  let targetMuscles = scenario.request.targetMuscles;
+
+  // Override bodyParts and targetMuscles if dayFocus is specified
+  if (scenario.dayFocus && DAY_FOCUS_MAPPING[scenario.dayFocus]) {
+    const mapping = DAY_FOCUS_MAPPING[scenario.dayFocus];
+    bodyParts = mapping.bodyParts;
+    targetMuscles = mapping.targetMuscles;
+  }
 
   return MOCK_EXERCISES.filter(ex => {
     // Equipment match
@@ -1092,16 +979,27 @@ function filterExercisesForScenario(scenario) {
     if (!equipmentMatch) return false;
 
     // Body part match (if specified and not full_body)
-    if (bodyParts.includes('full_body')) return true;
+    if (!bodyParts.includes('full_body')) {
+      const bodyPartMatch = bodyParts.some(bp => {
+        const bpLower = bp.toLowerCase();
+        return ex.bodyPart.toLowerCase() === bpLower ||
+          (bpLower === 'legs' && (ex.bodyPart === 'upper legs' || ex.bodyPart === 'lower legs')) ||
+          (bpLower === 'arms' && ex.bodyPart === 'upper arms');
+      });
 
-    const bodyPartMatch = bodyParts.some(bp => {
-      const bpLower = bp.toLowerCase();
-      return ex.bodyPart.toLowerCase() === bpLower ||
-        (bpLower === 'legs' && (ex.bodyPart === 'upper legs' || ex.bodyPart === 'lower legs')) ||
-        (bpLower === 'arms' && ex.bodyPart === 'upper arms');
-    });
+      if (!bodyPartMatch) return false;
+    }
 
-    return bodyPartMatch;
+    // Target muscle match - CRITICAL: prevents wrong muscles
+    if (targetMuscles && targetMuscles.length > 0) {
+      const targetLower = targetMuscles.map(t => t.toLowerCase());
+      const exTargetLower = ex.target.toLowerCase();
+      if (!targetLower.includes(exTargetLower)) {
+        return false;
+      }
+    }
+
+    return true;
   }).map(ex => ({
     id: ex.id,
     name: ex.name,

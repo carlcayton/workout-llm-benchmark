@@ -1,0 +1,315 @@
+{
+  "modelId": "anthropic/claude-sonnet-4.5",
+  "modelName": "Claude Sonnet 4.5",
+  "tier": "premium",
+  "timestamp": "2026-01-02T01:51:23.657Z",
+  "totalScenarios": 1,
+  "scenarios": [
+    {
+      "name": "Bro Split - Bodybuilding (Chest)",
+      "split": "bro_split",
+      "dayFocus": "Chest",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Chest Press",
+        "Pec Deck"
+      ],
+      "success": true,
+      "latency": 57299,
+      "exerciseCount": 8,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "10",
+      "avgRest": 67,
+      "error": null,
+      "workout": {
+        "title": "Generated Workout",
+        "description": "A balanced workout targeting your selected muscle groups.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "1261",
+                "exerciseId": "1261",
+                "name": "cable decline press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1261.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the cable machine to a decline position.",
+                  "Sit on the decline bench facing the cable machine.",
+                  "Grasp the handles with an overhand grip and position them at chest level.",
+                  "Keep your feet flat on the ground and your back firmly against the bench.",
+                  "Exhale and push the handles away from your body, extending your arms fully.",
+                  "Pause for a moment at the end of the movement, squeezing your chest muscles.",
+                  "Inhale and slowly return the handles back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable decline press is a chest exercise performed on a cable machine with a decline bench. It targets the lower portion of the pectoral muscles and also engages the triceps and shoulders. The movement involves pressing the handles away from the body in a decline position, providing constant tension through the range of motion.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1281",
+                "exerciseId": "1281",
+                "name": "dumbbell incline one arm press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1281.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Sit on an incline bench with a dumbbell in one hand, resting on your thigh.",
+                  "Lie back on the bench and position the dumbbell at shoulder level, palm facing forward.",
+                  "Press the dumbbell upward and slightly inward, extending your arm fully.",
+                  "Pause for a moment at the top, then slowly lower the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch to the other arm."
+                ],
+                "description": "The dumbbell incline one arm press is a unilateral chest exercise performed on an incline bench, targeting the upper pectorals while also engaging the shoulders and triceps. It requires balance and coordination due to the single-arm movement.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0155",
+                "exerciseId": "0155",
+                "name": "cable cross-over variation",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0155.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the cable pulleys to chest height.",
+                  "Stand in the center of the cable machine with one foot in front of the other.",
+                  "Grasp the handles with your palms facing down and your arms extended out to the sides.",
+                  "Take a step forward, keeping your arms slightly bent.",
+                  "With a slight bend in your elbows, bring your hands together in front of your chest.",
+                  "Pause for a moment, then slowly return your arms back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable cross-over variation is a chest exercise performed using a cable machine. It targets the pectoral muscles and also engages the deltoids and triceps. The movement involves bringing the handles together in front of the chest while maintaining a slight bend in the elbows.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0302",
+                "exerciseId": "0302",
+                "name": "dumbbell decline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0302.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Lie on a decline bench with your feet secured and your head lower than your hips.",
+                  "Hold a dumbbell in each hand with your palms facing each other and your arms extended above your chest.",
+                  "Lower the dumbbells out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "Pause for a moment, then squeeze your chest muscles to bring the dumbbells back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell decline fly is a chest exercise performed on a decline bench, targeting the lower pectoral muscles. It involves lowering dumbbells out to the sides in a wide arc and then bringing them back together, emphasizing chest muscle stretch and contraction.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0596",
+                "exerciseId": "0596",
+                "name": "lever seated fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0596.gif",
+                "target": "pectorals",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the seat height and position yourself on the machine with your back against the pad.",
+                  "Grasp the handles with a pronated grip and keep your elbows slightly bent.",
+                  "Exhale and push the handles forward, bringing them together in front of your chest.",
+                  "Pause for a moment, squeezing your chest muscles.",
+                  "Inhale and slowly return to the starting position, allowing your chest muscles to stretch.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever seated fly is a machine-based exercise targeting the pectoral muscles, performed by bringing the handles together in front of the chest while seated.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "trapezius"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0316",
+                "exerciseId": "0316",
+                "name": "dumbbell incline breeding",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0316.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Set up an incline bench at a 45-degree angle.",
+                  "Sit on the bench with your back against the pad and feet flat on the ground.",
+                  "Hold a dumbbell in each hand with an overhand grip, palms facing forward.",
+                  "Start with your arms fully extended, perpendicular to the ground.",
+                  "Lower the dumbbells slowly to the sides of your chest, keeping your elbows at a 90-degree angle.",
+                  "Pause for a moment at the bottom, then push the dumbbells back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell incline breeding (likely a typo for 'dumbbell incline bench press' or 'dumbbell incline fly') is a chest exercise performed on an incline bench using dumbbells. It targets the upper chest (pectorals) and also works the shoulders and triceps.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0307",
+                "exerciseId": "0307",
+                "name": "dumbbell decline twist fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0307.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Lie down on a decline bench with your head lower than your hips.",
+                  "Hold a dumbbell in each hand with your palms facing each other and your arms extended straight up over your chest.",
+                  "Lower the dumbbells out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "As you lower the dumbbells, twist your wrists so that your palms face forward at the bottom of the movement.",
+                  "Reverse the motion and bring the dumbbells back up to the starting position, squeezing your chest muscles at the top.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell decline twist fly is a chest exercise performed on a decline bench, targeting the pectoral muscles while also engaging the shoulders and triceps. The movement involves lowering dumbbells in a wide arc with a twisting motion, increasing the stretch and contraction of the chest.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0331",
+                "exerciseId": "0331",
+                "name": "dumbbell incline twisted flyes",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0331.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Set an incline bench to a 45-degree angle and sit on it with a dumbbell in each hand, palms facing each other.",
+                  "Lie back on the bench and press the dumbbells up to the starting position, directly above your chest, with your arms extended.",
+                  "Lower the dumbbells out to the sides in a wide arc until you feel a stretch in your chest.",
+                  "As you lower the dumbbells, rotate your wrists so that your palms face forward at the bottom of the movement.",
+                  "Reverse the motion and bring the dumbbells back up to the starting position, squeezing your chest muscles together at the top.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell incline twisted flye is a chest exercise performed on an incline bench, targeting the upper pectorals with an added wrist rotation for increased muscle activation.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [
+          "Focus on form",
+          "Control the eccentric phase"
+        ],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "1261",
+              "name": "cable decline press",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      },
+      "meta": {
+        "usedFallback": true,
+        "fallbackReason": null,
+        "exercisesAvailable": 82,
+        "appliedStyles": [
+          "BODYBUILD"
+        ],
+        "isCircuitMode": false,
+        "metaPlanAttempts": 0,
+        "exerciseSelectionAttempts": 3,
+        "paramAssignmentAttempts": 3,
+        "primaryExerciseCount": 82,
+        "supplementaryExerciseCount": 0,
+        "equipmentMatchRate": 100,
+        "equipmentViolations": [],
+        "primaryEquipmentViolations": [],
+        "deprecationWarnings": [
+          "experienceLevel as string is deprecated. Use a number from 1-10."
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "successCount": 1,
+    "parseErrorCount": 0,
+    "apiErrorCount": 0,
+    "totalLatency": 57299,
+    "avgLatency": 57299,
+    "avgExerciseCount": 8,
+    "avgEquipmentMatchRate": 100,
+    "avgSets": 4,
+    "avgRest": 67,
+    "repsCounts": {
+      "10": 1
+    },
+    "avgReps": "10",
+    "successRate": 100
+  }
+}

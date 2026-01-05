@@ -1,0 +1,297 @@
+{
+  "modelId": "anthropic/claude-sonnet-4.5",
+  "modelName": "Claude Sonnet 4.5",
+  "tier": "premium",
+  "timestamp": "2026-01-02T00:25:28.907Z",
+  "totalScenarios": 1,
+  "scenarios": [
+    {
+      "name": "Bro Split - Bodybuilding (Chest)",
+      "split": "bro_split",
+      "dayFocus": "Chest",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Chest Press",
+        "Pec Deck"
+      ],
+      "success": true,
+      "latency": 59596,
+      "exerciseCount": 8,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "10",
+      "avgRest": 67,
+      "error": null,
+      "workout": {
+        "title": "Generated Workout",
+        "description": "A balanced workout targeting your selected muscle groups.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0757",
+                "name": "smith incline bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0757.gif",
+                "target": "pectorals",
+                "equipment": "smith machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "exerciseId": "0757",
+                "instructions": [
+                  "Adjust the bench to a 30-45 degree incline.",
+                  "Sit on the bench with your back flat against the pad and feet firmly on the ground.",
+                  "Grasp the barbell with an overhand grip slightly wider than shoulder-width apart.",
+                  "Unrack the barbell and lower it slowly towards your upper chest, keeping your elbows slightly tucked in.",
+                  "Pause for a moment at the bottom, then push the barbell back up to the starting position, fully extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The smith incline bench press is a chest exercise performed on a smith machine with the bench set at a 30-45 degree incline. It primarily targets the upper pectorals, with secondary emphasis on the shoulders and triceps. The smith machine provides stability, making it accessible for those with less experience, but still requires proper form and control.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0025",
+                "name": "barbell bench press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0025.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "exerciseId": "0025",
+                "instructions": [
+                  "Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
+                  "Grasp the barbell with an overhand grip slightly wider than shoulder-width apart.",
+                  "Lift the barbell off the rack and hold it directly above your chest with your arms fully extended.",
+                  "Lower the barbell slowly towards your chest, keeping your elbows tucked in.",
+                  "Pause for a moment when the barbell touches your chest.",
+                  "Push the barbell back up to the starting position by extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell bench press is a classic compound exercise that primarily targets the pectoral muscles, while also engaging the triceps and shoulders. It is performed by lying on a bench and pressing a barbell up and down in a controlled manner.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0171",
+                "name": "cable incline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0171.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "exerciseId": "0171",
+                "instructions": [
+                  "Adjust the cable machine to a low position and attach the handles.",
+                  "Sit on an incline bench with your back against the pad and feet flat on the floor.",
+                  "Grasp the handles with an overhand grip and extend your arms straight out in front of you.",
+                  "Keeping a slight bend in your elbows, open your arms out to the sides in a controlled motion.",
+                  "Pause for a moment at the fully extended position, then slowly return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable incline fly is an isolation exercise targeting the upper chest (pectorals) using a cable machine. It involves opening and closing the arms in a fly motion while lying on an incline bench, providing constant tension throughout the movement.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0040",
+                "name": "barbell front raise and pullover",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0040.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "exerciseId": "0040",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and hold a barbell with an overhand grip, palms facing down.",
+                  "Keep your arms straight and raise the barbell in front of you until it reaches shoulder height.",
+                  "Pause for a moment at the top, then slowly lower the barbell back down to the starting position.",
+                  "Next, lower the barbell behind your head, keeping your arms straight.",
+                  "Pause for a moment at the bottom, then raise the barbell back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell front raise and pullover is a compound exercise targeting the pectorals, with secondary emphasis on the deltoids and triceps. It involves raising a barbell in front of the body and then performing a pullover motion behind the head, requiring strength, coordination, and shoulder mobility.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0227",
+                "name": "cable standing fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0227.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "exerciseId": "0227",
+                "instructions": [
+                  "Attach the handles to the cables at chest height.",
+                  "Stand with your feet shoulder-width apart, facing away from the cable machine.",
+                  "Grasp the handles with an overhand grip, palms facing forward.",
+                  "Step forward slightly to create tension in the cables.",
+                  "Keep your core engaged and your back straight throughout the exercise.",
+                  "With a slight bend in your elbows, slowly bring your arms forward and together in front of your chest.",
+                  "Squeeze your chest muscles at the peak of the movement.",
+                  "Slowly reverse the movement, returning your arms to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable standing fly is a chest isolation exercise performed using a cable machine. It targets the pectoral muscles and also engages the deltoids and triceps. The movement requires good form, balance, and control to execute safely and effectively.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1263",
+                "name": "cable one arm fly on exercise ball",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1263.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "exerciseId": "1263",
+                "instructions": [
+                  "Sit on an exercise ball with your feet flat on the ground and your back straight.",
+                  "Hold a cable handle in one hand and extend your arm out to the side, parallel to the ground.",
+                  "Keep your elbow slightly bent and your palm facing forward.",
+                  "Slowly bring your arm across your body, squeezing your chest muscles.",
+                  "Pause for a moment at the end of the movement, then slowly return to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch sides."
+                ],
+                "description": "The cable one arm fly on exercise ball is a unilateral chest exercise performed while seated on an exercise ball, which adds a balance component to the traditional cable fly movement. It targets the pectorals while also engaging the deltoids and triceps, and requires core stability to maintain posture on the ball.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0375",
+                "name": "dumbbell pullover",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0375.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "exerciseId": "0375",
+                "instructions": [
+                  "Lie flat on a bench with your head at one end and your feet on the floor.",
+                  "Hold a dumbbell with both hands and extend your arms straight above your chest.",
+                  "Keeping a slight bend in your elbows, slowly lower the dumbbell behind your head until you feel a stretch in your chest and shoulders.",
+                  "Pause for a moment, then raise the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell pullover is a chest exercise performed lying on a bench, where you lower a dumbbell behind your head and then bring it back over your chest, targeting the pectorals and also engaging the lats and triceps.",
+                "secondaryMuscles": [
+                  "latissimus dorsi",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1285",
+                "name": "dumbbell one arm bench fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1285.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "exerciseId": "1285",
+                "instructions": [
+                  "Sit on a flat bench with a dumbbell in one hand, resting it on top of your thigh.",
+                  "Lie back on the bench, keeping the dumbbell pressed against your thigh.",
+                  "Using your free hand, help lift the dumbbell up to the starting position.",
+                  "Hold the dumbbell directly above your shoulder with your arm extended and palm facing inward.",
+                  "Lower the dumbbell out to the side in a wide arc, keeping a slight bend in your elbow.",
+                  "Pause when your arm is parallel to the ground, then reverse the movement and bring the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch arms and repeat."
+                ],
+                "description": "The dumbbell one arm bench fly is a unilateral chest exercise that targets the pectoral muscles and also engages the shoulders. It requires balance and control to stabilize the weight with one arm while lying on a bench.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [
+          "Focus on form",
+          "Control the eccentric phase"
+        ],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0757",
+              "name": "smith incline bench press",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      }
+    }
+  ],
+  "summary": {
+    "successCount": 1,
+    "parseErrorCount": 0,
+    "apiErrorCount": 0,
+    "totalLatency": 59596,
+    "avgLatency": 59596,
+    "avgExerciseCount": 8,
+    "avgEquipmentMatchRate": 100,
+    "avgSets": 4,
+    "avgRest": 67,
+    "repsCounts": {
+      "10": 1
+    },
+    "avgReps": "10",
+    "successRate": 100
+  }
+}
