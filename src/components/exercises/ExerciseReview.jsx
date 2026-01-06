@@ -286,7 +286,6 @@ export function ExerciseReview() {
   const derivedStats = stats
     ? {
         total: stats.total,
-        flagged: 0,
         core: stats.core ?? 0,
         always: stats.always,
         catalog: stats.catalog,
@@ -294,7 +293,6 @@ export function ExerciseReview() {
       }
     : {
         total: 0,
-        flagged: 0,
         core: 0,
         always: 0,
         catalog: 0,
@@ -403,10 +401,9 @@ export function ExerciseReview() {
       </Card>
 
       {/* Stats Dashboard */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
         {[
           { label: 'Total', value: derivedStats.total, tier: null },
-          { label: 'Flagged', value: derivedStats.flagged, tier: 'flagged' },
           { label: 'Core', value: derivedStats.core, tier: 'core' },
           { label: 'Always', value: derivedStats.always, tier: 'always' },
           { label: 'Catalog', value: derivedStats.catalog, tier: 'catalog' },
