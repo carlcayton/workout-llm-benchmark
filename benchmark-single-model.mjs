@@ -8,7 +8,7 @@
  * This tests the complete production stack including:
  * - Edge function validation and normalization
  * - Exercise database queries
- * - 3-call LLM chain orchestrator
+ * - 2-call LLM chain orchestrator (Exercise Selector + Param Assigner)
  * - Response enrichment with GIF URLs
  *
  * Usage:
@@ -263,6 +263,7 @@ async function runSingleModelBenchmark() {
       name: scenario.name,
       split: scenario.split || null,
       dayFocus: scenario.dayFocus || null,
+      duration: scenario.request.duration || 60,  // Include duration for UI filtering
       trainingStyles: scenario.request.trainingStyles || null,
       category: scenario.category,
       trainingStyle: scenario.request.trainingStyle,

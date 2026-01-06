@@ -11,6 +11,7 @@ export function LLMBenchmark() {
   const [selectedScenarioIndex, setSelectedScenarioIndex] = useState(0)
   const [selectedSplit, setSelectedSplit] = useState(null)
   const [selectedDuration, setSelectedDuration] = useState(null)
+  const [selectedTier, setSelectedTier] = useState(null)
   const chipContainerRef = useRef(null)
 
   useEffect(() => {
@@ -52,10 +53,12 @@ export function LLMBenchmark() {
   const { timestamp, modelStats, scenarios } = data
 
   // Sort models by success rate desc, then latency asc
-  const sortedStats = [...modelStats].sort((a, b) => {
-    if (b.successRate !== a.successRate) return b.successRate - a.successRate
-    return a.avgLatency - b.avgLatency
-  })
+  const sortedStats = [...modelStats]
+    .filter(s => selectedTier === null || s.tier === selectedTier)
+    .sort((a, b) => {
+      if (b.successRate !== a.successRate) return b.successRate - a.successRate
+      return a.avgLatency - b.avgLatency
+    })
 
   // Group scenarios by split type
   const splitGroups = scenarios.reduce((acc, scenario, index) => {
@@ -81,6 +84,9 @@ export function LLMBenchmark() {
   const durationTypes = Object.keys(durationGroups)
     .map(d => parseInt(d, 10))
     .sort((a, b) => a - b)
+
+  // Extract unique tiers from modelStats
+  const tierTypes = [...new Set(modelStats.map(s => s.tier).filter(Boolean))]
 
   // Filter scenarios by selected split AND duration (null = show all)
   const filteredScenarios = scenarios.filter(s => {
@@ -163,6 +169,34 @@ export function LLMBenchmark() {
             <Layers className="w-5 h-5" />
             Model Performance Summary
           </CardTitle>
+          {/* Tier Filter Chips */}
+          <div className="flex gap-2 mt-4 flex-wrap">
+            <button
+              onClick={() => setSelectedTier(null)}
+              className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${
+                selectedTier === null
+                  ? 'bg-gray-900 text-white border-gray-900'
+                  : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-100'
+              }`}
+            >
+              All Tiers
+            </button>
+            {tierTypes.map(tier => (
+              <button
+                key={tier}
+                onClick={() => setSelectedTier(tier)}
+                className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${
+                  selectedTier === tier
+                    ? 'bg-gray-900 text-white border-gray-900'
+                    : tier === 'premium'
+                      ? 'bg-purple-100 text-purple-700 border-purple-300 hover:bg-purple-200'
+                      : 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200'
+                }`}
+              >
+                {tier.charAt(0).toUpperCase() + tier.slice(1)} ({modelStats.filter(s => s.tier === tier).length})
+              </button>
+            ))}
+          </div>
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">
@@ -241,7 +275,7 @@ export function LLMBenchmark() {
             <CardTitle>Scenario Results</CardTitle>
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-500">
-                {selectedScenarioIndex + 1} of {scenarios.length}
+                {filteredIndex + 1} of {filteredScenarios.length}
               </span>
               <Button
                 variant="outline"
@@ -332,10 +366,8 @@ export function LLMBenchmark() {
               className="flex gap-2 overflow-x-auto scrollbar-hide px-8 py-2 scroll-smooth"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
-              {(selectedSplit ? filteredScenarios : scenarios).map((scenario, idx) => {
-                const actualIndex = selectedSplit
-                  ? scenarios.findIndex(s => s.name === scenario.name)
-                  : idx
+              {filteredScenarios.map((scenario, idx) => {
+                const actualIndex = scenarios.findIndex(s => s.name === scenario.name)
                 const isActive = actualIndex === selectedScenarioIndex
 
                 return (

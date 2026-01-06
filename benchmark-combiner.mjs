@@ -23,6 +23,10 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const RESULTS_DIR = path.join(__dirname, 'benchmark-results');
 
+// Supabase configuration
+const SUPABASE_URL = process.env.SUPABASE_URL || 'https://ivfllbccljoyaayftecd.supabase.co';
+const GIF_BASE_URL = `${SUPABASE_URL}/storage/v1/object/public/exercise-gifs`;
+
 // Training style params for markdown report reference
 const TRAINING_STYLE_PARAMS = {
   classic_bodybuilding: {
@@ -120,7 +124,65 @@ function parseModelFile(filePath) {
 // RESULTS COMBINATION
 // ============================================================================
 
-function combineResults(modelFiles) {
+// Scenario metadata to derive split and duration from scenario names
+const SCENARIO_METADATA = {
+  'Classic Bodybuilding - Chest & Triceps': { split: 'bro_split', duration: 60, dayFocus: 'Chest' },
+  'Classic Bodybuilding - Back & Biceps': { split: 'bro_split', duration: 60, dayFocus: 'Back' },
+  'Bodybuilding - Shoulder Focus': { split: 'bro_split', duration: 60, dayFocus: 'Shoulders' },
+  'High Volume Leg Day': { split: 'bro_split', duration: 75, dayFocus: 'Legs' },
+  'Strength Focused - Upper Body': { split: 'upper_lower', duration: 60, dayFocus: 'Upper' },
+  'Strength Focused - Lower Body': { split: 'upper_lower', duration: 60, dayFocus: 'Lower' },
+  'PPL - Push Day': { split: 'ppl', duration: 60, dayFocus: 'Push' },
+  'PPL - Pull Day': { split: 'ppl', duration: 60, dayFocus: 'Pull' },
+  'PPL - Legs': { split: 'ppl', duration: 60, dayFocus: 'Legs' },
+  'Full Body - Strength': { split: 'full_body', duration: 45, dayFocus: 'Full Body' },
+  'Full Body - Hypertrophy': { split: 'full_body', duration: 60, dayFocus: 'Full Body' },
+  'Arnold Split - Chest & Back': { split: 'arnold_split', duration: 75, dayFocus: 'Chest/Back' },
+  'Arnold Split - Shoulders & Arms': { split: 'arnold_split', duration: 60, dayFocus: 'Shoulders/Arms' },
+};
+
+// ============================================================================
+// EXERCISE NAME HELPERS
+// ============================================================================
+
+/**
+ * Fetch exercise names from Supabase
+ */
+async function fetchExerciseNames() {
+  try {
+    const ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2ZmxsYmNjbGpveWFheWZ0ZWNkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYxMTkwMTQsImV4cCI6MjA4MTY5NTAxNH0.714kFWsFFKwVAywLY5NOyZz2_eMoi7-Js8JGCwtpycs';
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/exercises?select=id,name`, {
+      headers: {
+        'apikey': ANON_KEY,
+        'Authorization': `Bearer ${ANON_KEY}`,
+      },
+    });
+
+    if (!response.ok) {
+      console.warn(`Warning: Failed to fetch exercise names from Supabase: ${response.statusText}`);
+      return {};
+    }
+
+    const exercises = await response.json();
+    const nameMap = {};
+    for (const ex of exercises) {
+      nameMap[ex.id] = ex.name;
+    }
+    return nameMap;
+  } catch (error) {
+    console.warn(`Warning: Error fetching exercise names: ${error.message}`);
+    return {};
+  }
+}
+
+/**
+ * Get exercise name from ID using the fetched map
+ */
+function getExerciseName(exerciseId, exerciseNames) {
+  return exerciseNames[exerciseId] || `Exercise ${exerciseId}`;
+}
+
+function combineResults(modelFiles, exerciseNames) {
   const parsedFiles = [];
   const allModels = [];
   const modelSummaries = {};
@@ -166,13 +228,23 @@ function combineResults(modelFiles) {
       const scenarioName = scenarioResult.name;
 
       if (!scenarioMap.has(scenarioName)) {
+        // Extract scenario metadata from the request object if available
+        const req = scenarioResult.request || {};
+        const meta = SCENARIO_METADATA[scenarioName] || {};
         scenarioMap.set(scenarioName, {
           name: scenarioResult.name,
           category: scenarioResult.category,
+          // Include fields expected by LLMBenchmark.jsx
+          split: scenarioResult.split || req.split || meta.split || 'other',
+          duration: scenarioResult.duration || req.duration || meta.duration || 60,
+          equipment: scenarioResult.equipment || req.equipment || [],
+          dayFocus: scenarioResult.dayFocus || req.dayFocus || meta.dayFocus || '',
+          trainingStyles: scenarioResult.trainingStyles || req.trainingStyles || [scenarioResult.category || 'bodybuilding'],
+          // Keep original fields for reference
           request: scenarioResult.request,
           expectations: scenarioResult.expectations,
           exercisesAvailable: scenarioResult.exercisesAvailable,
-          modelResults: [],
+          results: [], // LLMBenchmark.jsx expects 'results', not 'modelResults'
         });
       }
 
@@ -189,15 +261,42 @@ function combineResults(modelFiles) {
         avgRest: scenarioResult.avgRest,
       };
 
-      scenario.modelResults.push({
-        model,
-        success: scenarioResult.success,
+      // Flatten the result object for LLMBenchmark.jsx consumption
+      // The component expects flat fields, not nested structures
+      const workout = scenarioResult.parsedWorkout || scenarioResult.workout;
+      // Flatten exercises from ALL sections, not just the first one
+      // Enrich with exercise names and GIF URLs
+      const exercises = (workout?.sections?.flatMap(s => s?.exercises || []) || []).map(e => ({
+        id: e.id,
+        name: getExerciseName(e.id, exerciseNames),
+        sets: e.sets,
+        reps: e.reps,
+        restSeconds: e.restSeconds || e.rest || 60,
+        notes: e.notes || null,
+        gifUrl: `${GIF_BASE_URL}/${e.id}.gif`,
+      }));
+
+      scenario.results.push({
+        // Flat model identifier
+        modelId: model.id,
+        model: model.name,
+        // Convert boolean success to status string
+        status: scenarioResult.success ? 'success' : 'error',
         latency: scenarioResult.latency,
+        // Flat metrics fields
+        exerciseCount: metrics.exerciseCount,
+        equipmentMatch: metrics.equipmentMatchRate || 0,
+        avgSets: metrics.avgSets,
+        avgReps: metrics.avgReps,
+        avgRest: metrics.avgRest,
+        // Flat exercises array (extracted from sections)
+        exercises,
+        error: scenarioResult.error || scenarioResult.parseError,
+        // Keep original nested data for backwards compatibility / markdown report
+        _model: model,
         parsedWorkout: scenarioResult.parsedWorkout,
-        workout: scenarioResult.workout, // Old format support
+        workout: scenarioResult.workout,
         metrics,
-        error: scenarioResult.error,
-        parseError: scenarioResult.parseError,
         rawResponse: scenarioResult.rawResponse,
       });
     }
@@ -212,6 +311,20 @@ function combineResults(modelFiles) {
     .filter(Boolean)
     .sort();
 
+  // Transform modelSummaries object to modelStats array for LLMBenchmark.jsx
+  const modelStats = Object.entries(modelSummaries).map(([modelId, summary]) => ({
+    modelId,
+    modelName: summary.name,
+    tier: summary.tier || 'unknown',
+    successRate: summary.successRate,
+    avgLatency: summary.avgLatency || 0,
+    avgExerciseCount: summary.avgExerciseCount || 0,
+    avgEquipmentMatchRate: summary.avgEquipmentMatchRate || 0,
+    successCount: summary.successCount || 0,
+    parseErrorCount: summary.parseErrorCount || 0,
+    totalRuns: summary.totalTests,
+  }));
+
   const combined = {
     timestamp: new Date().toISOString(),
     version: '2.1-parallel',
@@ -220,6 +333,7 @@ function combineResults(modelFiles) {
     totalScenarios: scenarios.length,
     models: allModels,
     modelSummaries,
+    modelStats,
     scenarios,
     metadata: {
       combinedAt: new Date().toISOString(),
@@ -404,20 +518,22 @@ function generateMarkdownReport(results) {
       md += `| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |\n`;
       md += `|-------|--------|---------|-----------|-------------|----------|----------|----------|\n`;
 
-      for (const result of scenario.modelResults) {
+      for (const result of scenario.results) {
         const hasWorkout = result.parsedWorkout || result.workout;
-        const status = result.success && hasWorkout ? 'OK' :
-                       result.success ? 'Parse Err' : 'API Err';
+        const status = result.status === 'success' && hasWorkout ? 'OK' :
+                       result.status === 'success' ? 'Parse Err' : 'API Err';
         const latency = result.latency ? `${result.latency}ms` : '-';
-        const exercises = result.metrics?.exerciseCount || '-';
-        const equipMatch = result.metrics?.equipmentMatchRate !== undefined ?
-                          `${result.metrics.equipmentMatchRate}%` : '-';
-        const avgSets = result.metrics?.avgSets || '-';
-        const avgReps = result.metrics?.avgReps || '-';
-        const avgRest = result.metrics?.avgRest !== undefined ?
-                       `${result.metrics.avgRest}s` : '-';
+        const exercises = result.exerciseCount || result.metrics?.exerciseCount || '-';
+        const equipMatch = result.equipmentMatch !== undefined ?
+                          `${result.equipmentMatch}%` : (result.metrics?.equipmentMatchRate !== undefined ?
+                          `${result.metrics.equipmentMatchRate}%` : '-');
+        const avgSets = result.avgSets || result.metrics?.avgSets || '-';
+        const avgReps = result.avgReps || result.metrics?.avgReps || '-';
+        const avgRest = result.avgRest !== undefined ?
+                       `${result.avgRest}s` : (result.metrics?.avgRest !== undefined ?
+                       `${result.metrics.avgRest}s` : '-');
 
-        md += `| ${result.model.name} | ${status} | ${latency} | ${exercises} | ${equipMatch} | ${avgSets} | ${avgReps} | ${avgRest} |\n`;
+        md += `| ${result.model} | ${status} | ${latency} | ${exercises} | ${equipMatch} | ${avgSets} | ${avgReps} | ${avgRest} |\n`;
       }
 
       md += `\n`;
@@ -538,7 +654,7 @@ function cleanupModelFiles(modelFiles) {
 // MAIN
 // ============================================================================
 
-function main() {
+async function main() {
   const args = process.argv.slice(2);
   const shouldCleanup = args.includes('--cleanup');
 
@@ -549,8 +665,13 @@ function main() {
   const modelFiles = discoverModelFiles();
   console.log(`Found ${modelFiles.length} model result files.`);
 
+  // Fetch exercise names from Supabase
+  console.log('\nFetching exercise names from Supabase...');
+  const exerciseNames = await fetchExerciseNames();
+  console.log(`Loaded ${Object.keys(exerciseNames).length} exercise names.`);
+
   // Combine results
-  const combined = combineResults(modelFiles);
+  const combined = combineResults(modelFiles, exerciseNames);
 
   // Create output directory if needed
   if (!fs.existsSync(RESULTS_DIR)) {

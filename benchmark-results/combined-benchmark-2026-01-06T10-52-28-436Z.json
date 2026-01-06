@@ -1,0 +1,445 @@
+{
+  "timestamp": "2026-01-06T10:52:28.435Z",
+  "version": "2.0-quick-benchmark",
+  "models": [
+    {
+      "id": "google/gemini-3-flash-preview",
+      "name": "Gemini 3 Flash",
+      "tier": "fast"
+    },
+    {
+      "id": "anthropic/claude-haiku-4.5",
+      "name": "Claude 4.5 Haiku",
+      "tier": "fast"
+    }
+  ],
+  "modelStats": [
+    {
+      "modelId": "google/gemini-3-flash-preview",
+      "modelName": "Gemini 3 Flash",
+      "tier": "fast",
+      "successRate": 100,
+      "avgLatency": 1260,
+      "avgExerciseCount": 6,
+      "avgScore": 84,
+      "avgEquipmentMatchRate": 100,
+      "avgEquipmentUtilization": 90,
+      "avgDiversity": 0,
+      "avgUniqueness": 0
+    },
+    {
+      "modelId": "anthropic/claude-haiku-4.5",
+      "modelName": "Claude 4.5 Haiku",
+      "tier": "fast",
+      "successRate": 100,
+      "avgLatency": 1409,
+      "avgExerciseCount": 6,
+      "avgScore": 76,
+      "avgEquipmentMatchRate": 100,
+      "avgEquipmentUtilization": 90,
+      "avgDiversity": 0,
+      "avgUniqueness": 0
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Bodybuilding - Chest & Triceps",
+      "category": "bodybuilding",
+      "split": "bro_split",
+      "request": {
+        "equipment": [
+          "dumbbell",
+          "barbell",
+          "cable",
+          "leverage machine"
+        ],
+        "trainingStyle": "BODYBUILD",
+        "bodyParts": [
+          "chest",
+          "upper arms"
+        ],
+        "targetMuscles": [
+          "pectorals",
+          "triceps"
+        ],
+        "duration": 60,
+        "experienceLevel": 5,
+        "goal": "build_muscle"
+      },
+      "expectations": {
+        "minExercises": 4,
+        "maxExercises": 8,
+        "setsRange": [
+          3,
+          4
+        ],
+        "repsRange": [
+          8,
+          12
+        ],
+        "restRange": [
+          60,
+          90
+        ]
+      },
+      "exercisesAvailable": 20,
+      "results": [
+        {
+          "modelId": "google/gemini-3-flash-preview",
+          "model": "Gemini 3 Flash",
+          "status": "success",
+          "latency": 1631,
+          "exerciseCount": 6,
+          "equipmentMatch": 100,
+          "score": 100,
+          "avgSets": "3.0",
+          "avgReps": "8.0",
+          "avgRest": 80,
+          "exercises": [],
+          "error": null,
+          "equipmentUtilization": 90,
+          "diversityIndex": 0,
+          "uniquenessScore": 100
+        },
+        {
+          "modelId": "anthropic/claude-haiku-4.5",
+          "model": "Claude 4.5 Haiku",
+          "status": "success",
+          "latency": 1656,
+          "exerciseCount": 6,
+          "equipmentMatch": 100,
+          "score": 100,
+          "avgSets": "3.2",
+          "avgReps": "9.0",
+          "avgRest": 70,
+          "exercises": [],
+          "error": null,
+          "equipmentUtilization": 90,
+          "diversityIndex": 0,
+          "uniquenessScore": 100
+        }
+      ]
+    },
+    {
+      "name": "Strength - Lower Body",
+      "category": "strength",
+      "split": "upper_lower",
+      "request": {
+        "equipment": [
+          "dumbbell",
+          "barbell",
+          "cable",
+          "leverage machine"
+        ],
+        "trainingStyle": "STRENGTH",
+        "bodyParts": [
+          "upper legs"
+        ],
+        "targetMuscles": [
+          "quads",
+          "hamstrings",
+          "glutes"
+        ],
+        "duration": 60,
+        "experienceLevel": 5,
+        "goal": "build_muscle"
+      },
+      "expectations": {
+        "minExercises": 4,
+        "maxExercises": 8,
+        "setsRange": [
+          3,
+          4
+        ],
+        "repsRange": [
+          8,
+          12
+        ],
+        "restRange": [
+          60,
+          90
+        ]
+      },
+      "exercisesAvailable": 20,
+      "results": [
+        {
+          "modelId": "google/gemini-3-flash-preview",
+          "model": "Gemini 3 Flash",
+          "status": "success",
+          "latency": 1040,
+          "exerciseCount": 5,
+          "equipmentMatch": 100,
+          "score": 60,
+          "avgSets": "3.8",
+          "avgReps": "7.0",
+          "avgRest": 120,
+          "exercises": [],
+          "error": null,
+          "equipmentUtilization": 90,
+          "diversityIndex": 0,
+          "uniquenessScore": 100
+        },
+        {
+          "modelId": "anthropic/claude-haiku-4.5",
+          "model": "Claude 4.5 Haiku",
+          "status": "success",
+          "latency": 1250,
+          "exerciseCount": 5,
+          "equipmentMatch": 100,
+          "score": 60,
+          "avgSets": "3.2",
+          "avgReps": "8.4",
+          "avgRest": 120,
+          "exercises": [],
+          "error": null,
+          "equipmentUtilization": 90,
+          "diversityIndex": 0,
+          "uniquenessScore": 100
+        }
+      ]
+    },
+    {
+      "name": "HIT - Upper Body",
+      "category": "hit",
+      "split": "full_body",
+      "request": {
+        "equipment": [
+          "dumbbell",
+          "barbell",
+          "cable",
+          "leverage machine"
+        ],
+        "trainingStyle": "HIT",
+        "bodyParts": [
+          "chest",
+          "back",
+          "upper arms"
+        ],
+        "targetMuscles": [
+          "pectorals",
+          "lats",
+          "biceps",
+          "triceps"
+        ],
+        "duration": 30,
+        "experienceLevel": 5,
+        "goal": "build_muscle"
+      },
+      "expectations": {
+        "minExercises": 4,
+        "maxExercises": 8,
+        "setsRange": [
+          3,
+          4
+        ],
+        "repsRange": [
+          8,
+          12
+        ],
+        "restRange": [
+          60,
+          90
+        ]
+      },
+      "exercisesAvailable": 20,
+      "results": [
+        {
+          "modelId": "google/gemini-3-flash-preview",
+          "model": "Gemini 3 Flash",
+          "status": "success",
+          "latency": 1336,
+          "exerciseCount": 5,
+          "equipmentMatch": 100,
+          "score": 80,
+          "avgSets": "1.0",
+          "avgReps": "8.0",
+          "avgRest": 102,
+          "exercises": [],
+          "error": null,
+          "equipmentUtilization": 90,
+          "diversityIndex": 0,
+          "uniquenessScore": 100
+        },
+        {
+          "modelId": "anthropic/claude-haiku-4.5",
+          "model": "Claude 4.5 Haiku",
+          "status": "success",
+          "latency": 1186,
+          "exerciseCount": 6,
+          "equipmentMatch": 100,
+          "score": 60,
+          "avgSets": "2.3",
+          "avgReps": "7.7",
+          "avgRest": 73,
+          "exercises": [],
+          "error": null,
+          "equipmentUtilization": 90,
+          "diversityIndex": 0,
+          "uniquenessScore": 100
+        }
+      ]
+    },
+    {
+      "name": "Endurance - Full Body Circuit",
+      "category": "endurance",
+      "split": "full_body",
+      "request": {
+        "equipment": [
+          "dumbbell",
+          "barbell",
+          "cable",
+          "leverage machine"
+        ],
+        "trainingStyle": "ENDURANCE",
+        "bodyParts": [
+          "chest",
+          "back",
+          "upper legs",
+          "shoulders"
+        ],
+        "targetMuscles": [
+          "pectorals",
+          "lats",
+          "quads",
+          "delts"
+        ],
+        "duration": 45,
+        "experienceLevel": 5,
+        "goal": "build_muscle"
+      },
+      "expectations": {
+        "minExercises": 4,
+        "maxExercises": 8,
+        "setsRange": [
+          3,
+          4
+        ],
+        "repsRange": [
+          8,
+          12
+        ],
+        "restRange": [
+          60,
+          90
+        ]
+      },
+      "exercisesAvailable": 20,
+      "results": [
+        {
+          "modelId": "google/gemini-3-flash-preview",
+          "model": "Gemini 3 Flash",
+          "status": "success",
+          "latency": 1230,
+          "exerciseCount": 6,
+          "equipmentMatch": 100,
+          "score": 80,
+          "avgSets": "2.8",
+          "avgReps": "15.0",
+          "avgRest": 55,
+          "exercises": [],
+          "error": null,
+          "equipmentUtilization": 90,
+          "diversityIndex": 0,
+          "uniquenessScore": 100
+        },
+        {
+          "modelId": "anthropic/claude-haiku-4.5",
+          "model": "Claude 4.5 Haiku",
+          "status": "success",
+          "latency": 1821,
+          "exerciseCount": 6,
+          "equipmentMatch": 100,
+          "score": 60,
+          "avgSets": "2.8",
+          "avgReps": "11.8",
+          "avgRest": 48,
+          "exercises": [],
+          "error": null,
+          "equipmentUtilization": 90,
+          "diversityIndex": 0,
+          "uniquenessScore": 100
+        }
+      ]
+    },
+    {
+      "name": "PPL - Push Day",
+      "category": "ppl",
+      "split": "ppl",
+      "request": {
+        "equipment": [
+          "dumbbell",
+          "barbell",
+          "cable",
+          "leverage machine"
+        ],
+        "trainingStyle": "BODYBUILD",
+        "bodyParts": [
+          "chest",
+          "shoulders",
+          "upper arms"
+        ],
+        "targetMuscles": [
+          "pectorals",
+          "delts",
+          "triceps"
+        ],
+        "duration": 60,
+        "experienceLevel": 5,
+        "goal": "build_muscle"
+      },
+      "expectations": {
+        "minExercises": 4,
+        "maxExercises": 8,
+        "setsRange": [
+          3,
+          4
+        ],
+        "repsRange": [
+          8,
+          12
+        ],
+        "restRange": [
+          60,
+          90
+        ]
+      },
+      "exercisesAvailable": 20,
+      "results": [
+        {
+          "modelId": "google/gemini-3-flash-preview",
+          "model": "Gemini 3 Flash",
+          "status": "success",
+          "latency": 1064,
+          "exerciseCount": 6,
+          "equipmentMatch": 100,
+          "score": 100,
+          "avgSets": "3.3",
+          "avgReps": "10.0",
+          "avgRest": 80,
+          "exercises": [],
+          "error": null,
+          "equipmentUtilization": 90,
+          "diversityIndex": 0,
+          "uniquenessScore": 100
+        },
+        {
+          "modelId": "anthropic/claude-haiku-4.5",
+          "model": "Claude 4.5 Haiku",
+          "status": "success",
+          "latency": 1133,
+          "exerciseCount": 7,
+          "equipmentMatch": 100,
+          "score": 100,
+          "avgSets": "3.1",
+          "avgReps": "8.6",
+          "avgRest": 69,
+          "exercises": [],
+          "error": null,
+          "equipmentUtilization": 90,
+          "diversityIndex": 0,
+          "uniquenessScore": 100
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3110 @@
+{
+  "timestamp": "2026-01-05T12:57:08.983Z",
+  "version": "2.0",
+  "models": [
+    {
+      "id": "x-ai/grok-4.1-fast",
+      "name": "Grok 4.1",
+      "tier": "fast"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Classic Bodybuilding - Chest & Triceps",
+      "category": "bodybuilding",
+      "request": {
+        "equipment": [
+          "dumbbell",
+          "barbell",
+          "cable",
+          "leverage machine"
+        ],
+        "trainingStyle": "BODYBUILD",
+        "bodyParts": [
+          "chest",
+          "upper arms"
+        ],
+        "targetMuscles": [
+          "pectorals",
+          "triceps"
+        ],
+        "duration": 60,
+        "experienceLevel": 5,
+        "goal": "build_muscle"
+      },
+      "expectations": {
+        "minExercises": 5,
+        "maxExercises": 8,
+        "setsRange": [
+          3,
+          4
+        ],
+        "repsRange": [
+          8,
+          12
+        ],
+        "restRange": [
+          60,
+          90
+        ],
+        "shouldIncludeTechniques": [
+          "supersets"
+        ],
+        "requiredMuscleBalance": {
+          "pectorals": 0.5,
+          "triceps": 0.3
+        }
+      },
+      "exercisesAvailable": 21,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 1423,
+          "rawResponse": "{\n  \"title\": \"Classic Chest & Triceps Hypertrophy\",\n  \"description\": \"Bodybuilding-focused workout targeting pectorals and triceps for muscle growth with compound and isolation movements.\",\n  \"estimatedDuration\": 60,\n  \"sections\": [\n    {\n      \"name\": \"Chest\",\n      \"exercises\": [\n        {\n          \"id\": \"0047\",\n          \"sets\": 4,\n          \"reps\": 8,\n          \"restSeconds\": 90,\n          \"notes\": \"Focus on controlled eccentric phase and full stretch at bottom\"\n        },\n        {\n          \"id\": \"0026\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 60,\n          \"notes\": \"Emphasize upper chest with 30-45 degree incline\"\n        },\n        {\n          \"id\": \"1254\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Squeeze pecs together at peak contraction\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Triceps\",\n      \"exercises\": [\n        {\n          \"id\": \"0203\",\n          \"sets\": 3,\n          \"reps\": 8,\n          \"restSeconds\": 90,\n          \"notes\": \"Keep elbows tucked to isolate triceps\"\n        },\n        {\n          \"id\": \"0200\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Use straight bar or rope, full lockout\"\n        },\n        {\n          \"id\": \"0202\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Overhead stretch for long head emphasis\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Progressive overload: increase weight when you hit reps easily\",\n    \"Mind-muscle connection: squeeze target muscles each rep\",\n    \"Breathe out on exertion, maintain strict form\",\n    \"Fuel with protein-rich meal after workout\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "Classic Chest & Triceps Hypertrophy",
+            "description": "Bodybuilding-focused workout targeting pectorals and triceps for muscle growth with compound and isolation movements.",
+            "estimatedDuration": 60,
+            "sections": [
+              {
+                "name": "Chest",
+                "exercises": [
+                  {
+                    "id": "0047",
+                    "sets": 4,
+                    "reps": 8,
+                    "restSeconds": 90,
+                    "notes": "Focus on controlled eccentric phase and full stretch at bottom"
+                  },
+                  {
+                    "id": "0026",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 60,
+                    "notes": "Emphasize upper chest with 30-45 degree incline"
+                  },
+                  {
+                    "id": "1254",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Squeeze pecs together at peak contraction"
+                  }
+                ]
+              },
+              {
+                "name": "Triceps",
+                "exercises": [
+                  {
+                    "id": "0203",
+                    "sets": 3,
+                    "reps": 8,
+                    "restSeconds": 90,
+                    "notes": "Keep elbows tucked to isolate triceps"
+                  },
+                  {
+                    "id": "0200",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Use straight bar or rope, full lockout"
+                  },
+                  {
+                    "id": "0202",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Overhead stretch for long head emphasis"
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Progressive overload: increase weight when you hit reps easily",
+              "Mind-muscle connection: squeeze target muscles each rep",
+              "Breathe out on exertion, maintain strict form",
+              "Fuel with protein-rich meal after workout"
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 1468,
+            "completion_tokens": 2037,
+            "total_tokens": 3505,
+            "cost": 0.001289,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 154,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.0002705,
+              "upstream_inference_completions_cost": 0.0010185
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1590,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 6,
+            "equipmentMatchRate": 100,
+            "avgSets": 3.2,
+            "avgReps": "12",
+            "avgRest": 70,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 75,
+            "diversityIndex": 33,
+            "uniqueTargets": 2,
+            "uniqueBodyParts": 2,
+            "exerciseIds": [
+              "0047",
+              "0026",
+              "1254",
+              "0203",
+              "0200",
+              "0202"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "Classic Bodybuilding - Back & Biceps",
+      "category": "bodybuilding",
+      "request": {
+        "equipment": [
+          "dumbbell",
+          "barbell",
+          "cable",
+          "leverage machine"
+        ],
+        "trainingStyle": "BODYBUILD",
+        "bodyParts": [
+          "back",
+          "upper arms"
+        ],
+        "targetMuscles": [
+          "lats",
+          "upper back",
+          "biceps"
+        ],
+        "duration": 60,
+        "experienceLevel": 5,
+        "goal": "stay_fit"
+      },
+      "expectations": {
+        "minExercises": 5,
+        "maxExercises": 8,
+        "setsRange": [
+          3,
+          4
+        ],
+        "repsRange": [
+          8,
+          12
+        ],
+        "restRange": [
+          60,
+          90
+        ],
+        "shouldIncludeTechniques": [
+          "supersets"
+        ],
+        "requiredMuscleBalance": {
+          "lats": 0.4,
+          "biceps": 0.3
+        }
+      },
+      "exercisesAvailable": 21,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 867,
+          "rawResponse": "{\n  \"title\": \"Classic Back & Biceps Bodybuilding Workout\",\n  \"description\": \"Targeted session for lats, upper back, and biceps using classic bodybuilding principles to stay fit.\",\n  \"estimatedDuration\": 60,\n  \"sections\": [\n    {\n      \"name\": \"Back\",\n      \"exercises\": [\n        {\n          \"id\": \"0027\",\n          \"sets\": 4,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Hinge at hips, keep back flat, squeeze shoulder blades\"\n        },\n        {\n          \"id\": \"0160\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Pull to chest, controlled eccentric\"\n        },\n        {\n          \"id\": \"0161\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 60,\n          \"notes\": \"Focus on mid-back contraction, avoid momentum\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Biceps\",\n      \"exercises\": [\n        {\n          \"id\": \"0100\",\n          \"sets\": 4,\n          \"reps\": 10,\n          \"restSeconds\": 60,\n          \"notes\": \"Strict form, full range of motion\"\n        },\n        {\n          \"id\": \"0101\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Alternate arms, supinate at top\"\n        },\n        {\n          \"id\": \"0103\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Constant tension, slow negatives\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Prioritize mind-muscle connection for maximum hypertrophy\",\n    \"Use progressive overload by increasing weight when reps are easy\",\n    \"Warm up with light sets, cool down with stretches\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "Classic Back & Biceps Bodybuilding Workout",
+            "description": "Targeted session for lats, upper back, and biceps using classic bodybuilding principles to stay fit.",
+            "estimatedDuration": 60,
+            "sections": [
+              {
+                "name": "Back",
+                "exercises": [
+                  {
+                    "id": "0027",
+                    "sets": 4,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Hinge at hips, keep back flat, squeeze shoulder blades"
+                  },
+                  {
+                    "id": "0160",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Pull to chest, controlled eccentric"
+                  },
+                  {
+                    "id": "0161",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 60,
+                    "notes": "Focus on mid-back contraction, avoid momentum"
+                  }
+                ]
+              },
+              {
+                "name": "Biceps",
+                "exercises": [
+                  {
+                    "id": "0100",
+                    "sets": 4,
+                    "reps": 10,
+                    "restSeconds": 60,
+                    "notes": "Strict form, full range of motion"
+                  },
+                  {
+                    "id": "0101",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Alternate arms, supinate at top"
+                  },
+                  {
+                    "id": "0103",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Constant tension, slow negatives"
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Prioritize mind-muscle connection for maximum hypertrophy",
+              "Use progressive overload by increasing weight when reps are easy",
+              "Warm up with light sets, cool down with stretches"
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 1463,
+            "completion_tokens": 1760,
+            "total_tokens": 3223,
+            "cost": 0.00114965,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 153,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.00026965,
+              "upstream_inference_completions_cost": 0.00088
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1328,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 6,
+            "equipmentMatchRate": 100,
+            "avgSets": 3.3,
+            "avgReps": "10",
+            "avgRest": 65,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 75,
+            "diversityIndex": 42,
+            "uniqueTargets": 3,
+            "uniqueBodyParts": 2,
+            "exerciseIds": [
+              "0027",
+              "0160",
+              "0161",
+              "0100",
+              "0101",
+              "0103"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bodybuilding - Shoulder Focus",
+      "category": "bodybuilding",
+      "request": {
+        "equipment": [
+          "dumbbell",
+          "barbell",
+          "cable",
+          "leverage machine"
+        ],
+        "trainingStyle": "BODYBUILD",
+        "bodyParts": [
+          "shoulders"
+        ],
+        "targetMuscles": [
+          "delts"
+        ],
+        "duration": 45,
+        "experienceLevel": 5,
+        "goal": "build_muscle"
+      },
+      "expectations": {
+        "minExercises": 4,
+        "maxExercises": 6,
+        "setsRange": [
+          3,
+          4
+        ],
+        "repsRange": [
+          10,
+          15
+        ],
+        "restRange": [
+          45,
+          75
+        ],
+        "shouldIncludeTechniques": [],
+        "requiredMuscleBalance": {
+          "delts": 0.8
+        }
+      },
+      "exercisesAvailable": 9,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 1024,
+          "rawResponse": "{\n  \"title\": \"Classic Bodybuilding Delts Builder\",\n  \"description\": \"45-minute hypertrophy-focused shoulder workout targeting all deltoid heads with progressive overload principles.\",\n  \"estimatedDuration\": 45,\n  \"sections\": [\n    {\n      \"name\": \"Compound Presses\",\n      \"exercises\": [\n        {\n          \"id\": \"0036\",\n          \"sets\": 4,\n          \"reps\": 8,\n          \"restSeconds\": 90,\n          \"notes\": \"Strict form, full range of motion, no momentum.\"\n        },\n        {\n          \"id\": \"0311\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 75,\n          \"notes\": \"Smooth rotation, control the descent.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Side Delt Isolation\",\n      \"exercises\": [\n        {\n          \"id\": \"0308\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Lead with elbows, slight bend in arms.\"\n        },\n        {\n          \"id\": \"0518\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Constant cable tension, no swinging.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Front & Rear Delts\",\n      \"exercises\": [\n        {\n          \"id\": \"0309\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Palms up, raise to eye level.\"\n        },\n        {\n          \"id\": \"0310\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Hinge at hips, squeeze rear delts.\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Focus on mind-muscle connection for peak contraction.\",\n    \"Progressive overload: increase weight or reps weekly.\",\n    \"Breathe out on effort, maintain controlled tempo.\",\n    \"Post-workout: consume protein and carbs for recovery.\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "Classic Bodybuilding Delts Builder",
+            "description": "45-minute hypertrophy-focused shoulder workout targeting all deltoid heads with progressive overload principles.",
+            "estimatedDuration": 45,
+            "sections": [
+              {
+                "name": "Compound Presses",
+                "exercises": [
+                  {
+                    "id": "0036",
+                    "sets": 4,
+                    "reps": 8,
+                    "restSeconds": 90,
+                    "notes": "Strict form, full range of motion, no momentum."
+                  },
+                  {
+                    "id": "0311",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 75,
+                    "notes": "Smooth rotation, control the descent."
+                  }
+                ]
+              },
+              {
+                "name": "Side Delt Isolation",
+                "exercises": [
+                  {
+                    "id": "0308",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Lead with elbows, slight bend in arms."
+                  },
+                  {
+                    "id": "0518",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Constant cable tension, no swinging."
+                  }
+                ]
+              },
+              {
+                "name": "Front & Rear Delts",
+                "exercises": [
+                  {
+                    "id": "0309",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Palms up, raise to eye level."
+                  },
+                  {
+                    "id": "0310",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Hinge at hips, squeeze rear delts."
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Focus on mind-muscle connection for peak contraction.",
+              "Progressive overload: increase weight or reps weekly.",
+              "Breathe out on effort, maintain controlled tempo.",
+              "Post-workout: consume protein and carbs for recovery."
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 915,
+            "completion_tokens": 2373,
+            "total_tokens": 3288,
+            "cost": 0.0013476,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 146,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.0001611,
+              "upstream_inference_completions_cost": 0.0011865
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1910,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 6,
+            "equipmentMatchRate": 100,
+            "avgSets": 3.2,
+            "avgReps": "12",
+            "avgRest": 68,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 75,
+            "diversityIndex": 17,
+            "uniqueTargets": 1,
+            "uniqueBodyParts": 1,
+            "exerciseIds": [
+              "0036",
+              "0311",
+              "0308",
+              "0518",
+              "0309",
+              "0310"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "High Volume Leg Day",
+      "category": "bodybuilding",
+      "request": {
+        "equipment": [
+          "barbell",
+          "dumbbell",
+          "leverage machine",
+          "cable"
+        ],
+        "trainingStyle": "BODYBUILD",
+        "bodyParts": [
+          "upper legs",
+          "lower legs"
+        ],
+        "targetMuscles": [
+          "quads",
+          "hamstrings",
+          "glutes",
+          "calves"
+        ],
+        "duration": 75,
+        "experienceLevel": 5,
+        "goal": "build_muscle"
+      },
+      "expectations": {
+        "minExercises": 6,
+        "maxExercises": 10,
+        "setsRange": [
+          3,
+          5
+        ],
+        "repsRange": [
+          8,
+          15
+        ],
+        "restRange": [
+          60,
+          120
+        ],
+        "shouldIncludeTechniques": [
+          "supersets",
+          "drop sets"
+        ],
+        "requiredMuscleBalance": {
+          "quads": 0.35,
+          "hamstrings": 0.25,
+          "glutes": 0.2,
+          "calves": 0.1
+        }
+      },
+      "exercisesAvailable": 23,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 935,
+          "rawResponse": "{\n  \"title\": \"Classic Bodybuilding Leg Day\",\n  \"description\": \"Hypertrophy-focused workout for quads, hamstrings, glutes, and calves using compound and isolation movements.\",\n  \"estimatedDuration\": 75,\n  \"sections\": [\n    {\n      \"name\": \"Quads\",\n      \"exercises\": [\n        {\n          \"id\": \"0032\",\n          \"sets\": 4,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Squat to full depth, drive through heels\"\n        },\n        {\n          \"id\": \"1259\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 90,\n          \"notes\": \"Controlled eccentric, feet shoulder-width\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Hamstrings & Glutes\",\n      \"exercises\": [\n        {\n          \"id\": \"0038\",\n          \"sets\": 4,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Hinge at hips, keep back flat\"\n        },\n        {\n          \"id\": \"0526\",\n          \"sets\": 4,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Squeeze glutes at top, full hip extension\"\n        },\n        {\n          \"id\": \"0586\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Slow negatives for peak contraction\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Calves\",\n      \"exercises\": [\n        {\n          \"id\": \"0600\",\n          \"sets\": 4,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Full stretch at bottom, hold peak\"\n        },\n        {\n          \"id\": \"0601\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Focus on soleus with knees bent\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Prioritize progressive overload by increasing weight when reps are hit consistently.\",\n    \"Use a 2-3 second eccentric phase for maximum hypertrophy.\",\n    \"Stay hydrated and consume protein post-workout.\",\n    \"Breathe properly: exhale on exertion.\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "Classic Bodybuilding Leg Day",
+            "description": "Hypertrophy-focused workout for quads, hamstrings, glutes, and calves using compound and isolation movements.",
+            "estimatedDuration": 75,
+            "sections": [
+              {
+                "name": "Quads",
+                "exercises": [
+                  {
+                    "id": "0032",
+                    "sets": 4,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Squat to full depth, drive through heels"
+                  },
+                  {
+                    "id": "1259",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 90,
+                    "notes": "Controlled eccentric, feet shoulder-width"
+                  }
+                ]
+              },
+              {
+                "name": "Hamstrings & Glutes",
+                "exercises": [
+                  {
+                    "id": "0038",
+                    "sets": 4,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Hinge at hips, keep back flat"
+                  },
+                  {
+                    "id": "0526",
+                    "sets": 4,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Squeeze glutes at top, full hip extension"
+                  },
+                  {
+                    "id": "0586",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Slow negatives for peak contraction"
+                  }
+                ]
+              },
+              {
+                "name": "Calves",
+                "exercises": [
+                  {
+                    "id": "0600",
+                    "sets": 4,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Full stretch at bottom, hold peak"
+                  },
+                  {
+                    "id": "0601",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Focus on soleus with knees bent"
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Prioritize progressive overload by increasing weight when reps are hit consistently.",
+              "Use a 2-3 second eccentric phase for maximum hypertrophy.",
+              "Stay hydrated and consume protein post-workout.",
+              "Breathe properly: exhale on exertion."
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 1562,
+            "completion_tokens": 2276,
+            "total_tokens": 3838,
+            "cost": 0.0014285,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 146,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.0002905,
+              "upstream_inference_completions_cost": 0.001138
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1760,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 7,
+            "equipmentMatchRate": 100,
+            "avgSets": 3.6,
+            "avgReps": "10",
+            "avgRest": 73,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 50,
+            "diversityIndex": 43,
+            "uniqueTargets": 4,
+            "uniqueBodyParts": 2,
+            "exerciseIds": [
+              "0032",
+              "1259",
+              "0038",
+              "0526",
+              "0586",
+              "0600",
+              "0601"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "Strength Focused - Upper Body",
+      "category": "strength",
+      "request": {
+        "equipment": [
+          "barbell",
+          "dumbbell",
+          "cable"
+        ],
+        "trainingStyle": "STRENGTH",
+        "bodyParts": [
+          "chest",
+          "back",
+          "shoulders"
+        ],
+        "targetMuscles": [
+          "pectorals",
+          "lats",
+          "delts"
+        ],
+        "duration": 60,
+        "experienceLevel": 5,
+        "goal": "build_strength"
+      },
+      "expectations": {
+        "minExercises": 4,
+        "maxExercises": 6,
+        "setsRange": [
+          4,
+          5
+        ],
+        "repsRange": [
+          4,
+          6
+        ],
+        "restRange": [
+          120,
+          240
+        ],
+        "shouldIncludeTechniques": [],
+        "requiredMuscleBalance": {
+          "pectorals": 0.3,
+          "lats": 0.3,
+          "delts": 0.25
+        }
+      },
+      "exercisesAvailable": 23,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 1133,
+          "rawResponse": "{\n  \"title\": \"Strength Builder: Chest, Back & Shoulders\",\n  \"description\": \"Strength-focused workout targeting pectorals, lats, and delts with compound lifts and targeted accessories using barbell, dumbbells, and cables.\",\n  \"estimatedDuration\": 60,\n  \"sections\": [\n    {\n      \"name\": \"Chest\",\n      \"exercises\": [\n        {\n          \"id\": \"0047\",\n          \"sets\": 4,\n          \"reps\": 6,\n          \"restSeconds\": 180,\n          \"notes\": \"Lower bar to mid-chest, explode up while maintaining control.\"\n        },\n        {\n          \"id\": \"0026\",\n          \"sets\": 3,\n          \"reps\": 8,\n          \"restSeconds\": 120,\n          \"notes\": \"Focus on stretch at bottom and squeeze at top.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Back\",\n      \"exercises\": [\n        {\n          \"id\": \"0027\",\n          \"sets\": 4,\n          \"reps\": 6,\n          \"restSeconds\": 180,\n          \"notes\": \"Hinge at hips, pull bar to lower abs, keep back flat.\"\n        },\n        {\n          \"id\": \"0160\",\n          \"sets\": 3,\n          \"reps\": 8,\n          \"restSeconds\": 120,\n          \"notes\": \"Lean back slightly, pull to upper chest with wide grip.\"\n        },\n        {\n          \"id\": \"0161\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Squeeze shoulder blades together, avoid momentum.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Shoulders\",\n      \"exercises\": [\n        {\n          \"id\": \"0036\",\n          \"sets\": 4,\n          \"reps\": 6,\n          \"restSeconds\": 180,\n          \"notes\": \"Press straight up, brace core to avoid lower back arch.\"\n        },\n        {\n          \"id\": \"0308\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 60,\n          \"notes\": \"Raise to shoulder height, lead with elbows.\"\n        },\n        {\n          \"id\": \"0310\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Bend forward, fly arms out focusing on rear delts.\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Prioritize progressive overload: increase weight when reps feel manageable.\",\n    \"Warm up with light sets before working weights.\",\n    \"Maintain strict form to prevent injury and maximize strength gains.\",\n    \"Breathe out on exertion, in on release.\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "Strength Builder: Chest, Back & Shoulders",
+            "description": "Strength-focused workout targeting pectorals, lats, and delts with compound lifts and targeted accessories using barbell, dumbbells, and cables.",
+            "estimatedDuration": 60,
+            "sections": [
+              {
+                "name": "Chest",
+                "exercises": [
+                  {
+                    "id": "0047",
+                    "sets": 4,
+                    "reps": 6,
+                    "restSeconds": 180,
+                    "notes": "Lower bar to mid-chest, explode up while maintaining control."
+                  },
+                  {
+                    "id": "0026",
+                    "sets": 3,
+                    "reps": 8,
+                    "restSeconds": 120,
+                    "notes": "Focus on stretch at bottom and squeeze at top."
+                  }
+                ]
+              },
+              {
+                "name": "Back",
+                "exercises": [
+                  {
+                    "id": "0027",
+                    "sets": 4,
+                    "reps": 6,
+                    "restSeconds": 180,
+                    "notes": "Hinge at hips, pull bar to lower abs, keep back flat."
+                  },
+                  {
+                    "id": "0160",
+                    "sets": 3,
+                    "reps": 8,
+                    "restSeconds": 120,
+                    "notes": "Lean back slightly, pull to upper chest with wide grip."
+                  },
+                  {
+                    "id": "0161",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Squeeze shoulder blades together, avoid momentum."
+                  }
+                ]
+              },
+              {
+                "name": "Shoulders",
+                "exercises": [
+                  {
+                    "id": "0036",
+                    "sets": 4,
+                    "reps": 6,
+                    "restSeconds": 180,
+                    "notes": "Press straight up, brace core to avoid lower back arch."
+                  },
+                  {
+                    "id": "0308",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 60,
+                    "notes": "Raise to shoulder height, lead with elbows."
+                  },
+                  {
+                    "id": "0310",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Bend forward, fly arms out focusing on rear delts."
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Prioritize progressive overload: increase weight when reps feel manageable.",
+              "Warm up with light sets before working weights.",
+              "Maintain strict form to prevent injury and maximize strength gains.",
+              "Breathe out on exertion, in on release."
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 1560,
+            "completion_tokens": 3389,
+            "total_tokens": 4949,
+            "cost": 0.00198115,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 169,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.00028665,
+              "upstream_inference_completions_cost": 0.0016945
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 2796,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 8,
+            "equipmentMatchRate": 100,
+            "avgSets": 3.4,
+            "avgReps": "6",
+            "avgRest": 124,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 100,
+            "diversityIndex": 44,
+            "uniqueTargets": 4,
+            "uniqueBodyParts": 3,
+            "exerciseIds": [
+              "0047",
+              "0026",
+              "0027",
+              "0160",
+              "0161",
+              "0036",
+              "0308",
+              "0310"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "Strength Focused - Lower Body",
+      "category": "strength",
+      "request": {
+        "equipment": [
+          "barbell",
+          "dumbbell",
+          "leverage machine"
+        ],
+        "trainingStyle": "STRENGTH",
+        "bodyParts": [
+          "upper legs"
+        ],
+        "targetMuscles": [
+          "quads",
+          "hamstrings",
+          "glutes"
+        ],
+        "duration": 60,
+        "experienceLevel": 5,
+        "goal": "build_strength"
+      },
+      "expectations": {
+        "minExercises": 4,
+        "maxExercises": 6,
+        "setsRange": [
+          4,
+          5
+        ],
+        "repsRange": [
+          4,
+          6
+        ],
+        "restRange": [
+          120,
+          240
+        ],
+        "shouldIncludeTechniques": [],
+        "requiredMuscleBalance": {
+          "quads": 0.35,
+          "hamstrings": 0.3,
+          "glutes": 0.25
+        }
+      },
+      "exercisesAvailable": 17,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 1262,
+          "rawResponse": "{\n  \"title\": \"Upper Legs Strength Builder\",\n  \"description\": \"60-minute strength-focused workout targeting quads, hamstrings, and glutes with compound and isolation movements.\",\n  \"estimatedDuration\": 60,\n  \"sections\": [\n    {\n      \"name\": \"Quad Focus\",\n      \"exercises\": [\n        {\n          \"id\": \"0032\",\n          \"sets\": 4,\n          \"reps\": 6,\n          \"restSeconds\": 180,\n          \"notes\": \"Use a weight that challenges you on the last reps; maintain depth below parallel.\"\n        },\n        {\n          \"id\": \"1259\",\n          \"sets\": 4,\n          \"reps\": 6,\n          \"restSeconds\": 180,\n          \"notes\": \"Keep knees tracking over toes; squeeze quads at the top.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Hamstring Focus\",\n      \"exercises\": [\n        {\n          \"id\": \"0038\",\n          \"sets\": 4,\n          \"reps\": 6,\n          \"restSeconds\": 180,\n          \"notes\": \"Hinge at hips with slight knee bend; feel the stretch in hamstrings.\"\n        },\n        {\n          \"id\": \"0586\",\n          \"sets\": 4,\n          \"reps\": 8,\n          \"restSeconds\": 120,\n          \"notes\": \"Control the eccentric phase; full range of motion.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Glute Focus\",\n      \"exercises\": [\n        {\n          \"id\": \"0526\",\n          \"sets\": 4,\n          \"reps\": 6,\n          \"restSeconds\": 180,\n          \"notes\": \"Drive through heels; full glute contraction at the top.\"\n        },\n        {\n          \"id\": \"0283\",\n          \"sets\": 4,\n          \"reps\": 8,\n          \"restSeconds\": 120,\n          \"notes\": \"Step up explosively; alternate legs.\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Prioritize progressive overload: increase weight when all sets/reps are completed with good form.\",\n    \"Warm up with light sets before working weights.\",\n    \"Focus on controlled negatives to build strength.\",\n    \"Stay hydrated and eat protein post-workout.\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "Upper Legs Strength Builder",
+            "description": "60-minute strength-focused workout targeting quads, hamstrings, and glutes with compound and isolation movements.",
+            "estimatedDuration": 60,
+            "sections": [
+              {
+                "name": "Quad Focus",
+                "exercises": [
+                  {
+                    "id": "0032",
+                    "sets": 4,
+                    "reps": 6,
+                    "restSeconds": 180,
+                    "notes": "Use a weight that challenges you on the last reps; maintain depth below parallel."
+                  },
+                  {
+                    "id": "1259",
+                    "sets": 4,
+                    "reps": 6,
+                    "restSeconds": 180,
+                    "notes": "Keep knees tracking over toes; squeeze quads at the top."
+                  }
+                ]
+              },
+              {
+                "name": "Hamstring Focus",
+                "exercises": [
+                  {
+                    "id": "0038",
+                    "sets": 4,
+                    "reps": 6,
+                    "restSeconds": 180,
+                    "notes": "Hinge at hips with slight knee bend; feel the stretch in hamstrings."
+                  },
+                  {
+                    "id": "0586",
+                    "sets": 4,
+                    "reps": 8,
+                    "restSeconds": 120,
+                    "notes": "Control the eccentric phase; full range of motion."
+                  }
+                ]
+              },
+              {
+                "name": "Glute Focus",
+                "exercises": [
+                  {
+                    "id": "0526",
+                    "sets": 4,
+                    "reps": 6,
+                    "restSeconds": 180,
+                    "notes": "Drive through heels; full glute contraction at the top."
+                  },
+                  {
+                    "id": "0283",
+                    "sets": 4,
+                    "reps": 8,
+                    "restSeconds": 120,
+                    "notes": "Step up explosively; alternate legs."
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Prioritize progressive overload: increase weight when all sets/reps are completed with good form.",
+              "Warm up with light sets before working weights.",
+              "Focus on controlled negatives to build strength.",
+              "Stay hydrated and eat protein post-workout."
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 1273,
+            "completion_tokens": 1920,
+            "total_tokens": 3193,
+            "cost": 0.00119195,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 151,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.00023195,
+              "upstream_inference_completions_cost": 0.00096
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1432,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 6,
+            "equipmentMatchRate": 100,
+            "avgSets": 4,
+            "avgReps": "6",
+            "avgRest": 160,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 100,
+            "diversityIndex": 33,
+            "uniqueTargets": 3,
+            "uniqueBodyParts": 1,
+            "exerciseIds": [
+              "0032",
+              "1259",
+              "0038",
+              "0586",
+              "0526",
+              "0283"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "Powerlifting Prep",
+      "category": "strength",
+      "request": {
+        "equipment": [
+          "barbell",
+          "dumbbell"
+        ],
+        "trainingStyle": "STRENGTH",
+        "bodyParts": [
+          "chest",
+          "upper legs",
+          "back"
+        ],
+        "targetMuscles": [
+          "pectorals",
+          "quads",
+          "spine"
+        ],
+        "duration": 90,
+        "experienceLevel": 5,
+        "goal": "build_strength"
+      },
+      "expectations": {
+        "minExercises": 4,
+        "maxExercises": 7,
+        "setsRange": [
+          4,
+          5
+        ],
+        "repsRange": [
+          4,
+          6
+        ],
+        "restRange": [
+          120,
+          240
+        ],
+        "shouldIncludeTechniques": [],
+        "requiredMuscleBalance": {
+          "pectorals": 0.3,
+          "quads": 0.3,
+          "spine": 0.3
+        }
+      },
+      "exercisesAvailable": 22,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 994,
+          "rawResponse": "{\n  \"title\": \"Strength Builder: Chest, Back & Legs\",\n  \"description\": \"90-minute strength-focused workout targeting pectorals, quads, and spine with compound lifts for maximum gains.\",\n  \"estimatedDuration\": 90,\n  \"sections\": [\n    {\n      \"name\": \"Chest\",\n      \"exercises\": [\n        {\n          \"id\": \"0047\",\n          \"sets\": 4,\n          \"reps\": \"6-8\",\n          \"restSeconds\": 180,\n          \"notes\": \"Use a weight you can control fully; lower slowly for tension.\"\n        },\n        {\n          \"id\": \"0289\",\n          \"sets\": 3,\n          \"reps\": \"8-10\",\n          \"restSeconds\": 120,\n          \"notes\": \"Keep a slight bend in elbows; focus on stretch and squeeze.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Back & Spine\",\n      \"exercises\": [\n        {\n          \"id\": \"0027\",\n          \"sets\": 4,\n          \"reps\": \"6-8\",\n          \"restSeconds\": 180,\n          \"notes\": \"Hinge at hips, pull bar to lower chest; keep back flat.\"\n        },\n        {\n          \"id\": \"0028\",\n          \"sets\": 4,\n          \"reps\": \"5-6\",\n          \"restSeconds\": 180,\n          \"notes\": \"Maintain neutral spine; drive through heels.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Upper Legs (Quads)\",\n      \"exercises\": [\n        {\n          \"id\": \"0032\",\n          \"sets\": 4,\n          \"reps\": \"6-8\",\n          \"restSeconds\": 180,\n          \"notes\": \"Squat to parallel or below; brace core.\"\n        },\n        {\n          \"id\": \"0280\",\n          \"sets\": 3,\n          \"reps\": \"8-10 per leg\",\n          \"restSeconds\": 120,\n          \"notes\": \"Elevate rear foot; keep front knee tracking over toes.\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Prioritize progressive overload: increase weight when you hit upper rep range.\",\n    \"Warm up with 5-10 min light cardio and empty bar sets.\",\n    \"Focus on full range of motion and controlled eccentrics for strength gains.\",\n    \"Stay hydrated and refuel with protein post-workout.\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "Strength Builder: Chest, Back & Legs",
+            "description": "90-minute strength-focused workout targeting pectorals, quads, and spine with compound lifts for maximum gains.",
+            "estimatedDuration": 90,
+            "sections": [
+              {
+                "name": "Chest",
+                "exercises": [
+                  {
+                    "id": "0047",
+                    "sets": 4,
+                    "reps": "6-8",
+                    "restSeconds": 180,
+                    "notes": "Use a weight you can control fully; lower slowly for tension."
+                  },
+                  {
+                    "id": "0289",
+                    "sets": 3,
+                    "reps": "8-10",
+                    "restSeconds": 120,
+                    "notes": "Keep a slight bend in elbows; focus on stretch and squeeze."
+                  }
+                ]
+              },
+              {
+                "name": "Back & Spine",
+                "exercises": [
+                  {
+                    "id": "0027",
+                    "sets": 4,
+                    "reps": "6-8",
+                    "restSeconds": 180,
+                    "notes": "Hinge at hips, pull bar to lower chest; keep back flat."
+                  },
+                  {
+                    "id": "0028",
+                    "sets": 4,
+                    "reps": "5-6",
+                    "restSeconds": 180,
+                    "notes": "Maintain neutral spine; drive through heels."
+                  }
+                ]
+              },
+              {
+                "name": "Upper Legs (Quads)",
+                "exercises": [
+                  {
+                    "id": "0032",
+                    "sets": 4,
+                    "reps": "6-8",
+                    "restSeconds": 180,
+                    "notes": "Squat to parallel or below; brace core."
+                  },
+                  {
+                    "id": "0280",
+                    "sets": 3,
+                    "reps": "8-10 per leg",
+                    "restSeconds": 120,
+                    "notes": "Elevate rear foot; keep front knee tracking over toes."
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Prioritize progressive overload: increase weight when you hit upper rep range.",
+              "Warm up with 5-10 min light cardio and empty bar sets.",
+              "Focus on full range of motion and controlled eccentrics for strength gains.",
+              "Stay hydrated and refuel with protein post-workout."
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 1507,
+            "completion_tokens": 1506,
+            "total_tokens": 3013,
+            "cost": 0.00103175,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 151,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.00027875,
+              "upstream_inference_completions_cost": 0.000753
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 991,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 6,
+            "equipmentMatchRate": 100,
+            "avgSets": 3.7,
+            "avgReps": "6-8",
+            "avgRest": 160,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 100,
+            "diversityIndex": 58,
+            "uniqueTargets": 4,
+            "uniqueBodyParts": 3,
+            "exerciseIds": [
+              "0047",
+              "0289",
+              "0027",
+              "0028",
+              "0032",
+              "0280"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "HIT - Upper Body",
+      "category": "HIT",
+      "request": {
+        "equipment": [
+          "leverage machine",
+          "dumbbell",
+          "cable"
+        ],
+        "trainingStyle": "HIT",
+        "bodyParts": [
+          "chest",
+          "back",
+          "shoulders"
+        ],
+        "targetMuscles": [
+          "pectorals",
+          "lats",
+          "delts"
+        ],
+        "duration": 45,
+        "experienceLevel": 5,
+        "goal": "build_muscle"
+      },
+      "expectations": {
+        "minExercises": 5,
+        "maxExercises": 8,
+        "setsRange": [
+          1,
+          2
+        ],
+        "repsRange": [
+          6,
+          10
+        ],
+        "restRange": [
+          120,
+          180
+        ],
+        "shouldIncludeTechniques": [
+          "slow_negatives",
+          "to_failure"
+        ],
+        "requiredMuscleBalance": {
+          "pectorals": 0.3,
+          "lats": 0.3,
+          "delts": 0.25
+        }
+      },
+      "exercisesAvailable": 20,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 765,
+          "rawResponse": "{\n  \"title\": \"HIT Chest, Back & Shoulders Muscle Builder\",\n  \"description\": \"High Intensity Training workout targeting pectorals, lats, and delts for muscle growth using available equipment.\",\n  \"estimatedDuration\": 45,\n  \"sections\": [\n    {\n      \"name\": \"Chest\",\n      \"exercises\": [\n        {\n          \"id\": \"0025\",\n          \"sets\": 3,\n          \"reps\": 8,\n          \"restSeconds\": 90,\n          \"notes\": \"Explode up, control the eccentric. Push to near failure on last set.\"\n        },\n        {\n          \"id\": \"1256\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Squeeze pecs at peak contraction, slow negative.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Back\",\n      \"exercises\": [\n        {\n          \"id\": \"1257\",\n          \"sets\": 3,\n          \"reps\": 8,\n          \"restSeconds\": 90,\n          \"notes\": \"Pull with lats, keep back flat. HIT intensity to failure.\"\n        },\n        {\n          \"id\": \"0160\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Wide grip, pull to chest, full stretch at top.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Shoulders\",\n      \"exercises\": [\n        {\n          \"id\": \"0237\",\n          \"sets\": 3,\n          \"reps\": 8,\n          \"restSeconds\": 90,\n          \"notes\": \"Press overhead explosively, lock out.\"\n        },\n        {\n          \"id\": \"0518\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 90,\n          \"notes\": \"Lead with elbows, constant tension on cables.\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Warm up with 5-10 min light cardio and dynamic stretches.\",\n    \"Use HIT principles: maximum effort per set, progressive overload weekly.\",\n    \"Focus on mind-muscle connection and full range of motion.\",\n    \"Hydrate and refuel with protein post-workout.\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "HIT Chest, Back & Shoulders Muscle Builder",
+            "description": "High Intensity Training workout targeting pectorals, lats, and delts for muscle growth using available equipment.",
+            "estimatedDuration": 45,
+            "sections": [
+              {
+                "name": "Chest",
+                "exercises": [
+                  {
+                    "id": "0025",
+                    "sets": 3,
+                    "reps": 8,
+                    "restSeconds": 90,
+                    "notes": "Explode up, control the eccentric. Push to near failure on last set."
+                  },
+                  {
+                    "id": "1256",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Squeeze pecs at peak contraction, slow negative."
+                  }
+                ]
+              },
+              {
+                "name": "Back",
+                "exercises": [
+                  {
+                    "id": "1257",
+                    "sets": 3,
+                    "reps": 8,
+                    "restSeconds": 90,
+                    "notes": "Pull with lats, keep back flat. HIT intensity to failure."
+                  },
+                  {
+                    "id": "0160",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Wide grip, pull to chest, full stretch at top."
+                  }
+                ]
+              },
+              {
+                "name": "Shoulders",
+                "exercises": [
+                  {
+                    "id": "0237",
+                    "sets": 3,
+                    "reps": 8,
+                    "restSeconds": 90,
+                    "notes": "Press overhead explosively, lock out."
+                  },
+                  {
+                    "id": "0518",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 90,
+                    "notes": "Lead with elbows, constant tension on cables."
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Warm up with 5-10 min light cardio and dynamic stretches.",
+              "Use HIT principles: maximum effort per set, progressive overload weekly.",
+              "Focus on mind-muscle connection and full range of motion.",
+              "Hydrate and refuel with protein post-workout."
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 1430,
+            "completion_tokens": 1451,
+            "total_tokens": 2881,
+            "cost": 0.0009896,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 146,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.0002641,
+              "upstream_inference_completions_cost": 0.0007255
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 960,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 6,
+            "equipmentMatchRate": 100,
+            "avgSets": 3,
+            "avgReps": "8",
+            "avgRest": 90,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 100,
+            "diversityIndex": 50,
+            "uniqueTargets": 3,
+            "uniqueBodyParts": 3,
+            "exerciseIds": [
+              "0025",
+              "1256",
+              "1257",
+              "0160",
+              "0237",
+              "0518"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "HIT - Full Body",
+      "category": "HIT",
+      "request": {
+        "equipment": [
+          "leverage machine",
+          "dumbbell"
+        ],
+        "trainingStyle": "HIT",
+        "bodyParts": [
+          "full_body"
+        ],
+        "duration": 45,
+        "experienceLevel": 5,
+        "goal": "stay_fit"
+      },
+      "expectations": {
+        "minExercises": 6,
+        "maxExercises": 10,
+        "setsRange": [
+          1,
+          2
+        ],
+        "repsRange": [
+          6,
+          10
+        ],
+        "restRange": [
+          120,
+          180
+        ],
+        "shouldIncludeTechniques": [
+          "slow_negatives",
+          "to_failure"
+        ],
+        "requiredMuscleBalance": {}
+      },
+      "exercisesAvailable": 37,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 1099,
+          "rawResponse": "{\n  \"title\": \"Full Body HIT Workout\",\n  \"description\": \"High-intensity full body session to stay fit, using dumbbells and leverage machines.\",\n  \"estimatedDuration\": 45,\n  \"sections\": [\n    {\n      \"name\": \"Upper Push\",\n      \"exercises\": [\n        {\n          \"id\": \"0025\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 60,\n          \"notes\": \"Lower slowly for control\"\n        },\n        {\n          \"id\": \"1258\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 60,\n          \"notes\": \"Press explosively\"\n        },\n        {\n          \"id\": \"0202\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 45,\n          \"notes\": \"Elbows tucked\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Upper Pull\",\n      \"exercises\": [\n        {\n          \"id\": \"1257\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 60,\n          \"notes\": \"Squeeze shoulder blades\"\n        },\n        {\n          \"id\": \"0101\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 45,\n          \"notes\": \"Full range of motion\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Lower Body\",\n      \"exercises\": [\n        {\n          \"id\": \"0584\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Feet shoulder-width\"\n        },\n        {\n          \"id\": \"0586\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Controlled eccentric\"\n        },\n        {\n          \"id\": \"0602\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Full stretch and squeeze\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Push to near failure on last reps while maintaining form\",\n    \"Minimize rest to keep intensity high\",\n    \"Warm up with 5 min light cardio\",\n    \"Cool down and stretch post-workout\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "Full Body HIT Workout",
+            "description": "High-intensity full body session to stay fit, using dumbbells and leverage machines.",
+            "estimatedDuration": 45,
+            "sections": [
+              {
+                "name": "Upper Push",
+                "exercises": [
+                  {
+                    "id": "0025",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 60,
+                    "notes": "Lower slowly for control"
+                  },
+                  {
+                    "id": "1258",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 60,
+                    "notes": "Press explosively"
+                  },
+                  {
+                    "id": "0202",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 45,
+                    "notes": "Elbows tucked"
+                  }
+                ]
+              },
+              {
+                "name": "Upper Pull",
+                "exercises": [
+                  {
+                    "id": "1257",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 60,
+                    "notes": "Squeeze shoulder blades"
+                  },
+                  {
+                    "id": "0101",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 45,
+                    "notes": "Full range of motion"
+                  }
+                ]
+              },
+              {
+                "name": "Lower Body",
+                "exercises": [
+                  {
+                    "id": "0584",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Feet shoulder-width"
+                  },
+                  {
+                    "id": "0586",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Controlled eccentric"
+                  },
+                  {
+                    "id": "0602",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Full stretch and squeeze"
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Push to near failure on last reps while maintaining form",
+              "Minimize rest to keep intensity high",
+              "Warm up with 5 min light cardio",
+              "Cool down and stretch post-workout"
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 2206,
+            "completion_tokens": 2426,
+            "total_tokens": 4632,
+            "cost": 0.00163155,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 151,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.00041855,
+              "upstream_inference_completions_cost": 0.001213
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1912,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 8,
+            "equipmentMatchRate": 100,
+            "avgSets": 3,
+            "avgReps": "12",
+            "avgRest": 54,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 100,
+            "diversityIndex": 88,
+            "uniqueTargets": 8,
+            "uniqueBodyParts": 6,
+            "exerciseIds": [
+              "0025",
+              "1258",
+              "0202",
+              "1257",
+              "0101",
+              "0584",
+              "0586",
+              "0602"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "HIT - Legs",
+      "category": "HIT",
+      "request": {
+        "equipment": [
+          "leverage machine",
+          "barbell"
+        ],
+        "trainingStyle": "HIT",
+        "bodyParts": [
+          "upper legs",
+          "lower legs"
+        ],
+        "targetMuscles": [
+          "quads",
+          "hamstrings",
+          "glutes",
+          "calves"
+        ],
+        "duration": 30,
+        "experienceLevel": 5,
+        "goal": "build_muscle"
+      },
+      "expectations": {
+        "minExercises": 4,
+        "maxExercises": 6,
+        "setsRange": [
+          1,
+          2
+        ],
+        "repsRange": [
+          6,
+          10
+        ],
+        "restRange": [
+          120,
+          180
+        ],
+        "shouldIncludeTechniques": [
+          "slow_negatives",
+          "to_failure"
+        ],
+        "requiredMuscleBalance": {
+          "quads": 0.3,
+          "hamstrings": 0.25,
+          "glutes": 0.2,
+          "calves": 0.1
+        }
+      },
+      "exercisesAvailable": 14,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 1252,
+          "rawResponse": "{\n  \"title\": \"30-Min HIT Lower Body Muscle Builder\",\n  \"description\": \"High-intensity leg workout targeting quads, hamstrings, glutes, and calves for muscle growth using barbell and leverage machine.\",\n  \"estimatedDuration\": 30,\n  \"sections\": [\n    {\n      \"name\": \"Quads\",\n      \"exercises\": [\n        {\n          \"id\": \"0032\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 120,\n          \"notes\": \"Squat to parallel, explode up with control on descent\"\n        },\n        {\n          \"id\": \"1259\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 120,\n          \"notes\": \"Full range of motion, squeeze quads at top\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Hamstrings & Glutes\",\n      \"exercises\": [\n        {\n          \"id\": \"0038\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 120,\n          \"notes\": \"Hinge at hips, keep back flat\"\n        },\n        {\n          \"id\": \"0526\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 120,\n          \"notes\": \"Drive through heels, full glute contraction\"\n        },\n        {\n          \"id\": \"0586\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 90,\n          \"notes\": \"Slow eccentric, curl to full contraction\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Calves\",\n      \"exercises\": [\n        {\n          \"id\": \"0600\",\n          \"sets\": 4,\n          \"reps\": 15,\n          \"restSeconds\": 60,\n          \"notes\": \"Full stretch at bottom, hold peak contraction\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Perform each set with maximum intensity, aiming for failure on the last 1-2 reps\",\n    \"Use heavy weights you can control with perfect form\",\n    \"Rest fully between sets to maintain high intensity\",\n    \"Focus on progressive overload each session\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "30-Min HIT Lower Body Muscle Builder",
+            "description": "High-intensity leg workout targeting quads, hamstrings, glutes, and calves for muscle growth using barbell and leverage machine.",
+            "estimatedDuration": 30,
+            "sections": [
+              {
+                "name": "Quads",
+                "exercises": [
+                  {
+                    "id": "0032",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 120,
+                    "notes": "Squat to parallel, explode up with control on descent"
+                  },
+                  {
+                    "id": "1259",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 120,
+                    "notes": "Full range of motion, squeeze quads at top"
+                  }
+                ]
+              },
+              {
+                "name": "Hamstrings & Glutes",
+                "exercises": [
+                  {
+                    "id": "0038",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 120,
+                    "notes": "Hinge at hips, keep back flat"
+                  },
+                  {
+                    "id": "0526",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 120,
+                    "notes": "Drive through heels, full glute contraction"
+                  },
+                  {
+                    "id": "0586",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 90,
+                    "notes": "Slow eccentric, curl to full contraction"
+                  }
+                ]
+              },
+              {
+                "name": "Calves",
+                "exercises": [
+                  {
+                    "id": "0600",
+                    "sets": 4,
+                    "reps": 15,
+                    "restSeconds": 60,
+                    "notes": "Full stretch at bottom, hold peak contraction"
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Perform each set with maximum intensity, aiming for failure on the last 1-2 reps",
+              "Use heavy weights you can control with perfect form",
+              "Rest fully between sets to maintain high intensity",
+              "Focus on progressive overload each session"
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 1130,
+            "completion_tokens": 2120,
+            "total_tokens": 3250,
+            "cost": 0.00126065,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 169,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.00020065,
+              "upstream_inference_completions_cost": 0.00106
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1639,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 6,
+            "equipmentMatchRate": 100,
+            "avgSets": 3.2,
+            "avgReps": "10",
+            "avgRest": 105,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 100,
+            "diversityIndex": 50,
+            "uniqueTargets": 4,
+            "uniqueBodyParts": 2,
+            "exerciseIds": [
+              "0032",
+              "1259",
+              "0038",
+              "0526",
+              "0586",
+              "0600"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "Muscular Endurance - Full Body Circuit",
+      "category": "ENDURANCE",
+      "request": {
+        "equipment": [
+          "body weight",
+          "dumbbell",
+          "kettlebell"
+        ],
+        "trainingStyle": "ENDURANCE",
+        "bodyParts": [
+          "full_body"
+        ],
+        "duration": 30,
+        "experienceLevel": 5,
+        "goal": "get_lean"
+      },
+      "expectations": {
+        "minExercises": 6,
+        "maxExercises": 10,
+        "setsRange": [
+          2,
+          3
+        ],
+        "repsRange": [
+          15,
+          20
+        ],
+        "restRange": [
+          30,
+          45
+        ],
+        "shouldIncludeTechniques": [
+          "circuit",
+          "tri_sets"
+        ],
+        "requiredMuscleBalance": {}
+      },
+      "exercisesAvailable": 59,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 1240,
+          "rawResponse": "{\n  \"title\": \"30-Min Full Body Endurance Lean Workout\",\n  \"description\": \"High-rep full body circuit using dumbbells and kettlebells to build muscular endurance and burn fat efficiently.\",\n  \"estimatedDuration\": 30,\n  \"sections\": [\n    {\n      \"name\": \"Lower Body\",\n      \"exercises\": [\n        {\n          \"id\": \"0528\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Hold kettlebell at chest, squat deep with knees tracking over toes\"\n        },\n        {\n          \"id\": \"0527\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Drive hips explosively, keep back neutral\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Upper Push\",\n      \"exercises\": [\n        {\n          \"id\": \"0025\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Lower dumbbells controlled to chest level\"\n        },\n        {\n          \"id\": \"0237\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Press overhead without arching back\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Upper Pull & Core\",\n      \"exercises\": [\n        {\n          \"id\": \"0294\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Pull elbow back, squeeze shoulder blade\"\n        },\n        {\n          \"id\": \"0284\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Hold dumbbell at chest, crunch slowly\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Move quickly between exercises to keep heart rate elevated for fat burn\",\n    \"Choose weights allowing 15 clean reps; prioritize form over load\",\n    \"Rest 60-90s between sections; hydrate and focus on steady breathing\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "30-Min Full Body Endurance Lean Workout",
+            "description": "High-rep full body circuit using dumbbells and kettlebells to build muscular endurance and burn fat efficiently.",
+            "estimatedDuration": 30,
+            "sections": [
+              {
+                "name": "Lower Body",
+                "exercises": [
+                  {
+                    "id": "0528",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Hold kettlebell at chest, squat deep with knees tracking over toes"
+                  },
+                  {
+                    "id": "0527",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Drive hips explosively, keep back neutral"
+                  }
+                ]
+              },
+              {
+                "name": "Upper Push",
+                "exercises": [
+                  {
+                    "id": "0025",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Lower dumbbells controlled to chest level"
+                  },
+                  {
+                    "id": "0237",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Press overhead without arching back"
+                  }
+                ]
+              },
+              {
+                "name": "Upper Pull & Core",
+                "exercises": [
+                  {
+                    "id": "0294",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Pull elbow back, squeeze shoulder blade"
+                  },
+                  {
+                    "id": "0284",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Hold dumbbell at chest, crunch slowly"
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Move quickly between exercises to keep heart rate elevated for fat burn",
+              "Choose weights allowing 15 clean reps; prioritize form over load",
+              "Rest 60-90s between sections; hydrate and focus on steady breathing"
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 3194,
+            "completion_tokens": 1820,
+            "total_tokens": 5014,
+            "cost": 0.0015269,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 146,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.0006169,
+              "upstream_inference_completions_cost": 0.00091
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1351,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 6,
+            "equipmentMatchRate": 100,
+            "avgSets": 3,
+            "avgReps": "15",
+            "avgRest": 45,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 67,
+            "diversityIndex": 92,
+            "uniqueTargets": 6,
+            "uniqueBodyParts": 5,
+            "exerciseIds": [
+              "0528",
+              "0527",
+              "0025",
+              "0237",
+              "0294",
+              "0284"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "Muscular Endurance - Upper Body",
+      "category": "ENDURANCE",
+      "request": {
+        "equipment": [
+          "dumbbell",
+          "cable",
+          "band"
+        ],
+        "trainingStyle": "ENDURANCE",
+        "bodyParts": [
+          "chest",
+          "back",
+          "shoulders",
+          "upper arms"
+        ],
+        "targetMuscles": [
+          "pectorals",
+          "lats",
+          "delts",
+          "biceps",
+          "triceps"
+        ],
+        "duration": 45,
+        "experienceLevel": 5,
+        "goal": "get_lean"
+      },
+      "expectations": {
+        "minExercises": 6,
+        "maxExercises": 9,
+        "setsRange": [
+          2,
+          3
+        ],
+        "repsRange": [
+          15,
+          20
+        ],
+        "restRange": [
+          30,
+          45
+        ],
+        "shouldIncludeTechniques": [
+          "circuit",
+          "supersets"
+        ],
+        "requiredMuscleBalance": {
+          "pectorals": 0.2,
+          "lats": 0.2,
+          "delts": 0.2,
+          "biceps": 0.15,
+          "triceps": 0.15
+        }
+      },
+      "exercisesAvailable": 31,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 940,
+          "rawResponse": "{\n  \"title\": \"Upper Body Muscular Endurance for Lean Physique\",\n  \"description\": \"45-minute endurance workout targeting pectorals, lats, delts, biceps, and triceps to build stamina and support leaning out.\",\n  \"estimatedDuration\": 45,\n  \"sections\": [\n    {\n      \"name\": \"Chest\",\n      \"exercises\": [\n        {\n          \"id\": \"0025\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Lie on flat bench, press dumbbells up powerfully, lower with control (3-second eccentric).\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Back\",\n      \"exercises\": [\n        {\n          \"id\": \"0294\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Hinge at hips, pull dumbbell to hip pocket, squeeze lats at top.\"\n        },\n        {\n          \"id\": \"0161\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Sit tall, retract shoulder blades, pull handles to mid-torso.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Shoulders\",\n      \"exercises\": [\n        {\n          \"id\": \"0237\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Press dumbbells overhead from shoulder height, avoid locking elbows.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Arms\",\n      \"exercises\": [\n        {\n          \"id\": \"0101\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Supinate wrists at top, control descent, no momentum.\"\n        },\n        {\n          \"id\": \"0200\",\n          \"sets\": 3,\n          \"reps\": 15,\n          \"restSeconds\": 45,\n          \"notes\": \"Elbows pinned to sides, extend fully, squeeze triceps.\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Select moderate weights to hit 15 reps with good form—last 3-4 reps should be challenging.\",\n    \"Keep rests short to elevate heart rate and enhance fat-burning for your get-lean goal.\",\n    \"Focus on tempo: 2 seconds up, 2 seconds down for maximum endurance benefits.\",\n    \"Pair with a calorie-controlled diet and cardio for optimal leaning results.\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "Upper Body Muscular Endurance for Lean Physique",
+            "description": "45-minute endurance workout targeting pectorals, lats, delts, biceps, and triceps to build stamina and support leaning out.",
+            "estimatedDuration": 45,
+            "sections": [
+              {
+                "name": "Chest",
+                "exercises": [
+                  {
+                    "id": "0025",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Lie on flat bench, press dumbbells up powerfully, lower with control (3-second eccentric)."
+                  }
+                ]
+              },
+              {
+                "name": "Back",
+                "exercises": [
+                  {
+                    "id": "0294",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Hinge at hips, pull dumbbell to hip pocket, squeeze lats at top."
+                  },
+                  {
+                    "id": "0161",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Sit tall, retract shoulder blades, pull handles to mid-torso."
+                  }
+                ]
+              },
+              {
+                "name": "Shoulders",
+                "exercises": [
+                  {
+                    "id": "0237",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Press dumbbells overhead from shoulder height, avoid locking elbows."
+                  }
+                ]
+              },
+              {
+                "name": "Arms",
+                "exercises": [
+                  {
+                    "id": "0101",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Supinate wrists at top, control descent, no momentum."
+                  },
+                  {
+                    "id": "0200",
+                    "sets": 3,
+                    "reps": 15,
+                    "restSeconds": 45,
+                    "notes": "Elbows pinned to sides, extend fully, squeeze triceps."
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Select moderate weights to hit 15 reps with good form—last 3-4 reps should be challenging.",
+              "Keep rests short to elevate heart rate and enhance fat-burning for your get-lean goal.",
+              "Focus on tempo: 2 seconds up, 2 seconds down for maximum endurance benefits.",
+              "Pair with a calorie-controlled diet and cardio for optimal leaning results."
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 1937,
+            "completion_tokens": 4198,
+            "total_tokens": 6135,
+            "cost": 0.00246375,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 151,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.00036475,
+              "upstream_inference_completions_cost": 0.002099
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 3643,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 6,
+            "equipmentMatchRate": 100,
+            "avgSets": 3,
+            "avgReps": "15",
+            "avgRest": 45,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 67,
+            "diversityIndex": 83,
+            "uniqueTargets": 6,
+            "uniqueBodyParts": 4,
+            "exerciseIds": [
+              "0025",
+              "0294",
+              "0161",
+              "0237",
+              "0101",
+              "0200"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "Home Gym - Dumbbells Only",
+      "category": "minimal",
+      "request": {
+        "equipment": [
+          "dumbbell"
+        ],
+        "trainingStyle": "BODYBUILD",
+        "bodyParts": [
+          "chest",
+          "back",
+          "shoulders",
+          "upper arms"
+        ],
+        "targetMuscles": [
+          "pectorals",
+          "lats",
+          "delts",
+          "biceps",
+          "triceps"
+        ],
+        "duration": 60,
+        "experienceLevel": 5,
+        "goal": "stay_fit"
+      },
+      "expectations": {
+        "minExercises": 5,
+        "maxExercises": 8,
+        "setsRange": [
+          3,
+          4
+        ],
+        "repsRange": [
+          8,
+          15
+        ],
+        "restRange": [
+          45,
+          90
+        ],
+        "shouldIncludeTechniques": [
+          "supersets"
+        ],
+        "requiredMuscleBalance": {}
+      },
+      "exercisesAvailable": 17,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 1146,
+          "rawResponse": "{\n  \"title\": \"Dumbbell Upper Body Bodybuilding Blast\",\n  \"description\": \"Classic bodybuilding workout targeting chest, back, shoulders, and arms for maintenance and strength using only dumbbells.\",\n  \"estimatedDuration\": 60,\n  \"sections\": [\n    {\n      \"name\": \"Chest\",\n      \"exercises\": [\n        {\n          \"id\": \"0025\",\n          \"sets\": 4,\n          \"reps\": \"8-12\",\n          \"restSeconds\": 90,\n          \"notes\": \"Focus on full range of motion and chest squeeze at the top.\"\n        },\n        {\n          \"id\": \"0289\",\n          \"sets\": 3,\n          \"reps\": \"10-12\",\n          \"restSeconds\": 60,\n          \"notes\": \"Keep a slight bend in elbows and control the descent.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Back\",\n      \"exercises\": [\n        {\n          \"id\": \"0294\",\n          \"sets\": 4,\n          \"reps\": \"8-12\",\n          \"restSeconds\": 90,\n          \"notes\": \"Pull with lats, keep back straight, squeeze at contraction.\"\n        },\n        {\n          \"id\": \"0293\",\n          \"sets\": 3,\n          \"reps\": \"10-12\",\n          \"restSeconds\": 60,\n          \"notes\": \"Lie on bench, stretch fully at top for lat expansion.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Shoulders\",\n      \"exercises\": [\n        {\n          \"id\": \"0237\",\n          \"sets\": 4,\n          \"reps\": \"8-12\",\n          \"restSeconds\": 90,\n          \"notes\": \"Press straight up, avoid locking elbows.\"\n        },\n        {\n          \"id\": \"0308\",\n          \"sets\": 3,\n          \"reps\": \"10-15\",\n          \"restSeconds\": 60,\n          \"notes\": \"Lead with elbows, slight bend in arms for side delts.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Arms\",\n      \"exercises\": [\n        {\n          \"id\": \"0101\",\n          \"sets\": 3,\n          \"reps\": \"10-12\",\n          \"restSeconds\": 60,\n          \"notes\": \"Controlled curls, full supination for bicep peak.\"\n        },\n        {\n          \"id\": \"0202\",\n          \"sets\": 3,\n          \"reps\": \"10-12\",\n          \"restSeconds\": 60,\n          \"notes\": \"Keep elbows fixed, extend fully overhead.\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Prioritize progressive overload: increase weight or reps weekly.\",\n    \"Focus on mind-muscle connection and slow eccentrics for hypertrophy.\",\n    \"Warm up with light sets; stay hydrated and maintain form to avoid injury.\",\n    \"Track your workouts to ensure consistent progress.\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "Dumbbell Upper Body Bodybuilding Blast",
+            "description": "Classic bodybuilding workout targeting chest, back, shoulders, and arms for maintenance and strength using only dumbbells.",
+            "estimatedDuration": 60,
+            "sections": [
+              {
+                "name": "Chest",
+                "exercises": [
+                  {
+                    "id": "0025",
+                    "sets": 4,
+                    "reps": "8-12",
+                    "restSeconds": 90,
+                    "notes": "Focus on full range of motion and chest squeeze at the top."
+                  },
+                  {
+                    "id": "0289",
+                    "sets": 3,
+                    "reps": "10-12",
+                    "restSeconds": 60,
+                    "notes": "Keep a slight bend in elbows and control the descent."
+                  }
+                ]
+              },
+              {
+                "name": "Back",
+                "exercises": [
+                  {
+                    "id": "0294",
+                    "sets": 4,
+                    "reps": "8-12",
+                    "restSeconds": 90,
+                    "notes": "Pull with lats, keep back straight, squeeze at contraction."
+                  },
+                  {
+                    "id": "0293",
+                    "sets": 3,
+                    "reps": "10-12",
+                    "restSeconds": 60,
+                    "notes": "Lie on bench, stretch fully at top for lat expansion."
+                  }
+                ]
+              },
+              {
+                "name": "Shoulders",
+                "exercises": [
+                  {
+                    "id": "0237",
+                    "sets": 4,
+                    "reps": "8-12",
+                    "restSeconds": 90,
+                    "notes": "Press straight up, avoid locking elbows."
+                  },
+                  {
+                    "id": "0308",
+                    "sets": 3,
+                    "reps": "10-15",
+                    "restSeconds": 60,
+                    "notes": "Lead with elbows, slight bend in arms for side delts."
+                  }
+                ]
+              },
+              {
+                "name": "Arms",
+                "exercises": [
+                  {
+                    "id": "0101",
+                    "sets": 3,
+                    "reps": "10-12",
+                    "restSeconds": 60,
+                    "notes": "Controlled curls, full supination for bicep peak."
+                  },
+                  {
+                    "id": "0202",
+                    "sets": 3,
+                    "reps": "10-12",
+                    "restSeconds": 60,
+                    "notes": "Keep elbows fixed, extend fully overhead."
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Prioritize progressive overload: increase weight or reps weekly.",
+              "Focus on mind-muscle connection and slow eccentrics for hypertrophy.",
+              "Warm up with light sets; stay hydrated and maintain form to avoid injury.",
+              "Track your workouts to ensure consistent progress."
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 1294,
+            "completion_tokens": 1299,
+            "total_tokens": 2593,
+            "cost": 0.00088565,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 151,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.00023615,
+              "upstream_inference_completions_cost": 0.0006495
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 675,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 8,
+            "equipmentMatchRate": 100,
+            "avgSets": 3.4,
+            "avgReps": "10-12",
+            "avgRest": 71,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 100,
+            "diversityIndex": 56,
+            "uniqueTargets": 5,
+            "uniqueBodyParts": 4,
+            "exerciseIds": [
+              "0025",
+              "0289",
+              "0294",
+              "0293",
+              "0237",
+              "0308",
+              "0101",
+              "0202"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "Full Body",
+      "category": "beginner",
+      "request": {
+        "equipment": [
+          "dumbbell",
+          "leverage machine",
+          "body weight"
+        ],
+        "trainingStyle": "BODYBUILD",
+        "bodyParts": [
+          "full_body"
+        ],
+        "duration": 30,
+        "experienceLevel": 5,
+        "goal": "stay_fit"
+      },
+      "expectations": {
+        "minExercises": 5,
+        "maxExercises": 8,
+        "setsRange": [
+          2,
+          3
+        ],
+        "repsRange": [
+          10,
+          15
+        ],
+        "restRange": [
+          60,
+          90
+        ],
+        "shouldIncludeTechniques": [],
+        "requiredMuscleBalance": {}
+      },
+      "exercisesAvailable": 62,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 1004,
+          "rawResponse": "{\n  \"title\": \"30-Min Full Body Bodybuilding Blast\",\n  \"description\": \"Classic bodybuilding full-body workout for maintenance fitness. Hypertrophy-focused with compounds and isolations.\",\n  \"estimatedDuration\": 30,\n  \"sections\": [\n    {\n      \"name\": \"Upper Push\",\n      \"exercises\": [\n        {\n          \"id\": \"0025\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 60,\n          \"notes\": \"Elbows at 45 degrees, full stretch at bottom\"\n        },\n        {\n          \"id\": \"0237\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 60\n        },\n        {\n          \"id\": \"0202\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Keep elbows close, extend fully\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Upper Pull\",\n      \"exercises\": [\n        {\n          \"id\": \"0294\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 60,\n          \"notes\": \"Squeeze shoulder blades, controlled negative\"\n        },\n        {\n          \"id\": \"0101\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60\n        }\n      ]\n    },\n    {\n      \"name\": \"Lower Body\",\n      \"exercises\": [\n        {\n          \"id\": \"0584\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Feet shoulder-width, deep controlled reps\"\n        },\n        {\n          \"id\": \"0587\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 90,\n          \"notes\": \"Full hamstring contraction\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Prioritize mind-muscle connection and squeeze at peak contraction.\",\n    \"Use progressive overload by increasing weight when reps feel easy.\",\n    \"Control the eccentric phase for better gains.\",\n    \"Warm up joints before starting.\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "30-Min Full Body Bodybuilding Blast",
+            "description": "Classic bodybuilding full-body workout for maintenance fitness. Hypertrophy-focused with compounds and isolations.",
+            "estimatedDuration": 30,
+            "sections": [
+              {
+                "name": "Upper Push",
+                "exercises": [
+                  {
+                    "id": "0025",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 60,
+                    "notes": "Elbows at 45 degrees, full stretch at bottom"
+                  },
+                  {
+                    "id": "0237",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 60
+                  },
+                  {
+                    "id": "0202",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Keep elbows close, extend fully"
+                  }
+                ]
+              },
+              {
+                "name": "Upper Pull",
+                "exercises": [
+                  {
+                    "id": "0294",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 60,
+                    "notes": "Squeeze shoulder blades, controlled negative"
+                  },
+                  {
+                    "id": "0101",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60
+                  }
+                ]
+              },
+              {
+                "name": "Lower Body",
+                "exercises": [
+                  {
+                    "id": "0584",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Feet shoulder-width, deep controlled reps"
+                  },
+                  {
+                    "id": "0587",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 90,
+                    "notes": "Full hamstring contraction"
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Prioritize mind-muscle connection and squeeze at peak contraction.",
+              "Use progressive overload by increasing weight when reps feel easy.",
+              "Control the eccentric phase for better gains.",
+              "Warm up joints before starting."
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 3316,
+            "completion_tokens": 3916,
+            "total_tokens": 7232,
+            "cost": 0.00259855,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 151,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.00064055,
+              "upstream_inference_completions_cost": 0.001958
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 3441,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 7,
+            "equipmentMatchRate": 100,
+            "avgSets": 3,
+            "avgReps": "10",
+            "avgRest": 69,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 67,
+            "diversityIndex": 86,
+            "uniqueTargets": 7,
+            "uniqueBodyParts": 5,
+            "exerciseIds": [
+              "0025",
+              "0237",
+              "0202",
+              "0294",
+              "0101",
+              "0584",
+              "0587"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "Upper/Lower Split - Upper",
+      "category": "beginner",
+      "request": {
+        "equipment": [
+          "dumbbell",
+          "cable",
+          "leverage machine"
+        ],
+        "trainingStyle": "BODYBUILD",
+        "bodyParts": [
+          "chest",
+          "back",
+          "shoulders",
+          "upper arms"
+        ],
+        "duration": 45,
+        "experienceLevel": 5,
+        "goal": "build_muscle"
+      },
+      "expectations": {
+        "minExercises": 4,
+        "maxExercises": 6,
+        "setsRange": [
+          2,
+          3
+        ],
+        "repsRange": [
+          10,
+          15
+        ],
+        "restRange": [
+          60,
+          90
+        ],
+        "shouldIncludeTechniques": [],
+        "requiredMuscleBalance": {}
+      },
+      "exercisesAvailable": 28,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 1082,
+          "rawResponse": "{\n  \"title\": \"Classic Upper Body Bodybuilding Workout\",\n  \"description\": \"A focused 45-minute bodybuilding session targeting chest, back, shoulders, and upper arms for hypertrophy using available equipment.\",\n  \"estimatedDuration\": 45,\n  \"sections\": [\n    {\n      \"name\": \"Chest\",\n      \"exercises\": [\n        {\n          \"id\": \"0025\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Use a full range of motion, control the eccentric phase\"\n        },\n        {\n          \"id\": \"1254\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Squeeze chest at the peak contraction\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Back\",\n      \"exercises\": [\n        {\n          \"id\": \"0160\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Pull with lats, keep chest up\"\n        },\n        {\n          \"id\": \"0161\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60\n        }\n      ]\n    },\n    {\n      \"name\": \"Shoulders\",\n      \"exercises\": [\n        {\n          \"id\": \"0237\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Press explosively, lower slowly\"\n        },\n        {\n          \"id\": \"0308\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Lead with elbows for side delts\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Upper Arms\",\n      \"exercises\": [\n        {\n          \"id\": \"0102\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Neutral grip for brachialis emphasis\"\n        },\n        {\n          \"id\": \"0200\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Keep elbows tucked, full extension\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Prioritize progressive overload by increasing weight or reps weekly\",\n    \"Focus on mind-muscle connection for maximum hypertrophy\",\n    \"Breathe out on exertion, maintain strict form\",\n    \"Cool down with light stretching for recovery\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "Classic Upper Body Bodybuilding Workout",
+            "description": "A focused 45-minute bodybuilding session targeting chest, back, shoulders, and upper arms for hypertrophy using available equipment.",
+            "estimatedDuration": 45,
+            "sections": [
+              {
+                "name": "Chest",
+                "exercises": [
+                  {
+                    "id": "0025",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Use a full range of motion, control the eccentric phase"
+                  },
+                  {
+                    "id": "1254",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Squeeze chest at the peak contraction"
+                  }
+                ]
+              },
+              {
+                "name": "Back",
+                "exercises": [
+                  {
+                    "id": "0160",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Pull with lats, keep chest up"
+                  },
+                  {
+                    "id": "0161",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60
+                  }
+                ]
+              },
+              {
+                "name": "Shoulders",
+                "exercises": [
+                  {
+                    "id": "0237",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Press explosively, lower slowly"
+                  },
+                  {
+                    "id": "0308",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Lead with elbows for side delts"
+                  }
+                ]
+              },
+              {
+                "name": "Upper Arms",
+                "exercises": [
+                  {
+                    "id": "0102",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Neutral grip for brachialis emphasis"
+                  },
+                  {
+                    "id": "0200",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Keep elbows tucked, full extension"
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Prioritize progressive overload by increasing weight or reps weekly",
+              "Focus on mind-muscle connection for maximum hypertrophy",
+              "Breathe out on exertion, maintain strict form",
+              "Cool down with light stretching for recovery"
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 1795,
+            "completion_tokens": 1848,
+            "total_tokens": 3643,
+            "cost": 0.00126035,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 151,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.00033635,
+              "upstream_inference_completions_cost": 0.000924
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1285,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 8,
+            "equipmentMatchRate": 100,
+            "avgSets": 3,
+            "avgReps": "12",
+            "avgRest": 71,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 67,
+            "diversityIndex": 63,
+            "uniqueTargets": 6,
+            "uniqueBodyParts": 4,
+            "exerciseIds": [
+              "0025",
+              "1254",
+              "0160",
+              "0161",
+              "0237",
+              "0308",
+              "0102",
+              "0200"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "Push Day",
+      "category": "advanced",
+      "request": {
+        "equipment": [
+          "barbell",
+          "dumbbell",
+          "cable",
+          "leverage machine"
+        ],
+        "trainingStyle": "BODYBUILD",
+        "bodyParts": [
+          "chest",
+          "shoulders",
+          "upper arms"
+        ],
+        "targetMuscles": [
+          "pectorals",
+          "delts",
+          "triceps"
+        ],
+        "duration": 75,
+        "experienceLevel": 5,
+        "goal": "build_muscle"
+      },
+      "expectations": {
+        "minExercises": 7,
+        "maxExercises": 10,
+        "setsRange": [
+          3,
+          5
+        ],
+        "repsRange": [
+          6,
+          15
+        ],
+        "restRange": [
+          45,
+          120
+        ],
+        "shouldIncludeTechniques": [
+          "supersets",
+          "drop sets",
+          "rest pause"
+        ],
+        "requiredMuscleBalance": {
+          "pectorals": 0.35,
+          "delts": 0.3,
+          "triceps": 0.25
+        }
+      },
+      "exercisesAvailable": 30,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 831,
+          "rawResponse": "{\n  \"title\": \"Classic Bodybuilding Chest, Shoulders & Triceps\",\n  \"description\": \"Hypertrophy-focused push workout targeting pectorals, delts, and triceps with compound and isolation movements.\",\n  \"estimatedDuration\": 75,\n  \"sections\": [\n    {\n      \"name\": \"Chest\",\n      \"exercises\": [\n        {\n          \"id\": \"0047\",\n          \"sets\": 4,\n          \"reps\": \"8-12\",\n          \"restSeconds\": 90,\n          \"notes\": \"Controlled eccentric phase, full stretch at bottom.\"\n        },\n        {\n          \"id\": \"0026\",\n          \"sets\": 3,\n          \"reps\": \"10-12\",\n          \"restSeconds\": 75,\n          \"notes\": \"45-degree elbows, focus on upper pecs.\"\n        },\n        {\n          \"id\": \"1254\",\n          \"sets\": 3,\n          \"reps\": \"12-15\",\n          \"restSeconds\": 60,\n          \"notes\": \"Cross hands at peak contraction for inner chest squeeze.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Shoulders\",\n      \"exercises\": [\n        {\n          \"id\": \"0036\",\n          \"sets\": 4,\n          \"reps\": \"8-12\",\n          \"restSeconds\": 90,\n          \"notes\": \"Strict form, no momentum, lock out at top.\"\n        },\n        {\n          \"id\": \"0308\",\n          \"sets\": 3,\n          \"reps\": \"12-15\",\n          \"restSeconds\": 60,\n          \"notes\": \"Light weights, lead with elbows, slight bend in arms.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Triceps\",\n      \"exercises\": [\n        {\n          \"id\": \"0203\",\n          \"sets\": 3,\n          \"reps\": \"8-12\",\n          \"restSeconds\": 75,\n          \"notes\": \"Close grip on barbell, elbows tucked.\"\n        },\n        {\n          \"id\": \"0200\",\n          \"sets\": 3,\n          \"reps\": \"10-12\",\n          \"restSeconds\": 60,\n          \"notes\": \"Keep elbows pinned to sides, full extension.\"\n        },\n        {\n          \"id\": \"0202\",\n          \"sets\": 3,\n          \"reps\": \"12-15\",\n          \"restSeconds\": 60,\n          \"notes\": \"Overhead stretch, use one or two dumbbells.\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Progressive overload: Increase weight or reps weekly when possible.\",\n    \"Mind-muscle connection: Focus on target muscles contracting.\",\n    \"Proper warm-up sets before working sets.\",\n    \"Nutrition: Consume protein-rich meal post-workout for recovery.\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "Classic Bodybuilding Chest, Shoulders & Triceps",
+            "description": "Hypertrophy-focused push workout targeting pectorals, delts, and triceps with compound and isolation movements.",
+            "estimatedDuration": 75,
+            "sections": [
+              {
+                "name": "Chest",
+                "exercises": [
+                  {
+                    "id": "0047",
+                    "sets": 4,
+                    "reps": "8-12",
+                    "restSeconds": 90,
+                    "notes": "Controlled eccentric phase, full stretch at bottom."
+                  },
+                  {
+                    "id": "0026",
+                    "sets": 3,
+                    "reps": "10-12",
+                    "restSeconds": 75,
+                    "notes": "45-degree elbows, focus on upper pecs."
+                  },
+                  {
+                    "id": "1254",
+                    "sets": 3,
+                    "reps": "12-15",
+                    "restSeconds": 60,
+                    "notes": "Cross hands at peak contraction for inner chest squeeze."
+                  }
+                ]
+              },
+              {
+                "name": "Shoulders",
+                "exercises": [
+                  {
+                    "id": "0036",
+                    "sets": 4,
+                    "reps": "8-12",
+                    "restSeconds": 90,
+                    "notes": "Strict form, no momentum, lock out at top."
+                  },
+                  {
+                    "id": "0308",
+                    "sets": 3,
+                    "reps": "12-15",
+                    "restSeconds": 60,
+                    "notes": "Light weights, lead with elbows, slight bend in arms."
+                  }
+                ]
+              },
+              {
+                "name": "Triceps",
+                "exercises": [
+                  {
+                    "id": "0203",
+                    "sets": 3,
+                    "reps": "8-12",
+                    "restSeconds": 75,
+                    "notes": "Close grip on barbell, elbows tucked."
+                  },
+                  {
+                    "id": "0200",
+                    "sets": 3,
+                    "reps": "10-12",
+                    "restSeconds": 60,
+                    "notes": "Keep elbows pinned to sides, full extension."
+                  },
+                  {
+                    "id": "0202",
+                    "sets": 3,
+                    "reps": "12-15",
+                    "restSeconds": 60,
+                    "notes": "Overhead stretch, use one or two dumbbells."
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Progressive overload: Increase weight or reps weekly when possible.",
+              "Mind-muscle connection: Focus on target muscles contracting.",
+              "Proper warm-up sets before working sets.",
+              "Nutrition: Consume protein-rich meal post-workout for recovery."
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 1892,
+            "completion_tokens": 2763,
+            "total_tokens": 4655,
+            "cost": 0.0017368,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 154,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.0003553,
+              "upstream_inference_completions_cost": 0.0013815
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 2170,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 8,
+            "equipmentMatchRate": 100,
+            "avgSets": 3.3,
+            "avgReps": "8-12",
+            "avgRest": 71,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 75,
+            "diversityIndex": 38,
+            "uniqueTargets": 3,
+            "uniqueBodyParts": 3,
+            "exerciseIds": [
+              "0047",
+              "0026",
+              "1254",
+              "0036",
+              "0308",
+              "0203",
+              "0200",
+              "0202"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pull Day",
+      "category": "advanced",
+      "request": {
+        "equipment": [
+          "barbell",
+          "dumbbell",
+          "cable",
+          "leverage machine",
+          "body weight"
+        ],
+        "trainingStyle": "BODYBUILD",
+        "bodyParts": [
+          "back",
+          "upper arms"
+        ],
+        "targetMuscles": [
+          "lats",
+          "upper back",
+          "biceps"
+        ],
+        "duration": 75,
+        "experienceLevel": 5,
+        "goal": "get_lean"
+      },
+      "expectations": {
+        "minExercises": 7,
+        "maxExercises": 10,
+        "setsRange": [
+          3,
+          5
+        ],
+        "repsRange": [
+          6,
+          15
+        ],
+        "restRange": [
+          45,
+          120
+        ],
+        "shouldIncludeTechniques": [
+          "supersets",
+          "drop sets"
+        ],
+        "requiredMuscleBalance": {
+          "lats": 0.35,
+          "upper back": 0.25,
+          "biceps": 0.25
+        }
+      },
+      "exercisesAvailable": 26,
+      "modelResults": [
+        {
+          "model": {
+            "id": "x-ai/grok-4.1-fast",
+            "name": "Grok 4.1",
+            "tier": "fast"
+          },
+          "success": true,
+          "latency": 1446,
+          "rawResponse": "{\n  \"title\": \"Classic Bodybuilding Back & Biceps Lean Workout\",\n  \"description\": \"Intermediate bodybuilding session targeting lats, upper back, and biceps with compounds and isolations for lean muscle definition.\",\n  \"estimatedDuration\": 75,\n  \"sections\": [\n    {\n      \"name\": \"Lats & Upper Back\",\n      \"exercises\": [\n        {\n          \"id\": \"0027\",\n          \"sets\": 4,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Hinge at hips, keep back flat, pull bar to lower abs squeezing lats.\"\n        },\n        {\n          \"id\": \"1257\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 75,\n          \"notes\": \"Full range, focus on stretch at bottom.\"\n        },\n        {\n          \"id\": \"0161\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Squeeze shoulder blades together, keep chest up.\"\n        },\n        {\n          \"id\": \"0029\",\n          \"sets\": 3,\n          \"reps\": 10,\n          \"restSeconds\": 90,\n          \"notes\": \"Drive elbows back, use T-bar or landmine setup.\"\n        }\n      ]\n    },\n    {\n      \"name\": \"Biceps\",\n      \"exercises\": [\n        {\n          \"id\": \"0100\",\n          \"sets\": 4,\n          \"reps\": 10,\n          \"restSeconds\": 60,\n          \"notes\": \"Strict form, curl to shoulders without swinging.\"\n        },\n        {\n          \"id\": \"0101\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Supinate wrists at top for peak contraction.\"\n        },\n        {\n          \"id\": \"0102\",\n          \"sets\": 3,\n          \"reps\": 12,\n          \"restSeconds\": 60,\n          \"notes\": \"Neutral grip targets brachialis for arm thickness.\"\n        }\n      ]\n    }\n  ],\n  \"tips\": [\n    \"Prioritize mind-muscle connection on every rep.\",\n    \"Use progressive overload weekly to build lean muscle.\",\n    \"Control the eccentric phase for better hypertrophy and leanness.\",\n    \"Stay hydrated and eat in a slight calorie deficit for get_lean goals.\"\n  ]\n}",
+          "parsedWorkout": {
+            "title": "Classic Bodybuilding Back & Biceps Lean Workout",
+            "description": "Intermediate bodybuilding session targeting lats, upper back, and biceps with compounds and isolations for lean muscle definition.",
+            "estimatedDuration": 75,
+            "sections": [
+              {
+                "name": "Lats & Upper Back",
+                "exercises": [
+                  {
+                    "id": "0027",
+                    "sets": 4,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Hinge at hips, keep back flat, pull bar to lower abs squeezing lats."
+                  },
+                  {
+                    "id": "1257",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 75,
+                    "notes": "Full range, focus on stretch at bottom."
+                  },
+                  {
+                    "id": "0161",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Squeeze shoulder blades together, keep chest up."
+                  },
+                  {
+                    "id": "0029",
+                    "sets": 3,
+                    "reps": 10,
+                    "restSeconds": 90,
+                    "notes": "Drive elbows back, use T-bar or landmine setup."
+                  }
+                ]
+              },
+              {
+                "name": "Biceps",
+                "exercises": [
+                  {
+                    "id": "0100",
+                    "sets": 4,
+                    "reps": 10,
+                    "restSeconds": 60,
+                    "notes": "Strict form, curl to shoulders without swinging."
+                  },
+                  {
+                    "id": "0101",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Supinate wrists at top for peak contraction."
+                  },
+                  {
+                    "id": "0102",
+                    "sets": 3,
+                    "reps": 12,
+                    "restSeconds": 60,
+                    "notes": "Neutral grip targets brachialis for arm thickness."
+                  }
+                ]
+              }
+            ],
+            "tips": [
+              "Prioritize mind-muscle connection on every rep.",
+              "Use progressive overload weekly to build lean muscle.",
+              "Control the eccentric phase for better hypertrophy and leanness.",
+              "Stay hydrated and eat in a slight calorie deficit for get_lean goals."
+            ]
+          },
+          "parseError": null,
+          "usage": {
+            "prompt_tokens": 1689,
+            "completion_tokens": 2441,
+            "total_tokens": 4130,
+            "cost": 0.0015364,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 146,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": null,
+              "upstream_inference_prompt_cost": 0.0003159,
+              "upstream_inference_completions_cost": 0.0012205
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 1922,
+              "image_tokens": 0
+            }
+          },
+          "metrics": {
+            "success": true,
+            "exerciseCount": 7,
+            "equipmentMatchRate": 100,
+            "avgSets": 3.3,
+            "avgReps": "10",
+            "avgRest": 75,
+            "supersetsCount": 0,
+            "hasValidSupersets": true,
+            "equipmentUtilization": 80,
+            "diversityIndex": 36,
+            "uniqueTargets": 3,
+            "uniqueBodyParts": 2,
+            "exerciseIds": [
+              "0027",
+              "1257",
+              "0161",
+              "0029",
+              "0100",
+              "0101",
+              "0102"
+            ],
+            "uniquenessScore": 100
+          }
+        }
+      ]
+    }
+  ],
+  "modelSummaries": {
+    "x-ai/grok-4.1-fast": {
+      "name": "Grok 4.1",
+      "tier": "fast",
+      "totalTests": 17,
+      "successCount": 17,
+      "parseErrorCount": 0,
+      "apiErrorCount": 0,
+      "totalLatency": 18443,
+      "totalExerciseCount": 115,
+      "totalEquipmentMatchRate": 1700,
+      "totalSets": 55.599999999999994,
+      "totalRest": 1416,
+      "repsCounts": {
+        "6": 2,
+        "8": 1,
+        "10": 5,
+        "12": 4,
+        "15": 2,
+        "6-8": 1,
+        "10-12": 1,
+        "8-12": 1
+      },
+      "totalEquipmentUtilization": 1398,
+      "totalDiversityIndex": 912,
+      "totalUniquenessScore": 1700,
+      "uniquenessScoreCount": 17,
+      "avgLatency": 1085,
+      "avgExerciseCount": 6.8,
+      "avgEquipmentMatchRate": 100,
+      "avgSets": 3.3,
+      "avgRest": 83,
+      "avgEquipmentUtilization": 82,
+      "avgDiversityIndex": 54,
+      "avgUniquenessScore": 100,
+      "avgReps": "10",
+      "successRate": 100
+    }
+  }
+}

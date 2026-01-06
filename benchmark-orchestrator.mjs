@@ -15,14 +15,16 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// All available models
+// All available models - ordered CHEAPEST FIRST for sequential mode safety
 const ALL_MODELS = [
-  { id: 'openai/gpt-5.2', name: 'GPT-5.2' },
-  { id: 'anthropic/claude-sonnet-4.5', name: 'Claude Sonnet 4.5' },
-  { id: 'anthropic/claude-haiku-4.5', name: 'Claude 4.5 Haiku' },
-  { id: 'google/gemini-3-flash-preview', name: 'Gemini 3 Flash' },
-  { id: 'google/gemini-3-pro-preview', name: 'Gemini 3 Pro' },
-  { id: 'x-ai/grok-4.1-fast', name: 'Grok 4.1' },
+  // Fast/cheap tier first (most likely to complete before credits run out)
+  { id: 'anthropic/claude-haiku-4.5', name: 'Claude 4.5 Haiku', tier: 'fast' },
+  { id: 'google/gemini-3-flash-preview', name: 'Gemini 3 Flash', tier: 'fast' },
+  { id: 'x-ai/grok-4.1-fast', name: 'Grok 4.1', tier: 'fast' },
+  // Premium tier last (run these after cheap models have data)
+  { id: 'google/gemini-3-pro-preview', name: 'Gemini 3 Pro', tier: 'premium' },
+  { id: 'anthropic/claude-sonnet-4.5', name: 'Claude Sonnet 4.5', tier: 'premium' },
+  { id: 'openai/gpt-5.2', name: 'GPT-5.2', tier: 'premium' },
 ];
 
 // Fast models for dry runs (DRY_RUN=1)
@@ -33,6 +35,12 @@ const DRY_RUN_MODELS = [
 
 // Select models based on DRY_RUN env var
 const MODELS = process.env.DRY_RUN === '1' ? DRY_RUN_MODELS : ALL_MODELS;
+
+// SEQUENTIAL=1 runs models one at a time, cheapest first (safer for credit limits)
+const SEQUENTIAL_MODE = process.env.SEQUENTIAL === '1';
+
+// ABORT_ON_CONSECUTIVE_FAILURES - stop if N models fail in a row (likely credit exhaustion)
+const ABORT_THRESHOLD = parseInt(process.env.ABORT_THRESHOLD, 10) || 2;
 
 // ANSI color codes for terminal output
 const colors = {
@@ -176,7 +184,7 @@ function runCombiner() {
 async function main() {
   console.log('\n');
   log('========================================', colors.bright);
-  log('  LLM BENCHMARK PARALLEL ORCHESTRATOR  ', colors.bright + colors.cyan);
+  log(`  LLM BENCHMARK ${SEQUENTIAL_MODE ? 'SEQUENTIAL' : 'PARALLEL'} ORCHESTRATOR  `, colors.bright + colors.cyan);
   log('========================================', colors.bright);
   console.log('\n');
 
@@ -187,29 +195,63 @@ async function main() {
     process.exit(1);
   }
 
-  log(`Launching ${MODELS.length} model benchmarks in parallel...`, colors.yellow);
+  if (SEQUENTIAL_MODE) {
+    log(`Running ${MODELS.length} models SEQUENTIALLY (cheapest first, safer for credits)`, colors.yellow);
+    log(`Will abort after ${ABORT_THRESHOLD} consecutive failures (likely credit exhaustion)`, colors.yellow);
+  } else {
+    log(`Launching ${MODELS.length} model benchmarks in parallel...`, colors.yellow);
+  }
   console.log('\n');
 
   const startTime = Date.now();
   let completed = 0;
   let successes = 0;
   let failures = 0;
+  let consecutiveFailures = 0;
+  let abortedEarly = false;
+  const results = [];
 
-  // Launch all models in parallel
-  const promises = MODELS.map(async (model) => {
-    const result = await runModelBenchmark(model);
-    completed++;
-    if (result.success) {
-      successes++;
-    } else {
-      failures++;
+  if (SEQUENTIAL_MODE) {
+    // Sequential mode: run one at a time, cheapest first
+    for (const model of MODELS) {
+      const result = await runModelBenchmark(model);
+      results.push(result);
+      completed++;
+
+      if (result.success) {
+        successes++;
+        consecutiveFailures = 0; // Reset on success
+      } else {
+        failures++;
+        consecutiveFailures++;
+
+        // Check for early abort
+        if (consecutiveFailures >= ABORT_THRESHOLD) {
+          log(`\n${colors.bgYellow}${colors.bright} EARLY ABORT ${colors.reset} ${consecutiveFailures} consecutive failures - likely credit exhaustion`, colors.yellow);
+          log(`Completed ${successes} models successfully before stopping.`, colors.yellow);
+          abortedEarly = true;
+          break;
+        }
+      }
+      logProgress(completed, MODELS.length, successes, failures);
     }
-    logProgress(completed, MODELS.length, successes, failures);
-    return result;
-  });
+  } else {
+    // Parallel mode: launch all at once
+    const promises = MODELS.map(async (model) => {
+      const result = await runModelBenchmark(model);
+      completed++;
+      if (result.success) {
+        successes++;
+      } else {
+        failures++;
+      }
+      logProgress(completed, MODELS.length, successes, failures);
+      return result;
+    });
 
-  // Wait for all to complete
-  const results = await Promise.all(promises);
+    // Wait for all to complete
+    results.push(...await Promise.all(promises));
+  }
 
   const totalDuration = Date.now() - startTime;
 
@@ -220,9 +262,12 @@ async function main() {
   console.log('\n');
 
   // Summary table
-  log(`Total models: ${MODELS.length}`, colors.reset);
+  log(`Total models: ${MODELS.length}${abortedEarly ? ` (aborted after ${completed})` : ''}`, colors.reset);
   log(`Successful: ${successes}`, colors.green);
   log(`Failed: ${failures}`, failures > 0 ? colors.red : colors.reset);
+  if (abortedEarly) {
+    log(`Skipped: ${MODELS.length - completed} (early abort due to credit exhaustion)`, colors.yellow);
+  }
   log(`Total time: ${(totalDuration / 1000).toFixed(1)}s`, colors.reset);
   console.log('\n');
 

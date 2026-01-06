@@ -1,0 +1,1364 @@
+{
+  "modelId": "openai/gpt-5.2",
+  "modelName": "GPT-5.2",
+  "tier": "premium",
+  "timestamp": "2025-12-30T11:44:16.997Z",
+  "totalScenarios": 5,
+  "scenarios": [
+    {
+      "name": "Bro Split - Bodybuilding (Chest)",
+      "split": "bro_split",
+      "dayFocus": "Chest",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Chest Press",
+        "Pec Deck"
+      ],
+      "success": true,
+      "latency": 88915,
+      "exerciseCount": 8,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "10",
+      "avgRest": 78,
+      "error": null,
+      "workout": {
+        "title": "Generated Workout",
+        "description": "A balanced workout targeting your selected muscle groups.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "1620",
+                "name": "dumbbell incline one arm hammer press on exercise ball",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1620.gif",
+                "target": "triceps",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "1620",
+                "instructions": [
+                  "Sit on an exercise ball with a dumbbell in one hand.",
+                  "Walk your feet forward and roll your body down until your head, neck, and upper back are supported on the ball.",
+                  "Hold the dumbbell with your palm facing inward and your elbow bent at a 90-degree angle.",
+                  "Press the dumbbell up towards the ceiling, straightening your arm.",
+                  "Lower the dumbbell back down to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch arms."
+                ],
+                "description": "The dumbbell incline one arm hammer press on exercise ball is a unilateral pressing exercise that targets the triceps, with secondary emphasis on the shoulders and chest. It is performed while balancing on an exercise ball, which increases core engagement and stability demands.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "chest"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0048",
+                "name": "barbell incline reverse-grip press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0048.gif",
+                "target": "triceps",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "0048",
+                "instructions": [
+                  "Set up an incline bench at a 45-degree angle.",
+                  "Lie back on the bench and grasp the barbell with a reverse grip, hands slightly wider than shoulder-width apart.",
+                  "Unrack the barbell and lower it towards your upper chest, keeping your elbows tucked in.",
+                  "Pause for a moment at the bottom, then push the barbell back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell incline reverse-grip press is a compound upper body exercise that targets the triceps while also engaging the chest and shoulders. It is performed on an incline bench using a reverse (underhand) grip on the barbell.",
+                "secondaryMuscles": [
+                  "chest",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0194",
+                "name": "cable overhead triceps extension (rope attachment)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0194.gif",
+                "target": "triceps",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "0194",
+                "instructions": [
+                  "Attach a rope to a cable machine at a high position.",
+                  "Stand facing away from the machine with your feet shoulder-width apart.",
+                  "Grasp the rope with both hands, palms facing each other, and bring your hands above your head.",
+                  "Keep your upper arms close to your head and your elbows pointing forward.",
+                  "Slowly lower the rope behind your head by bending your elbows.",
+                  "Pause for a moment, then extend your arms back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable overhead triceps extension (rope attachment) is an isolation exercise targeting the triceps using a cable machine and rope attachment. It requires the user to extend the arms overhead, emphasizing triceps engagement while also involving the shoulders for stabilization.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0152",
+                "name": "cable concentration extension (on knee)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0152.gif",
+                "target": "triceps",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "0152",
+                "instructions": [
+                  "Sit on a bench or chair with your knees bent and feet flat on the ground.",
+                  "Hold the cable handle with your right hand and place your elbow on the inside of your right knee.",
+                  "Extend your arm fully, keeping your elbow stationary and close to your knee.",
+                  "Pause for a moment at the top, then slowly lower your arm back to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch sides."
+                ],
+                "description": "The cable concentration extension (on knee) is an isolation exercise targeting the triceps. It is performed seated, using a cable machine, with the working arm's elbow braced against the inside of the knee to stabilize the movement and focus on triceps extension.",
+                "secondaryMuscles": [
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1726",
+                "name": "cable rope lying on floor tricep extension",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1726.gif",
+                "target": "triceps",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "1726",
+                "instructions": [
+                  "Attach a rope to a cable machine and set it to the lowest position.",
+                  "Lie on the floor facing up, with your head towards the cable machine.",
+                  "Hold the rope with both hands, palms facing each other, and extend your arms straight up towards the ceiling.",
+                  "Keep your upper arms stationary and slowly lower the rope towards your forehead, bending your elbows.",
+                  "Pause for a moment, then extend your arms back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable rope lying on floor tricep extension is an isolation exercise targeting the triceps, performed lying on the floor with a cable machine. It requires proper form to avoid strain on the elbows and shoulders.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1741",
+                "name": "dumbbell standing bent over two arm triceps extension",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1741.gif",
+                "target": "triceps",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "1741",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and hold a dumbbell in each hand.",
+                  "Bend forward at the waist, keeping your back straight and your knees slightly bent.",
+                  "Extend your arms straight back, keeping your elbows close to your body.",
+                  "Slowly lower the dumbbells back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell standing bent over two arm triceps extension is an exercise targeting the triceps, performed by bending forward at the waist and extending the arms backward with dumbbells.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "back"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1738",
+                "name": "dumbbell seated reverse grip one arm overhead tricep extension",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1738.gif",
+                "target": "triceps",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "1738",
+                "instructions": [
+                  "Sit on a bench with your back straight and feet flat on the ground.",
+                  "Hold a dumbbell with an underhand grip and extend your arm straight up overhead.",
+                  "Lower the dumbbell behind your head by bending your elbow, keeping your upper arm stationary.",
+                  "Pause for a moment, then extend your arm back up to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch arms."
+                ],
+                "description": "The dumbbell seated reverse grip one arm overhead tricep extension is an isolation exercise targeting the triceps, performed with a single dumbbell using an underhand grip while seated. It emphasizes triceps development and also engages the shoulders for stability.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1734",
+                "name": "dumbbell kickbacks on exercise ball",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1734.gif",
+                "target": "triceps",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "1734",
+                "instructions": [
+                  "Sit on an exercise ball with your feet flat on the ground and your back straight.",
+                  "Hold a dumbbell in each hand with your palms facing inwards and your arms bent at a 90-degree angle.",
+                  "Extend your arms straight back, squeezing your triceps at the top of the movement.",
+                  "Pause for a moment, then slowly lower the dumbbells back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "A triceps isolation exercise performed while seated on an exercise ball, which adds an element of balance and core engagement. The movement targets the triceps with secondary involvement from the shoulders and back.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "back"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [
+          "Focus on form",
+          "Control the eccentric phase"
+        ],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "1620",
+              "name": "dumbbell incline one arm hammer press on exercise ball",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      }
+    },
+    {
+      "name": "Bro Split - Bodybuilding (Back)",
+      "split": "bro_split",
+      "dayFocus": "Back",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Lat Pulldown",
+        "Seated Row Machine"
+      ],
+      "success": true,
+      "latency": 90938,
+      "exerciseCount": 8,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "10",
+      "avgRest": 78,
+      "error": null,
+      "workout": {
+        "title": "Generated Workout",
+        "description": "A balanced workout targeting your selected muscle groups.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0234",
+                "name": "cable standing row (v-bar)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0234.gif",
+                "target": "upper back",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "0234",
+                "instructions": [
+                  "Stand facing the cable machine with your feet shoulder-width apart.",
+                  "Grasp the v-bar attachment with an overhand grip, palms facing down.",
+                  "Keep your back straight and your core engaged.",
+                  "Pull the v-bar towards your body, squeezing your shoulder blades together.",
+                  "Pause for a moment at the peak of the movement, then slowly release the tension and return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable standing row (v-bar) is a compound exercise that targets the upper back using a cable machine and a v-bar attachment. It also engages the biceps and shoulders as secondary muscles. The movement requires proper posture and core engagement to perform safely and effectively.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1330",
+                "name": "dumbbell reverse grip incline bench one arm row",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1330.gif",
+                "target": "upper back",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "1330",
+                "instructions": [
+                  "Set up an incline bench at a 45-degree angle.",
+                  "Place a dumbbell on the floor next to the bench.",
+                  "Stand facing the bench with your feet shoulder-width apart.",
+                  "Bend at the waist and place your left knee and left hand on the bench for support.",
+                  "Pick up the dumbbell with your right hand using a reverse grip (palm facing down).",
+                  "Keep your back straight and your core engaged.",
+                  "Pull the dumbbell up towards your chest, keeping your elbow close to your body.",
+                  "Squeeze your back muscles at the top of the movement.",
+                  "Lower the dumbbell back down to the starting position in a controlled manner.",
+                  "Repeat for the desired number of repetitions.",
+                  "Switch sides and repeat the exercise with your left arm."
+                ],
+                "description": "The dumbbell reverse grip incline bench one arm row is a strength exercise targeting the upper back, performed on an incline bench using a single dumbbell and a reverse grip.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0209",
+                "name": "cable reverse preacher curl",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0209.gif",
+                "target": "biceps",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "0209",
+                "instructions": [
+                  "Adjust the cable machine so that the preacher curl pad is at chest height.",
+                  "Sit on the preacher curl bench and place your upper arms on the pad, with your palms facing down and your elbows fully extended.",
+                  "Grab the cable handles with an underhand grip, shoulder-width apart.",
+                  "Keeping your upper arms stationary, exhale and curl the handles towards your shoulders, contracting your biceps.",
+                  "Pause for a moment at the top of the movement, squeezing your biceps.",
+                  "Inhale and slowly lower the handles back to the starting position, fully extending your elbows.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable reverse preacher curl is an isolation exercise targeting the biceps, performed using a cable machine and a preacher curl bench. It emphasizes the brachialis and forearm muscles due to the reverse (pronated) grip.",
+                "secondaryMuscles": [
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1676",
+                "name": "dumbbell seated alternate hammer curl on exercise ball",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1676.gif",
+                "target": "biceps",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "1676",
+                "instructions": [
+                  "Sit on an exercise ball with your feet flat on the ground and your back straight.",
+                  "Hold a dumbbell in each hand with your palms facing your body and your arms fully extended.",
+                  "Keeping your upper arms stationary, exhale and curl one dumbbell up towards your shoulder while keeping your palm facing your body.",
+                  "Continue to raise the dumbbell until your biceps are fully contracted and the dumbbell is at shoulder level.",
+                  "Hold the contracted position for a brief pause as you squeeze your biceps.",
+                  "Inhale and slowly lower the dumbbell back to the starting position.",
+                  "Repeat the movement with the opposite arm.",
+                  "Continue alternating arms for the desired number of repetitions."
+                ],
+                "description": "The dumbbell seated alternate hammer curl on an exercise ball is a biceps-focused exercise that also engages the forearms and core due to the instability of the exercise ball. It involves curling dumbbells alternately while seated on an exercise ball, which requires additional balance and coordination.",
+                "secondaryMuscles": [
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1645",
+                "name": "cable two arm curl on incline bench",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1645.gif",
+                "target": "biceps",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "1645",
+                "instructions": [
+                  "Sit on an incline bench with your back against the pad and your feet flat on the ground.",
+                  "Grasp the cable handles with an underhand grip, palms facing up, and your arms fully extended.",
+                  "Keeping your upper arms stationary, exhale and curl the handles towards your shoulders while contracting your biceps.",
+                  "Pause for a moment at the top of the movement, squeezing your biceps.",
+                  "Inhale and slowly lower the handles back to the starting position, fully extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable two arm curl on incline bench is an isolation exercise targeting the biceps, performed using a cable machine while seated on an incline bench. It emphasizes strict form and constant tension on the biceps throughout the movement.",
+                "secondaryMuscles": [
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1638",
+                "name": "cable pulldown bicep curl",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1638.gif",
+                "target": "biceps",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "1638",
+                "instructions": [
+                  "Attach a straight bar to the cable machine at the highest setting.",
+                  "Stand facing the machine with your feet shoulder-width apart.",
+                  "Grasp the bar with an underhand grip, hands shoulder-width apart.",
+                  "Keep your elbows close to your sides and your upper arms stationary.",
+                  "Exhale and slowly curl the bar down towards your thighs, keeping your wrists straight.",
+                  "Pause for a moment at the bottom of the movement, squeezing your biceps.",
+                  "Inhale and slowly return the bar to the starting position, fully extending your arms.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable pulldown bicep curl is an isolation exercise targeting the biceps using a cable machine. It involves pulling a straight bar attached to a high cable down towards the thighs, emphasizing bicep contraction and control.",
+                "secondaryMuscles": [
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "2616",
+                "name": "cable lateral pulldown with v-bar",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/2616.gif",
+                "target": "lats",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "2616",
+                "instructions": [
+                  "Sit down on the cable pulldown machine and grab the v-bar attachment with an overhand grip.",
+                  "Adjust the knee pad so that your thighs are secured under it.",
+                  "Keep your back straight and lean back slightly.",
+                  "Pull the v-bar down towards your upper chest while keeping your elbows close to your body.",
+                  "Squeeze your back muscles at the bottom of the movement.",
+                  "Slowly return the v-bar to the starting position and repeat for the desired number of repetitions."
+                ],
+                "description": "The cable lateral pulldown with v-bar is a strength exercise targeting the latissimus dorsi (lats) using a cable machine and v-bar attachment. It also engages the biceps and forearms as secondary muscles.",
+                "secondaryMuscles": [
+                  "biceps",
+                  "forearms"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0113",
+                "name": "barbell standing wide-grip curl",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0113.gif",
+                "target": "biceps",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 78,
+                "tempo": "2-0-1",
+                "exerciseId": "0113",
+                "instructions": [
+                  "Stand up straight with your feet shoulder-width apart and hold a barbell with an overhand grip, hands wider than shoulder-width apart.",
+                  "Let the barbell hang at arm's length in front of your thighs, with your palms facing away from your body.",
+                  "Keeping your upper arms stationary, exhale and curl the barbell upward by contracting your biceps.",
+                  "Continue to raise the barbell until your biceps are fully contracted and the barbell is at shoulder level.",
+                  "Hold the contracted position for a brief pause as you squeeze your biceps.",
+                  "Inhale and slowly begin to lower the barbell back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell standing wide-grip curl is a biceps-focused exercise performed with a barbell using a grip wider than shoulder-width. This variation emphasizes the outer part of the biceps and also engages the forearms and shoulders.",
+                "secondaryMuscles": [
+                  "forearms",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [
+          "Focus on form",
+          "Control the eccentric phase"
+        ],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0234",
+              "name": "cable standing row (v-bar)",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      }
+    },
+    {
+      "name": "Bro Split - Bodybuilding (Shoulders)",
+      "split": "bro_split",
+      "dayFocus": "Shoulders",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "dumbbell",
+        "barbell",
+        "cable",
+        "leverage machine"
+      ],
+      "success": true,
+      "latency": 57395,
+      "exerciseCount": 6,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "10",
+      "avgRest": 73,
+      "error": null,
+      "workout": {
+        "title": "Shoulder Day - BODYBUILD",
+        "description": "Shoulder Day workout focusing on bodybuild training.",
+        "estimatedDuration": 45,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "1765",
+                "name": "dumbbell upright row (back pov)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1765.gif",
+                "target": "delts",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 73,
+                "tempo": "2-0-1",
+                "notes": "Lift the dumbbells straight up toward your chin by leading with your elbows while keeping your core braced and back straight.",
+                "exerciseId": "1765",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart, holding a dumbbell in each hand with an overhand grip.",
+                  "Let the dumbbells hang in front of your thighs, with your arms fully extended and your palms facing your body.",
+                  "Keeping your back straight and your core engaged, exhale and lift the dumbbells straight up towards your chin, leading with your elbows.",
+                  "Continue lifting until the dumbbells are at shoulder height, with your elbows pointing out to the sides.",
+                  "Pause for a moment at the top, then inhale and slowly lower the dumbbells back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell upright row (back pov) is a strength exercise targeting the deltoids, with secondary emphasis on the traps and biceps. It involves lifting dumbbells from thigh level to shoulder height, leading with the elbows.",
+                "secondaryMuscles": [
+                  "traps",
+                  "biceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0404",
+                "name": "dumbbell seated shoulder press (parallel grip)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0404.gif",
+                "target": "delts",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 8,
+                "restSeconds": 73,
+                "tempo": "2-0-1",
+                "notes": "Press the dumbbells overhead to full elbow extension without letting your ribs flare off the bench.",
+                "exerciseId": "0404",
+                "instructions": [
+                  "Sit on a bench with a dumbbell in each hand, palms facing inward.",
+                  "Raise the dumbbells to shoulder height, elbows bent and palms facing forward.",
+                  "Press the dumbbells upward until your arms are fully extended overhead.",
+                  "Pause for a moment at the top, then slowly lower the dumbbells back to shoulder height.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell seated shoulder press (parallel grip) is a strength exercise targeting the deltoids, performed while seated with dumbbells held in a neutral grip. It also engages the triceps and upper back as secondary muscles.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "upper back"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0376",
+                "name": "dumbbell raise",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0376.gif",
+                "target": "delts",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 73,
+                "tempo": "2-0-1",
+                "notes": "Raise your arms out to the sides to shoulder height with a slight bend in your elbows and control the lowering.",
+                "exerciseId": "0376",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and hold a dumbbell in each hand, palms facing your body.",
+                  "Keep your back straight and engage your core.",
+                  "Raise your arms out to the sides until they are parallel to the floor, keeping a slight bend in your elbows.",
+                  "Pause for a moment at the top, then slowly lower your arms back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell raise is a shoulder exercise that targets the deltoid muscles, with secondary emphasis on the traps and rhomboids. It involves lifting dumbbells out to the sides to shoulder height, focusing on controlled movement and proper form.",
+                "secondaryMuscles": [
+                  "traps",
+                  "rhomboids"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0378",
+                "name": "dumbbell rear fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0378.gif",
+                "target": "delts",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 12,
+                "restSeconds": 73,
+                "tempo": "2-0-1",
+                "notes": "Lift the dumbbells out to the sides while squeezing your shoulder blades together with a slight bend in your elbows.",
+                "exerciseId": "0378",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and hold a dumbbell in each hand.",
+                  "Bend your knees slightly and hinge forward at the hips, keeping your back straight.",
+                  "Extend your arms straight down towards the ground, palms facing each other.",
+                  "Keeping a slight bend in your elbows, lift your arms out to the sides and squeeze your shoulder blades together.",
+                  "Pause for a moment at the top, then slowly lower your arms back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell rear fly is an isolation exercise that targets the rear deltoids, with secondary emphasis on the trapezius and rhomboids. It is performed by hinging at the hips, maintaining a straight back, and lifting dumbbells out to the sides while squeezing the shoulder blades together.",
+                "secondaryMuscles": [
+                  "trapezius",
+                  "rhomboids"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0379",
+                "name": "dumbbell rear lateral raise (support head)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0379.gif",
+                "target": "delts",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 73,
+                "tempo": "2-0-1",
+                "notes": "Hinge at the hips with a flat back and raise your arms to parallel without shrugging your shoulders.",
+                "exerciseId": "0379",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and hold a dumbbell in each hand.",
+                  "Bend your knees slightly and hinge forward at the hips, keeping your back straight.",
+                  "Raise your arms out to the sides, keeping a slight bend in your elbows, until they are parallel to the ground.",
+                  "Pause for a moment at the top, then slowly lower your arms back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell rear lateral raise (support head) is an isolation exercise targeting the rear deltoids, with secondary emphasis on the traps and rhomboids. It involves hinging forward at the hips and raising dumbbells out to the sides, focusing on shoulder stability and control.",
+                "secondaryMuscles": [
+                  "traps",
+                  "rhomboids"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "3546",
+                "name": "dumbbell seated alternate shoulder",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/3546.gif",
+                "target": "delts",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 73,
+                "tempo": "2-0-1",
+                "notes": "Keep one dumbbell parked at shoulder height as you press the other overhead, then alternate smoothly without leaning back.",
+                "exerciseId": "3546",
+                "instructions": [
+                  "Sit on a bench with your back straight and feet flat on the ground.",
+                  "Hold a dumbbell in each hand, palms facing inwards, and raise them to shoulder height.",
+                  "Press one dumbbell up overhead while keeping the other dumbbell at shoulder height.",
+                  "Lower the raised dumbbell back to shoulder height while simultaneously pressing the other dumbbell up overhead.",
+                  "Continue alternating between arms for the desired number of repetitions."
+                ],
+                "description": "The dumbbell seated alternate shoulder press is a strength exercise targeting the deltoids, performed while seated and alternating arms for each press. It also engages the triceps and upper back as secondary muscles.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "upper back"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "1765",
+              "name": "dumbbell upright row (back pov)",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      }
+    },
+    {
+      "name": "PPL - Bodybuilding (Legs)",
+      "split": "push_pull_legs",
+      "dayFocus": "Legs",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Barbell",
+        "Dumbbells",
+        "Leg Press",
+        "Leg Curl Machine",
+        "Leg Extension Machine",
+        "Hack Squat"
+      ],
+      "success": true,
+      "latency": 71026,
+      "exerciseCount": 8,
+      "equipmentMatchRate": 50,
+      "avgSets": 4,
+      "avgReps": "10",
+      "avgRest": 90,
+      "error": null,
+      "workout": {
+        "title": "Generated Workout",
+        "description": "A balanced workout targeting your selected muscle groups.",
+        "estimatedDuration": 65,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0740",
+                "name": "sled 45° leg wide press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0740.gif",
+                "target": "glutes",
+                "equipment": "sled machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "exerciseId": "0740",
+                "instructions": [
+                  "Adjust the sled machine to a 45-degree angle.",
+                  "Sit on the sled machine with your back against the pad and your feet on the foot platform.",
+                  "Position your feet wider than shoulder-width apart.",
+                  "Push against the foot platform to extend your legs and straighten your knees.",
+                  "Pause for a moment at the end of the movement, then slowly bend your knees to return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The sled 45° leg wide press is a compound lower body exercise performed on a sled machine set at a 45-degree angle. It targets the glutes primarily, with significant involvement from the quadriceps, hamstrings, and calves. The wide stance emphasizes the glutes and inner thighs more than a standard leg press.",
+                "secondaryMuscles": [
+                  "quadriceps",
+                  "hamstrings",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1434",
+                "name": "smith low bar squat",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1434.gif",
+                "target": "glutes",
+                "equipment": "smith machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "exerciseId": "1434",
+                "instructions": [
+                  "Set up the smith machine with the barbell at a height that allows you to comfortably rest it on your upper back.",
+                  "Stand with your feet shoulder-width apart, toes slightly turned outwards.",
+                  "Step under the bar and position it across your upper back, resting it on your traps.",
+                  "Grip the bar with your hands slightly wider than shoulder-width apart.",
+                  "Unrack the bar by straightening your legs and stepping back from the rack.",
+                  "Take a deep breath and brace your core.",
+                  "Initiate the squat by pushing your hips back and bending your knees.",
+                  "Lower your body until your thighs are parallel to the ground or slightly below.",
+                  "Keep your chest up and your back straight throughout the movement.",
+                  "Drive through your heels to stand back up, extending your hips and knees.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The smith low bar squat is a compound lower body exercise performed on a smith machine, targeting the glutes as the primary muscle group, with secondary emphasis on the quadriceps, hamstrings, and calves. The smith machine provides stability, making it accessible for those learning squat mechanics while still offering a challenging strength workout.",
+                "secondaryMuscles": [
+                  "quadriceps",
+                  "hamstrings",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0594",
+                "name": "lever seated calf raise",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0594.gif",
+                "target": "calves",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "exerciseId": "0594",
+                "instructions": [
+                  "Adjust the seat height so that your knees are slightly bent and your feet are flat on the footplate.",
+                  "Place your toes on the footplate with your heels hanging off the edge.",
+                  "Grasp the handles or the sides of the seat for stability.",
+                  "Push through the balls of your feet to raise your heels as high as possible.",
+                  "Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever seated calf raise is a machine-based exercise that targets the calf muscles, particularly the gastrocnemius and soleus. It is performed while seated, using a leverage machine to provide resistance as you raise and lower your heels.",
+                "secondaryMuscles": [
+                  "soleus",
+                  "ankle stabilizers"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0196",
+                "name": "cable pull through (with rope)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0196.gif",
+                "target": "glutes",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "exerciseId": "0196",
+                "instructions": [
+                  "Stand facing away from the cable machine with your feet shoulder-width apart.",
+                  "Grab the rope attachment with both hands and step forward, creating tension in the cable.",
+                  "Bend at the hips and lower your upper body until it is parallel to the ground, keeping your back straight.",
+                  "Engage your glutes and hamstrings to pull your body back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable pull through (with rope) is a hip hinge exercise that targets the glutes, with secondary emphasis on the hamstrings and lower back. It is performed using a cable machine and a rope attachment, focusing on hip extension and posterior chain activation.",
+                "secondaryMuscles": [
+                  "hamstrings",
+                  "lower back"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0431",
+                "name": "dumbbell step-up",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0431.gif",
+                "target": "glutes",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "exerciseId": "0431",
+                "instructions": [
+                  "Stand in front of a bench or step with a dumbbell in each hand, palms facing your body.",
+                  "Place your right foot on the bench or step, ensuring your entire foot is in contact with the surface.",
+                  "Push through your right heel and lift your body up onto the bench or step, straightening your right leg.",
+                  "Bring your left foot up onto the bench or step, standing fully upright.",
+                  "Step back down with your left foot, followed by your right foot, returning to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch legs."
+                ],
+                "description": "The dumbbell step-up is a lower body exercise that targets the glutes, quadriceps, and hamstrings, while also engaging the calves. It involves stepping onto a raised platform while holding dumbbells, which increases resistance and challenges balance and coordination.",
+                "secondaryMuscles": [
+                  "quadriceps",
+                  "hamstrings",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0228",
+                "name": "cable standing hip extension",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0228.gif",
+                "target": "glutes",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "exerciseId": "0228",
+                "instructions": [
+                  "Attach a cable to a low pulley and stand facing away from the machine.",
+                  "Place the cable around your ankle and stand with your feet shoulder-width apart.",
+                  "Keep your core engaged and your back straight throughout the exercise.",
+                  "Slowly extend your leg straight back, squeezing your glutes at the top of the movement.",
+                  "Pause for a moment, then return to the starting position.",
+                  "Repeat for the desired number of repetitions.",
+                  "Switch sides and repeat with the other leg."
+                ],
+                "description": "The cable standing hip extension targets the glutes by extending the leg backward against resistance. It also engages the hamstrings and quadriceps as secondary muscles. This exercise is performed using a cable machine and requires balance and core stability.",
+                "secondaryMuscles": [
+                  "hamstrings",
+                  "quadriceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1253",
+                "name": "lever donkey calf raise",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1253.gif",
+                "target": "calves",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "exerciseId": "1253",
+                "instructions": [
+                  "Adjust the leverage machine to the appropriate height for your body.",
+                  "Position yourself facing the machine, with your toes on the foot platform and your heels hanging off the edge.",
+                  "Place your hands on the handles or the support bars for stability.",
+                  "Engage your calves and lift your heels as high as possible, using the balls of your feet.",
+                  "Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever donkey calf raise is a machine-based exercise targeting the calf muscles. It involves standing on a platform with your heels hanging off, then raising and lowering your heels to work the calves. The leverage machine provides resistance and support, making it a controlled movement.",
+                "secondaryMuscles": [
+                  "hamstrings",
+                  "glutes"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0648",
+                "name": "power clean",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0648.gif",
+                "target": "hamstrings",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 90,
+                "tempo": "2-0-1",
+                "exerciseId": "0648",
+                "instructions": [
+                  "Start with the barbell on the ground in front of you, with your feet shoulder-width apart.",
+                  "Bend down and grip the barbell with an overhand grip, slightly wider than shoulder-width apart.",
+                  "Keep your back straight and chest up as you lift the barbell off the ground, extending your hips and knees.",
+                  "As the barbell reaches your mid-thigh, explosively pull it upwards, shrugging your shoulders and pulling your elbows high and to the sides.",
+                  "As the barbell reaches its highest point, quickly drop underneath it, rotating your elbows around and catching the barbell on your shoulders in a front squat position.",
+                  "Stand up with the barbell, fully extending your hips and knees.",
+                  "Lower the barbell back down to the starting position, keeping control of the weight throughout the movement.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The power clean is a compound Olympic weightlifting movement that involves lifting a barbell from the floor to the shoulders in one explosive motion. It targets the hamstrings, glutes, quadriceps, and calves, and requires significant strength, coordination, and technique.",
+                "secondaryMuscles": [
+                  "glutes",
+                  "quadriceps",
+                  "calves"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [
+          "Focus on form",
+          "Control the eccentric phase"
+        ],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0740",
+              "name": "sled 45° leg wide press",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      }
+    },
+    {
+      "name": "Upper/Lower - Strength (Upper)",
+      "split": "upper_lower",
+      "dayFocus": "Upper",
+      "trainingStyles": [
+        "strength_focused"
+      ],
+      "equipment": [
+        "barbell",
+        "dumbbell",
+        "cable"
+      ],
+      "success": true,
+      "latency": 63385,
+      "exerciseCount": 8,
+      "equipmentMatchRate": 100,
+      "avgSets": 5,
+      "avgReps": "5",
+      "avgRest": 180,
+      "error": null,
+      "workout": {
+        "title": "Generated Workout",
+        "description": "A balanced workout targeting your selected muscle groups.",
+        "estimatedDuration": 131,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "0105",
+                "name": "barbell standing bradford press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0105.gif",
+                "target": "delts",
+                "equipment": "barbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "exerciseId": "0105",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and hold the barbell in front of your shoulders with an overhand grip.",
+                  "Press the barbell overhead, fully extending your arms.",
+                  "Lower the barbell back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell standing Bradford press is a shoulder exercise that targets the deltoids and also works the triceps and upper back. It involves pressing a barbell overhead from the front of the shoulders, requiring strength, coordination, and shoulder mobility.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "upper back"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0087",
+                "name": "barbell seated bradford rocky press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0087.gif",
+                "target": "delts",
+                "equipment": "barbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "exerciseId": "0087",
+                "instructions": [
+                  "Sit on a bench with your back straight and feet flat on the ground.",
+                  "Hold the barbell with an overhand grip, slightly wider than shoulder-width apart.",
+                  "Lift the barbell to shoulder height, keeping your elbows slightly bent and pointing forward.",
+                  "Press the barbell overhead, fully extending your arms.",
+                  "Lower the barbell back to shoulder height and repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell seated Bradford Rocky press is a shoulder exercise performed while seated, focusing on pressing a barbell overhead to target the deltoids. It also engages the triceps and upper back as secondary muscles. The movement requires good shoulder mobility, core stability, and pressing strength.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "upper back"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0324",
+                "name": "dumbbell incline palm-in press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0324.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "exerciseId": "0324",
+                "instructions": [
+                  "Set up an incline bench at a 45-degree angle.",
+                  "Sit on the bench with a dumbbell in each hand, palms facing each other.",
+                  "Plant your feet firmly on the ground and keep your back straight against the bench.",
+                  "Start with the dumbbells at shoulder level, elbows bent and palms facing each other.",
+                  "Press the dumbbells up and away from your body, extending your arms fully.",
+                  "Pause for a moment at the top, then slowly lower the dumbbells back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell incline palm-in press is a chest exercise performed on an incline bench with dumbbells, focusing on the upper pectorals while also engaging the shoulders and triceps. The palms face each other throughout the movement, which can reduce shoulder strain and emphasize the inner chest.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0227",
+                "name": "cable standing fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0227.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "exerciseId": "0227",
+                "instructions": [
+                  "Attach the handles to the cables at chest height.",
+                  "Stand with your feet shoulder-width apart, facing away from the cable machine.",
+                  "Grasp the handles with an overhand grip, palms facing forward.",
+                  "Step forward slightly to create tension in the cables.",
+                  "Keep your core engaged and your back straight throughout the exercise.",
+                  "With a slight bend in your elbows, slowly bring your arms forward and together in front of your chest.",
+                  "Squeeze your chest muscles at the peak of the movement.",
+                  "Slowly reverse the movement, returning your arms to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable standing fly is a chest isolation exercise performed using a cable machine. It targets the pectoral muscles and also engages the deltoids and triceps. The movement requires good form, balance, and control to execute safely and effectively.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0359",
+                "name": "dumbbell one arm reverse fly (with support)",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0359.gif",
+                "target": "delts",
+                "equipment": "dumbbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "exerciseId": "0359",
+                "instructions": [
+                  "Sit on a bench with your feet flat on the ground and your back straight.",
+                  "Hold a dumbbell in one hand with your palm facing inwards.",
+                  "Lean forward and place your free hand on the bench for support.",
+                  "Keep your arm slightly bent and raise it out to the side until it is parallel to the ground.",
+                  "Pause for a moment at the top, then slowly lower your arm back down to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch arms."
+                ],
+                "description": "The dumbbell one arm reverse fly (with support) is an isolation exercise targeting the rear deltoids, with additional activation of the trapezius and rhomboids. It is performed seated, with one arm supported on a bench for stability, making it accessible for those developing shoulder strength and control.",
+                "secondaryMuscles": [
+                  "trapezius",
+                  "rhomboids"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1276",
+                "name": "dumbbell decline one arm fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1276.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "exerciseId": "1276",
+                "instructions": [
+                  "Lie down on a decline bench with a dumbbell in one hand, resting it on your thigh.",
+                  "Using your thigh to help raise the dumbbell, lift it up to shoulder width with your palm facing your torso.",
+                  "Rotate your wrist so that the palm of your hand is facing forward.",
+                  "As you breathe in, lower the dumbbell slowly to the side until you feel a stretch in your chest.",
+                  "Exhale and use your chest muscles to bring the dumbbell back up to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch arms."
+                ],
+                "description": "The dumbbell decline one arm fly is a unilateral chest exercise performed on a decline bench, targeting the pectoral muscles and also engaging the shoulders. It requires good control and stability to perform safely, especially due to the decline angle and single-arm movement.",
+                "secondaryMuscles": [
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0240",
+                "name": "cable supine reverse fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0240.gif",
+                "target": "delts",
+                "equipment": "cable",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "exerciseId": "0240",
+                "instructions": [
+                  "Attach a D-handle to a low pulley cable machine and lie face down on a flat bench.",
+                  "Grasp the D-handle with each hand, palms facing down, and extend your arms straight out in front of you.",
+                  "Keeping your arms straight, raise them out to the sides until they are parallel to the floor.",
+                  "Pause for a moment at the top, then slowly lower your arms back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable supine reverse fly is an isolation exercise targeting the rear deltoids, performed lying face down on a bench while using a cable machine. It emphasizes shoulder strength and stability, with secondary activation of the trapezius and rhomboids.",
+                "secondaryMuscles": [
+                  "trapezius",
+                  "rhomboids"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0311",
+                "name": "dumbbell full can lateral raise",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0311.gif",
+                "target": "delts",
+                "equipment": "dumbbell",
+                "sets": 5,
+                "reps": 5,
+                "restSeconds": 180,
+                "tempo": "X-1-1",
+                "exerciseId": "0311",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart, holding a dumbbell in each hand with your palms facing your body.",
+                  "Keep your back straight and engage your core.",
+                  "Raise your arms out to the sides, keeping a slight bend in your elbows, until they are parallel to the ground.",
+                  "Pause for a moment at the top, then slowly lower your arms back down to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The dumbbell full can lateral raise is a shoulder exercise that targets the deltoids and also engages the traps and rotator cuff. It involves raising dumbbells to the sides with a slight bend in the elbows, mimicking the motion of pouring from a can, which helps reduce shoulder impingement risk.",
+                "secondaryMuscles": [
+                  "traps",
+                  "rotator cuff"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [
+          "Focus on form",
+          "Control the eccentric phase"
+        ],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "0105",
+              "name": "barbell standing bradford press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0105",
+              "name": "barbell standing bradford press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "70%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0105",
+              "name": "barbell standing bradford press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "85%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0087",
+              "name": "barbell seated bradford rocky press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0087",
+              "name": "barbell seated bradford rocky press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "70%",
+              "notes": "Light weight, focus on form and range of motion"
+            },
+            {
+              "exerciseId": "0087",
+              "name": "barbell seated bradford rocky press",
+              "sets": 1,
+              "reps": 10,
+              "intensity": "85%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 12,
+          "notes": "Progressive warmup to prepare CNS and joints for heavy lifting. Rest 60-90 seconds between warmup sets."
+        }
+      }
+    }
+  ],
+  "summary": {
+    "successCount": 5,
+    "parseErrorCount": 0,
+    "apiErrorCount": 0,
+    "totalLatency": 371659,
+    "avgLatency": 74332,
+    "avgExerciseCount": 7.6,
+    "avgEquipmentMatchRate": 90,
+    "avgSets": 4.2,
+    "avgRest": 100,
+    "repsCounts": {
+      "5": 1,
+      "10": 4
+    },
+    "avgReps": "10",
+    "successRate": 100
+  }
+}

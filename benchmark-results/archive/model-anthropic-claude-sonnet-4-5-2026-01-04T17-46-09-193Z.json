@@ -1,0 +1,318 @@
+{
+  "modelId": "anthropic/claude-sonnet-4.5",
+  "modelName": "Claude Sonnet 4.5",
+  "tier": "premium",
+  "timestamp": "2026-01-04T17:46:09.193Z",
+  "totalScenarios": 1,
+  "scenarios": [
+    {
+      "name": "Bro Split (Chest)",
+      "split": "bro_split",
+      "dayFocus": "Chest",
+      "trainingStyles": [
+        "classic_bodybuilding"
+      ],
+      "equipment": [
+        "Dumbbells",
+        "Barbell",
+        "Cable Machine",
+        "Chest Press",
+        "Pec Deck"
+      ],
+      "success": true,
+      "latency": 2199,
+      "exerciseCount": 8,
+      "equipmentMatchRate": 100,
+      "avgSets": 4,
+      "avgReps": "10",
+      "avgRest": 67,
+      "error": null,
+      "workout": {
+        "title": "Generated Workout",
+        "description": "A balanced workout targeting your selected muscle groups.",
+        "estimatedDuration": 60,
+        "structure": "STANDARD",
+        "sections": [
+          {
+            "name": "Main Lifts",
+            "exercises": [
+              {
+                "id": "1299",
+                "exerciseId": "1299",
+                "name": "lever incline chest press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1299.gif",
+                "target": "pectorals",
+                "equipment": "leverage machine",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the seat and backrest of the leverage machine to a comfortable position.",
+                  "Sit on the machine with your back against the backrest and your feet flat on the floor.",
+                  "Grasp the handles with an overhand grip and position your hands slightly wider than shoulder-width apart.",
+                  "Push the handles forward and away from your body until your arms are fully extended.",
+                  "Pause for a moment, then slowly bend your elbows and lower the handles back towards your chest.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The lever incline chest press is a machine-based exercise targeting the upper chest (pectorals), with secondary emphasis on the shoulders and triceps. It is performed on a leverage machine, providing guided movement for safety and stability.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1622",
+                "exerciseId": "1622",
+                "name": "dumbbell one arm reverse grip press",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1622.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 107,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Sit on a flat bench with a dumbbell in one hand, palm facing towards your body.",
+                  "Place your feet flat on the ground and keep your back straight.",
+                  "Raise the dumbbell to shoulder height, keeping your elbow close to your body.",
+                  "Press the dumbbell upwards until your arm is fully extended.",
+                  "Pause for a moment at the top, then slowly lower the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch to the other arm."
+                ],
+                "description": "The dumbbell one arm reverse grip press is a unilateral chest exercise that targets the pectorals with a unique grip, also engaging the triceps and shoulders. It requires stability and control due to the reverse grip and single-arm execution.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "shoulders"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          },
+          {
+            "name": "Accessories",
+            "exercises": [
+              {
+                "id": "0040",
+                "exerciseId": "0040",
+                "name": "barbell front raise and pullover",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0040.gif",
+                "target": "pectorals",
+                "equipment": "barbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart and hold a barbell with an overhand grip, palms facing down.",
+                  "Keep your arms straight and raise the barbell in front of you until it reaches shoulder height.",
+                  "Pause for a moment at the top, then slowly lower the barbell back down to the starting position.",
+                  "Next, lower the barbell behind your head, keeping your arms straight.",
+                  "Pause for a moment at the bottom, then raise the barbell back up to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The barbell front raise and pullover is a compound exercise targeting the pectorals, with secondary emphasis on the deltoids and triceps. It involves raising a barbell in front of the body and then performing a pullover motion behind the head, requiring strength, coordination, and shoulder mobility.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1291",
+                "exerciseId": "1291",
+                "name": "dumbbell one arm pullover on exercise ball",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1291.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Sit on an exercise ball with your feet flat on the ground and your knees bent at a 90-degree angle.",
+                  "Hold a dumbbell with one hand and extend your arm straight up above your chest.",
+                  "Slowly lower the dumbbell behind your head while keeping your arm straight.",
+                  "Pause for a moment, then raise the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch arms."
+                ],
+                "description": "The dumbbell one arm pullover on exercise ball is a chest exercise that also engages the triceps, latissimus dorsi, and rhomboids. It requires balance and core stability due to the use of the exercise ball, as well as unilateral strength and coordination.",
+                "secondaryMuscles": [
+                  "triceps",
+                  "latissimus dorsi",
+                  "rhomboids"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0155",
+                "exerciseId": "0155",
+                "name": "cable cross-over variation",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0155.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the cable pulleys to chest height.",
+                  "Stand in the center of the cable machine with one foot in front of the other.",
+                  "Grasp the handles with your palms facing down and your arms extended out to the sides.",
+                  "Take a step forward, keeping your arms slightly bent.",
+                  "With a slight bend in your elbows, bring your hands together in front of your chest.",
+                  "Pause for a moment, then slowly return your arms back to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable cross-over variation is a chest exercise performed using a cable machine. It targets the pectoral muscles and also engages the deltoids and triceps. The movement involves bringing the handles together in front of the chest while maintaining a slight bend in the elbows.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "1288",
+                "exerciseId": "1288",
+                "name": "dumbbell one arm fly on exercise ball",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/1288.gif",
+                "target": "pectorals",
+                "equipment": "dumbbell",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Sit on an exercise ball with a dumbbell in one hand and your feet flat on the ground.",
+                  "Walk your feet forward and roll your body down until your upper back is resting on the exercise ball.",
+                  "Extend your arm with the dumbbell straight up above your chest, palm facing inwards.",
+                  "Slowly lower the dumbbell out to the side, keeping a slight bend in your elbow.",
+                  "Pause for a moment, then squeeze your chest muscles to bring the dumbbell back to the starting position.",
+                  "Repeat for the desired number of repetitions, then switch arms."
+                ],
+                "description": "The dumbbell one arm fly on exercise ball is a chest exercise that also challenges balance and core stability. It involves performing a single-arm fly movement while lying with your upper back on an exercise ball, which increases the demand on stabilizing muscles.",
+                "secondaryMuscles": [
+                  "shoulders",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0171",
+                "exerciseId": "0171",
+                "name": "cable incline fly",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0171.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Adjust the cable machine to a low position and attach the handles.",
+                  "Sit on an incline bench with your back against the pad and feet flat on the floor.",
+                  "Grasp the handles with an overhand grip and extend your arms straight out in front of you.",
+                  "Keeping a slight bend in your elbows, open your arms out to the sides in a controlled motion.",
+                  "Pause for a moment at the fully extended position, then slowly return to the starting position.",
+                  "Repeat for the desired number of repetitions."
+                ],
+                "description": "The cable incline fly is an isolation exercise targeting the upper chest (pectorals) using a cable machine. It involves opening and closing the arms in a fly motion while lying on an incline bench, providing constant tension throughout the movement.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "triceps"
+                ],
+                "sourceTier": "primary"
+              },
+              {
+                "id": "0191",
+                "exerciseId": "0191",
+                "name": "cable one arm lateral bent-over",
+                "gifUrl": "https://ivfllbccljoyaayftecd.supabase.co/storage/v1/object/public/exercise-gifs/0191.gif",
+                "target": "pectorals",
+                "equipment": "cable",
+                "sets": 4,
+                "reps": 10,
+                "restSeconds": 54,
+                "tempo": "2-0-1",
+                "instructions": [
+                  "Stand with your feet shoulder-width apart, facing a cable machine.",
+                  "Grasp the handle with one hand and step back to create tension on the cable.",
+                  "Bend forward at the waist, keeping your back straight and your core engaged.",
+                  "Extend your arm out to the side, parallel to the ground, with a slight bend in your elbow.",
+                  "Slowly bring your arm back to the starting position, maintaining control throughout the movement.",
+                  "Repeat for the desired number of repetitions, then switch sides."
+                ],
+                "description": "The cable one arm lateral bent-over is an isolation exercise targeting the pectoral muscles, performed using a cable machine. It involves extending one arm laterally while bent over, focusing on chest activation with secondary involvement of the deltoids and trapezius.",
+                "secondaryMuscles": [
+                  "deltoids",
+                  "trapezius"
+                ],
+                "sourceTier": "primary"
+              }
+            ],
+            "supersets": []
+          }
+        ],
+        "tips": [
+          "Focus on form",
+          "Control the eccentric phase"
+        ],
+        "warmup": {
+          "exercises": [
+            {
+              "exerciseId": "1299",
+              "name": "lever incline chest press",
+              "sets": 1,
+              "reps": 14,
+              "intensity": "50%",
+              "notes": "Light weight, focus on form and range of motion"
+            }
+          ],
+          "duration": 2,
+          "notes": "Brief warmup to activate target muscles. Can skip if first working set feels warm."
+        }
+      },
+      "meta": {
+        "usedFallback": true,
+        "fallbackReason": null,
+        "exercisesAvailable": 82,
+        "appliedStyles": [
+          "BODYBUILD"
+        ],
+        "isCircuitMode": false,
+        "metaPlanAttempts": 0,
+        "exerciseSelectionAttempts": 3,
+        "paramAssignmentAttempts": 3,
+        "requestedDuration": 60,
+        "targetExerciseCount": 8,
+        "targetSetsPerExercise": 4,
+        "primaryExerciseCount": 82,
+        "supplementaryExerciseCount": 0,
+        "equipmentMatchRate": 100,
+        "equipmentViolations": [],
+        "primaryEquipmentViolations": [],
+        "deprecationWarnings": [
+          "experienceLevel as string is deprecated. Use a number from 1-10."
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "successCount": 1,
+    "parseErrorCount": 0,
+    "apiErrorCount": 0,
+    "totalLatency": 2199,
+    "avgLatency": 2199,
+    "avgExerciseCount": 8,
+    "avgEquipmentMatchRate": 100,
+    "avgSets": 4,
+    "avgRest": 67,
+    "repsCounts": {
+      "10": 1
+    },
+    "avgReps": "10",
+    "successRate": 100
+  }
+}

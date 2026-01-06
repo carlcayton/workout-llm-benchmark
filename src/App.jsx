@@ -2,7 +2,8 @@ import { Routes, Route, NavLink, Navigate } from 'react-router-dom'
 import { Gallery } from './components/gallery'
 import { VideoComparison } from './components/comparison'
 import { LLMBenchmark } from './components/benchmark'
-import { Beaker, Image, Video, Brain } from 'lucide-react'
+import { ExerciseReview } from './components/exercises'
+import { Beaker, Image, Video, Brain, Dumbbell } from 'lucide-react'
 
 function NavTab({ to, children }) {
   return (
@@ -46,6 +47,10 @@ function App() {
                 <Brain className="w-4 h-4 mr-1.5" />
                 LLM Benchmark
               </NavTab>
+              <NavTab to="/exercises">
+                <Dumbbell className="w-4 h-4 mr-1.5" />
+                Exercise Review
+              </NavTab>
             </nav>
           </div>
         </div>
@@ -58,6 +63,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/video" element={<VideoComparison />} />
           <Route path="/benchmark" element={<LLMBenchmark />} />
+          <Route path="/exercises" element={<ExerciseReview />} />
         </Routes>
       </main>
 
