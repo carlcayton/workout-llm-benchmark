@@ -1,0 +1,239 @@
+/**
+ * MuscleWiki Toggle Switch Styles
+ * Extracted from musclewiki.com
+ * Date: 2026-01-07
+ *
+ * Based on HeadlessUI Switch component with Tailwind CSS
+ */
+
+/* ==========================================================================
+   Color Variables (MuscleWiki Custom Colors)
+   ========================================================================== */
+
+:root {
+  /* Toggle ON state (checked) */
+  --mw-red-400: rgb(254, 107, 139);    /* #fe6b8b */
+  --mw-red-800: rgb(153, 27, 59);      /* For female icon */
+
+  /* Toggle OFF state (unchecked) */
+  --mw-blue-200: rgb(98, 121, 184);    /* #6279b8 */
+  --mw-blue-600: rgb(25, 51, 123);     /* #19337b - ring/outline color, male icon */
+
+  /* Neutral */
+  --toggle-thumb-bg: #ffffff;
+  --toggle-thumb-bg-dark: rgb(17, 24, 39); /* gray-900 for dark mode */
+}
+
+/* ==========================================================================
+   Toggle Switch Base Styles
+   ========================================================================== */
+
+.toggle-switch {
+  /* Layout */
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  /* Sizing */
+  height: 1.75rem;           /* h-7 = 28px */
+  width: 3.5rem;             /* w-14 = 56px */
+
+  /* Appearance */
+  border-radius: 9999px;     /* rounded-full */
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  /* Focus ring */
+  outline: none;
+  box-shadow:
+    rgb(255, 255, 255) 0px 0px 0px 2px,           /* ring-offset-2 */
+    var(--mw-blue-600) 0px 0px 0px 4px,           /* ring-2 ring-mw-blue-600 */
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+
+  /* Animation */
+  transition: background-color 200ms ease-in-out;
+}
+
+/* OFF state */
+.toggle-switch[aria-checked="false"] {
+  background-color: var(--mw-blue-200);
+}
+
+/* ON state */
+.toggle-switch[aria-checked="true"] {
+  background-color: var(--mw-red-400);
+}
+
+/* Disabled state */
+.toggle-switch:disabled {
+  background-color: rgb(107, 114, 128); /* gray-500 */
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   Toggle Thumb (the circular knob)
+   ========================================================================== */
+
+.toggle-thumb {
+  /* Layout */
+  display: block;
+  pointer-events: none;
+
+  /* Sizing */
+  height: 1.5rem;            /* h-6 = 24px */
+  width: 1.5rem;             /* w-6 = 24px */
+
+  /* Appearance */
+  border-radius: 9999px;     /* rounded-full */
+  background-color: var(--toggle-thumb-bg);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+  /* Animation */
+  transform: translateX(0);
+  transition: transform 200ms ease-in-out;
+}
+
+/* Thumb position when ON */
+.toggle-switch[aria-checked="true"] .toggle-thumb {
+  transform: translateX(1.75rem);  /* translate-x-7 */
+}
+
+/* RTL support */
+[dir="rtl"] .toggle-switch[aria-checked="true"] .toggle-thumb {
+  transform: translateX(-1.75rem); /* rtl:-translate-x-7 */
+}
+
+/* Dark mode thumb */
+@media (prefers-color-scheme: dark) {
+  .toggle-thumb {
+    background-color: var(--toggle-thumb-bg-dark);
+  }
+}
+
+/* ==========================================================================
+   Icon Container (for Gender toggle with Male/Female icons)
+   ========================================================================== */
+
+.toggle-icon-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  transition: opacity 200ms;
+}
+
+/* Icon visible when toggle is ON (checked) */
+.toggle-icon-on {
+  opacity: 1;
+  transition-timing-function: ease-in;
+  transition-duration: 200ms;
+}
+
+/* Icon visible when toggle is OFF (unchecked) */
+.toggle-icon-off {
+  opacity: 0;
+  transition-timing-function: ease-out;
+  transition-duration: 100ms;
+}
+
+/* Swap visibility based on state */
+.toggle-switch[aria-checked="false"] .toggle-icon-on {
+  opacity: 1;
+}
+.toggle-switch[aria-checked="false"] .toggle-icon-off {
+  opacity: 0;
+}
+.toggle-switch[aria-checked="true"] .toggle-icon-on {
+  opacity: 0;
+}
+.toggle-switch[aria-checked="true"] .toggle-icon-off {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Icons
+   ========================================================================== */
+
+.toggle-icon {
+  height: 0.875rem;          /* h-3.5 */
+  width: 0.875rem;           /* w-3.5 */
+}
+
+@media (min-width: 1280px) { /* xl breakpoint */
+  .toggle-icon {
+    height: 1rem;            /* xl:h-4 */
+    width: 1rem;             /* xl:w-4 */
+  }
+}
+
+/* Female icon color (shown when Female is selected, toggle is ON for female) */
+.toggle-icon-female {
+  color: var(--mw-red-800);
+}
+
+/* Male icon color (shown when Male is selected, toggle is OFF for female) */
+.toggle-icon-male {
+  color: var(--mw-blue-600);
+}
+
+/* ==========================================================================
+   Toggle Container (wrapper with label)
+   ========================================================================== */
+
+.toggle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;              /* space-y-1 */
+  font-size: 0.75rem;        /* text-xs */
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .toggle-container {
+    transform: scale(0.9);   /* lg:scale-90 */
+  }
+}
+
+@media (min-width: 1536px) { /* 2xl breakpoint */
+  .toggle-container {
+    font-size: 1rem;         /* 2xl:text-base */
+  }
+}
+
+/* ==========================================================================
+   Toggle Label
+   ========================================================================== */
+
+.toggle-label {
+  font-size: 0.75rem;        /* text-xs */
+  padding-top: 0.25rem;      /* pt-1 */
+  font-weight: 500;          /* font-medium */
+  color: white;
+}
+
+@media (min-width: 1280px) { /* xl breakpoint */
+  .toggle-label {
+    font-size: 0.875rem;     /* xl:text-sm */
+  }
+}
+
+@media (min-width: 1536px) { /* 2xl breakpoint */
+  .toggle-label {
+    font-size: 1rem;         /* 2xl:text-base */
+  }
+}
+
+/* ==========================================================================
+   Toggle Group (container for multiple toggles)
+   ========================================================================== */
+
+.toggle-group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}

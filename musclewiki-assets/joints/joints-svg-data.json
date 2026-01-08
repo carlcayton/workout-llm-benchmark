@@ -1,0 +1,78 @@
+{
+  "source": "https://musclewiki.com",
+  "extractedAt": "2026-01-07",
+  "viewBox": "0 0 660.46 1206.46",
+  "gradient": {
+    "id": "jointradial",
+    "type": "radialGradient",
+    "cx": "50%",
+    "cy": "50%",
+    "r": "50%",
+    "fx": "50%",
+    "fy": "50%",
+    "stops": [
+      { "offset": "0%", "color": "rgb(254, 91, 127)", "opacity": 1 },
+      { "offset": "100%", "color": "rgb(231, 236, 239)", "opacity": 1 }
+    ],
+    "svg": "<radialGradient id=\"jointradial\" cx=\"50%\" cy=\"50%\" r=\"50%\" fx=\"50%\" fy=\"50%\"><stop offset=\"0%\" style=\"stop-color: rgb(254, 91, 127); stop-opacity: 1;\"></stop><stop offset=\"100%\" style=\"stop-color: rgb(231, 236, 239); stop-opacity: 1;\"></stop></radialGradient>"
+  },
+  "jointStyle": {
+    "visibleClass": "joints text-mw-red stroke-[#484a68] hover:text-mw-green hover:stroke-gray-900",
+    "hiddenClass": "hidden",
+    "description": "Each joint has 2 ellipses per side - a larger hover area with gradient fill, and a smaller solid center"
+  },
+  "front": {
+    "shoulders": {
+      "left": { "cx": 219.33, "cy": 261.13, "hoverRx": 24.71, "hoverRy": 25.24, "centerRx": 12.04, "centerRy": 12.3 },
+      "right": { "cx": 441.13, "cy": 261.13, "hoverRx": 24.71, "hoverRy": 25.24, "centerRx": 12.04, "centerRy": 12.3 },
+      "svg": "<g id=\"shoulders\" class=\"joints text-mw-red stroke-[#484a68] hover:text-mw-green hover:stroke-gray-900\"><ellipse cx=\"441.13\" cy=\"261.13\" rx=\"24.71\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"219.33\" cy=\"261.13\" rx=\"24.71\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"441.13\" cy=\"261.13\" rx=\"12.04\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.46\"></ellipse><ellipse cx=\"219.33\" cy=\"261.13\" rx=\"12.04\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.46\"></ellipse></g>"
+    },
+    "elbow": {
+      "left": { "cx": 118.6, "cy": 412.77, "hoverRx": 24.71, "hoverRy": 25.24, "centerRx": 12.04, "centerRy": 12.3 },
+      "right": { "cx": 541.86, "cy": 412.77, "hoverRx": 24.71, "hoverRy": 25.24, "centerRx": 12.04, "centerRy": 12.3 },
+      "svg": "<g id=\"elbow\" class=\"joints text-mw-red stroke-[#484a68] hover:text-mw-green hover:stroke-gray-900\"><ellipse cx=\"118.6\" cy=\"412.77\" rx=\"24.71\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"541.86\" cy=\"412.77\" rx=\"24.71\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"541.86\" cy=\"412.77\" rx=\"12.04\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.46\"></ellipse><ellipse cx=\"118.6\" cy=\"412.77\" rx=\"12.04\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.46\"></ellipse></g>"
+    },
+    "wrist": {
+      "left": { "cx": 42.41, "cy": 531.02, "hoverRx": 24.71, "hoverRy": 25.24, "centerRx": 12.04, "centerRy": 12.3 },
+      "right": { "cx": 618.05, "cy": 531.02, "hoverRx": 24.71, "hoverRy": 25.24, "centerRx": 12.04, "centerRy": 12.3 },
+      "svg": "<g id=\"wrist\" class=\"joints text-mw-red stroke-[#484a68] hover:text-mw-green hover:stroke-gray-900\"><ellipse cx=\"42.41\" cy=\"531.02\" rx=\"24.71\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"618.05\" cy=\"531.02\" rx=\"24.71\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"618.05\" cy=\"531.02\" rx=\"12.04\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.46\"></ellipse><ellipse cx=\"42.41\" cy=\"531.02\" rx=\"12.04\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.46\"></ellipse></g>"
+    },
+    "hips": {
+      "left": { "cx": 247.71, "cy": 523.37, "hoverRx": 24.71, "hoverRy": 25.24, "centerRx": 12.04, "centerRy": 12.3 },
+      "right": { "cx": 412.75, "cy": 523.37, "hoverRx": 24.71, "hoverRy": 25.24, "centerRx": 12.04, "centerRy": 12.3 },
+      "svg": "<g id=\"hips\" class=\"joints text-mw-red stroke-[#484a68] hover:text-mw-green hover:stroke-gray-900\"><ellipse cx=\"412.75\" cy=\"523.37\" rx=\"24.71\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"247.71\" cy=\"523.37\" rx=\"24.71\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"412.75\" cy=\"523.37\" rx=\"12.04\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.46\"></ellipse><ellipse cx=\"247.71\" cy=\"523.37\" rx=\"12.04\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.46\"></ellipse></g>"
+    },
+    "knees": {
+      "left": { "cx": 241.09, "cy": 874.7, "hoverRx": 24.71, "hoverRy": 25.24, "centerRx": 12.04, "centerRy": 12.3 },
+      "right": { "cx": 419.37, "cy": 874.7, "hoverRx": 24.71, "hoverRy": 25.24, "centerRx": 12.04, "centerRy": 12.3 },
+      "svg": "<g id=\"knees\" class=\"joints text-mw-red stroke-[#484a68] hover:text-mw-green hover:stroke-gray-900\"><ellipse cx=\"419.37\" cy=\"874.7\" rx=\"24.71\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"241.09\" cy=\"874.7\" rx=\"24.71\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"419.37\" cy=\"874.7\" rx=\"12.04\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.46\"></ellipse><ellipse cx=\"241.09\" cy=\"874.7\" rx=\"12.04\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.46\"></ellipse></g>"
+    },
+    "ankles": {
+      "left": { "cx": 221.14, "cy": 1105.65, "hoverRx": 24.71, "hoverRy": 25.24, "centerRx": 12.04, "centerRy": 12.3 },
+      "right": { "cx": 439.32, "cy": 1105.65, "hoverRx": 24.71, "hoverRy": 25.24, "centerRx": 12.04, "centerRy": 12.3 },
+      "svg": "<g id=\"ankles\" class=\"joints text-mw-red stroke-[#484a68] hover:text-mw-green hover:stroke-gray-900\"><ellipse cx=\"221.14\" cy=\"1105.65\" rx=\"24.71\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"439.32\" cy=\"1105.65\" rx=\"24.71\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"439.32\" cy=\"1105.65\" rx=\"12.04\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.46\"></ellipse><ellipse cx=\"221.14\" cy=\"1105.65\" rx=\"12.04\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.46\"></ellipse></g>"
+    }
+  },
+  "back": {
+    "elbow": {
+      "left": { "cx": 119.84, "cy": 396.23, "hoverRx": 25.53, "hoverRy": 25.24, "centerRx": 12.44, "centerRy": 12.3 },
+      "right": { "cx": 540.68, "cy": 396.23, "hoverRx": 25.53, "hoverRy": 25.24, "centerRx": 12.44, "centerRy": 12.3 },
+      "svg": "<g id=\"elbow\" class=\"joints text-mw-red stroke-[#484a68] hover:text-mw-green hover:stroke-gray-900\"><ellipse cx=\"119.84\" cy=\"396.23\" rx=\"25.53\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"540.68\" cy=\"396.23\" rx=\"25.53\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"540.68\" cy=\"396.23\" rx=\"12.44\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.52\"></ellipse><ellipse cx=\"119.84\" cy=\"396.23\" rx=\"12.44\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.52\"></ellipse></g>"
+    },
+    "wrist": {
+      "left": { "cx": 30.54, "cy": 548.63, "hoverRx": 25.53, "hoverRy": 25.24, "centerRx": 12.44, "centerRy": 12.3 },
+      "right": { "cx": 629.98, "cy": 548.63, "hoverRx": 25.53, "hoverRy": 25.24, "centerRx": 12.44, "centerRy": 12.3 },
+      "svg": "<g id=\"wrist\" class=\"joints text-mw-red stroke-[#484a68] hover:text-mw-green hover:stroke-gray-900\"><ellipse cx=\"30.54\" cy=\"548.63\" rx=\"25.53\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"629.98\" cy=\"548.63\" rx=\"25.53\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"629.98\" cy=\"548.63\" rx=\"12.44\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.52\"></ellipse><ellipse cx=\"30.54\" cy=\"548.63\" rx=\"12.44\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.52\"></ellipse></g>"
+    },
+    "knees": {
+      "left": { "cx": 237.16, "cy": 879.63, "hoverRx": 25.53, "hoverRy": 25.24, "centerRx": 12.44, "centerRy": 12.3 },
+      "right": { "cx": 423.36, "cy": 879.63, "hoverRx": 25.53, "hoverRy": 25.24, "centerRx": 12.44, "centerRy": 12.3 },
+      "svg": "<g id=\"knees\" class=\"joints text-mw-red stroke-[#484a68] hover:text-mw-green hover:stroke-gray-900\"><ellipse cx=\"237.16\" cy=\"879.63\" rx=\"25.53\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"423.36\" cy=\"879.63\" rx=\"25.53\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"423.36\" cy=\"879.63\" rx=\"12.44\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.52\"></ellipse><ellipse cx=\"237.16\" cy=\"879.63\" rx=\"12.44\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.52\"></ellipse></g>"
+    },
+    "ankles": {
+      "left": { "cx": 214.71, "cy": 1119.64, "hoverRx": 25.53, "hoverRy": 25.24, "centerRx": 12.44, "centerRy": 12.3 },
+      "right": { "cx": 445.81, "cy": 1119.64, "hoverRx": 25.53, "hoverRy": 25.24, "centerRx": 12.44, "centerRy": 12.3 },
+      "svg": "<g id=\"ankles\" class=\"joints text-mw-red stroke-[#484a68] hover:text-mw-green hover:stroke-gray-900\"><ellipse cx=\"445.81\" cy=\"1119.64\" rx=\"25.53\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"214.71\" cy=\"1119.64\" rx=\"25.53\" ry=\"25.24\" fill=\"url(#jointradial)\" opacity=\"1\" stroke-width=\"0\"></ellipse><ellipse cx=\"214.71\" cy=\"1119.64\" rx=\"12.44\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.52\"></ellipse><ellipse cx=\"445.81\" cy=\"1119.64\" rx=\"12.44\" ry=\"12.3\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3.52\"></ellipse></g>"
+    }
+  }
+}

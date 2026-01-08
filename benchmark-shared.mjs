@@ -822,15 +822,19 @@ export const TRAINING_STYLE_PARAMS = {
 // ============================================================================
 
 export const MODELS = [
-  { id: 'openai/gpt-5.2', name: 'GPT-5.2', tier: 'premium' },
-  { id: 'openai/gpt-5', name: 'GPT-5', tier: 'premium' },
-  { id: 'anthropic/claude-sonnet-4.5', name: 'Claude Sonnet 4.5', tier: 'premium' },
-  { id: 'anthropic/claude-sonnet-4', name: 'Claude Sonnet 4', tier: 'premium' },
+  // Fast tier
   { id: 'anthropic/claude-haiku-4.5', name: 'Claude 4.5 Haiku', tier: 'fast' },
-  { id: 'google/gemini-3-pro-preview', name: 'Gemini 3 Pro', tier: 'premium' },
   { id: 'google/gemini-3-flash-preview', name: 'Gemini 3 Flash', tier: 'fast' },
+  { id: 'x-ai/grok-4.1-fast', name: 'Grok 4.1 Fast', tier: 'fast' },
+  { id: 'openai/gpt-5-nano', name: 'GPT-5 Nano', tier: 'fast' },
+  // Premium tier
+  { id: 'anthropic/claude-sonnet-4.5', name: 'Claude Sonnet 4.5', tier: 'premium' },
+  { id: 'openai/gpt-5.2', name: 'GPT-5.2', tier: 'premium' },
+  // Other (not in default benchmark run)
+  { id: 'openai/gpt-5', name: 'GPT-5', tier: 'premium' },
+  { id: 'anthropic/claude-sonnet-4', name: 'Claude Sonnet 4', tier: 'premium' },
   { id: 'deepseek/deepseek-r1', name: 'DeepSeek R1', tier: 'reasoning' },
-  { id: 'x-ai/grok-4.1-fast', name: 'Grok 4.1', tier: 'fast' },
+  // Removed: google/gemini-3-pro-preview (60s+ latency, too slow)
 ];
 
 // ============================================================================

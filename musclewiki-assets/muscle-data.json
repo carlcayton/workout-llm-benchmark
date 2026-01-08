@@ -1,0 +1,61 @@
+{
+  "viewBox": "0 0 660.46 1206.46",
+  "source": "https://musclewiki.com/",
+  "extractedAt": "2026-01-07",
+  "front": {
+    "muscles": [
+      { "id": "calves", "name": "Calves", "pathCount": 2 },
+      { "id": "quads", "name": "Quadriceps", "pathCount": 2 },
+      { "id": "abdominals", "name": "Abdominals", "pathCount": 1 },
+      { "id": "obliques", "name": "Obliques", "pathCount": 2 },
+      { "id": "hands", "name": "Hands", "pathCount": 4 },
+      { "id": "forearms", "name": "Forearms", "pathCount": 2 },
+      { "id": "biceps", "name": "Biceps", "pathCount": 2 },
+      { "id": "front-shoulders", "name": "Front Deltoids", "pathCount": 2 },
+      { "id": "chest", "name": "Chest", "pathCount": 2 },
+      { "id": "traps", "name": "Upper Trapezius", "pathCount": 2 }
+    ]
+  },
+  "back": {
+    "muscles": [
+      { "id": "traps", "name": "Upper Trapezius", "pathCount": 1 },
+      { "id": "calves", "name": "Calves", "pathCount": 2 },
+      { "id": "hamstrings", "name": "Hamstrings", "pathCount": 2 },
+      { "id": "glutes", "name": "Glutes", "pathCount": 2 },
+      { "id": "hands", "name": "Hands", "pathCount": 4 },
+      { "id": "forearms", "name": "Forearms", "pathCount": 2 },
+      { "id": "triceps", "name": "Triceps", "pathCount": 2 },
+      { "id": "lats", "name": "Latissimus Dorsi", "pathCount": 2 },
+      { "id": "lowerback", "name": "Lower Back", "pathCount": 1 },
+      { "id": "traps-middle", "name": "Middle Trapezius", "pathCount": 1 },
+      { "id": "rear-shoulders", "name": "Rear Deltoids", "pathCount": 2 }
+    ]
+  },
+  "colors": {
+    "default": {
+      "class": "text-mw-gray",
+      "hex": "#EBEBEB",
+      "rgb": "rgb(235, 235, 235)"
+    },
+    "hover": {
+      "class": "lg:hover:text-mw-red-100",
+      "hex": "#FE9CB2",
+      "rgb": "rgb(254, 156, 178)"
+    },
+    "active": {
+      "class": "active:text-mw-red-700",
+      "hex": "#B13F58",
+      "rgb": "rgb(177, 63, 88)"
+    },
+    "brand": {
+      "class": "text-mw-red",
+      "hex": "#FE5B7F",
+      "rgb": "rgb(254, 91, 127)"
+    }
+  },
+  "cssClasses": {
+    "muscleGroup": "bodymap text-mw-gray active:text-mw-red-700 lg:hover:text-mw-red-100",
+    "container": "flex justify-center 2xl:flex-nowrap w-full px-10 gap-x-2",
+    "svg": "w-full mc:h-[700px] 2xl:h-[90vh] 3xl:h-[95vh] 4xl:h-screen sm:mx-auto object-fit"
+  }
+}

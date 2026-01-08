@@ -1,0 +1,141 @@
+{
+  "brand": {
+    "mwBlue": {
+      "50": "#8F9FCC",
+      "100": "#798CC2",
+      "200": "#6279B8",
+      "300": "#4C66AE",
+      "400": "#3653A4",
+      "DEFAULT": "#20409A",
+      "500": "#1C398A",
+      "600": "#19337B",
+      "700": "#162C6B",
+      "800": "#13265C",
+      "900": "#10204D"
+    },
+    "mwBlueRgb": {
+      "50": "rgb(143, 159, 204)",
+      "100": "rgb(121, 140, 194)",
+      "200": "rgb(98, 121, 184)",
+      "300": "rgb(76, 102, 174)",
+      "400": "rgb(54, 83, 164)",
+      "DEFAULT": "rgb(32, 64, 154)",
+      "500": "rgb(28, 57, 138)",
+      "600": "rgb(25, 51, 123)",
+      "700": "rgb(22, 44, 107)",
+      "800": "rgb(19, 38, 92)",
+      "900": "rgb(16, 32, 77)"
+    }
+  },
+  "backgrounds": {
+    "page": {
+      "hex": "#E7ECEF",
+      "rgb": "rgb(231, 236, 239)",
+      "description": "Main page background - light blue-gray"
+    },
+    "sidebar": {
+      "hex": "#20409A",
+      "rgb": "rgb(32, 64, 154)",
+      "description": "Sidebar background - primary mw-blue"
+    },
+    "card": {
+      "hex": "#FFFFFF",
+      "rgb": "rgb(255, 255, 255)",
+      "description": "Card and panel backgrounds"
+    },
+    "header": {
+      "hex": "#FFFFFF",
+      "rgb": "rgb(255, 255, 255)",
+      "description": "Top navigation bar background"
+    }
+  },
+  "text": {
+    "primary": {
+      "hex": "#11181C",
+      "rgb": "rgb(17, 24, 28)",
+      "description": "Primary text color - near black"
+    },
+    "sidebarActive": {
+      "hex": "#20409A",
+      "rgb": "rgb(32, 64, 154)",
+      "description": "Active sidebar item text (mw-blue-600)"
+    },
+    "sidebarInactive": {
+      "hex": "#E5E7EB",
+      "rgb": "rgb(229, 231, 235)",
+      "description": "Inactive sidebar item text (gray-200)"
+    },
+    "sidebarHover": {
+      "hex": "#F9FAFB",
+      "rgb": "rgb(249, 250, 251)",
+      "description": "Hover state sidebar text (gray-50)"
+    }
+  },
+  "ui": {
+    "activeItemBg": {
+      "hex": "#F9FAFB",
+      "rgb": "rgb(249, 250, 251)",
+      "description": "Active nav item background (gray-50)"
+    },
+    "border": {
+      "hex": "#E5E7EB",
+      "rgb": "rgb(229, 231, 235)",
+      "description": "Default border color (gray-200)"
+    },
+    "focus": {
+      "hex": "#2563EB",
+      "rgb": "rgb(37, 99, 235)",
+      "description": "Focus ring color (blue-600)"
+    },
+    "toggleThumb": {
+      "hex": "#20409A",
+      "rgb": "rgb(32, 64, 154)",
+      "description": "Toggle switch thumb color"
+    }
+  },
+  "heroui": {
+    "primary": "hsl(212, 100%, 46.67%)",
+    "secondary": "hsl(270, 66.67%, 47.06%)",
+    "success": "hsl(146, 79.46%, 43.92%)",
+    "warning": "hsl(37, 91.27%, 55.1%)",
+    "danger": "hsl(339, 90.36%, 51.18%)",
+    "background": "hsl(0, 0%, 100%)",
+    "foreground": "hsl(202, 24.44%, 8.82%)"
+  },
+  "tailwindConfig": {
+    "extend": {
+      "colors": {
+        "mw-blue": {
+          "50": "#8F9FCC",
+          "100": "#798CC2",
+          "200": "#6279B8",
+          "300": "#4C66AE",
+          "400": "#3653A4",
+          "DEFAULT": "#20409A",
+          "500": "#1C398A",
+          "600": "#19337B",
+          "700": "#162C6B",
+          "800": "#13265C",
+          "900": "#10204D"
+        },
+        "mw-bg": "#E7ECEF"
+      }
+    }
+  },
+  "cssVariables": {
+    "--mw-blue": "#20409A",
+    "--mw-blue-50": "#8F9FCC",
+    "--mw-blue-100": "#798CC2",
+    "--mw-blue-200": "#6279B8",
+    "--mw-blue-300": "#4C66AE",
+    "--mw-blue-400": "#3653A4",
+    "--mw-blue-500": "#1C398A",
+    "--mw-blue-600": "#19337B",
+    "--mw-blue-700": "#162C6B",
+    "--mw-blue-800": "#13265C",
+    "--mw-blue-900": "#10204D",
+    "--mw-bg": "#E7ECEF",
+    "--mw-text-primary": "#11181C",
+    "--mw-text-secondary": "#6B7280"
+  }
+}

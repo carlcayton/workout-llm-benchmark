@@ -1,0 +1,169 @@
+/**
+ * MuscleWiki Equipment Filter Panel Styles
+ * Extracted from musclewiki.com
+ */
+
+/* Panel Container - 2-column grid layout */
+.equipment-filter-panel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.625rem; /* space-y-2.5 */
+}
+
+/* Responsive: single column on smaller screens */
+@media (max-width: 1024px) {
+  .equipment-filter-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Individual filter item container */
+.equipment-filter-item {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 1280px) {
+  .equipment-filter-item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .equipment-filter-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .equipment-filter-item {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Checkbox styling */
+.equipment-checkbox {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  color: #2563eb; /* text-mw-blue-600 */
+}
+
+.equipment-checkbox:focus {
+  ring: 2px;
+  ring-color: #3b82f6; /* focus:ring-mw-blue-500 */
+}
+
+.equipment-checkbox:disabled {
+  background-color: #f1f5f9; /* disabled:bg-slate-100 */
+}
+
+/* Label styling */
+.equipment-label {
+  margin-left: 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0.75rem; /* text-xs */
+  color: #4b5563; /* text-gray-600 */
+  letter-spacing: -0.025em; /* tracking-tight */
+  line-height: 1;
+}
+
+@media (min-width: 1280px) {
+  .equipment-label {
+    margin-left: 0.625rem;
+    font-size: 0.875rem; /* xl:text-sm */
+  }
+}
+
+@media (min-width: 1536px) {
+  .equipment-label {
+    margin-left: 0.75rem;
+    font-size: 1rem; /* mc:text-base */
+  }
+}
+
+/* Icon styling */
+.equipment-icon {
+  height: 1.25rem; /* h-5 */
+  width: 2rem; /* w-8 */
+  margin-right: 0.25rem;
+  color: #64748b; /* text-slate-500 */
+}
+
+@media (min-width: 1280px) {
+  .equipment-icon {
+    height: 1.5rem; /* xl:h-6 */
+    width: 2.25rem; /* xl:w-9 */
+    margin-right: 0.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .equipment-icon {
+    height: 1.75rem; /* mc:h-7 */
+    width: 2.25rem; /* mc:w-9 - same as xl */
+  }
+}
+
+/* Dark mode support (from original) */
+@media (prefers-color-scheme: dark) {
+  .equipment-label {
+    color: #d1d5db; /* dark:text-gray-300 */
+  }
+}
+
+/* RTL support classes (from original Tailwind) */
+[dir="rtl"] .equipment-label {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 1280px) {
+  [dir="rtl"] .equipment-label {
+    margin-right: 0.625rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  [dir="rtl"] .equipment-label {
+    margin-right: 0.75rem;
+  }
+}
+
+[dir="rtl"] .equipment-icon {
+  margin-right: 0;
+  margin-left: 0.25rem;
+}
+
+@media (min-width: 1280px) {
+  [dir="rtl"] .equipment-icon {
+    margin-left: 0.5rem;
+  }
+}
+
+/* Tailwind class mappings for reference:
+ *
+ * Panel: space-y-2.5 xl:space-y-2.5 grid lg:grid-cols-2 grid-cols-1
+ *
+ * Item: flex items-center xl:px-2 mc:px-4 2xl:px-6 self-center pb-1
+ *
+ * Checkbox: h-4 w-4 rounded border-gray-300 text-mw-blue-600
+ *           focus:ring-mw-blue-500 disabled:bg-slate-100
+ *
+ * Label: xl:ml-2.5 mc:ml-3 2mc:ml-3.5 ml-2
+ *        rtl:xl:me-2.5 rtl:mc:me-3 rtl:2mc:me-3.5 rtl:me-2
+ *        text-xs xl:text-sm mc:text-base text-gray-600
+ *        tracking-tight leading-0 dark:text-gray-300
+ *        disabled:bg-slate-100 flex justify-evenly items-center
+ *
+ * Icon: xl:h-6 xl:w-9 mc:h-7 mc:w-9 h-5 w-8
+ *       xl:me-2 sm:me-1 rtl:xl:ml-2 rtl:sm:ml-1 text-slate-500
+ */

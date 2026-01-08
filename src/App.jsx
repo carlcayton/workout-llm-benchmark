@@ -3,7 +3,9 @@ import { Gallery } from './components/gallery'
 import { VideoComparison } from './components/comparison'
 import { LLMBenchmark } from './components/benchmark'
 import { ExerciseReview } from './components/exercises'
-import { Beaker, Image, Video, Brain, Dumbbell } from 'lucide-react'
+import { MuscleMap } from './components/muscle-map'
+import { BeforeAfterComparison } from './components/before-after'
+import { Beaker, Image, Video, Brain, Dumbbell, User, ArrowLeftRight } from 'lucide-react'
 
 function NavTab({ to, children }) {
   return (
@@ -51,6 +53,14 @@ function App() {
                 <Dumbbell className="w-4 h-4 mr-1.5" />
                 Exercise Review
               </NavTab>
+              <NavTab to="/muscle-map">
+                <User className="w-4 h-4 mr-1.5" />
+                Muscle Map
+              </NavTab>
+              <NavTab to="/before-after">
+                <ArrowLeftRight className="w-4 h-4 mr-1.5" />
+                Before/After
+              </NavTab>
             </nav>
           </div>
         </div>
@@ -64,6 +74,8 @@ function App() {
           <Route path="/video" element={<VideoComparison />} />
           <Route path="/benchmark" element={<LLMBenchmark />} />
           <Route path="/exercises" element={<ExerciseReview />} />
+          <Route path="/muscle-map" element={<MuscleMap />} />
+          <Route path="/before-after" element={<BeforeAfterComparison />} />
         </Routes>
       </main>
 

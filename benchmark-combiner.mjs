@@ -268,7 +268,7 @@ function combineResults(modelFiles, exerciseNames) {
       // Enrich with exercise names and GIF URLs
       const exercises = (workout?.sections?.flatMap(s => s?.exercises || []) || []).map(e => ({
         id: e.id,
-        name: getExerciseName(e.id, exerciseNames),
+        name: e.name || getExerciseName(e.id, exerciseNames),
         sets: e.sets,
         reps: e.reps,
         restSeconds: e.restSeconds || e.rest || 60,

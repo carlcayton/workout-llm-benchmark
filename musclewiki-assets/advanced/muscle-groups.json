@@ -1,0 +1,280 @@
+{
+  "source": "https://musclewiki.com/",
+  "extractedAt": "2026-01-07",
+  "modes": {
+    "basic": {
+      "viewBox": "0 0 660.46 1206.46",
+      "front": {
+        "muscles": [
+          "calves",
+          "quads",
+          "abdominals",
+          "obliques",
+          "forearms",
+          "biceps",
+          "front-shoulders",
+          "chest",
+          "traps",
+          "shoulders"
+        ],
+        "joints": [
+          "elbow",
+          "wrist",
+          "hips",
+          "knees",
+          "ankles"
+        ]
+      },
+      "back": {
+        "muscles": [
+          "traps",
+          "calves",
+          "hamstrings",
+          "glutes",
+          "forearms",
+          "triceps",
+          "lats",
+          "lowerback",
+          "traps-middle",
+          "rear-shoulders"
+        ],
+        "joints": [
+          "ankles",
+          "knees",
+          "wrist",
+          "elbow",
+          "upper-spine",
+          "scapula",
+          "lower-spine"
+        ]
+      }
+    },
+    "advanced": {
+      "viewBox": "0 0 676.49 1203.49",
+      "front": {
+        "muscles": [
+          "groin",
+          "upper-abdominals",
+          "gastrocnemius",
+          "tibialis",
+          "soleus",
+          "outer-quadricep",
+          "rectus-femoris",
+          "inner-quadricep",
+          "inner-thigh",
+          "lower-abdominals",
+          "obliques",
+          "wrist-flexors",
+          "wrist-extensors",
+          "short-head-bicep",
+          "long-head-bicep",
+          "mid-lower-pectoralis",
+          "upper-pectoralis",
+          "anterior-deltoid",
+          "lateral-deltoid",
+          "upper-trapzeius"
+        ]
+      },
+      "back": {
+        "muscles": [
+          "upper-trapezius",
+          "gastrocnemius",
+          "soleus",
+          "inner-thigh",
+          "medial-hamstrings",
+          "lateral-hamstrings",
+          "gluteus-maximus",
+          "gluteus-medius",
+          "lowerback",
+          "lats",
+          "wrist-flexors",
+          "wrist-extensors",
+          "medial-head-triceps",
+          "long-head-triceps",
+          "later-head-triceps",
+          "posterior-deltoid",
+          "lateral-deltoid",
+          "lower-trapezius",
+          "traps-middle"
+        ]
+      }
+    }
+  },
+  "subdivisionMapping": {
+    "biceps": ["short-head-bicep", "long-head-bicep"],
+    "triceps": ["medial-head-triceps", "long-head-triceps", "later-head-triceps"],
+    "quads": ["outer-quadricep", "rectus-femoris", "inner-quadricep"],
+    "hamstrings": ["medial-hamstrings", "lateral-hamstrings"],
+    "calves": ["gastrocnemius", "tibialis", "soleus"],
+    "glutes": ["gluteus-maximus", "gluteus-medius"],
+    "chest": ["upper-pectoralis", "mid-lower-pectoralis"],
+    "abdominals": ["upper-abdominals", "lower-abdominals"],
+    "traps": ["upper-trapezius", "traps-middle", "lower-trapezius"],
+    "shoulders": ["anterior-deltoid", "lateral-deltoid", "posterior-deltoid"],
+    "forearms": ["wrist-flexors", "wrist-extensors"]
+  },
+  "muscleDetails": {
+    "short-head-bicep": {
+      "name": "Biceps Short Head",
+      "parent": "biceps",
+      "view": "front",
+      "description": "Inner portion of the biceps brachii"
+    },
+    "long-head-bicep": {
+      "name": "Biceps Long Head",
+      "parent": "biceps",
+      "view": "front",
+      "description": "Outer portion of the biceps brachii"
+    },
+    "medial-head-triceps": {
+      "name": "Triceps Medial Head",
+      "parent": "triceps",
+      "view": "back",
+      "description": "Deep head of the triceps brachii"
+    },
+    "long-head-triceps": {
+      "name": "Triceps Long Head",
+      "parent": "triceps",
+      "view": "back",
+      "description": "Inner/long head of the triceps brachii"
+    },
+    "later-head-triceps": {
+      "name": "Triceps Lateral Head",
+      "parent": "triceps",
+      "view": "back",
+      "description": "Outer head of the triceps brachii"
+    },
+    "outer-quadricep": {
+      "name": "Vastus Lateralis",
+      "parent": "quads",
+      "view": "front",
+      "description": "Outer quad muscle"
+    },
+    "rectus-femoris": {
+      "name": "Rectus Femoris",
+      "parent": "quads",
+      "view": "front",
+      "description": "Central quad muscle, crosses hip joint"
+    },
+    "inner-quadricep": {
+      "name": "Vastus Medialis",
+      "parent": "quads",
+      "view": "front",
+      "description": "Inner quad muscle (teardrop)"
+    },
+    "medial-hamstrings": {
+      "name": "Medial Hamstrings",
+      "parent": "hamstrings",
+      "view": "back",
+      "description": "Semitendinosus and semimembranosus"
+    },
+    "lateral-hamstrings": {
+      "name": "Lateral Hamstrings",
+      "parent": "hamstrings",
+      "view": "back",
+      "description": "Biceps femoris (long and short head)"
+    },
+    "gastrocnemius": {
+      "name": "Gastrocnemius",
+      "parent": "calves",
+      "view": "both",
+      "description": "Superficial calf muscle with medial and lateral heads"
+    },
+    "tibialis": {
+      "name": "Tibialis Anterior",
+      "parent": "calves",
+      "view": "front",
+      "description": "Front of lower leg (shin muscle)"
+    },
+    "soleus": {
+      "name": "Soleus",
+      "parent": "calves",
+      "view": "both",
+      "description": "Deep calf muscle beneath gastrocnemius"
+    },
+    "gluteus-maximus": {
+      "name": "Gluteus Maximus",
+      "parent": "glutes",
+      "view": "back",
+      "description": "Largest gluteal muscle"
+    },
+    "gluteus-medius": {
+      "name": "Gluteus Medius",
+      "parent": "glutes",
+      "view": "back",
+      "description": "Side glute, hip abductor"
+    },
+    "upper-pectoralis": {
+      "name": "Upper Pectoralis (Clavicular)",
+      "parent": "chest",
+      "view": "front",
+      "description": "Upper chest fibers attached to clavicle"
+    },
+    "mid-lower-pectoralis": {
+      "name": "Mid/Lower Pectoralis (Sternal)",
+      "parent": "chest",
+      "view": "front",
+      "description": "Mid and lower chest fibers attached to sternum"
+    },
+    "upper-abdominals": {
+      "name": "Upper Abdominals",
+      "parent": "abdominals",
+      "view": "front",
+      "description": "Upper portion of rectus abdominis"
+    },
+    "lower-abdominals": {
+      "name": "Lower Abdominals",
+      "parent": "abdominals",
+      "view": "front",
+      "description": "Lower portion of rectus abdominis"
+    },
+    "upper-trapezius": {
+      "name": "Upper Trapezius",
+      "parent": "traps",
+      "view": "back",
+      "description": "Upper fibers - elevates scapula"
+    },
+    "traps-middle": {
+      "name": "Middle Trapezius",
+      "parent": "traps",
+      "view": "back",
+      "description": "Middle fibers - retracts scapula"
+    },
+    "lower-trapezius": {
+      "name": "Lower Trapezius",
+      "parent": "traps",
+      "view": "back",
+      "description": "Lower fibers - depresses scapula"
+    },
+    "anterior-deltoid": {
+      "name": "Anterior Deltoid",
+      "parent": "shoulders",
+      "view": "front",
+      "description": "Front shoulder - flexion"
+    },
+    "lateral-deltoid": {
+      "name": "Lateral Deltoid",
+      "parent": "shoulders",
+      "view": "both",
+      "description": "Side shoulder - abduction"
+    },
+    "posterior-deltoid": {
+      "name": "Posterior Deltoid",
+      "parent": "shoulders",
+      "view": "back",
+      "description": "Rear shoulder - extension"
+    },
+    "wrist-flexors": {
+      "name": "Wrist Flexors",
+      "parent": "forearms",
+      "view": "both",
+      "description": "Forearm muscles that flex the wrist"
+    },
+    "wrist-extensors": {
+      "name": "Wrist Extensors",
+      "parent": "forearms",
+      "view": "both",
+      "description": "Forearm muscles that extend the wrist"
+    }
+  }
+}

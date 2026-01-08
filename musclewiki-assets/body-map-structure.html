@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MuscleWiki Body Map Structure</title>
+  <style>
+    /* MuscleWiki Custom Colors */
+    .bg-mw-red { --tw-bg-opacity: 1; background-color: rgb(254 91 127/var(--tw-bg-opacity)); }
+    .bg-mw-red-100 { --tw-bg-opacity: 1; background-color: rgb(254 156 178/var(--tw-bg-opacity)); }
+    .bg-mw-red-400 { --tw-bg-opacity: 1; background-color: rgb(254 107 139/var(--tw-bg-opacity)); }
+    .bg-mw-red-600 { --tw-bg-opacity: 1; background-color: rgb(203 72 101/var(--tw-bg-opacity)); }
+    .bg-mw-red\/20 { background-color: rgba(254, 91, 127, 0.2); }
+    .from-mw-red { --tw-gradient-from: #fe5b7f var(--tw-gradient-from-position); --tw-gradient-to: rgb(254 91 127/0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to); }
+    .to-mw-red-400 { --tw-gradient-to: #fe6b8b var(--tw-gradient-to-position); }
+    .to-mw-red-900 { --tw-gradient-to: #7f2d3f var(--tw-gradient-to-position); }
+    .fill-mw-red { fill: rgb(254, 91, 127); }
+    .fill-mw-red-700 { fill: rgb(177, 63, 88); }
+    .text-mw-gray { --tw-text-opacity: 1; color: rgb(235 235 235/var(--tw-text-opacity)); }
+    .text-mw-red { --tw-text-opacity: 1; color: rgb(254 91 127/var(--tw-text-opacity)); }
+    .text-mw-red-600 { --tw-text-opacity: 1; color: rgb(203 72 101/var(--tw-text-opacity)); }
+    .text-mw-red-700 { --tw-text-opacity: 1; color: rgb(177 63 88/var(--tw-text-opacity)); }
+    .text-mw-red-800 { --tw-text-opacity: 1; color: rgb(152 54 76/var(--tw-text-opacity)); }
+    .ring-mw-red-800 { --tw-ring-opacity: 1; --tw-ring-color: rgb(152 54 76/var(--tw-ring-opacity)); }
+
+    /* Body Map Muscle States */
+    .body-map__muscle_primary { color: rgb(254, 91, 127); transition: color 25ms ease-in-out; }
+    .body-map__muscle_secondary { color: rgb(249, 159, 102); transition: color 25ms ease-in-out; }
+    .body-map__muscle_tertiary { color: rgb(255, 234, 115); transition: color 25ms ease-in-out; }
+
+    /* Hover/Active States */
+    .hover\:text-mw-red-600:hover { --tw-text-opacity: 1; color: rgb(203 72 101/var(--tw-text-opacity)); }
+    .focus\:ring-mw-red-600:focus { --tw-ring-opacity: 1; --tw-ring-color: rgb(203 72 101/var(--tw-ring-opacity)); }
+    .active\:text-mw-red-700:active { --tw-text-opacity: 1; color: rgb(177 63 88/var(--tw-text-opacity)); }
+    .dark\:bg-mw-red-900:is(.dark *) { --tw-bg-opacity: 1; background-color: rgb(127 45 63/var(--tw-bg-opacity)); }
+
+    /* Container Styles */
+    body {
+      background: #1a1a2e;
+      padding: 20px;
+    }
+    .body-map-container {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 40px;
+    }
+    svg {
+      max-height: 90vh;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color: white; text-align: center;">MuscleWiki Body Map - Extracted Structure</h1>
+
+  <div class="body-map-container">
+    <!-- FRONT VIEW SVG -->
+    <!-- See front-body.svg for full source -->
+
+    <!-- BACK VIEW SVG -->
+    <!-- See back-body.svg for full source -->
+  </div>
+
+  <h2 style="color: white; margin-top: 40px;">Structure Analysis</h2>
+
+  <div style="color: #ccc; font-family: monospace; white-space: pre-wrap;">
+## MuscleWiki Body Map - Complete Layer Structure
+
+### Container
+- Class: "flex justify-center 2xl:flex-nowrap w-full px-10 gap-x-2 animate-fade-in"
+- Contains: 2 SVG elements (front view + back view)
+
+### SVG Properties
+- ViewBox: "0 0 660.46 1206.46"
+- Classes: "w-full mc:h-[700px] 2xl:h-[90vh] 3xl:h-[95vh] 4xl:h-screen sm:mx-auto object-fit"
+
+### Layer Stack (back to front)
+1. **Defs** - Contains radialGradient "jointradial" for joint hover effects
+   - Colors: rgb(254, 91, 127) at center -> rgb(231, 236, 239) at edge
+
+2. **Muscle Groups (g elements with class="bodymap text-mw-gray")**
+   - Each uses `fill="currentColor"` for easy color theming
+   - Hover state: `lg:hover:text-mw-red-100`
+   - Active state: `active:text-mw-red-700`
+
+3. **Body Outline (g id="body" class="body-map__model")**
+   - Contains paths with stroke="#484a68" (dark blue-gray)
+   - stroke-width: 3.46 (front) / 3.52 (back)
+   - No fill, just outlines
+
+4. **Joint Groups (hidden by default)**
+   - Classes: "hidden" - toggled via "Joints" switch
+   - IDs: shoulders, elbow, wrist, hips, knees, ankles
+   - Each joint has:
+     - Outer ellipse with radialGradient fill (hover area)
+     - Inner ellipse with currentColor fill (visible dot)
+
+### Front View Muscle Groups (24 total):
+1. calves - 2 paths (left/right)
+2. quads - 2 paths
+3. obliques - 2 paths
+4. abdominals - 1 path (complex with internal detail lines)
+5. hands - 4 paths
+6. forearms - 2 paths
+7. biceps - 2 paths
+8. chest - 2 paths
+9. front-shoulders - 2 paths
+10. traps - 2 paths
+11. body (outline) - many paths/lines
+
+### Back View Muscle Groups (12 total):
+1. traps - 1 path
+2. calves - 2 paths
+3. hamstrings - 2 paths
+4. glutes - 2 paths
+5. hands - 4 paths
+6. forearms - 2 paths
+7. triceps - 2 paths
+8. lats - 2 paths
+9. lowerback - 1 path
+10. traps-middle - 1 path
+11. rear-shoulders - 2 paths
+12. body (outline) - many paths/lines
+
+### Color System
+- Default (inactive): `text-mw-gray` = rgb(235, 235, 235) - light gray
+- Hover: `text-mw-red-100` = rgb(254, 156, 178) - light pink
+- Active/Selected: `text-mw-red-700` = rgb(177, 63, 88) - dark red
+- Primary muscle: `body-map__muscle_primary` = rgb(254, 91, 127) - pink
+- Secondary muscle: `body-map__muscle_secondary` = rgb(249, 159, 102) - orange
+- Tertiary muscle: `body-map__muscle_tertiary` = rgb(255, 234, 115) - yellow
+
+### Body Outline Styling
+- Stroke color: #484a68 (dark blue-gray)
+- Stroke width: ~3.5px
+- No fill (transparent)
+- stroke-linecap: round
+- stroke-linejoin: round
+
+### Important Technical Notes
+1. All muscle paths use `fill="currentColor"` - color is controlled via CSS text-color
+2. Joint groups are hidden by default (class="hidden")
+3. Responsive sizing via Tailwind classes (mc:, 2xl:, 3xl:, 4xl: breakpoints)
+4. Animation on load: "animate-fade-in"
+5. Two separate SVGs side by side - NOT a single mirrored SVG
+  </div>
+</body>
+</html>

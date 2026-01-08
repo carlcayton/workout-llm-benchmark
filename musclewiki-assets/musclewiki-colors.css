@@ -1,0 +1,175 @@
+/**
+ * MuscleWiki Body Map - Color System
+ * Extracted from musclewiki.com on 2026-01-07
+ */
+
+/* ========================================
+   BASE COLORS
+   ======================================== */
+
+/* Gray (default/inactive muscle state) */
+.text-mw-gray {
+  --tw-text-opacity: 1;
+  color: rgb(235 235 235 / var(--tw-text-opacity));
+}
+
+/* ========================================
+   RED COLOR PALETTE (Primary Accent)
+   ======================================== */
+
+/* Red - Base */
+.text-mw-red {
+  --tw-text-opacity: 1;
+  color: rgb(254 91 127 / var(--tw-text-opacity));
+}
+.bg-mw-red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 91 127 / var(--tw-bg-opacity));
+}
+.fill-mw-red {
+  fill: rgb(254, 91, 127);
+}
+
+/* Red-100 (Light - Hover state) */
+.bg-mw-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 156 178 / var(--tw-bg-opacity));
+}
+
+/* Red-400 */
+.bg-mw-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 107 139 / var(--tw-bg-opacity));
+}
+.to-mw-red-400 {
+  --tw-gradient-to: #fe6b8b var(--tw-gradient-to-position);
+}
+
+/* Red-600 */
+.bg-mw-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 72 101 / var(--tw-bg-opacity));
+}
+.text-mw-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(203 72 101 / var(--tw-text-opacity));
+}
+
+/* Red-700 (Active/Selected state) */
+.text-mw-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(177 63 88 / var(--tw-text-opacity));
+}
+.fill-mw-red-700 {
+  fill: rgb(177, 63, 88);
+}
+
+/* Red-800 */
+.text-mw-red-800 {
+  --tw-text-opacity: 1;
+  color: rgb(152 54 76 / var(--tw-text-opacity));
+}
+.ring-mw-red-800 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(152 54 76 / var(--tw-ring-opacity));
+}
+
+/* Red-900 (Dark) */
+.to-mw-red-900 {
+  --tw-gradient-to: #7f2d3f var(--tw-gradient-to-position);
+}
+
+/* Red with opacity */
+.bg-mw-red\/20 {
+  background-color: rgba(254, 91, 127, 0.2);
+}
+
+/* ========================================
+   GRADIENT UTILITIES
+   ======================================== */
+
+.from-mw-red {
+  --tw-gradient-from: #fe5b7f var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(254 91 127 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+/* ========================================
+   INTERACTIVE STATES
+   ======================================== */
+
+.hover\:text-mw-red-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(203 72 101 / var(--tw-text-opacity));
+}
+
+.focus\:ring-mw-red-600:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(203 72 101 / var(--tw-ring-opacity));
+}
+
+.active\:text-mw-red-700:active {
+  --tw-text-opacity: 1;
+  color: rgb(177 63 88 / var(--tw-text-opacity));
+}
+
+/* ========================================
+   BODY MAP MUSCLE HIGHLIGHT CLASSES
+   ======================================== */
+
+/* Primary muscle being worked */
+.body-map__muscle_primary {
+  color: rgb(254, 91, 127);
+  transition: color 25ms ease-in-out;
+}
+
+/* Secondary/supporting muscle */
+.body-map__muscle_secondary {
+  color: rgb(249, 159, 102);
+  transition: color 25ms ease-in-out;
+}
+
+/* Tertiary/stabilizer muscle */
+.body-map__muscle_tertiary {
+  color: rgb(255, 234, 115);
+  transition: color 25ms ease-in-out;
+}
+
+/* ========================================
+   DARK MODE
+   ======================================== */
+
+.dark\:bg-mw-red-900:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 45 63 / var(--tw-bg-opacity));
+}
+
+/* ========================================
+   COLOR REFERENCE (Raw Values)
+   ======================================== */
+
+/*
+  MuscleWiki Color Palette:
+
+  Grays:
+  - mw-gray:      #EBEBEB / rgb(235, 235, 235) - Default muscle color
+  - body-outline: #484A68 / rgb(72, 74, 104)   - Body outline stroke
+
+  Reds (Pink accent):
+  - mw-red:       #FE5B7F / rgb(254, 91, 127)  - Primary accent
+  - mw-red-100:   #FE9CB2 / rgb(254, 156, 178) - Light (hover)
+  - mw-red-400:   #FE6B8B / rgb(254, 107, 139)
+  - mw-red-600:   #CB4865 / rgb(203, 72, 101)
+  - mw-red-700:   #B13F58 / rgb(177, 63, 88)   - Dark (active)
+  - mw-red-800:   #98364C / rgb(152, 54, 76)
+  - mw-red-900:   #7F2D3F / rgb(127, 45, 63)   - Darkest
+
+  Muscle Highlights:
+  - Primary:      #FE5B7F / rgb(254, 91, 127)  - Pink (same as mw-red)
+  - Secondary:    #F99F66 / rgb(249, 159, 102) - Orange
+  - Tertiary:     #FFEA73 / rgb(255, 234, 115) - Yellow
+
+  Joint Gradient:
+  - Center:       rgb(254, 91, 127) - Pink
+  - Edge:         rgb(231, 236, 239) - Light gray
+*/

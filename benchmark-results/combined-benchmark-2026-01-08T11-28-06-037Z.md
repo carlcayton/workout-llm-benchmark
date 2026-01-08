@@ -1,0 +1,322 @@
+# LLM Workout Generation Benchmark - Combined Results
+
+**Generated:** 2026-01-08T11:28:06.036Z
+**Version:** 2.1-parallel
+**Scenarios Tested:** 30
+**Models Tested:** 4
+**Source Files:** 4
+
+**Results Period:** 2026-01-08T10:38:51.033Z to 2026-01-08T10:43:39.523Z
+
+## Models Overview
+
+| Model | Tier | Success Rate | Avg Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|------|--------------|-------------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | fast | 100% | 7971ms | 5 | 100% | 3.5 | 12 | 124s |
+| Claude Sonnet 4.5 | premium | 100% | 12304ms | 5 | 100% | 3.5 | 10 | 125s |
+| Gemini 3 Flash | fast | 100% | 7076ms | 5 | 100% | 3.5 | 12 | 125s |
+| gpt-4o | unknown | 100% | 8764ms | 5 | 100% | 3.5 | 3 | 128s |
+
+## Quick Stats
+
+- **Fastest Response:** Gemini 3 Flash (7076ms avg)
+- **Highest Success Rate:** Claude 4.5 Haiku (100%)
+- **Best Equipment Match:** Claude 4.5 Haiku (100%)
+- **Most Exercises (avg):** Claude 4.5 Haiku (5)
+
+## Results by Category
+
+### Uncategorized Scenarios
+
+#### Bro Split (Chest) (30min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 8582ms | 3 | 100% | 4 | 8 | 96s |
+| Claude Sonnet 4.5 | OK | 8605ms | 3 | 100% | 4 | 8 | 96s |
+| Gemini 3 Flash | OK | 7375ms | 3 | 100% | 4 | 8 | 96s |
+| gpt-4o | OK | 8057ms | 3 | 100% | 4 | 8 | 96s |
+
+#### Bro Split (Chest) (60min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 7499ms | 6 | 100% | 4 | 12 | 113s |
+| Claude Sonnet 4.5 | OK | 10179ms | 6 | 100% | 4 | 12 | 113s |
+| Gemini 3 Flash | OK | 6143ms | 6 | 100% | 4 | 12 | 113s |
+| gpt-4o | OK | 5867ms | 6 | 100% | 4 | 12 | 113s |
+
+#### Bro Split (Chest) (90min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 9115ms | 8 | 100% | 4 | 12 | 113s |
+| Claude Sonnet 4.5 | OK | 13409ms | 8 | 100% | 4 | 12 | 113s |
+| Gemini 3 Flash | OK | 7733ms | 8 | 100% | 4 | 12 | 113s |
+| gpt-4o | OK | 7035ms | 8 | 100% | 4 | 12 | 124s |
+
+#### Full Body - Strength (30min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 6337ms | 2 | 100% | 5 | 3 | 123s |
+| Claude Sonnet 4.5 | OK | 9471ms | 2 | 100% | 5 | 5 | 123s |
+| Gemini 3 Flash | OK | 4807ms | 2 | 100% | 5 | 3 | 123s |
+| gpt-4o | OK | 4322ms | 2 | 100% | 5 | 3 | 123s |
+
+#### Full Body - Strength (60min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 7073ms | 3 | 100% | 5 | 3 | 150s |
+| Claude Sonnet 4.5 | OK | 8703ms | 3 | 100% | 5 | 5 | 150s |
+| Gemini 3 Flash | OK | 4473ms | 3 | 100% | 5 | 3 | 150s |
+| gpt-4o | OK | 5598ms | 3 | 100% | 5 | 3 | 150s |
+
+#### Full Body - Strength (90min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 7483ms | 5 | 100% | 5 | 5 | 126s |
+| Claude Sonnet 4.5 | OK | 9472ms | 5 | 100% | 5 | 10 | 126s |
+| Gemini 3 Flash | OK | 6256ms | 5 | 100% | 5 | 6 | 126s |
+| gpt-4o | OK | 4631ms | 5 | 100% | 5 | 3 | 126s |
+
+#### Full Body - HIT (30min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 8320ms | 3 | 100% | 2 | 6 | 150s |
+| Claude Sonnet 4.5 | OK | 12754ms | 3 | 100% | 2 | 6 | 150s |
+| Gemini 3 Flash | OK | 6087ms | 3 | 100% | 2 | 6 | 150s |
+| gpt-4o | OK | 5845ms | 3 | 100% | 2 | 6 | 150s |
+
+#### Full Body - HIT (60min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 6955ms | 5 | 100% | 2 | 10 | 126s |
+| Claude Sonnet 4.5 | OK | 10328ms | 5 | 100% | 2 | 10 | 126s |
+| Gemini 3 Flash | OK | 7614ms | 5 | 100% | 2 | 10 | 126s |
+| gpt-4o | OK | 6463ms | 5 | 100% | 2 | 10 | 126s |
+
+#### Full Body - HIT (90min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 8541ms | 6 | 100% | 2 | 10 | 120s |
+| Claude Sonnet 4.5 | OK | 11855ms | 6 | 100% | 2 | 10 | 120s |
+| Gemini 3 Flash | OK | 6686ms | 6 | 100% | 2 | 10 | 120s |
+| gpt-4o | OK | 8700ms | 6 | 100% | 2 | 10 | 120s |
+
+#### Full Body - Endurance (30min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 10058ms | 5 | 100% | 3 | 15 | 67s |
+| Claude Sonnet 4.5 | OK | 10449ms | 5 | 100% | 3 | 20 | 67s |
+| Gemini 3 Flash | OK | 6743ms | 5 | 100% | 3 | 25 | 67s |
+| gpt-4o | OK | 6435ms | 5 | 100% | 3 | 25 | 67s |
+
+#### Full Body - Endurance (60min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 9678ms | 8 | 100% | 3 | 25 | 113s |
+| Claude Sonnet 4.5 | OK | 13560ms | 8 | 100% | 3 | 20 | 113s |
+| Gemini 3 Flash | OK | 8925ms | 8 | 100% | 3 | 25 | 113s |
+| gpt-4o | OK | 8208ms | 8 | 100% | 3 | 20 | 113s |
+
+#### Full Body - Endurance (90min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 7072ms | 10 | 100% | 3 | 20 | 108s |
+| Claude Sonnet 4.5 | OK | 15416ms | 10 | 100% | 3 | 22 | 108s |
+| Gemini 3 Flash | OK | 9383ms | 10 | 100% | 3 | 25 | 108s |
+| gpt-4o | OK | 9391ms | 10 | 100% | 3 | 25 | 117s |
+
+#### PPL - Strength + Bodybuilding (Push) (30min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 8885ms | 2 | 100% | 5 | 3 | 123s |
+| Claude Sonnet 4.5 | OK | 9403ms | 2 | 100% | 5 | 5 | 123s |
+| Gemini 3 Flash | OK | 6024ms | 2 | 100% | 5 | 3 | 123s |
+| gpt-4o | OK | 5039ms | 2 | 100% | 5 | 3 | 123s |
+
+#### PPL - Strength + Bodybuilding (Push) (60min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 7258ms | 3 | 100% | 5 | 3 | 180s |
+| Claude Sonnet 4.5 | OK | 13745ms | 3 | 100% | 5 | 5 | 180s |
+| Gemini 3 Flash | OK | 6512ms | 3 | 100% | 5 | 3 | 180s |
+| gpt-4o | OK | 20446ms | 3 | 100% | 5 | 3 | 180s |
+
+#### PPL - Strength + Bodybuilding (Push) (90min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 7824ms | 5 | 100% | 4.4 | 6 | 126s |
+| Claude Sonnet 4.5 | OK | 17039ms | 5 | 100% | 4.4 | 8 | 126s |
+| Gemini 3 Flash | OK | 7925ms | 5 | 100% | 4.6 | 3 | 144s |
+| gpt-4o | OK | 7050ms | 5 | 100% | 4.4 | 10 | 126s |
+
+#### Upper/Lower - HIT + Bodybuilding (Upper) (30min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 6775ms | 3 | 100% | 2 | 6 | 180s |
+| Claude Sonnet 4.5 | OK | 17000ms | 3 | 100% | 2 | 8 | 180s |
+| Gemini 3 Flash | OK | 6670ms | 3 | 100% | 2 | 6 | 180s |
+| gpt-4o | OK | 9238ms | 3 | 100% | 2 | 6 | 180s |
+
+#### Upper/Lower - HIT + Bodybuilding (Upper) (60min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 10629ms | 5 | 100% | 2.4 | 8 | 162s |
+| Claude Sonnet 4.5 | OK | 12590ms | 5 | 100% | 2 | 8 | 180s |
+| Gemini 3 Flash | OK | 8040ms | 5 | 100% | 2.8 | 8 | 144s |
+| gpt-4o | OK | 6301ms | 5 | 100% | 2 | 8 | 180s |
+
+#### Upper/Lower - HIT + Bodybuilding (Upper) (90min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 8137ms | 6 | 100% | 2.3 | 8 | 165s |
+| Claude Sonnet 4.5 | OK | 10957ms | 6 | 100% | 2.3 | 8 | 165s |
+| Gemini 3 Flash | OK | 8969ms | 6 | 100% | 2.7 | 8 | 150s |
+| gpt-4o | OK | 7993ms | 6 | 100% | 2 | 8 | 180s |
+
+#### Full Body - Strength + Endurance (30min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 7725ms | 2 | 100% | 5 | 3 | 123s |
+| Claude Sonnet 4.5 | OK | 16602ms | 2 | 100% | 5 | 5 | 123s |
+| Gemini 3 Flash | OK | 6194ms | 2 | 100% | 5 | 3 | 123s |
+| gpt-4o | OK | 9174ms | 2 | 100% | 5 | 3 | 123s |
+
+#### Full Body - Strength + Endurance (60min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 8218ms | 3 | 100% | 4.3 | 3 | 150s |
+| Claude Sonnet 4.5 | OK | 15928ms | 3 | 100% | 4.3 | 4 | 150s |
+| Gemini 3 Flash | OK | 8218ms | 3 | 100% | 4.3 | 3 | 150s |
+| gpt-4o | OK | 6875ms | 3 | 100% | 4.3 | 3 | 150s |
+
+#### Full Body - Strength + Endurance (90min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 7807ms | 5 | 100% | 3.8 | 5 | 126s |
+| Claude Sonnet 4.5 | OK | 19683ms | 5 | 100% | 3.8 | 5 | 126s |
+| Gemini 3 Flash | OK | 6343ms | 5 | 100% | 3.8 | 6 | 126s |
+| gpt-4o | OK | 18665ms | 5 | 100% | 3.8 | 6 | 126s |
+
+#### Arnold Split - Bodybuilding + Endurance (Chest/Back) (30min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 7465ms | 3 | 100% | 4 | 10 | 96s |
+| Claude Sonnet 4.5 | OK | 8571ms | 3 | 100% | 4 | 10 | 96s |
+| Gemini 3 Flash | OK | 5992ms | 3 | 100% | 4 | 10 | 96s |
+| gpt-4o | OK | 13585ms | 3 | 100% | 4 | 8 | 96s |
+
+#### Arnold Split - Bodybuilding + Endurance (Chest/Back) (60min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 7237ms | 6 | 100% | 3.3 | 12 | 120s |
+| Claude Sonnet 4.5 | OK | 11251ms | 6 | 100% | 3.3 | 12 | 120s |
+| Gemini 3 Flash | OK | 7421ms | 6 | 100% | 3.3 | 12 | 120s |
+| gpt-4o | OK | 9717ms | 6 | 100% | 3.5 | 8 | 135s |
+
+#### Arnold Split - Bodybuilding + Endurance (Chest/Back) (90min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 7235ms | 8 | 100% | 3.3 | 12 | 113s |
+| Claude Sonnet 4.5 | OK | 14620ms | 8 | 100% | 3.3 | 10 | 113s |
+| Gemini 3 Flash | OK | 8583ms | 8 | 100% | 3.3 | 12 | 113s |
+| gpt-4o | OK | 10388ms | 8 | 100% | 3.5 | 12 | 135s |
+
+#### Arnold Split - Bodybuilding + HIT (Chest/Back) (30min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 8058ms | 3 | 100% | 4 | 10 | 96s |
+| Claude Sonnet 4.5 | OK | 10214ms | 3 | 100% | 4 | 10 | 96s |
+| Gemini 3 Flash | OK | 4844ms | 3 | 100% | 3.3 | 8 | 123s |
+| gpt-4o | OK | 6088ms | 3 | 100% | 4 | 10 | 96s |
+
+#### Arnold Split - Bodybuilding + HIT (Chest/Back) (60min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 7046ms | 6 | 100% | 2.7 | 10 | 120s |
+| Claude Sonnet 4.5 | OK | 10788ms | 6 | 100% | 2.7 | 12 | 120s |
+| Gemini 3 Flash | OK | 7943ms | 6 | 100% | 2.7 | 12 | 120s |
+| gpt-4o | OK | 9446ms | 6 | 100% | 3 | 12 | 135s |
+
+#### Arnold Split - Bodybuilding + HIT (Chest/Back) (90min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 6639ms | 8 | 100% | 2.5 | 12 | 113s |
+| Claude Sonnet 4.5 | OK | 12733ms | 8 | 100% | 2.5 | 12 | 113s |
+| Gemini 3 Flash | OK | 7809ms | 8 | 100% | 2.5 | 12 | 113s |
+| gpt-4o | OK | 11030ms | 8 | 100% | 2.5 | 12 | 113s |
+
+#### Arnold Split - Bodybuilding + HIT (Shoulders/Arms) (30min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 7853ms | 3 | 100% | 4 | 8 | 96s |
+| Claude Sonnet 4.5 | OK | 9747ms | 3 | 100% | 4 | 10 | 96s |
+| Gemini 3 Flash | OK | 5351ms | 3 | 100% | 4 | 8 | 96s |
+| gpt-4o | OK | 10290ms | 3 | 100% | 4 | 8 | 96s |
+
+#### Arnold Split - Bodybuilding + HIT (Shoulders/Arms) (60min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 9029ms | 6 | 100% | 2.7 | 12 | 120s |
+| Claude Sonnet 4.5 | OK | 11438ms | 6 | 100% | 2.7 | 12 | 120s |
+| Gemini 3 Flash | OK | 7354ms | 6 | 100% | 2.7 | 12 | 120s |
+| gpt-4o | OK | 11410ms | 6 | 100% | 2.7 | 12 | 120s |
+
+#### Arnold Split - Bodybuilding + HIT (Shoulders/Arms) (90min)
+
+| Model | Status | Latency | Exercises | Equip Match | Avg Sets | Avg Reps | Avg Rest |
+|-------|--------|---------|-----------|-------------|----------|----------|----------|
+| Claude 4.5 Haiku | OK | 8597ms | 8 | 100% | 2.5 | 12 | 113s |
+| Claude Sonnet 4.5 | OK | 12609ms | 8 | 100% | 2.5 | 12 | 113s |
+| Gemini 3 Flash | OK | 9873ms | 8 | 100% | 2.5 | 12 | 113s |
+| gpt-4o | OK | 9629ms | 8 | 100% | 2.5 | 12 | 113s |
+
+## Methodology
+
+### Metrics Reported
+
+- **Exercise Count:** Number of exercises in the workout
+- **Equipment Match Rate:** Percentage of exercises using requested equipment
+- **Avg Sets:** Average sets per exercise
+- **Avg Reps:** Most common reps value returned
+- **Avg Rest:** Average rest period in seconds
+
+### Training Style Parameters (Reference)
+
+| Style | Sets | Reps | Rest |
+|-------|------|------|------|
+| Classic Bodybuilding | 3-4 | 8-12 | 60-90s |
+| Strength Focused | 4-5 | 4-6 | 120-240s |
+| High Intensity (HIT) | 1-2 | 6-10 | 120-180s |
+| Muscular Endurance | 2-3 | 15-20 | 30-45s |
+
+---
+
+*Combined from 4 individual model result files.*
