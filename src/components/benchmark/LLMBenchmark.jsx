@@ -68,6 +68,15 @@ export function LLMBenchmark() {
     return acc
   }, {})
 
+  // Count unique base scenarios per split (excluding duration suffix)
+  const getBaseScenarioName = (name) => name.replace(/\s*\(\d+min\)$/, '')
+  const splitBaseCounts = Object.fromEntries(
+    Object.entries(splitGroups).map(([split, scenarios]) => [
+      split,
+      new Set(scenarios.map(s => getBaseScenarioName(s.name))).size
+    ])
+  )
+
   const splitTypes = Object.keys(splitGroups)
 
   // Group scenarios by duration
@@ -320,7 +329,7 @@ export function LLMBenchmark() {
                     : getSplitColor(split)
                 }`}
               >
-                {formatSplitName(split)} ({splitGroups[split].length})
+                {formatSplitName(split)} ({splitBaseCounts[split]})
               </button>
             ))}
           </div>
